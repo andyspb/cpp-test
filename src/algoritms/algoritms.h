@@ -39,7 +39,7 @@
 namespace algorithms {
 int test() {
   std::cout << "algorithms: -->\n";
-//  assert(array_characters_reverse::test());
+  assert(array_characters_reverse::test());
 //  assert(array_find_duplicates::test());
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());

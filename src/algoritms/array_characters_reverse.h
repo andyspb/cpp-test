@@ -1,6 +1,9 @@
 #ifndef _ARRAY_CHARACTERS_REVERSE_H
 #define _ARRAY_CHARACTERS_REVERSE_H
+
+#include <stdio.h>
 #include <iostream>
+
 //Given an array of characters. How would you reverse it. ?
 //How would you reverse it without using indexing in the array.
 namespace array_characters_reverse {

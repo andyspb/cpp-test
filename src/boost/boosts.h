@@ -24,15 +24,15 @@
 namespace boosts {
 int test() {
   std::cout << "Boost tests:\n";
-//  assert(boost_1::test());
-//  assert(boost_2::test());
+//    assert(boost_1::test());
+  assert(boost_2::test());
 //  assert(boost_3::test());
 //  assert(boost_4::test());
 //  assert(boost_5::test());
 //  assert(boost_6::test());
 //  assert(boost_7::test());
-   assert(boost_asio::test());
-  //  assert(boost_lambda::test());
+// assert(boost_asio::test());
+//  assert(boost_lambda::test());
 //  assert(boost_lexical::test());
 //  assert(boost_pc::test());
 //  assert(boost_prod_cons::test());
