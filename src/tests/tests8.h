@@ -11,7 +11,7 @@
 // ÐŸÐ¾Ð´Ñ€Ð¾Ð±Ð½ÐµÐµ: http://company.yandex.ru/job/vacancies/dev_browser_principal.xml
 
 #include <iostream>
-#include <atomic>
+// #include <atomic>
 
 using namespace std;
 

@@ -15,11 +15,13 @@ struct Foo {
 };
 
 int test() {
+#pragma (disable : 4244)  
   double x = 3.14;
 
   Foo f(x);
 
   std::cout << f.x << std::endl;
+#pragma (default : 4244)  
 
   return 1;
 }

@@ -71,7 +71,7 @@ class B {
 
 int x = 1;
 int y = 2;
-int s = 3;
+const int s = 3;
 
 int test() {
   A a;
@@ -88,6 +88,7 @@ int test() {
   int x = x;
   int y = y;
 
+#pragma warning ( disable : 4101 )
   int arr[s];
 
   std::cout << "x: "<< x << std::endl;

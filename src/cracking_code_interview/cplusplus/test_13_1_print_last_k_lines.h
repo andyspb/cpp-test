@@ -22,29 +22,29 @@
 
 namespace test_13_1_print_last_k_lines {
 
-void f(int K, const char* file_name ) {
-  std::string L[K];
-  int lines = 0;
-  std::fstream file(file_name);
-  if (!file.good()) {
-    std::cout << file_name << "was not opened correctly" << std::endl;
-  }
-  while (file.good()) {
-    std::getline(file, L[lines % K]); // read file line by line
-    ++lines;
-  }
-  // if less than K lines were read, print them all
-  int start, count;
-  if (lines < K) {
-    start = 0;
-    count = lines;
-  } else {
-    start = lines % K;
-    count = K;
-  }
-  for (int i = 0; i < count; ++i) {
-    std::cout << L[(start + i) % K] << std::endl;
-  }
+void f(const int K, const char* file_name ) {
+//   std::string L[K];
+//   int lines = 0;
+//   std::fstream file(file_name);
+//   if (!file.good()) {
+//     std::cout << file_name << "was not opened correctly" << std::endl;
+//   }
+//   while (file.good()) {
+//     std::getline(file, L[lines % K]); // read file line by line
+//     ++lines;
+//   }
+//   // if less than K lines were read, print them all
+//   int start, count;
+//   if (lines < K) {
+//     start = 0;
+//     count = lines;
+//   } else {
+//     start = lines % K;
+//     count = K;
+//   }
+//   for (int i = 0; i < count; ++i) {
+//     std::cout << L[(start + i) % K] << std::endl;
+//   }
 }
 
 int test() {

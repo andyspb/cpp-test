@@ -5,7 +5,7 @@
 #ifndef TESTS22_H_
 #define TESTS22_H_
 
-#include "logger.h"
+//#include "logger.h"
 namespace tests22 {
 
 class Base {
@@ -31,7 +31,7 @@ class Derived {
 
 int main() {
 
-  LOG("Tests22");
+//  LOG("Tests22");
   return 0;
 }
 

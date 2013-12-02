@@ -23,7 +23,7 @@ size_t hash(const std::string &data) {
 int hash2 (string word) {
     int result = 0;
     for(size_t i = 0; i < word.length(); ++i) {
-        result += word[i] * pow(31, i);
+        result += word[i] * pow( (float) 31, (int) i);
     }
     return result;
 }

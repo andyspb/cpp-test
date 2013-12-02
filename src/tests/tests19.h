@@ -15,8 +15,10 @@
 namespace tests19 {
 
 int main() {
+#ifndef _MSC_VER
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsequence-point"
+#endif
 
   int i = 5;
   int j = i++ + ++i;
@@ -50,7 +52,9 @@ int main() {
     std::cout << "f != f1\n";
   }
 
+#ifndef _MSC_VER
 #pragma GCC diagnostic pop
+#endif
 
   return 0;
 }

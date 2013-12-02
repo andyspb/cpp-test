@@ -2,14 +2,14 @@
 
 #include "test.h"
 
-#include "logger.h"
-#include "string_utils.h"
+//#include "logger.h"
+//#include "string_utils.h"
 
 #include <iostream>
 #include <assert.h>
 
 //#include "demo/demo_http_server/demo_http_server.h"
-#include "update_srv/update_srv.h"
+//#include "update_srv/update_srv.h"
 
 
 // for c++011
@@ -46,38 +46,37 @@ int main(int argc, char **argv) {
 //  assert(cpp0x::test());
 
 // cracking code interviews
-//  assert(cracking::test());
+  assert(cracking::test());
 
 // funcions
-//  assert(func::test());
+  assert(func::test());
 
 // hash functions
-//  assert(hashcodes::test());
+  assert(hashcodes::test());
 
 // language
-//  assert(language::test());
+  assert(language::test());
 
 //lambda
-//  assert(lambda::test());
+  assert(lambda::test());
 //  templates
-//  assert(templates::test());
+  assert(templates::test());
 
 // patterns
 //  assert(patterns::test());
 
 // quiz
-//  assert(quiz::test());
+  assert(quiz::test());
 
   // quiz
   //  assert(quiz::test());
 
 //  assert(smart_ptr::test());
 
-
   tests::test();
 
 // virtuals
-//  assert(virtuals::test());
+  assert(virtuals::test());
 
 // transas
 //  transas_test::test();

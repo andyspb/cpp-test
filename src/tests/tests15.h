@@ -10,8 +10,10 @@
 namespace tests15 {
 
 int main() {
+#ifndef _MSC_VER
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsequence-point"
+#endif 
 
   int i = 0;
   i = i++ + ++i;
@@ -33,7 +35,9 @@ int main() {
   r = r++ + ++r;
   printf("Example:\nregister int r = 0;\nr = r++ + ++r;\nResult:r=%d\n", r);  // 3 (Should be the same as u ?)
 
+#ifndef _MSC_VER
 #pragma GCC diagnostic pop
+#endif
 
   return 0;
 }

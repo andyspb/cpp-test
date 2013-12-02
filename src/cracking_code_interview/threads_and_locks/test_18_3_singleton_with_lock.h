@@ -65,7 +65,7 @@ template<class T>
 Lock Singleton<T>::lock;
 
 int test() {
-  __attribute__((unused)) A* singleton = Singleton<A>::Instance();
+  A* singleton = Singleton<A>::Instance();
   return 1;
 }
 }  // test_18_3_singleton_with_lock

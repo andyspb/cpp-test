@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\work\cpp-test\src\demo\iface;D:\work\cpp-test\src\epee\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\algoritms\algoritms.h" />
+    <ClInclude Include="..\src\algoritms\array_characters_reverse.h" />
+    <ClInclude Include="..\src\algoritms\array_find_duplicates.h" />
+    <ClInclude Include="..\src\algoritms\big_little_endian.h" />
+    <ClInclude Include="..\src\algoritms\btree_depth.h" />
+    <ClInclude Include="..\src\algoritms\bubblesort.h" />
+    <ClInclude Include="..\src\algoritms\byte_array_2_string.h" />
+    <ClInclude Include="..\src\algoritms\circular_que.h" />
+    <ClInclude Include="..\src\algoritms\common_data.h" />
+    <ClInclude Include="..\src\algoritms\compare_linked_list.h" />
+    <ClInclude Include="..\src\algoritms\count_1_in_binary.h" />
+    <ClInclude Include="..\src\algoritms\dining_philosophers.h" />
+    <ClInclude Include="..\src\algoritms\drawcircle.h" />
+    <ClInclude Include="..\src\algoritms\duplication.h" />
+    <ClInclude Include="..\src\algoritms\encode_string_google.h" />
+    <ClInclude Include="..\src\algoritms\encode_string_google2.h" />
+    <ClInclude Include="..\src\algoritms\fibbonachi.h" />
+    <ClInclude Include="..\src\algoritms\find_largest_sum_in_array.h" />
+    <ClInclude Include="..\src\algoritms\free_linked_list.h" />
+    <ClInclude Include="..\src\algoritms\google_test.h" />
+    <ClInclude Include="..\src\algoritms\heapsort.h" />
+    <ClInclude Include="..\src\algoritms\insertsort.h" />
+    <ClInclude Include="..\src\algoritms\insert_into_sorted_list.h" />
+    <ClInclude Include="..\src\algoritms\merge_sort.h" />
+    <ClInclude Include="..\src\algoritms\merge_sort_linked_list.h" />
+    <ClInclude Include="..\src\algoritms\multiply_7.h" />
+    <ClInclude Include="..\src\algoritms\multiply_by_7.h" />
+    <ClInclude Include="..\src\algoritms\my_atoi.h" />
+    <ClInclude Include="..\src\algoritms\num_to_str.h" />
+    <ClInclude Include="..\src\algoritms\palindrome.h" />
+    <ClInclude Include="..\src\algoritms\palindrom_rec.h" />
+    <ClInclude Include="..\src\algoritms\power_of2.h" />
+    <ClInclude Include="..\src\algoritms\power_of2_2.h" />
+    <ClInclude Include="..\src\algoritms\power_of_2.h" />
+    <ClInclude Include="..\src\algoritms\power_of_two.h" />
+    <ClInclude Include="..\src\algoritms\power_of_two_2.h" />
+    <ClInclude Include="..\src\algoritms\quicksort.h" />
+    <ClInclude Include="..\src\algoritms\radixsort.h" />
+    <ClInclude Include="..\src\algoritms\remove_elem_from_dlist.h" />
+    <ClInclude Include="..\src\algoritms\remove_from_list.h" />
+    <ClInclude Include="..\src\algoritms\remove_Nth_from_dlist.h" />
+    <ClInclude Include="..\src\algoritms\remove_substr_in_str.h" />
+    <ClInclude Include="..\src\algoritms\repeat_number_in_array.h" />
+    <ClInclude Include="..\src\algoritms\reverse_chars.h" />
+    <ClInclude Include="..\src\algoritms\reverse_chars2.h" />
+    <ClInclude Include="..\src\algoritms\reverse_integer.h" />
+    <ClInclude Include="..\src\algoritms\reverse_linked_list.h" />
+    <ClInclude Include="..\src\algoritms\reverse_linked_list2.h" />
+    <ClInclude Include="..\src\algoritms\reverse_linked_list_old.h" />
+    <ClInclude Include="..\src\algoritms\reverse_llist.h" />
+    <ClInclude Include="..\src\algoritms\reverse_llist_1.h" />
+    <ClInclude Include="..\src\algoritms\reverse_sentense.h" />
+    <ClInclude Include="..\src\algoritms\reverse_string.h" />
+    <ClInclude Include="..\src\algoritms\reverse_string_1.h" />
+    <ClInclude Include="..\src\algoritms\reverse_words_in_sentense.h" />
+    <ClInclude Include="..\src\algoritms\revert_slist.h" />
+    <ClInclude Include="..\src\algoritms\search_test.h" />
+    <ClInclude Include="..\src\algoritms\singleton.h" />
+    <ClInclude Include="..\src\algoritms\singleton_with_mutex.h" />
+    <ClInclude Include="..\src\algoritms\square_root.h" />
+    <ClInclude Include="..\src\algoritms\string_unique_chars.h" />
+    <ClInclude Include="..\src\algoritms\substr_search.h" />
+    <ClInclude Include="..\src\algoritms\sum_1_to_N.h" />
+    <ClInclude Include="..\src\algoritms\tree_traversal.h" />
+    <ClInclude Include="..\src\boost\boosts.h" />
+    <ClInclude Include="..\src\boost\boost_2.h" />
+    <ClInclude Include="..\src\boost\boost_3.h" />
+    <ClInclude Include="..\src\boost\boost_4.h" />
+    <ClInclude Include="..\src\boost\boost_5.h" />
+    <ClInclude Include="..\src\boost\boost_6.h" />
+    <ClInclude Include="..\src\boost\boost_7.h" />
+    <ClInclude Include="..\src\boost\boost_asio.h" />
+    <ClInclude Include="..\src\boost\boost_cond.h" />
+    <ClInclude Include="..\src\boost\boost_lambda.h" />
+    <ClInclude Include="..\src\boost\boost_lexical.h" />
+    <ClInclude Include="..\src\boost\boost_pc.h" />
+    <ClInclude Include="..\src\boost\boost_pc_2.h" />
+    <ClInclude Include="..\src\boost\boost_prod_cons.h" />
+    <ClInclude Include="..\src\boost\boost_shared_lock.h" />
+    <ClInclude Include="..\src\boost\boost_shared_mutex.h" />
+    <ClInclude Include="..\src\boost\boost_threads.h" />
+    <ClInclude Include="..\src\cpp0x\cpp0x.h" />
+    <ClInclude Include="..\src\cpp0x\cpp0x_thread.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\arrays_and_strings.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_1_string_has_all_unique_characters.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_2_reverse_c_string.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_3_remove_duplicates_form_string.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_4_strings_are_anagram.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_5_replace_all_spaces_in_string_with_pers20.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_6_rotate_image.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_7_if_element_matrix_is_0_entire_row_and_column_set_0.h" />
+    <ClInclude Include="..\src\cracking_code_interview\arrays_and_strings\test_1_8_check_string_rotation_if_has_substr.h" />
+    <ClInclude Include="..\src\cracking_code_interview\cplusplus\cplusplus.h" />
+    <ClInclude Include="..\src\cracking_code_interview\cplusplus\test_13_1_print_last_k_lines.h" />
+    <ClInclude Include="..\src\cracking_code_interview\cplusplus\test_13_8_copy_node_to_structure.h" />
+    <ClInclude Include="..\src\cracking_code_interview\cplusplus\test_13_9_smart_ptr.h" />
+    <ClInclude Include="..\src\cracking_code_interview\cracking.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\linked_lists.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\test_2_1_remove_duplicates from_unsorted_linked)list.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\test_2_2_find_nth_to last_element_of_slist.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\test_2_3_delete_in_middle_slist.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\test_2_4_sum_linked_list.h" />
+    <ClInclude Include="..\src\cracking_code_interview\linked_lists\test_2_5_find_beginning_of_loop_in_circular_ilst.h" />
+    <ClInclude Include="..\src\cracking_code_interview\low_level\low_level.h" />
+    <ClInclude Include="..\src\cracking_code_interview\low_level\test_16_10_two_dim_array.h" />
+    <ClInclude Include="..\src\cracking_code_interview\low_level\test_16_5_little_big_endian.h" />
+    <ClInclude Include="..\src\cracking_code_interview\stacks_and_queues.h\stacks_and_queues.h" />
+    <ClInclude Include="..\src\cracking_code_interview\stacks_and_queues.h\test_3_5_myque_using_two_stacks.h" />
+    <ClInclude Include="..\src\cracking_code_interview\stacks_and_queues.h\test_3_6_sort_stack.h" />
+    <ClInclude Include="..\src\cracking_code_interview\threads_and_locks\test_18_3_singleton_with_lock.h" />
+    <ClInclude Include="..\src\cracking_code_interview\threads_and_locks\threads_and_locks.h" />
+    <ClInclude Include="..\src\cracking_code_interview\trees_and_graphs\test_4_1.h" />
+    <ClInclude Include="..\src\cracking_code_interview\trees_and_graphs\trees_and_graphs.h" />
+    <ClInclude Include="..\src\demo\demo_http_server\demo_http_server.h" />
+    <ClInclude Include="..\src\demo\demo_http_server\stdafx.h" />
+    <ClInclude Include="..\src\demo\demo_http_server\targetver.h" />
+    <ClInclude Include="..\src\demo\iface\transport_defs.h" />
+    <ClInclude Include="..\src\demo\stdafx.h" />
+    <ClInclude Include="..\src\demo\targetver.h" />
+    <ClInclude Include="..\src\epee\include\ado_db_helper.h" />
+    <ClInclude Include="..\src\epee\include\console_handler.h" />
+    <ClInclude Include="..\src\epee\include\file_io_utils.h" />
+    <ClInclude Include="..\src\epee\include\global_stream_operators.h" />
+    <ClInclude Include="..\src\epee\include\gzip_encoding.h" />
+    <ClInclude Include="..\src\epee\include\hmac-md5.h" />
+    <ClInclude Include="..\src\epee\include\include_base_utils.h" />
+    <ClInclude Include="..\src\epee\include\logger.h" />
+    <ClInclude Include="..\src\epee\include\log_opt_defs.h" />
+    <ClInclude Include="..\src\epee\include\math_helper.h" />
+    <ClInclude Include="..\src\epee\include\md5global.h" />
+    <ClInclude Include="..\src\epee\include\md5_l.h" />
+    <ClInclude Include="..\src\epee\include\misc_language.h" />
+    <ClInclude Include="..\src\epee\include\misc_log_ex.h" />
+    <ClInclude Include="..\src\epee\include\misc_os_dependent.h" />
+    <ClInclude Include="..\src\epee\include\net\abstract_tcp_server.h" />
+    <ClInclude Include="..\src\epee\include\net\abstract_tcp_server2.h" />
+    <ClInclude Include="..\src\epee\include\net\abstract_tcp_server_cp.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_base.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_client.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_helper.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_protocol_handler.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_server_cp.h" />
+    <ClInclude Include="..\src\epee\include\net\anmp_server_cp2.h" />
+    <ClInclude Include="..\src\epee\include\net\http_base.h" />
+    <ClInclude Include="..\src\epee\include\net\http_client.h" />
+    <ClInclude Include="..\src\epee\include\net\http_client_via_api_helper.h" />
+    <ClInclude Include="..\src\epee\include\net\http_server.h" />
+    <ClInclude Include="..\src\epee\include\net\http_server_cp.h" />
+    <ClInclude Include="..\src\epee\include\net\http_server_cp2.h" />
+    <ClInclude Include="..\src\epee\include\net\http_server_handlers_map.h" />
+    <ClInclude Include="..\src\epee\include\net\http_server_thread_per_connect.h" />
+    <ClInclude Include="..\src\epee\include\net\multiprotocols_server.h" />
+    <ClInclude Include="..\src\epee\include\net\munin_connection_handler.h" />
+    <ClInclude Include="..\src\epee\include\net\munin_node_server.h" />
+    <ClInclude Include="..\src\epee\include\net\net_helper.h" />
+    <ClInclude Include="..\src\epee\include\net\net_parse_helpers.h" />
+    <ClInclude Include="..\src\epee\include\net\net_utils_base.h" />
+    <ClInclude Include="..\src\epee\include\net\protocol_switcher.h" />
+    <ClInclude Include="..\src\epee\include\net\smtp.h" />
+    <ClInclude Include="..\src\epee\include\net\smtp_helper.h" />
+    <ClInclude Include="..\src\epee\include\profile_tools.h" />
+    <ClInclude Include="..\src\epee\include\reg_exp_definer.h" />
+    <ClInclude Include="..\src\epee\include\reg_utils.h" />
+    <ClInclude Include="..\src\epee\include\serialization\mem_block.h" />
+    <ClInclude Include="..\src\epee\include\serialization\NamedSerialize.h" />
+    <ClInclude Include="..\src\epee\include\service_impl_base.h" />
+    <ClInclude Include="..\src\epee\include\sha1.h" />
+    <ClInclude Include="..\src\epee\include\soci_helper.h" />
+    <ClInclude Include="..\src\epee\include\static_initializer.h" />
+    <ClInclude Include="..\src\epee\include\stdafx.h" />
+    <ClInclude Include="..\src\epee\include\storages\abstract_invoke.h" />
+    <ClInclude Include="..\src\epee\include\storages\crypted_storage.h" />
+    <ClInclude Include="..\src\epee\include\storages\gzipped_inmemstorage.h" />
+    <ClInclude Include="..\src\epee\include\storages\inmemstorage.h" />
+    <ClInclude Include="..\src\epee\include\storages\inmemtoxml.h" />
+    <ClInclude Include="..\src\epee\include\storages\inmem_to_json.h" />
+    <ClInclude Include="..\src\epee\include\storages\InRegStorage.h" />
+    <ClInclude Include="..\src\epee\include\storages\parserse_base_utils.h" />
+    <ClInclude Include="..\src\epee\include\storages\serializeble_struct_helper.h" />
+    <ClInclude Include="..\src\epee\include\string_coding.h" />
+    <ClInclude Include="..\src\epee\include\string_tools.h" />
+    <ClInclude Include="..\src\epee\include\string_utils.h" />
+    <ClInclude Include="..\src\epee\include\syncobj.h" />
+    <ClInclude Include="..\src\epee\include\targetver.h" />
+    <ClInclude Include="..\src\epee\include\time_helper.h" />
+    <ClInclude Include="..\src\epee\include\tiny_ini.h" />
+    <ClInclude Include="..\src\epee\include\to_nonconst_iterator.h" />
+    <ClInclude Include="..\src\epee\include\utils.h" />
+    <ClInclude Include="..\src\epee\include\winobj.h" />
+    <ClInclude Include="..\src\epee\include\zlib_helper.h" />
+    <ClInclude Include="..\src\func\func.h" />
+    <ClInclude Include="..\src\func\functors.h" />
+    <ClInclude Include="..\src\hashcode\hashcodes.h" />
+    <ClInclude Include="..\src\hashcode\hash_function_sample.h" />
+    <ClInclude Include="..\src\lambda\lambda.h" />
+    <ClInclude Include="..\src\lambda\lambda_test1.h" />
+    <ClInclude Include="..\src\lambda\lambda_test2.h" />
+    <ClInclude Include="..\src\lambda\lambda_test3.h" />
+    <ClInclude Include="..\src\language\binary.h" />
+    <ClInclude Include="..\src\language\bind1st.h" />
+    <ClInclude Include="..\src\language\bind2nd.h" />
+    <ClInclude Include="..\src\language\binder1st.h" />
+    <ClInclude Include="..\src\language\binder2nd.h" />
+    <ClInclude Include="..\src\language\bits_arithmetic.h" />
+    <ClInclude Include="..\src\language\blo.h" />
+    <ClInclude Include="..\src\language\brainbench_1.h" />
+    <ClInclude Include="..\src\language\brainbench_2.h" />
+    <ClInclude Include="..\src\language\cast_1.h" />
+    <ClInclude Include="..\src\language\cast_2.h" />
+    <ClInclude Include="..\src\language\char_array.h" />
+    <ClInclude Include="..\src\language\class_initialization.h" />
+    <ClInclude Include="..\src\language\condition_x_0_or_1.h" />
+    <ClInclude Include="..\src\language\constructor_exception.h" />
+    <ClInclude Include="..\src\language\const_char_test.h" />
+    <ClInclude Include="..\src\language\const_const.h" />
+    <ClInclude Include="..\src\language\const_method.h" />
+    <ClInclude Include="..\src\language\const_test.h" />
+    <ClInclude Include="..\src\language\cout.h" />
+    <ClInclude Include="..\src\language\ctor_test.h" />
+    <ClInclude Include="..\src\language\db_test.h" />
+    <ClInclude Include="..\src\language\delete.h" />
+    <ClInclude Include="..\src\language\dino_test.h" />
+    <ClInclude Include="..\src\language\dynamic_cast.h" />
+    <ClInclude Include="..\src\language\embar_test.h" />
+    <ClInclude Include="..\src\language\errno.h" />
+    <ClInclude Include="..\src\language\exception_in_destructor.h" />
+    <ClInclude Include="..\src\language\exception_test.h" />
+    <ClInclude Include="..\src\language\explicit_ctor.h" />
+    <ClInclude Include="..\src\language\find_loop_in_slist.h" />
+    <ClInclude Include="..\src\language\functions_test.h" />
+    <ClInclude Include="..\src\language\function_parameter.h" />
+    <ClInclude Include="..\src\language\function_pointers.h" />
+    <ClInclude Include="..\src\language\generic_list_test.h" />
+    <ClInclude Include="..\src\language\goto_.h" />
+    <ClInclude Include="..\src\language\huge_val.h" />
+    <ClInclude Include="..\src\language\huge_val_duoble.h" />
+    <ClInclude Include="..\src\language\inheritance.h" />
+    <ClInclude Include="..\src\language\initialization_list.h" />
+    <ClInclude Include="..\src\language\initialization_with_this.h" />
+    <ClInclude Include="..\src\language\inner_outer.h" />
+    <ClInclude Include="..\src\language\intialization_test.h" />
+    <ClInclude Include="..\src\language\int_2_bin.h" />
+    <ClInclude Include="..\src\language\io_tests.h" />
+    <ClInclude Include="..\src\language\istringstream.h" />
+    <ClInclude Include="..\src\language\iterator.h" />
+    <ClInclude Include="..\src\language\ItoaTest.h" />
+    <ClInclude Include="..\src\language\itoa_test.h" />
+    <ClInclude Include="..\src\language\language.h" />
+    <ClInclude Include="..\src\language\last_include_index.h" />
+    <ClInclude Include="..\src\language\list_find.h" />
+    <ClInclude Include="..\src\language\lock_test_1.h" />
+    <ClInclude Include="..\src\language\loop_in_switch.h" />
+    <ClInclude Include="..\src\language\method_hiding.h" />
+    <ClInclude Include="..\src\language\ms_itoa_3.h" />
+    <ClInclude Include="..\src\language\ms_nth_node_test.h" />
+    <ClInclude Include="..\src\language\ms_strtoi.h" />
+    <ClInclude Include="..\src\language\ms_test_3.h" />
+    <ClInclude Include="..\src\language\multition.h" />
+    <ClInclude Include="..\src\language\mutex_wrap.h" />
+    <ClInclude Include="..\src\language\my_deque.h" />
+    <ClInclude Include="..\src\language\my_header.h" />
+    <ClInclude Include="..\src\language\my_limits.h" />
+    <ClInclude Include="..\src\language\my_queue.h" />
+    <ClInclude Include="..\src\language\my_stack.h" />
+    <ClInclude Include="..\src\language\namespace_test.h" />
+    <ClInclude Include="..\src\language\operator_cast.h" />
+    <ClInclude Include="..\src\language\operator_cast_2.h" />
+    <ClInclude Include="..\src\language\ostream_change.h" />
+    <ClInclude Include="..\src\language\own_sizeof.h" />
+    <ClInclude Include="..\src\language\pointer_2_function.h" />
+    <ClInclude Include="..\src\language\pointer_as_param.h" />
+    <ClInclude Include="..\src\language\prefix_postfix_test.h" />
+    <ClInclude Include="..\src\language\printf_test.h" />
+    <ClInclude Include="..\src\language\private_constructor.h" />
+    <ClInclude Include="..\src\language\ptr_test.h" />
+    <ClInclude Include="..\src\language\pure_virtual_call.h" />
+    <ClInclude Include="..\src\language\put_char.h" />
+    <ClInclude Include="..\src\language\que_test.h" />
+    <ClInclude Include="..\src\language\set_test.h" />
+    <ClInclude Include="..\src\language\sizeof.h" />
+    <ClInclude Include="..\src\language\sizeof_class.h" />
+    <ClInclude Include="..\src\language\sizeof_test.h" />
+    <ClInclude Include="..\src\language\smartptr_test.h" />
+    <ClInclude Include="..\src\language\smart_ptr_test.h" />
+    <ClInclude Include="..\src\language\stack_container.h" />
+    <ClInclude Include="..\src\language\static_cast.h" />
+    <ClInclude Include="..\src\language\stdouttest.h" />
+    <ClInclude Include="..\src\language\std_map.h" />
+    <ClInclude Include="..\src\language\std_qsort.h" />
+    <ClInclude Include="..\src\language\stl.h" />
+    <ClInclude Include="..\src\language\stl_tests.h" />
+    <ClInclude Include="..\src\language\string_literal.h" />
+    <ClInclude Include="..\src\language\string_test.h" />
+    <ClInclude Include="..\src\language\strlen.h" />
+    <ClInclude Include="..\src\language\strlen_test.h" />
+    <ClInclude Include="..\src\language\test_ansi.h" />
+    <ClInclude Include="..\src\language\trace.h" />
+    <ClInclude Include="..\src\language\two_dimensional_array.h" />
+    <ClInclude Include="..\src\language\union.h" />
+    <ClInclude Include="..\src\language\vector_pointer_arithmetic.h" />
+    <ClInclude Include="..\src\language\virtual_destr.h" />
+    <ClInclude Include="..\src\language\virtual_function_default_param.h" />
+    <ClInclude Include="..\src\language\virtual_method.h" />
+    <ClInclude Include="..\src\lock-free\lock_free.h" />
+    <ClInclude Include="..\src\lock-free\lock_free1.h" />
+    <ClInclude Include="..\src\patterns\abstract_factory.h" />
+    <ClInclude Include="..\src\patterns\adapter.h" />
+    <ClInclude Include="..\src\patterns\bridge.h" />
+    <ClInclude Include="..\src\patterns\builder.h" />
+    <ClInclude Include="..\src\patterns\chain_of_responsibility.h" />
+    <ClInclude Include="..\src\patterns\command.h" />
+    <ClInclude Include="..\src\patterns\composite.h" />
+    <ClInclude Include="..\src\patterns\decorator.h" />
+    <ClInclude Include="..\src\patterns\facade.h" />
+    <ClInclude Include="..\src\patterns\factory_method.h" />
+    <ClInclude Include="..\src\patterns\flyweight.h" />
+    <ClInclude Include="..\src\patterns\interpreter.h" />
+    <ClInclude Include="..\src\patterns\lazy_initialization.h" />
+    <ClInclude Include="..\src\patterns\mediator.h" />
+    <ClInclude Include="..\src\patterns\memento.h" />
+    <ClInclude Include="..\src\patterns\null_object.h" />
+    <ClInclude Include="..\src\patterns\observer.h" />
+    <ClInclude Include="..\src\patterns\observer_test.h" />
+    <ClInclude Include="..\src\patterns\patterns.h" />
+    <ClInclude Include="..\src\patterns\profiler.h" />
+    <ClInclude Include="..\src\patterns\prototype.h" />
+    <ClInclude Include="..\src\patterns\proxy.h" />
+    <ClInclude Include="..\src\patterns\ProxyPatternTest.h" />
+    <ClInclude Include="..\src\patterns\resource_acquisition_is_initialization.h" />
+    <ClInclude Include="..\src\patterns\state.h" />
+    <ClInclude Include="..\src\patterns\strategy.h" />
+    <ClInclude Include="..\src\patterns\template_method.h" />
+    <ClInclude Include="..\src\patterns\visitor.h" />
+    <ClInclude Include="..\src\patterns\visitor_2.h" />
+    <ClInclude Include="..\src\patterns\visitor_templ.h" />
+    <ClInclude Include="..\src\quiz\quiz.h" />
+    <ClInclude Include="..\src\quiz\quiz_38.h" />
+    <ClInclude Include="..\src\quiz\quiz_39.h" />
+    <ClInclude Include="..\src\quiz\quiz_42.h" />
+    <ClInclude Include="..\src\quiz\quiz_43.h" />
+    <ClInclude Include="..\src\smart_ptr\smart_ptr.h" />
+    <ClInclude Include="..\src\templates\templates.h" />
+    <ClInclude Include="..\src\templates\template_factorial.h" />
+    <ClInclude Include="..\src\templates\template_keyword.h" />
+    <ClInclude Include="..\src\templates\template_method_in_non_template_class.h" />
+    <ClInclude Include="..\src\templates\template_mycontainer.h" />
+    <ClInclude Include="..\src\templates\template_test1.h" />
+    <ClInclude Include="..\src\templates\template_test2.h" />
+    <ClInclude Include="..\src\templates\template_test3.h" />
+    <ClInclude Include="..\src\templates\template_test4.h" />
+    <ClInclude Include="..\src\test.h" />
+    <ClInclude Include="..\src\tests\tests.h" />
+    <ClInclude Include="..\src\tests\tests1.h" />
+    <ClInclude Include="..\src\tests\tests10.h" />
+    <ClInclude Include="..\src\tests\tests11.h" />
+    <ClInclude Include="..\src\tests\tests12.h" />
+    <ClInclude Include="..\src\tests\tests13.h" />
+    <ClInclude Include="..\src\tests\tests14.h" />
+    <ClInclude Include="..\src\tests\tests15.h" />
+    <ClInclude Include="..\src\tests\tests16.h" />
+    <ClInclude Include="..\src\tests\tests17.h" />
+    <ClInclude Include="..\src\tests\tests18.h" />
+    <ClInclude Include="..\src\tests\tests19.h" />
+    <ClInclude Include="..\src\tests\tests2.h" />
+    <ClInclude Include="..\src\tests\tests20.h" />
+    <ClInclude Include="..\src\tests\tests21.h" />
+    <ClInclude Include="..\src\tests\tests22.h" />
+    <ClInclude Include="..\src\tests\tests3.h" />
+    <ClInclude Include="..\src\tests\tests4.h" />
+    <ClInclude Include="..\src\tests\tests5.h" />
+    <ClInclude Include="..\src\tests\tests6.h" />
+    <ClInclude Include="..\src\tests\tests7.h" />
+    <ClInclude Include="..\src\tests\tests8.h" />
+    <ClInclude Include="..\src\tests\tests9.h" />
+    <ClInclude Include="..\src\update_srv\handlers_config.h" />
+    <ClInclude Include="..\src\update_srv\incremental_update_defs.h" />
+    <ClInclude Include="..\src\update_srv\protocol_defs.h" />
+    <ClInclude Include="..\src\update_srv\protocol_events_handler.h" />
+    <ClInclude Include="..\src\update_srv\stdafx.h" />
+    <ClInclude Include="..\src\update_srv\targetver.h" />
+    <ClInclude Include="..\src\update_srv\update_req_handler.h" />
+    <ClInclude Include="..\src\update_srv\update_srv.h" />
+    <ClInclude Include="..\src\virtual\virtuals.h" />
+    <ClInclude Include="..\src\virtual\virt_access.h" />
+    <ClInclude Include="..\src\virtual\virt_cast_1.h" />
+    <ClInclude Include="..\src\virtual\virt_cast_2.h" />
+    <ClInclude Include="..\src\virtual\virt_func_1.h" />
+    <ClInclude Include="..\src\virtual\virt_func_2.h" />
+    <ClInclude Include="..\src\virtual\virt_func_3.h" />
+    <ClInclude Include="..\src\virtual\virt_func_4.h" />
+    <ClInclude Include="..\src\virtual\virt_func_5.h" />
+    <ClInclude Include="..\src\virtual\virt_func_6.h" />
+    <ClInclude Include="..\src\virtual\virt_inheritance.h" />
+    <ClInclude Include="..\src\virtual\virt_private_access.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\epee\include\md5_l.inl" />
+    <None Include="..\src\epee\include\net\abstract_tcp_server2.inl" />
+    <None Include="..\src\epee\include\net\abstract_tcp_server_cp.inl" />
+    <None Include="..\src\epee\include\net\anmp_client.inl" />
+    <None Include="..\src\epee\include\net\http_server.inl" />
+    <None Include="..\src\epee\include\net\smtp.inl" />
+    <None Include="..\src\epee\include\sha1.inl" />
+    <None Include="..\src\update_srv\update_req_handler.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
