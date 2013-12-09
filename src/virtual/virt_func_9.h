@@ -31,7 +31,7 @@ public:
 int test() {
     printf("virt_func_9::test()\n");
     D* d = new D;
-    d->print();
+    // d->print();
     return 1;
 }
 

@@ -9,7 +9,7 @@
 namespace array_characters_reverse {
 
 int test() {
-  std::cout << "Test: Reverse characters in array" << std::endl;
+  std::cout << "\tTest: Reverse characters in array" << std::endl;
   char str[] = { 'a', 'b', 'c', 'd', 'e' };
   unsigned int size = sizeof(str) / sizeof(str[0]);
   for (unsigned int i = 0; i < size; i++) {
@@ -30,7 +30,7 @@ int test() {
     std::cout << " " << str[i];
   }
   std::endl(std::cout);
-  std::cout << "<--- passed" << std::endl;
+  std::cout << "\t<--- end" << std::endl;
   return 1;
 }
 }  // namespace array_characters_reverse

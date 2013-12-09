@@ -69,7 +69,7 @@ class CQue {
 };
 
 int test() {
-  std::cout << "Test: circular que --->" << std::endl;
+  std::cout << "\tTest: circular que --->" << std::endl;
   CQue<int> cque(6);
   std::cout << "\tCQue capacity: " << cque.Capacity() << std::endl;
   std::cout << "\tPush: ";
@@ -84,7 +84,7 @@ int test() {
     std::cout << cque.Pop() << ' ';
   }
   std::endl(std::cout);
-  std::cout << "<--- tree traversal tests passed" << std::endl;
+  std::cout << "\t<--- cirqular que" << std::endl;
   return 1;
 }
 }  // namespace circular_que

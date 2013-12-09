@@ -12,10 +12,10 @@ using namespace std;
 int main()
 {
     cout << "From Qt apps!" << endl;
-    // algorithms::test();
+    algorithms::test();
     // boosts::test();
     //func:test_13_1_print_last_k_lines();
-    virtuals::test();
+    //virtuals::test();
     return 0;
 }
 

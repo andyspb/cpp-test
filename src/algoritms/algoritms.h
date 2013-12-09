@@ -44,12 +44,12 @@ int test() {
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
-//  assert(circular_que::test());
+  assert(circular_que::test());
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
 //  assert(drawcircle::test());
 //  assert(duplication::test());
-    assert(heapsort::test());
+//    assert(heapsort::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(free_linkedlist::test());
@@ -64,7 +64,7 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(quicksort::test());
 //  assert(tree_traversal_tests::test());
-  std::cout << "<--\n";
+  std::cout << "<-- algorithms end\n";
   return 1;
 }
 
