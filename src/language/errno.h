@@ -1,3 +1,6 @@
+#ifndef ERRNO_H
+#define ERRNO_H
+
 #include <errno.h>
 
 void testErrno1(void) {
@@ -7,3 +10,5 @@ void testErrno1(void) {
 void testErrno2(void) {
   errno = ENOMEM;
 }
+
+#endif // ERRNO_H

@@ -40,10 +40,10 @@ namespace algorithms {
 int test() {
   std::cout << "algorithms: -->\n";
   assert(array_characters_reverse::test());
-//  assert(array_find_duplicates::test());
-//  assert(btree_depth::test());
-//  assert(bubblesort::test());
-//  assert(byte_array_2_string::test());
+  assert(array_find_duplicates::test());
+  assert(btree_depth::test());
+  assert(bubblesort::test());
+  assert(byte_array_2_string::test());
   assert(circular_que::test());
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
