@@ -33,7 +33,7 @@ template<class T>
 void heapsort(T a[], long size) {
   long i;
   T temp;
-  for (i = (size>>1); i >= 0; --i) {
+  for (i = (size >> 1); i >= 0; --i) {
     downheap(a, i, size - 1);
   }
 
@@ -49,12 +49,12 @@ int test() {
   std::cout << "Test heapsort:\n";
   const int size = 11;
   int arr[size] = { 13, 2, 3, 1, 7, 8, 9, 11, 6, 5, 4 };
-  for (int i = 0 ; i < size; ++i) {
+  for (int i = 0; i < size; ++i) {
     std::cout << arr[i] << ' ';
   }
   std::endl(std::cout);
   heapsort<int>(arr, size);
-  for (int i = 0 ; i < size; ++i) {
+  for (int i = 0; i < size; ++i) {
     std::cout << arr[i] << ' ';
   }
   std::endl(std::cout);

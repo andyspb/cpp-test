@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 
-#include <boost/lexical_cast.hpp>
+//#include <boost/lexical_cast.hpp>
 using namespace std;
 
 namespace tests10 {
@@ -34,16 +34,16 @@ string convertInt2(int number) {
 }
 
 int main() {
-  string s = boost::lexical_cast<string>(10);
-  cout << "s: " << s << endl;
-
-  int i = 0xDEADBEEF;  // some 32-bit integer
-  char buffer[16] = { 0 };
-  sprintf(buffer, "%i.%i.%i.%i", (i >> 24) & 0xFF, (i >> 16) & 0xFF,
-          (i >> 8) & 0xFF, i & 0xFF);
-  cout << "buffer: " << buffer << endl;
-  string ss(buffer);
-  cout << "ss: " << ss << endl;
+//  string s = boost::lexical_cast<string>(10);
+//  cout << "s: " << s << endl;
+//
+//  int i = 0xDEADBEEF;  // some 32-bit integer
+//  char buffer[16] = { 0 };
+//  sprintf(buffer, "%i.%i.%i.%i", (i >> 24) & 0xFF, (i >> 16) & 0xFF,
+//          (i >> 8) & 0xFF, i & 0xFF);
+//  cout << "buffer: " << buffer << endl;
+//  string ss(buffer);
+//  cout << "ss: " << ss << endl;
   return 0;
 }
 

@@ -6,7 +6,7 @@
 #ifndef TESTS20_H_
 #define TESTS20_H_
 
-#include <boost/asio.hpp>
+//#include <boost/asio.hpp>
 //#include "misc_log_ex.h"
 
 namespace tests20 {

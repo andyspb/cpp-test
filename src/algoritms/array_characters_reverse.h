@@ -6,13 +6,13 @@
 
 //Given an array of characters. How would you reverse it. ?
 //How would you reverse it without using indexing in the array.
-namespace array_characters_reverse {
+namespace reverse_char_array {
 
 int test() {
   std::cout << "\tTest: Reverse characters in array" << std::endl;
   char str[] = { 'a', 'b', 'c', 'd', 'e' };
   unsigned int size = sizeof(str) / sizeof(str[0]);
-  for (unsigned int i = 0; i < size; i++) {
+  for (unsigned int i = 0; i < size; ++i) {
     printf(" %c", str[i]);
   }
   std::endl(std::cout);
@@ -26,7 +26,7 @@ int test() {
     ++a;
     --b;
   }
-  for (unsigned int i = 0; i < size; i++) {
+  for (unsigned int i = 0; i < size; ++i) {
     std::cout << " " << str[i];
   }
   std::endl(std::cout);

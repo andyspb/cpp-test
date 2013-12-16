@@ -29,7 +29,7 @@ int test() {
 
   Union x,y;
   x.a = 50;
-  std::strcpy(x.b, "hello");
+  strcpy(x.b, "hello");
   x.c = 21.50;
 
 //  std::cout << "Union x:" << x.a  << " " << x.b << " " << x.c << std::endl;

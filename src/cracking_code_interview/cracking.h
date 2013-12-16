@@ -14,13 +14,13 @@
 namespace cracking {
 int test() {
   std::cout << "Cracking code interviews tests" << std::endl;
-//  assert(arrays_and_strings::test());
-//  assert(cplusplus::test());
-//  assert(linked_lists::test());
-//  assert(low_level::test());
+  assert(arrays_and_strings::test());
+  assert(cplusplus::test());
+  assert(linked_lists::test());
+  assert(low_level::test());
   assert(threads_and_locks::test());
-//  assert(stacks_and_queues::test());
-//  assert(trees_and_graphs::test());
+  assert(stacks_and_queues::test());
+  assert(trees_and_graphs::test());
   std::cout << "<--- tests done" << std::endl;
   return 1;
 }

@@ -4,23 +4,24 @@
 #include <iostream>
 
 namespace virt_cast_1 {
+
 class Base {
-  public:
-    virtual ~Base() {
-      std::cout << "From Base::~Base()" << std::endl;
-    }
-    virtual void f() {
-      std::cout << "From Base::f()" << std::endl;
-    }
+ public:
+  virtual ~Base() {
+    std::cout << "From Base::~Base()" << std::endl;
+  }
+  virtual void f() {
+    std::cout << "From Base::f()" << std::endl;
+  }
 };
-class Derived: public Base {
-  public:
-    virtual ~Derived() {
-      std::cout << "From Derived::~Derived()" << std::endl;
-    }
-    virtual void f() {
-      std::cout << "From Derived::f()" << std::endl;
-    }
+class Derived : public Base {
+ public:
+  virtual ~Derived() {
+    std::cout << "From Derived::~Derived()" << std::endl;
+  }
+  virtual void f() {
+    std::cout << "From Derived::f()" << std::endl;
+  }
 };
 
 int test() {
@@ -34,7 +35,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace virt_cast_1
+}  // namespace virt_cast_1
 
 #endif // _VIRT_CAST_1_H_
-

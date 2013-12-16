@@ -68,10 +68,11 @@ class CQue {
   }
 };
 
+// test
 int test() {
   std::cout << "\tTest: circular que --->" << std::endl;
   CQue<int> cque(6);
-  std::cout << "\tCQue capacity: " << cque.Capacity() << std::endl;
+  std::cout << "\tCircQue capacity: " << cque.Capacity() << std::endl;
   std::cout << "\tPush: ";
   for (int i = 1; i < 20; ++i) {
     cque.Push(i);

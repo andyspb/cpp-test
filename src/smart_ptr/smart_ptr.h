@@ -10,25 +10,25 @@
 
 namespace smart_ptr {
 
-std::weak_ptr<int> gw;
-
-void f() {
-  if (auto spt = gw.lock()) {  // Has to be copied into a shared_ptr before usage
-    std::cout << *spt << "\n";
-  } else {
-    std::cout << "gw is expired\n";
-  }
-}
+//std::weak_ptr<int> gw;
+//
+//void f() {
+//  if (auto spt = gw.lock()) {  // Has to be copied into a shared_ptr before usage
+//    std::cout << *spt << "\n";
+//  } else {
+//    std::cout << "gw is expired\n";
+//  }
+//}
 int test() {
 
-  {
-    auto sp = std::make_shared<int>(42);
-    gw = sp;
+//  {
+//    auto sp = std::make_shared<int>(42);
+//    gw = sp;
+//
+//    f();
+//  }
 
-    f();
-  }
-
-  f();
+//  f();
   return 1;
 }
 

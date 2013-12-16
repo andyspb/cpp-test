@@ -8,7 +8,7 @@
 // You are allowed to destroy the array if you like.
 // [ I ended up giving about 4 or 5 different solutions for this, each supposedly better than the others ].
 
-namespace array_find_duplicates {
+namespace find_dup_in_array {
 int test() {
   std::cout << "\n\tTest: find duplicates in array ----> " << std::endl;
   int a[100], b[100];
@@ -34,4 +34,4 @@ int test() {
   return 1;
 }
 }  // namesapce array_find_duplicates
-#endif // _ARRAY_FIND_DUPLICATES_H
+#endif // _ARRAY_FIND_DUPLICATES_H

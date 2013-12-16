@@ -1,7 +1,3 @@
-//  cpp0x.h
-//  author: andrey.krutogolov@gmail.com
-//  date:   03.02.2013
-//  тест
 #ifndef CPP0X_H_
 #define CPP0X_H_
 
@@ -9,7 +5,6 @@
 
 #include <assert.h>
 #include <iostream>
-
 
 namespace cpp0x {
 
