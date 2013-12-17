@@ -5,7 +5,7 @@
 #ifndef CPP0X_THREAD_H_
 #define CPP0X_THREAD_H_
 
-#include <thread>
+//#include <thread>
 #include <iostream>
 
 namespace cpp0x_thread {
