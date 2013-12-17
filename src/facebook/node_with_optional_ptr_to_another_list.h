@@ -56,7 +56,38 @@ void printNodes(Node<int> *& node) {
   std::endl(std::cout);
 }
 
-Node<int> * flattenNodes(Node<int> * head) {
+Node<int>* preOrder(Node<int>* root, Node<int>* prev) {
+  if (!root) {
+    return root;
+  }
+
+  Node<int>* left(root->optional);
+  Node<int>* right(root->next);
+
+  if (!prev) {
+    prev = root;
+  } else {
+    prev->optional = 0;
+    prev->next = root;
+    prev = root;
+  }
+
+  if (left) {
+    prev = preOrder(left, prev);
+  }
+  if (right) {
+    prev = preOrder(right, prev);
+  }
+  return prev;
+}
+
+void flatten(Node<int>*& head) {
+  preOrder(head, 0);
+  return;
+}
+
+
+Node<int>* flattenNodes(Node<int> * head) {
   if (!head) {
     return head;
   }
@@ -103,10 +134,11 @@ int test() {
 
   printNodes(head);
 
-  Node<int>* h = flattenNodes(head);
+//  Node<int>* h = flattenNodes(head);
+  flatten(head);
   std::endl(std::cout);
 
-  printNodes(h);
+  printNodes(head);
   std::cout << "<---end test:\n";
   return 1;
 }
