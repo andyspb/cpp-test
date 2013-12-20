@@ -206,12 +206,6 @@
     <ClInclude Include="..\src\epee\include\net\http_server_cp2.h" />
     <ClInclude Include="..\src\epee\include\net\http_server_handlers_map.h" />
     <ClInclude Include="..\src\epee\include\net\http_server_thread_per_connect.h" />
-    <ClInclude Include="..\src\epee\include\net\multiprotocols_server.h" />
-    <ClInclude Include="..\src\epee\include\net\munin_connection_handler.h" />
-    <ClInclude Include="..\src\epee\include\net\munin_node_server.h" />
-    <ClInclude Include="..\src\epee\include\net\net_helper.h" />
-    <ClInclude Include="..\src\epee\include\net\net_parse_helpers.h" />
-    <ClInclude Include="..\src\epee\include\net\net_utils_base.h" />
     <ClInclude Include="..\src\epee\include\net\protocol_switcher.h" />
     <ClInclude Include="..\src\epee\include\net\smtp.h" />
     <ClInclude Include="..\src\epee\include\net\smtp_helper.h" />
@@ -219,7 +213,6 @@
     <ClInclude Include="..\src\epee\include\reg_exp_definer.h" />
     <ClInclude Include="..\src\epee\include\reg_utils.h" />
     <ClInclude Include="..\src\epee\include\serialization\mem_block.h" />
-    <ClInclude Include="..\src\epee\include\serialization\NamedSerialize.h" />
     <ClInclude Include="..\src\epee\include\service_impl_base.h" />
     <ClInclude Include="..\src\epee\include\sha1.h" />
     <ClInclude Include="..\src\epee\include\soci_helper.h" />
@@ -232,7 +225,6 @@
     <ClInclude Include="..\src\epee\include\storages\inmemtoxml.h" />
     <ClInclude Include="..\src\epee\include\storages\inmem_to_json.h" />
     <ClInclude Include="..\src\epee\include\storages\InRegStorage.h" />
-    <ClInclude Include="..\src\epee\include\storages\parserse_base_utils.h" />
     <ClInclude Include="..\src\epee\include\storages\serializeble_struct_helper.h" />
     <ClInclude Include="..\src\epee\include\string_coding.h" />
     <ClInclude Include="..\src\epee\include\string_tools.h" />

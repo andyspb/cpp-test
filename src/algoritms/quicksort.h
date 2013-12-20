@@ -10,9 +10,9 @@ void qsort(int *arr, int start, int end) {
   int i(start), j(end), p(start - (start - end) / 2);
   while (i < j) {
     while (i < p && arr[i] <= arr[p])
-      i++;
+      ++i;
     while (j > p && arr[j] >= arr[p])
-      j--;
+      --j;
     if (i < j) {
       int t = arr[i];
       arr[i] = arr[j];
@@ -32,7 +32,7 @@ int test() {
   std::cout << "Test: QuickSort --->" << std::endl;
   int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23 };
   int size = sizeof(arr) / sizeof(arr[0]);
-  for (int i = 0; i < size; i++) {
+  for (int i = 0; i < size; ++i) {
     std::cout << arr[i] << " ";
   }
   std::endl(std::cout);

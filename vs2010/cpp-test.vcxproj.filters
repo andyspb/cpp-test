@@ -482,24 +482,6 @@
     <ClInclude Include="..\src\epee\include\net\http_server_thread_per_connect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\multiprotocols_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\munin_connection_handler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\munin_node_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\net_helper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\net_parse_helpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\net\net_utils_base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\epee\include\net\protocol_switcher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -510,9 +492,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\epee\include\serialization\mem_block.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\serialization\NamedSerialize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\epee\include\storages\abstract_invoke.h">
@@ -534,9 +513,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\epee\include\storages\InRegStorage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\epee\include\storages\parserse_base_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\epee\include\storages\serializeble_struct_helper.h">
