@@ -38,7 +38,7 @@ class Singleton {
     Singleton(const Singleton &);             // intentionally undefined
     Singleton & operator=(const Singleton &); // intentionally undefined
 
-    static Singleton *_instance;
+    static mutable Singleton *_instance;
 
   public:
     static Singleton * getInstance();
@@ -49,10 +49,12 @@ Singleton* Singleton::_instance = 0;
 Guard Singleton::guard;
 
 Singleton* Singleton::getInstance() {
-  guard.Lock();
   if (!_instance) {
-    _instance = new Singleton();
-    //         Sleep(1000);
+    guard.Lock();
+    if (!_instance) {
+      _instance = new Singleton();
+      //         Sleep(1000);
+    }
   }
   guard.Unlock();
   return _instance;

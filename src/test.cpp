@@ -6,10 +6,10 @@
 int main(int argc, char **argv) {
   std::cout << "All test cases -------------------->" << std::endl;
 
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
-  assert(facebook::test());
+//  assert(facebook::test());
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());

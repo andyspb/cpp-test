@@ -1,38 +1,46 @@
 //Write a method that will reverse a string.
-#pragma once
+#ifndef  _REVERSE_STRING_1_H_
+#define _REVERSE_STRING_1_H_
+
 #include <iostream>
 
-using namespace std;
+namespace reverse_string_1 {
 
-void ReverseString(char *str) {
+void reverse(char *str) {
   int length = static_cast<int>(strlen(str));
   if (length <= 1) {
     return;
   }
   char temp;
-  for (int i = 0; i < length >> 1; i++) {
+  for (int i = 0; i < length >> 1; ++i) {
     temp = str[length - i - 1];
     str[length - i - 1] = str[i];
     str[i] = temp;
   }
 }
 
-void StrReverse4(char *str) {
+void reverse_rec(char *str) {
   if (*str) {
-    StrReverse4(str + 1);
+    reverse_rec(str + 1);
     putchar(*str);
-    putchar('_');
   }
 }
 
-void ReverseStringTest() {
-  cout << "Reverse string test" << endl;
-  char strForReverse[] = "This is a string for reverse.";
-  cout << "test string before reversing:" << strForReverse << endl;
-  ReverseString(strForReverse);
-  cout << "test string after reversing:" << strForReverse << endl;
-  ReverseString(strForReverse);
-  StrReverse4(strForReverse);
-  //    cout<<"test string after reversing:"<<strForReverse<<endl;
-  cout << endl;
+int test() {
+  std::cout << "Reverse string test" << std::endl;
+  char str[] = "This is a string for reverse.";
+  std::cout << "Source str:\n" << str << std::endl;
+  reverse(str);
+  std::cout << "Reversed str:\n" << str << std::endl;
+  // reverse back
+  reverse(str);
+
+  reverse_rec(str);
+  std::cout << "Reversed with recursion:\n" << str << std::endl;
+  std::cout << std::endl;
+  return 1;
 }
+
+}  // namespace reverse_string_1
+
+#endif _REVERSE_STRING_1_H_
