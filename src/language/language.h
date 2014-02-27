@@ -55,6 +55,7 @@
 #include "virtual_destr.h"
 #include "virtual_method.h"
 #include "virtual_function_default_param.h"
+#include "virtuals.h"
 
 namespace language {
 int test() {
@@ -96,7 +97,7 @@ int test() {
 
 //  assert(private_constructor::test());
 //  assert(pure_virt_call::test());
-  assert(set_test::test());
+//  assert(set_test::test());
 
   //    assert(static_cast_::test());
 //	assert(string_literal::test());
@@ -109,6 +110,7 @@ int test() {
 //  assert(virtual_destr::test());
 //  assert(virtual_method::test());
 //  assert(virtual_function_default_param::test());
+  assert(virtuals::test());
 	return 1;
 }
 } // namespace language

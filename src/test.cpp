@@ -14,7 +14,7 @@ int main(int argc, char **argv) {
 //  assert(hashcodes::test());
 //  assert(lambda::test());
 //  assert(language::test());
-//  assert(templates::test());
+  assert(templates::test());
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());

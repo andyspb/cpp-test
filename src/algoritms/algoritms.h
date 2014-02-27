@@ -56,6 +56,13 @@ int test() {
 //  assert(free_linkedlist::test());
 //  assert(find_largest_sum_in_array::test());
 //  assert(google_test::test());
+//  assert(encode_string_google::test());
+//  assert(fibbonachi::test());
+  //  assert(find_dup_in_array::test());
+//  assert(free_linkedlist::test());
+//  assert(find_largest_sum_in_array::test());
+//  assert(google_test::test());
+  //  assert(heapsort::test());
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(merge_sort::test());
@@ -66,6 +73,11 @@ int test() {
 //  assert(quicksort::test());
 //  assert(tree_traversal_tests::test());
   assert(reverse_string_1::test());
+  //  assert(quicksort::test());
+  //  assert(reverse_char_array::test());
+//  assert(reverse_linkedlist::test());
+//  assert(reverse_string_1::test());
+//  assert(tree_traversal::test());
   std::cout << "\t<-- algorithms end\n";
   return 1;
 }

@@ -29,15 +29,15 @@ void reverse_rec(char *str) {
 int test() {
   std::cout << "Reverse string test" << std::endl;
   char str[] = "This is a string for reverse.";
-  std::cout << "Source str:\n" << str << std::endl;
+  std::cout << "Source string:\n" << str << std::endl;
   reverse(str);
-  std::cout << "Reversed str:\n" << str << std::endl;
-  // reverse back
+  std::cout << "Reversed string:\n" << str << std::endl;
+  // reverse back for next test
   reverse(str);
-
+  std::cout << "Recursively reversed string:\n" ;
   reverse_rec(str);
-  std::cout << "Reversed with recursion:\n" << str << std::endl;
-  std::cout << std::endl;
+  std::endl(std::cout);
+  std::cout << "end of the test" << std::endl;
   return 1;
 }
 
