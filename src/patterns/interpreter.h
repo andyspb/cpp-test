@@ -28,7 +28,8 @@ class Interpreter {
             std::cout << std::endl;
             break;
           default:
-            throw std::runtime_error("Unknown command");
+//            throw std::runtime_error("Unknown command");
+        	break;
         }
       }
     }

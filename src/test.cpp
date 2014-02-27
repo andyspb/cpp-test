@@ -9,12 +9,12 @@ int main(int argc, char **argv) {
 //  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
-  assert(facebook::test());
+//  assert(facebook::test());
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
 //  assert(language::test());
-//  assert(templates::test());
+  assert(templates::test());
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
