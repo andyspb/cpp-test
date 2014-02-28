@@ -1,5 +1,5 @@
-#ifndef _ALGO_21_H
-#define _ALGO_21_H
+#ifndef REMOVE_NTH_FROM_DLIST_H
+#define REMOVE_NTH_FROM_DLIST_H
 
 #include "common_data.h"
 //Delete an element from a doubly linked list.
@@ -41,4 +41,4 @@ int remove_Nth_from_dlist(DList ** list, int n) {
 
 }
 
-#endif //_ALGO_22_H
+#endif  // REMOVE_NTH_FROM_DLIST_H
