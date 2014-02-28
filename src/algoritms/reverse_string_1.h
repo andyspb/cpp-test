@@ -21,7 +21,7 @@ void reverse(char *str) {
 
 void reverse_rec(char *str) {
   if (*str) {
-	  reverse_rec(str + 1);
+    reverse_rec(str + 1);
     putchar(*str);
   }
 }
