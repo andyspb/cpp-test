@@ -6,6 +6,7 @@
 #include "algoritms/algoritms.h"
 #include "cpp0x/cpp0x.h"
 #include "cracking_code_interview/cracking.h"
+#include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "func/func.h"
 #include "hashcode/hashcodes.h"
