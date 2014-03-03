@@ -9,7 +9,7 @@ namespace count_ones_in_binary {
 int number_of_ones_in_N(int b) {
   printf(" %d has", b);
   int n = 0;
-  for (n = 0; b; n++) {
+  for (n = 0; b; ++n) {
     b &= b - 1;
   }
   printf(" %d ones\n", n);
