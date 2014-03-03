@@ -12,23 +12,33 @@
 
 namespace exception_ {
 
-//struct my_exc1 : virtual std::exception {
-//  char const* what() const throw ();
-//};
-struct my_exc2 :  std::exception {
-  char const* what() const throw ();
+struct my_exc1 : std::exception {
+  char const* what() const throw () {
+    return "what my_exc1";
+  }
 };
-struct your_exc3 : my_exc2 {
+
+struct my_exc2 : std::exception {
+  char const* what() const throw () {
+    return "what my_exc2";
+  }
+};
+struct your_exc3 : my_exc1, my_exc2 {
 
 };
 
 int test() {
+  std::cout << "exception_::test() --->\n";
   try {
     throw your_exc3();
-  } catch (std::exception const& e) {
-  } catch (...) {
+  }
+  catch (std::exception const& e) {
+    std::cout << e.what();
+  }
+  catch (...) {
     std::cout << "whoops!" << std::endl;
   }
+  std::cout << "<---\n";
   return 1;
 }
 
