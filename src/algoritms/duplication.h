@@ -17,9 +17,10 @@ int test() {
   }
   a[33] = 22;
   a[11] = 44;
-  for (int i = 0; i < 100; i++)
+  for (int i = 0; i < 100; ++i) {
     b[i] = 0;
-  for (int i = 0; i < 100; i++) {
+  }
+  for (int i = 0; i < 100; ++i) {
     if (b[a[i]]) {
       std::cout << "duplication found a[" << i << "]=" << a[i] << std::endl;
     } else
