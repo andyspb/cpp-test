@@ -39,7 +39,8 @@
 
 namespace algorithms {
 int test() {
-  std::cout << "\talgorithms: -->\n";
+  std::cout << "\t";
+  std::cout << "Algorithms: -->\n";
   assert(btree_depth::test());
   assert(bubblesort::test());
   assert(byte_array_2_string::test());

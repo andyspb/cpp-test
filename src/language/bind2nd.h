@@ -14,7 +14,7 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace bind2nd_
+}  // namespace bind2nd_
 
 #endif  // _BIND2ND_H_
 

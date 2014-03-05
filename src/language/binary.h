@@ -26,6 +26,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace binary
+}  // namespace binary
 
 #endif //  _BINARY_H_

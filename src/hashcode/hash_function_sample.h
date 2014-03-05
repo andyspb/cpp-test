@@ -20,12 +20,12 @@ size_t hash(const std::string &data) {
   return h;
 }
 
-int hash2 (string word) {
-    int result = 0;
-    for(size_t i = 0; i < word.length(); ++i) {
-        result += word[i] * pow( (float) 31, (int) i);
-    }
-    return result;
+int hash2(string word) {
+  int result = 0;
+  for (size_t i = 0; i < word.length(); ++i) {
+    result += word[i] * pow((float) 31, (int) i);
+  }
+  return result;
 }
 
 int test() {
@@ -38,14 +38,12 @@ int test() {
   test_strings.push_back("five");
   test_strings.push_back("six");
   test_strings.push_back("one");
-  for( my_iter it = test_strings.begin();
-      it != test_strings.end(); ++it) {
-      std::cout << "hash(\""<<*it << "\") = " << hash(*it) << std::endl;
+  for (my_iter it = test_strings.begin(); it != test_strings.end(); ++it) {
+    std::cout << "hash(\"" << *it << "\") = " << hash(*it) << std::endl;
   }
 
-  for( my_iter it = test_strings.begin();
-      it != test_strings.end(); ++it) {
-      std::cout << "hash2(\""<<*it << "\") = " << hash2(*it) << std::endl;
+  for (my_iter it = test_strings.begin(); it != test_strings.end(); ++it) {
+    std::cout << "hash2(\"" << *it << "\") = " << hash2(*it) << std::endl;
   }
 
   return 1;

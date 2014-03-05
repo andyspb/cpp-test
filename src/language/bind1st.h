@@ -22,6 +22,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace bind1st_
+}  // namespace bind1st_
 
 #endif // #define _BIND1ST_H_
