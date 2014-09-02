@@ -27,6 +27,8 @@
 #include "cout.h"
 #include "delete.h"
 #include "dynamic_cast.h"
+#include "dynamic_cast_2.h"
+#include "dynamic_cast_3.h"
 #include "generic_list_test.h"
 #include "goto_.h"
 #include "que_test.h"
@@ -78,6 +80,8 @@ int test() {
 //  assert(cout_::test());
 //  assert(delete_::test());
 //  assert(dynamic_cast_::test());
+//  assert(dynamic_cast_2::test());
+  assert(dynamic_cast_3::test());
 //  assert(function_parameter::test());
 
 //  assert(goto_::test());
@@ -110,7 +114,7 @@ int test() {
 //  assert(virtual_destr::test());
 //  assert(virtual_method::test());
 //  assert(virtual_function_default_param::test());
-  assert(virtuals::test());
+//  assert(virtuals::test());
 	return 1;
 }
 } // namespace language
