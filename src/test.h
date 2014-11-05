@@ -20,4 +20,6 @@
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
 
+#include "last/last_1.h"
+
 #endif /* TEST_H_ */

@@ -14,13 +14,16 @@ int main(int argc, char **argv) {
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
-  assert(language::test());
+//  assert(language::test());
 //  assert(templates::test());
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
 //  assert(tests::test());
 //  assert(virtuals::test());
+
+  assert(last_1::test());
+
   std::cout << "\n<-------------------- All done" << std::endl;
   return 0;
 
