@@ -23,8 +23,11 @@ int main(int argc, char **argv) {
 //  assert(virtuals::test());
 
 //  assert(last_1::test());
+//  assert(static_::test());
 
-  assert(static_::test());
+  assert(array::test());
+
+
   std::cout << "\n<-------------------- All done" << std::endl;
   return 0;
 

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "algoritms/algoritms.h"
+#include "array/array.h"
 #include "cpp0x/cpp0x.h"
 #include "cracking_code_interview/cracking.h"
 #include "exception/exceptions.h"
