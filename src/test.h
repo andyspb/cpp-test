@@ -16,6 +16,7 @@
 #include "patterns/patterns.h"
 #include "templates/templates.h"
 #include "smart_ptr/smart_ptr.h"
+#include "static/static.h"
 #include "tests/tests.h"
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"

@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include <memory>
 
 namespace composite {
 class Graphic {
