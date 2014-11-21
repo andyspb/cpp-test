@@ -52,6 +52,4 @@ int test() {
 
 }  // template_test5
 
-
-
 #endif /* TEMPLATE_TEST5_H_ */

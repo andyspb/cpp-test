@@ -16,6 +16,7 @@
 #include "language/language.h"
 #include "lambda/lambda.h"
 #include "lock-free/lock_free.h"
+#include "memory/mem_test.h"
 #include "patterns/patterns.h"
 #include "templates/templates.h"
 #include "smart_ptr/smart_ptr.h"
@@ -31,7 +32,7 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
 //  assert(exceptions::test());
@@ -40,7 +41,10 @@ int main(int argc, char **argv) {
 //  assert(hashcodes::test());
 //  assert(lambda::test());
 //  assert(language::test());
-//  assert(templates::test());
+
+  assert(mem_test::test());
+
+  //  assert(templates::test());
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
