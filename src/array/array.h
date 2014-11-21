@@ -23,8 +23,9 @@ int test() {
          *(arr + i*column + j) = ++count;
 
     for (i = 0; i < row; i++) {
-      for (j = 0; j < column; j++)
+      for (j = 0; j < column; j++) {
          printf("%d ", *(arr + i*column + j));
+      }
       printf("%s", "\n");
     }
    /* Code for further processing and free the

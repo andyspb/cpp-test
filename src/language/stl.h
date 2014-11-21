@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __STL_H__
+#define __STL_H__
 
 using namespace std;
 namespace stl_test {
@@ -14,3 +15,5 @@ void test() {
 }
 
 }
+
+#endif  // __STL_H__

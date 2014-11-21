@@ -88,7 +88,6 @@ int test() {
   int x = x;
   int y = y;
 
-#pragma warning ( disable : 4101 )
   int arr[s];
 
   std::cout << "x: "<< x << std::endl;

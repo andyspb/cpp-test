@@ -14,9 +14,11 @@
 #include "template_test4.h"
 #include "template_test5.h"
 
+#include "../logger/logger.h"
+
 namespace templates {
 int test() {
-   std::cout << "Templates tests start:\n";
+   logger::LogMethodWrapperTab l("Templates tests");
 //    assert(template_factorial::test());
 //    assert(template_keyword::test());
 //    assert(template_method_in_non_template_class::test());
@@ -26,7 +28,6 @@ int test() {
 //    assert(template_test3::test());
 //    assert(template_test4::test());
   assert(template_test5::test());
-   std::cout << "Templates tests end\n";
   return 1;
 }
 }  // namespace templates

@@ -31,7 +31,7 @@ void Increment(int& arg, int value) {
   arg+=value;
 }
 
-int main() {
+int test() {
   std::cout << "Test3: " << std::endl;
   int arr[] = {1,2,3,4,5};
   for (int i = 0; i < 5; ++i) {
@@ -43,7 +43,7 @@ int main() {
     printf("%d ", arr[i]);
   }
   printf("%c", '\n');
-  return 0;
+  return 1;
 }
 
 }  // namespace test3

@@ -1,12 +1,37 @@
 #include "test.h"
 
+#include <stdio.h>
 #include <iostream>
 #include <assert.h>
 
-int main(int argc, char **argv) {
-  std::cout << "All test cases -------------------->" << std::endl;
+#include "algoritms/algoritms.h"
+#include "array/array.h"
+#include "clock/clock.h"
+#include "cpp0x/cpp0x.h"
+#include "cracking_code_interview/cracking.h"
+#include "exception/exceptions.h"
+#include "facebook/facebook.h"
+#include "func/func.h"
+#include "hashcode/hashcodes.h"
+#include "language/language.h"
+#include "lambda/lambda.h"
+#include "lock-free/lock_free.h"
+#include "patterns/patterns.h"
+#include "templates/templates.h"
+#include "smart_ptr/smart_ptr.h"
+#include "static/static.h"
+#include "tests/tests.h"
+#include "quiz/quiz.h"
+#include "virtual/virtuals.h"
 
-//  assert(algorithms::test());
+#include "logger/logger.h"
+
+#include "last/last_1.h"
+
+int main(int argc, char **argv) {
+  logger::LogMethodWrapper l("All test cases");
+
+  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
 //  assert(exceptions::test());
@@ -25,10 +50,9 @@ int main(int argc, char **argv) {
 //  assert(last_1::test());
 //  assert(static_::test());
 
-  assert(array::test());
+//  assert(array::test());
+  assert(clock_::test());
 
-
-  std::cout << "\n<-------------------- All done" << std::endl;
   return 0;
 
 }

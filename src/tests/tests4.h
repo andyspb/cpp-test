@@ -1,15 +1,9 @@
-//  tests4.h
-//  author: andrey.krutogolov@gmail.com
-//  date:   14.03.2013
-
 #ifndef TESTS4_H_
 #define TESTS4_H_
 
 #include <iostream>
 
 namespace tests4 {
-
-
 
 class A {
  public:

@@ -43,4 +43,4 @@ int test() {
 
 }  // namespace reverse_string_1
 
-#endif _REVERSE_STRING_1_H_
+#endif // _REVERSE_STRING_1_H_

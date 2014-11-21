@@ -23,7 +23,7 @@ int test() {
   }
   endl(cout);
   cout << "v size =" << v.size() << endl;
-  v.erase(std::remove(v.begin(), v.end(), 99), v.end()); // really remove all elements with value 99
+  v.erase(std::remove(v.begin(), v.end(), 99), v.end());  // really remove all elements with value 99
   cout << "v size =" << v.size() << endl;
   for (size_t i = 0; i < v.size(); ++i) {
     cout << v.at(i) << ' ';
@@ -36,6 +36,6 @@ int test() {
   cout << str << endl;
   return 1;
 }
-} //  stl_tests
+}  //  stl_tests
 
 #endif //  _STL_TESTS_H

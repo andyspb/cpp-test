@@ -1,39 +1,44 @@
 #ifndef _BTREE_DEPTH_H
 #define _BTREE_DEPTH_H
 
+#include "../logger/logger.h"
+
 #include <iostream>
 //Write a function to find the depth of a binary tree. Write a function to find the depth of a binary tree.
 
 namespace btree_depth {
-struct BTNode {
-  BTNode(int i)
+template<typename T>
+struct BinaryTreeNode {
+  BinaryTreeNode(T i)
       : data(i),
         left(0),
         right(0) {
   }
   int data;
-  BTNode * left;
-  BTNode * right;
+  BinaryTreeNode * left;
+  BinaryTreeNode * right;
 };
 int btree_data = 0;
 
-void fill_tree(BTNode *root, int& number) {
+template<typename T>
+void fill_tree(BinaryTreeNode<T> *root, T& number) {
   if (!root || number == 0)
     return;
 
-  BTNode * tmp = root;
+  BinaryTreeNode<T> * tmp = root;
   while (number != 0) {
-    BTNode * leftNode = new BTNode(++btree_data);
-    BTNode * rightNode = new BTNode(++btree_data);
+    BinaryTreeNode<T> * leftNode = new BinaryTreeNode<T>(++btree_data);
+    BinaryTreeNode<T> * rightNode = new BinaryTreeNode<T>(++btree_data);
     tmp->left = leftNode;
     tmp->right = rightNode;
     number -= 1;
-    fill_tree(leftNode, number);
-    fill_tree(rightNode, number);
+    fill_tree<T>(leftNode, number);
+    fill_tree<T>(rightNode, number);
   }
 }
 
-int btree_depth(BTNode *p) {
+template<typename T>
+int btree_depth(BinaryTreeNode<T> *p) {
   if (!p)
     return 0;
 
@@ -49,14 +54,13 @@ int btree_depth(BTNode *p) {
 }
 
 int test() {
-  std::cout << "Tests: binary tree depth" << std::endl;
-  BTNode *root = new BTNode(0);
+  logger::LogMethodWrapperTab l("Tests: binary tree depth");
+  BinaryTreeNode<int> *root = new BinaryTreeNode<int>(0);
   int elements = 3;
-  fill_tree(root, elements);
-  int depth = btree_depth(root);
-  std::cout << "BTree with " << elements << " elements depth is " << depth
+  fill_tree<int>(root, elements);
+  int depth = btree_depth<int>(root);
+  std::cout << "\t\tBTree with " << elements << " elements depth is " << depth
             << std::endl;
-  std::cout << "<--- passed" << std::endl;
   return 1;
 }
 }  // namespace btree_depth

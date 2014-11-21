@@ -74,7 +74,7 @@ void ProcessIDs() {
   free(alias_ids);
 }
 
-/* we want to use ‘theFirst’ and  ‘r’ here*/
+/* we want to use ï¿½theFirstï¿½ and  ï¿½rï¿½ here*/
 
 /*-------- GetSomeIDs-----*/
 int * GetSomeIDs() {
@@ -90,6 +90,8 @@ int * GetSomeIDs() {
 int* ReorderIDs(int *someIDs) {
   return NULL;
 }
+
+#pragma GCC diagnostic ignored "-Wunused-variable"
 
 int test() {
   int theFirst;
