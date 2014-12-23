@@ -9,6 +9,7 @@
 #define CLOCK_H_
 
 #include <iostream>
+#include <time.h>
 
 namespace clock_ {
 

@@ -20,6 +20,7 @@
 #include "patterns/patterns.h"
 #include "templates/templates.h"
 #include "smart_ptr/smart_ptr.h"
+#include "sqrt/sqrt.h"
 #include "static/static.h"
 #include "tests/tests.h"
 #include "quiz/quiz.h"
@@ -32,7 +33,7 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
 //  assert(exceptions::test());
@@ -42,7 +43,8 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 
-  assert(mem_test::test());
+//  assert(sqrt_::test());
+//  assert(mem_test::test());
 
   //  assert(templates::test());
 //  assert(patterns::test());
@@ -55,7 +57,7 @@ int main(int argc, char **argv) {
 //  assert(static_::test());
 
 //  assert(array::test());
-  assert(clock_::test());
+//  assert(clock_::test());
 
   return 0;
 

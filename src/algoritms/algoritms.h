@@ -42,7 +42,7 @@
 namespace algorithms {
 int test() {
   logger::LogMethodWrapperTab l("\tAlgorithms: -->\n");
-  assert(btree_depth::test());
+//  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
 //  assert(circular_que::test());
@@ -65,7 +65,7 @@ int test() {
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
 //  assert(reverse_char_array::test());
-//  assert(reverse_linkedlist::test());
+  assert(reverse_linkedlist::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(tree_traversal::test());
