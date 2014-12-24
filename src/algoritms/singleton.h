@@ -4,23 +4,25 @@ namespace singleton {
 
 using namespace std;
 
-class Guard {
+class ScopeLock {
   public:
-    Guard() {
+    ScopeLock() {
       //       InitializeCriticalSection(&cs);
+      Lock();
     }
-    virtual ~Guard() {
+    virtual ~ScopeLock() {
       //       DeleteCriticalSection(&cs);
+      Unlock();
     }
+
+  private:
+    //     CRITICAL_SECTION cs;
     void Lock() {
       //       EnterCriticalSection(&cs);
     }
     void Unlock() {
       //       LeaveCriticalSection(&cs);
     }
-
-  private:
-    //     CRITICAL_SECTION cs;
 };
 
 //
@@ -42,21 +44,20 @@ class Singleton {
 
   public:
     static Singleton * getInstance();
-    static Guard guard;
+    static ScopeLock lock;
 };
 
 Singleton* Singleton::_instance = 0;
-Guard Singleton::guard;
+ScopeLock Singleton::lock;
 
 Singleton* Singleton::getInstance() {
   if (!_instance) {
-    guard.Lock();
+    ScopeLock lock;
     if (!_instance) {
-      _instance = new Singleton();
-      //         Sleep(1000);
+      Singleton* tmp = new Singleton();
+      _instance = tmp;
     }
   }
-  guard.Unlock();
   return _instance;
 }
 
