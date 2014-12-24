@@ -8,7 +8,8 @@
 #include "array/array.h"
 #include "clock/clock.h"
 #include "cpp0x/cpp0x.h"
-#include "cracking_code_interview/cracking.h"
+#include "cci4/cracking4.h"
+#include "cci5/cracking5.h"
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "func/func.h"
@@ -33,9 +34,9 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(cpp0x::test());
-//  assert(cracking::test());
+  assert(cracking::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
