@@ -45,6 +45,7 @@ int test() {
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
+//  assert(circular_buffer::test());
 //  assert(circular_que::test());
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
@@ -65,7 +66,7 @@ int test() {
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
 //  assert(reverse_char_array::test());
-  assert(reverse_linkedlist::test());
+//  assert(reverse_linkedlist::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(tree_traversal::test());

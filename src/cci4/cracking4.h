@@ -11,7 +11,7 @@
 #include "threads_and_locks/threads_and_locks.h"
 #include "trees_and_graphs/trees_and_graphs.h"
 
-namespace cracking {
+namespace cracking4 {
 int test() {
   std::cout << "Cracking code interviews tests" << std::endl;
   assert(arrays_and_strings::test());

@@ -10,11 +10,19 @@ namespace tree_traversal {
 //	Binary Tree
 template<class T>
 struct Node {
-    Node(T val) : value(val), left(0), right(0) {}
-    Node() : value(0), left(0), right(0) {}
-    T value;
-    Node<T> *left;
-    Node<T> *right;
+  Node(T val)
+      : value(val),
+        left(0),
+        right(0) {
+  }
+  Node()
+      : value(0),
+        left(0),
+        right(0) {
+  }
+  T value;
+  Node<T> *left;
+  Node<T> *right;
 };
 
 // Depth-first Traversal preorder
@@ -96,8 +104,6 @@ void breadth_first_traverse(Node<T>* node) {
       q.push(t->right);
     }
   }
-
-
 }
 
 template<typename T>

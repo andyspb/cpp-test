@@ -10,6 +10,7 @@ int test() {
   std::cout << "Test: binder2nd  --->" << std::endl;
   int numbers[] = { 10, -20, -30, 40, -50, 60, -70 };
   int cx;
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
   std::binder1st<std::less<int> > IsNegative(std::less<int>(), 0);
   cx = static_cast<int>(count_if(numbers, numbers + 5, IsNegative));
   std::cout << "There are " << cx << " negative elements." << std::endl;

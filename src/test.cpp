@@ -36,7 +36,8 @@ int main(int argc, char **argv) {
 
 //  assert(algorithms::test());
 //  assert(cpp0x::test());
-  assert(cracking::test());
+//  assert(cracking::test());
+  assert(cracking5::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());

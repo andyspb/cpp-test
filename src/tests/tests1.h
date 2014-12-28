@@ -92,9 +92,11 @@ int* ReorderIDs(int *someIDs) {
 }
 
 #pragma GCC diagnostic ignored "-Wunused-variable"
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 
 int test() {
   int theFirst;
+
   int *someIDs, *r;
   someIDs = GetSomeIDs(); /* defined below */
   theFirst = someIDs[0];

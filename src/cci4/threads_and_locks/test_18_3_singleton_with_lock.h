@@ -65,6 +65,7 @@ template<class T>
 Lock Singleton<T>::lock;
 
 int test() {
+#pragma GCC diagnostic ignored "-Wunused-variable"
   A* singleton = Singleton<A>::Instance();
   return 1;
 }

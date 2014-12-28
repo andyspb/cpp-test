@@ -37,13 +37,14 @@ template<class T, int size> class Myfilebuf
       T* filepos;
       static int array[size];
 public:
-      Myfilebuf(): T(0) { /* ... */ }
+      Myfilebuf(): filepos(0) { /* ... */ }
       ~Myfilebuf();
   //    advance(); // function defined elsewhere in program
 };
 
 int test() {
   A<> a;
+#pragma GCC diagnostic ignored "-Wunused-variable"
   X<> x;
 
   f<int()>();

@@ -5,7 +5,7 @@
 
 namespace circular_que {
 template<typename T>
-class CQue {
+class CircularQue {
  private:
   enum {
     default_max = 10
@@ -16,7 +16,7 @@ class CQue {
   size_t capacity_;
   T * data_;
  public:
-  CQue(size_t max_size = default_max)
+  CircularQue(size_t max_size = default_max)
       : head_(0),
         tail_(0),
         size_(0),
@@ -24,7 +24,7 @@ class CQue {
         data_(new T[capacity_]) {
   }
 
-  ~CQue() {
+  ~CircularQue() {
     delete[] data_;
   }
 
@@ -71,7 +71,7 @@ class CQue {
 // test
 int test() {
   std::cout << "\tTest: circular que --->" << std::endl;
-  CQue<int> cque(6);
+  CircularQue<int> cque(6);
   std::cout << "\tCircQue capacity: " << cque.Capacity() << std::endl;
   std::cout << "\tPush: ";
   for (int i = 1; i < 20; ++i) {

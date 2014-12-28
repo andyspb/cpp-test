@@ -23,8 +23,7 @@ class CLock {
 
   private:
     //Non-assignable
-    CLock(CLock&) {
-    }
+    CLock(CLock&) ;
     CLock& operator=(const CLock&);
     pthread_mutex_t mutex;
 };

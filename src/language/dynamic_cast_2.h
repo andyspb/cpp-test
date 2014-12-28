@@ -15,14 +15,17 @@ namespace dynamic_cast_2 {
 
 struct A {
   virtual void f() { cout << "Class A" << endl; }
+  virtual ~A() {};
 };
 
 struct B : A {
   virtual void f() { cout << "Class B" << endl; }
+  virtual ~B() {};
 };
 
 struct C : A {
   virtual void f() { cout << "Class C" << endl; }
+  virtual ~C() {};
 };
 
 void f(A* arg) {

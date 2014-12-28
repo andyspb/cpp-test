@@ -15,6 +15,7 @@ int test() {
    {
         A a;
         goto out;
+#pragma GCC diagnostic ignored "-Wunused-variable"
         int i = 0;
     }
 out:

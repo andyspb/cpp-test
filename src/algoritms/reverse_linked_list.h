@@ -30,10 +30,10 @@ template<typename T>
 List<T> * reverse_recursive(List<T> *head) {
   if (!head || !head->next)
     return head;
-  List<T>* r(reverse_recursive(head->next));
+  List<T>* rec(reverse_recursive(head->next));
   head->next->next = head;
   head->next = 0;
-  return r;
+  return rec;
 }
 
 template<typename T>

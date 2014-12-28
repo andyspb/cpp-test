@@ -22,7 +22,9 @@ int test() {
 
   A* a;
 //  a->hello();
-  a->hello1();
+
+#pragma GCC diagnostic ignored "-Wuninitialized"
+ a->hello1();
 
   return 1;
 }

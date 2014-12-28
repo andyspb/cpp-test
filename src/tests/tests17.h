@@ -41,6 +41,7 @@ int main() {
 //  cPri.m_nProtected = 3;  // not okay: m_nProtected is now a private member when accessed through Pri
 
   // However, we can still access Base members as normal through Base:
+#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
   Base cBase;
   cBase.m_nPublic = 1;  // okay, m_nPublic is public
 //  cBase.m_nPrivate = 2;  // not okay, m_nPrivate is private
