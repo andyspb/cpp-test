@@ -20,6 +20,12 @@
 #include "2/2_4_partition_llist_around_a_value.h"
 #include "2/2_5_check_linked_list_is_palindrome.h"
 
+#include "3/3_1_impl_three_stack_with_array.h"
+#include "3/3_2_stack_with_min.h"
+
+#include "3/3_5_impl_que_with_two_stacks.h"
+#include "3/3_6_sort_stack_ascending.h"
+
 namespace cracking5 {
 int test() {
   // 1
@@ -31,12 +37,15 @@ int test() {
 //  assert(perform_string_compression::test());
 
   // 2
-  std::cout << "Cracking code interviews (5) tests 2 " << std::endl;
+//  std::cout << "Cracking code interviews (5) tests 2 " << std::endl;
 //  assert(remove_dup_from_unsorted_llist::test());
 //  assert(find_the_kth_from_list_end::test());
 
-  assert(partition_llist_around_value::test());
+  //3
+//  assert(partition_llist_around_value::test());
 //  assert(is_linked_list_palindrome::test());
+//  assert(stack_with_min::test());
+  assert(sort_stack_ascending::test());
   std::cout << "<--- tests done" << std::endl;
   return 1;
 }
