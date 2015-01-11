@@ -10,23 +10,23 @@
 namespace heapsort {
 
 template<class T>
-void downheap(T a[], long k, long n) {
+void downheap(T arr[], long k, long n) {
   T new_elem;
   long child;
-  new_elem = a[k];
+  new_elem = arr[k];
 
   while (k <= n / 2) {
     child = 2 * k;
-    if (child < n && a[child] < a[child + 1]) {
+    if (child < n && arr[child] < arr[child + 1]) {
       child++;
     }
-    if (new_elem >= a[child]) {
+    if (new_elem >= arr[child]) {
       break;
     }
-    a[k] = a[child];
+    arr[k] = arr[child];
     k = child;
   }
-  a[k] = new_elem;
+  arr[k] = new_elem;
 }
 
 template<class T>

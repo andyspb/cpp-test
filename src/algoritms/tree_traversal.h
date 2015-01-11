@@ -87,23 +87,21 @@ void postorder_traverse(Node<T>* tree) {
 // Breadth-first Traversal
 template<typename T>
 void breadth_first_traverse(Node<T>* node) {
-  if (!node) {
+  if (!node)
     return;
-  }
   std::queue<Node<T>*> q;
   q.push(node);
   Node<T>* t;
-  while (!q.empty()) {
+  while(!q.empty()) {
     t = q.front();
-    std::cout << t->value << " ";
+    std::cout << t->value << ' ';
     q.pop();
-    if (t->left) {
+    if (t->left)
       q.push(t->left);
-    }
-    if (t->right) {
+    if (t->right)
       q.push(t->right);
-    }
   }
+  std::cout << std::endl;
 }
 
 template<typename T>

@@ -18,6 +18,17 @@
 
 namespace sort_stack_ascending {
 
+void print_stack(std::stack<int> stack) {
+  while (!stack.empty()) {
+    int v;
+    v = stack.top();
+    stack.pop();
+    std::cout << v << " ";
+  }
+  std::cout << std::endl;
+}
+
+
 void sort_stack_with_2add_stacks(std::stack<int> &s) {
   int v0, v1, min;
   std::stack<int> temp_stack1, temp_stack2;
@@ -63,7 +74,7 @@ void sort_stack_with_2add_stacks(std::stack<int> &s) {
   }
 }
 
-void sort_stack_with_add_stack1(std::stack<int> &stack) {
+void sort_stack_with_1add_stack(std::stack<int> &stack) {
   int value, min_value;
   std::stack<int> temp_stack;
 
@@ -76,10 +87,12 @@ void sort_stack_with_add_stack1(std::stack<int> &stack) {
 
   while (!temp_stack.empty()) {
     min_value = temp_stack.top();
+    std::cout << "min_value = " << min_value << std::endl;
     temp_stack.pop();
 
     while (!stack.empty() && stack.top() > min_value) {
       value = stack.top();
+      std::cout << "value = " << value << std::endl;
       stack.pop();
 
       temp_stack.push(value);
@@ -101,14 +114,11 @@ int test() {
   stack.push(7);
   stack.push(7);
 
-  sort_stack_with_add_stack1(stack);
+  print_stack(stack);
 
-  while (!stack.empty()) {
-    int v;
-    v = stack.top();
-    stack.pop();
-    std::cout << v << std::endl;
-  }
+  sort_stack_with_1add_stack(stack);
+
+  print_stack(stack);
 
   return 1;
 }

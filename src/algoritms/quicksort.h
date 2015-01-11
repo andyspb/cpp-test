@@ -4,6 +4,15 @@
 #include <iostream>
 
 namespace quicksort {
+
+void print_arr(int* arr, int size) {
+  for (int i = 0; i < size; ++i) {
+    std::cout << arr[i] << " ";
+  }
+  std::cout << std::endl;
+
+}
+
 void qsort(int *arr, int start, int end) {
   if (start >= end)
     return;
@@ -18,31 +27,27 @@ void qsort(int *arr, int start, int end) {
       arr[i] = arr[j];
       arr[j] = t;
     }
-    if (p == j) {
-      p = i;
-    } else if (p == i) {
+
+    if (p == i)
       p = j;
-    }
+    else if (p == j)
+      p = i;
   }
   qsort(arr, start, p);
   qsort(arr, p + 1, end);
 }
 
 int test() {
-  std::cout << "Test: QuickSort --->" << std::endl;
+  std::cout << "test: qsort" << std::endl;
   int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23 };
   int size = sizeof(arr) / sizeof(arr[0]);
-  for (int i = 0; i < size; ++i) {
-    std::cout << arr[i] << " ";
-  }
-  std::endl(std::cout);
+  print_arr(arr, size);
   qsort(arr, 0, size - 1);
-  for (int i = 0; i < size; i++) {
-    std::cout << arr[i] << " ";
-  }
-  std::cout << "<--- test passed " << std::endl;
+  print_arr(arr, size);
+  std::cout << std::endl;
+
   return 1;
 }
-} // namespace quicksort
+}  // namespace quicksort
 
 #endif // _QUICKSORT_H_

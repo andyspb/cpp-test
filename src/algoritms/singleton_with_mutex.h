@@ -56,12 +56,15 @@ MutexGuard Singleton_with_mutex::guard;
 Singleton_with_mutex* Singleton_with_mutex::getInstance() {
   cout << "called Singleton_with_mutex::getInstance()\n";
 
-  guard.Lock();
   if (!_instance) {
-    _instance = new Singleton_with_mutex();
+    guard.Lock();
+    if (!_instance) {
+      Singleton_with_mutex* tmp = new Singleton_with_mutex();
+      _instance = tmp;
 
+    }
+    guard.Unlock();
   }
-  guard.Unlock();
   return _instance;
 }
 

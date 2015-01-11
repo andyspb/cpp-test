@@ -6,17 +6,17 @@
 namespace palindrom {
 void test() {
   char strn[] = "a rosa upala na lapu asora";
-  char *s = strn;  // point to first char
-  char *e = strn + strlen(strn) - 1;  // point to last char
+  char *first_char = strn;  // point to first char
+  char *last_char = strn + strlen(strn) - 1;  // point to last char
 
-  while (*s == *e && s != e) {
-    ++s, --e;
-    while (*s == ' ')
-      ++s;
-    while (*e == ' ')
-      --e;
+  while (*first_char == *last_char && first_char != last_char) {
+    ++first_char, --last_char;
+    while (*first_char == ' ')
+      ++first_char;
+    while (*last_char == ' ')
+      --last_char;
   }  // move towards each other
-  bool flag = (s == e);
+  bool flag = (first_char == last_char);
   if (!flag) {
     std::cout << " Not a ";
   }

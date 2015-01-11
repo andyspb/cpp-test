@@ -10,6 +10,7 @@
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
+#include "binary_search.h"
 #include "btree_depth.h"
 #include "bubblesort.h"
 #include "byte_array_2_string.h"
@@ -33,6 +34,7 @@
 #include "reverse_linked_list.h"
 #include "reverse_string_1.h"
 #include "quicksort.h"
+#include "quicksort_2linked_list.h"
 #include "tree_traversal.h"
 
 #include "../logger/logger.h"
@@ -41,8 +43,9 @@
 
 namespace algorithms {
 int test() {
-  logger::LogMethodWrapperTab l("\tAlgorithms: -->\n");
-//  assert(btree_depth::test());
+  logger::LogMethodWrapper l("algorithms\n");
+  assert(binary_search::test());
+  //  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
 //  assert(circular_buffer::test());
@@ -69,6 +72,7 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
+//  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
   return 1;
 }

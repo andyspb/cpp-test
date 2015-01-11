@@ -13,6 +13,9 @@
 #include "1/1_3_string_permutation_of_other.h"
 #include "1/1_4_replace_space_to_20.h"
 #include "1/1_5_perform_string_compression.h"
+#include "1/1_6_rotate_image_NxN_matrix.h"
+#include "1/1_7_if_elem_in_MxN_is_0_then_row_column_0.h"
+#include "1/1_8_check_if_s2_is_rotation_of_s1.h"
 
 #include "2/2_1_remove_duplicates_from_unsorted_linked_list.h"
 #include "2/2_2_find_kth_elem_of_list.h"
@@ -26,6 +29,8 @@
 #include "3/3_5_impl_que_with_two_stacks.h"
 #include "3/3_6_sort_stack_ascending.h"
 
+#include "inheritance/inheritance.h"
+
 namespace cracking5 {
 int test() {
   // 1
@@ -35,6 +40,8 @@ int test() {
 //  assert(string_permutation_of_other::test());
 //  assert(replaceSpaces::test());
 //  assert(perform_string_compression::test());
+//  assert(rotate_matrix::test());
+  assert(set_matrix_col_row_zero::test());
 
   // 2
 //  std::cout << "Cracking code interviews (5) tests 2 " << std::endl;
@@ -45,7 +52,9 @@ int test() {
 //  assert(partition_llist_around_value::test());
 //  assert(is_linked_list_palindrome::test());
 //  assert(stack_with_min::test());
-  assert(sort_stack_ascending::test());
+//  assert(sort_stack_ascending::test());
+
+//  assert(inheritance_::test());
   std::cout << "<--- tests done" << std::endl;
   return 1;
 }

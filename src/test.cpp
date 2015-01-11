@@ -34,10 +34,10 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
-  assert(cracking5::test());
+//  assert(cracking5::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
 
-  //  assert(templates::test());
+//    assert(templates::test());
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());

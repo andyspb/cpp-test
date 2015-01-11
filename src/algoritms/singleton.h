@@ -40,7 +40,7 @@ class Singleton {
     Singleton(const Singleton &);             // intentionally undefined
     Singleton & operator=(const Singleton &); // intentionally undefined
 
-    static mutable Singleton *_instance;
+    static mutable Singleton * volatile _instance;
 
   public:
     static Singleton * getInstance();

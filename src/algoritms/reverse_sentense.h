@@ -22,7 +22,7 @@ void rev_sentense(char * str) {
   }
   char *end, *x, *y;
   end = &str[length];
-  rev_word(str, end - 1);
+  rev_word(str, end - 1);;
   x = str - 1;
   y = str;
   while (x++ < end) {

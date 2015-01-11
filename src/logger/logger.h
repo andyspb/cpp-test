@@ -23,30 +23,30 @@ class LogMethodWrapper {
   LogMethodWrapper(const char* str)
   : str_(str) {
     str_ = str;
-    printf(">>>> %s >>>>\n", str_);
+    printf("%s >>>\n", str_);
   }
 
   ~LogMethodWrapper() {
-    printf("<<<< %s <<<<\n", str_);
+    printf("<<< %s\n", str_);
   }
  private:
    const char* str_;
 };
 
-class LogMethodWrapperTab {
- public:
-  LogMethodWrapperTab(const char* str)
-  : str_(str) {
-    str_ = str;
-    printf("\t>>>> %s >>>>\n", str_);
-  }
-
-  ~LogMethodWrapperTab() {
-    printf("\t<<<< %s <<<<\n", str_);
-  }
- private:
-   const char* str_;
-};
+//class LogMethodWrapperTab {
+// public:
+//  LogMethodWrapperTab(const char* str)
+//  : str_(str) {
+//    str_ = str;
+//    printf("\t>>>> %s >>>>\n", str_);
+//  }
+//
+//  ~LogMethodWrapperTab() {
+//    printf("\t<<<< %s <<<<\n", str_);
+//  }
+// private:
+//   const char* str_;
+//};
 
 }  // namespace logger
 
