@@ -1,7 +1,7 @@
 /*
  * 3_1_impl_stack_with_array.h
  *
- *  Created on: 28 дек. 2014 г.
+ *  Created on: 28 пїЅпїЅпїЅ. 2014 пїЅ.
  *      Author: andy
  */
 
@@ -18,7 +18,7 @@ class Exception : public std::exception {
   Exception(std::string msg)
       : message(msg) {
   }
-  ~Exception() {
+  ~Exception() throw() {
   }
 
   virtual const char* what() const throw () {

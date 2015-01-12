@@ -54,7 +54,7 @@ int btree_depth(BinaryTreeNode<T> *p) {
 }
 
 int test() {
-  logger::LogMethodWrapperTab l("Tests: binary tree depth");
+  logger::LogMethodWrapper l("Tests: binary tree depth");
   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(0);
   int elements = 3;
   fill_tree<int>(root, elements);
