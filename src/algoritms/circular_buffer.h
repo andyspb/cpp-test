@@ -1,20 +1,20 @@
 /*
  * circular_buffer.h
  *
- *  Created on: 28 дек. 2014 г.
+ *  Created on: 28 пїЅпїЅпїЅ. 2014 пїЅ.
  *      Author: andy
  */
 
 #ifndef _CIRCULAR_BUFFER_H_
 #define _CIRCULAR_BUFFER_H_
 
-namespace circular_buffer {
-
-/* Circular buffer example, keeps one slot open */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+namespace circular_buffer {
+
+/* Circular buffer example, keeps one slot open */
 /* Opaque buffer element type.  This would be defined by the application. */
 typedef struct { int value; } ElemType;
 

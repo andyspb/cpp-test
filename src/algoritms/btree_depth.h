@@ -38,16 +38,16 @@ void fill_tree(BinaryTreeNode<T> *root, T& number) {
 }
 
 template<typename T>
-int btree_depth(BinaryTreeNode<T> *p) {
-  if (!p)
+int btree_depth(BinaryTreeNode<T> *node) {
+  if (!node)
     return 0;
 
   int h1 = 0, h2 = 0;
-  if (p->left) {
-    h1 = btree_depth(p->left);
+  if (node->left) {
+    h1 = btree_depth(node->left);
   }
-  if (p->right) {
-    h2 = btree_depth(p->right);
+  if (node->right) {
+    h2 = btree_depth(node->right);
   }
 
   return (h1 > h2 ? h1 + 1 : h2 + 1);

@@ -36,7 +36,7 @@ void print_slist(SList * head) {
   return;
 }
 
-void insert(SList ** list, int n) {
+void insert(SList** list, int n) {
   if (!list)
     return;
   if (!(*list)) {
