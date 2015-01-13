@@ -23,6 +23,7 @@
 #include "smart_ptr/smart_ptr.h"
 #include "sqrt/sqrt.h"
 #include "static/static.h"
+#include "stl/stl.h"
 #include "tests/tests.h"
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
@@ -34,7 +35,7 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
 //  assert(cracking5::test());
@@ -52,6 +53,7 @@ int main(int argc, char **argv) {
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
+  assert(stl::test());
 //  assert(tests::test());
 //  assert(virtuals::test());
 
