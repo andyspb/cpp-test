@@ -4,6 +4,11 @@
 #include <iostream>
 #include <assert.h>
 
+#include "common/binary_tree.h"
+#include "common/linked_list.h"
+#include "common/circular_que.h"
+#include "common/node.h"
+
 #include "algoritms/algoritms.h"
 #include "array/array.h"
 #include "clock/clock.h"
