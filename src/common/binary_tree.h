@@ -54,6 +54,15 @@ struct TreeNode {
     return size(node->left) + size(node->right) + 1;
   }
 
+  bool isBST(TreeNode* node, int min, int max) {
+    if (!node)
+      return true;
+    if (node->data < min || node->data > max )
+      return false;
+    return isBST(node->left, min, node->data) && isBST(node->right, node->data, max);
+  }
+
+
   TreeNode* insert(TreeNode* node, T data) {
     if (!node)
       return new TreeNode(data);
@@ -126,6 +135,16 @@ struct TreeNode {
   }
 };
 
+template<typename T>
+void destroy(TreeNode<T> *node) {
+  if (node) {
+    destroy(node->left);
+    destroy(node->right);
+    delete node;
+  }
+}
+
+
 namespace binary_tree {
 int test() {
   std::cout << __PRETTY_FUNCTION__ << std::endl;
@@ -156,6 +175,12 @@ int test() {
 
   t1.printLevelOrder2(&t1);
   std::cout<<std::endl;
+
+  std::cout << "isBST: " << t1.isBST(&t1, 0,100);
+  std::cout<<std::endl;
+
+
+//  destroy(&t1);
   return 1;
 }
 }  // namespace binary_tree

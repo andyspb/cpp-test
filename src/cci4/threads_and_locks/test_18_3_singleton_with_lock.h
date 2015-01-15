@@ -8,6 +8,8 @@
 #ifndef TEST_18_3_SINGLETON_WITH_LOCK_H_
 #define TEST_18_3_SINGLETON_WITH_LOCK_H_
 
+#include <iostream>
+
 using namespace std;
 
 namespace test_18_3_singleton_with_lock {
@@ -15,18 +17,17 @@ namespace test_18_3_singleton_with_lock {
 class A {
 };
 
-
 /* Place holder for thread synchronization lock */
 class Lock {
-  public:
-    Lock() { /* placeholder code to create the lock */
-    }
-    ~Lock() { /* placeholder code to deallocate the lock */
-    }
-    void AcquireLock() { /* placeholder to acquire the lock */
-    }
-    void ReleaseLock() { /* placeholder to release the lock */
-    }
+ public:
+  Lock() { /* placeholder code to create the lock */
+  }
+  ~Lock() { /* placeholder code to deallocate the lock */
+  }
+  void AcquireLock() { /* placeholder to acquire the lock */
+  }
+  void ReleaseLock() { /* placeholder to release the lock */
+  }
 };
 
 /* Singleton class with a method that creates a new instance of the
@@ -34,28 +35,28 @@ class Lock {
  * already exist. */
 template<class T>
 class Singleton {
-  private:
-    static Lock lock;
-    static T* object;
-  protected:
-    Singleton() {
-    }
+ private:
+  static Lock lock;
+  static T* object;
+ protected:
+  Singleton() {
+  }
 
-  public:
-    static T * Instance() {
-      /* if object is not initialized, acquire lock */
+ public:
+  static T * Instance() {
+    /* if object is not initialized, acquire lock */
+    if (object == 0) {
+      lock.AcquireLock();
+      /* If two threads simultaneously check and pass the first “if”
+       * condition, then only the one who acquired the lock first
+       * should create the instance */
       if (object == 0) {
-        lock.AcquireLock();
-        /* If two threads simultaneously check and pass the first “if”
-         * condition, then only the one who acquired the lock first
-         * should create the instance */
-        if (object == 0) {
-          object = new T;
-        }
-        lock.ReleaseLock();
+        object = new T;
       }
-      return object;
+      lock.ReleaseLock();
     }
+    return object;
+  }
 };
 
 template<class T>
@@ -65,6 +66,8 @@ template<class T>
 Lock Singleton<T>::lock;
 
 int test() {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+
 #pragma GCC diagnostic ignored "-Wunused-variable"
   A* singleton = Singleton<A>::Instance();
   return 1;

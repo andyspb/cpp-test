@@ -33,6 +33,8 @@
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
 
+#include "overloading/overloading.h"
+
 #include "logger/logger.h"
 
 #include "last/last_1.h"
@@ -55,11 +57,14 @@ int main(int argc, char **argv) {
 //  assert(mem_test::test());
 
 //    assert(templates::test());
-//  assert(patterns::test());
+
+  assert(overloading::test());
+
+  //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
 //  assert(stl::test());
-  assert(binary_tree::test());
+//  assert(binary_tree::test());
 //  assert(tests::test());
 //  assert(virtuals::test());
 

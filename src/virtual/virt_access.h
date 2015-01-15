@@ -2,26 +2,28 @@
 using namespace std;
 namespace virt_access {
 class Base {
-  public:
-    virtual ~Base() {
-    }
-    virtual void f() {
-      cout << __FUNCTION__ << endl;
-    }
+ public:
+  virtual ~Base() {
+  }
+  virtual void f() {
+    cout << __FUNCTION__ << endl;
+  }
 };
 
-class Derived: public Base {
-  public:
-    virtual ~Derived() {
-    }
-  private:
-    void f() {
-      cout << __FUNCTION__ << endl;
-    }
-    ;
+class Derived : public Base {
+ public:
+  virtual ~Derived() {
+  }
+ private:
+  void f() {
+    cout << __FUNCTION__ << endl;
+  }
+  ;
 };
 
 int test() {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+
   Derived dobj;
   Base* bptr = &dobj;
   // D* dptr = &dobj;

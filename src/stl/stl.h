@@ -22,12 +22,12 @@ typedef std::queue<std::string> str_que;
 typedef std::stack<std::string> str_stack;
 typedef std::set<std::string> str_set;
 
-
 void print(std::pair<const std::string, int>& p) {
   std::cout << " print " << p.first << " " << p.second << std::endl;
 }
 
 int test() {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
 
   str_map mymap;
   str_set myset;
