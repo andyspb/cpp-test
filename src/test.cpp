@@ -58,7 +58,8 @@ int main(int argc, char **argv) {
 //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
-  assert(stl::test());
+//  assert(stl::test());
+  assert(binary_tree::test());
 //  assert(tests::test());
 //  assert(virtuals::test());
 
