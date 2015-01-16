@@ -34,6 +34,7 @@
 #include "virtual/virtuals.h"
 
 #include "overloading/overloading.h"
+#include "moto/moto.h"
 
 #include "logger/logger.h"
 
@@ -55,10 +56,10 @@ int main(int argc, char **argv) {
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
-
+assert(moto::test());
 //    assert(templates::test());
 
-  assert(overloading::test());
+//  assert(overloading::test());
 
   //  assert(patterns::test());
 //  assert(quiz::test());
