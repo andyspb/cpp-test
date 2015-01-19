@@ -85,8 +85,12 @@ int test() {
   vTable[0]->Call("A::Display called!");        // via function "Call"
   (*vTable[1])("B::Display called!");        // via operator "()"
 
-//#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#ifdef __linux__
 #pragma GCC diagnostic ignored "-Wuninitialized"
+#elif _WIN32
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#endif
+
   int x = x;
   int y = y;
 
