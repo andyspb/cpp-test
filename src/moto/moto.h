@@ -20,34 +20,33 @@ std::string git_diff(std::fstream& f1, std::fstream& f2) {
     throw("SOme file incorrect");
 
   std::string output;
+  std::string out1;
+  std::string out2;
   std::queue<std::string> q1;
   std::queue<std::string> q2;
-
 
   std::string s1;
   std::string s2;
 
   bool endBlock = false;
 
-  while( f1.good() && f2.good()) {
+  while( f1.good() ) {
     std::getline(f1, s1);
+    q1.push(s1+"\n");
+  }
+
+  while (f2.good()) {
     std::getline(f2, s2);
-
-    std::cout << "s1: " << s1 << std::endl;
-    std::cout << "s2: " << s2 << std::endl;
-
-    if (!endBlock) {
-      if (s1.compare(s2) != 0 ) {
-        std::cout << "s1 != s2" << std::endl;
-        q1.push(s1+"\n");
-
-    }
-
-    if (s1.compare(s2) != 0 ) {
-      std::cout << "s1 != s2" << std::endl;
-      q1.push(s1+"\n");
       q2.push(s2+"\n");
-    } else {
+  }
+
+  bool equal = false;
+  while (!q1.empty() && !q2.empty) {
+    out1 = q1.front();
+    out2 = q2.front();
+    while(!equal) {
+    }
+//    else {
 //      std::cout << "s1 == s2" << std::endl;
 //      while (!q1.empty() ) {
 //        std::cout << "!q1.empty()" << std::endl;
