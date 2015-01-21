@@ -41,7 +41,7 @@ std::string git_diff(std::fstream& f1, std::fstream& f2) {
   }
 
   bool equal = false;
-  while (!q1.empty() && !q2.empty) {
+  while (!q1.empty() && !q2.empty()) {
     out1 = q1.front();
     out2 = q2.front();
     while(!equal) {

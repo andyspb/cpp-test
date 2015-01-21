@@ -40,6 +40,8 @@
 
 #include "last/last_1.h"
 
+#include "cpp11/quick_sort.h"
+
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
@@ -56,7 +58,7 @@ int main(int argc, char **argv) {
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
-assert(moto::test());
+//assert(moto::test());
 //    assert(templates::test());
 
 //  assert(overloading::test());
@@ -74,6 +76,8 @@ assert(moto::test());
 
 //  assert(array::test());
 //  assert(clock_::test());
+
+  assert(quicksort_cpp11::test());
 
   return 0;
 
