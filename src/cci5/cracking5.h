@@ -29,6 +29,8 @@
 #include "3/3_5_impl_que_with_two_stacks.h"
 #include "3/3_6_sort_stack_ascending.h"
 
+#include "5/5_2_print_binary_of_double.h"
+
 #include "inheritance/inheritance.h"
 
 namespace cracking5 {
@@ -41,7 +43,7 @@ int test() {
 //  assert(replaceSpaces::test());
 //  assert(perform_string_compression::test());
 //  assert(rotate_matrix::test());
-  assert(set_matrix_col_row_zero::test());
+//  assert(set_matrix_col_row_zero::test());
 
   // 2
 //  std::cout << "Cracking code interviews (5) tests 2 " << std::endl;
@@ -55,6 +57,9 @@ int test() {
 //  assert(sort_stack_ascending::test());
 
 //  assert(inheritance_::test());
+
+  assert(print_binary_of_double::test());
+
   std::cout << "<--- tests done" << std::endl;
   return 1;
 }

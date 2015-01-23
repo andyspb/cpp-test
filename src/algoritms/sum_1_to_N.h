@@ -9,11 +9,11 @@ int test() {
   int n = 100;
   std::cout << "Test to calculate sum from 1 to " << n << std::endl;
   int sum = 0;
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i <= n; ++i) {
     sum = sum + i;
   }
   std::cout << "throw loop sum is " << sum << std::endl;
-  sum = n * (n - 1) / 2;
+  sum = n * (n + 1) / 2;
   std::cout << "throw n*(n+1)/2 sum is " << sum << std::endl;
   return 1;
 }
