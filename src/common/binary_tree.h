@@ -13,14 +13,17 @@
 #include <queue>
 #include <algorithm>
 
+namespace binary_tree {
+
+enum ORDER {
+  PREODER,
+  INORDER,
+  POSTRODER
+};
+
 // http://codereview.stackexchange.com/questions/35656/printing-out-a-binary-tree-level-by-level
 template<typename T>
 struct TreeNode {
-  enum ORDER {
-    PREODER,
-    INORDER,
-    POSTRODER
-  };
 
   T data;
   TreeNode* left;
@@ -57,11 +60,24 @@ struct TreeNode {
   bool isBST(TreeNode* node, int min, int max) {
     if (!node)
       return true;
-    if (node->data < min || node->data > max )
+    if (node->data < min || node->data > max)
       return false;
-    return isBST(node->left, min, node->data) && isBST(node->right, node->data, max);
+    return isBST(node->left, min, node->data)
+        && isBST(node->right, node->data, max);
   }
 
+  bool isBinarySearchTree(TreeNode* node, int min, int max) {
+
+    if (!node) {
+      return true;
+    }
+
+    bool left = isBinarySearchTree(node->left, min, node->data);
+    bool right = isBinarySearchTree(node->right, node->data, max);
+
+    return left && right && (node->data < max) && (node->data >= min);
+
+  }
 
   TreeNode* insert(TreeNode* node, T data) {
     if (!node)
@@ -144,8 +160,6 @@ void destroy(TreeNode<T> *node) {
   }
 }
 
-
-namespace binary_tree {
 int test() {
   std::cout << __PRETTY_FUNCTION__ << std::endl;
 
@@ -166,19 +180,17 @@ int test() {
   t3.left = &t6;
   t3.right = &t7;
 
-  t1.print(&t1, TreeNode<int>::PREODER);
-  std::cout<<std::endl;
-
+  t1.print(&t1, binary_tree::PREODER);
+  std::cout << std::endl;
 
   t1.printLevelOrder(&t1);
-  std::cout<<std::endl;
+  std::cout << std::endl;
 
   t1.printLevelOrder2(&t1);
-  std::cout<<std::endl;
+  std::cout << std::endl;
 
-  std::cout << "isBST: " << t1.isBST(&t1, 0,100);
-  std::cout<<std::endl;
-
+  std::cout << "isBST: " << t1.isBST(&t1, 0, 100);
+  std::cout << std::endl;
 
 //  destroy(&t1);
   return 1;

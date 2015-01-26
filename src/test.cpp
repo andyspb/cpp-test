@@ -39,6 +39,7 @@
 #include "logger/logger.h"
 
 #include "last/last_1.h"
+#include "epam/epam.h"
 
 #include "cpp11/quick_sort.h"
 
@@ -48,7 +49,7 @@ int main(int argc, char **argv) {
 //  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
-  assert(cracking5::test());
+//  assert(cracking5::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
@@ -78,6 +79,8 @@ int main(int argc, char **argv) {
 //  assert(clock_::test());
 
 //  assert(quicksort_cpp11::test());
+
+  assert(epam::test() );
 
   return 0;
 
