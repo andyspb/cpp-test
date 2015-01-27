@@ -43,6 +43,7 @@
 
 #include "cpp11/quick_sort.h"
 
+
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
@@ -81,6 +82,9 @@ int main(int argc, char **argv) {
 //  assert(quicksort_cpp11::test());
 
   assert(epam::test() );
+
+  int arr[10];
+  int *pa = arr;
 
   return 0;
 
