@@ -40,6 +40,7 @@
 
 #include "last/last_1.h"
 #include "epam/epam.h"
+#include "ms/ms.h"
 
 #include "cpp11/quick_sort.h"
 
@@ -81,7 +82,8 @@ int main(int argc, char **argv) {
 
 //  assert(quicksort_cpp11::test());
 
-  assert(epam::test() );
+//  assert(epam::test() );
+  assert(ms::test() );
 
   int arr[10];
   int *pa = arr;
