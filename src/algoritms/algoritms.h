@@ -44,7 +44,7 @@
 namespace algorithms {
 int test() {
   logger::LogMethodWrapper l("algorithms\n");
-  assert(binary_search::test());
+//  assert(binary_search::test());
   //  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
@@ -65,7 +65,7 @@ int test() {
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(merge_sort::test());
-//  assert(mergesort_linkedlist::test());
+  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
 //  assert(reverse_char_array::test());

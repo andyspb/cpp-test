@@ -81,7 +81,6 @@ int test() {
     sl = sl->next;
   }
   std::endl(std::cout);
-  std::cout << "<--- test passed" << std::endl;
   return 1;
 }
 }  // namespace mergesort_linkedlist

@@ -8,6 +8,8 @@
 #ifndef BITS_H_
 #define BITS_H_
 
+#include "turn_off_K_bit_in_number.h"
+
 namespace bits {
 
 }
