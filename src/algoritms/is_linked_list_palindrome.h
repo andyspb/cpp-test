@@ -26,30 +26,21 @@ struct Node {
 
 bool isPalindrome(Node* head) {
   Node *fast(head), *slow(head);
-
   stack<int> stack;
-  /* Push elements from first half of linked list onto stack. When
-   * fast runner (which is moving at 2x speed) reaches the end of
-   * the linked list, then we know we're at the middle */
   while (fast && fast->next) {
     stack.push(slow->data);
     slow = slow->next;
     fast = fast->next->next;
   }
-  /* Has odd number of elements, so skip the middle element */
-  if (fast) {
+  if (fast)
     slow = slow->next;
-  }
   while (slow) {
     int top = stack.top();
-    /* If values are different, then it's not a palindrome */
-    if (top != slow->data) {
+    if (top != slow->data)
       return false;
-    }
     stack.pop();
     slow = slow->next;
   }
-
   return true;
 }
 
