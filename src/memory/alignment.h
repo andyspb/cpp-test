@@ -1,7 +1,7 @@
 /*
  * alignment.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -26,7 +26,8 @@ typedef struct structa_tag
 {
    char        c;
    short int   s;
-} __attribute__((packed, aligned(4))) structa_t;
+} //__attribute__((packed, aligned(4)))
+structa_t;
 
 // structure B
 typedef struct structb_tag
@@ -34,7 +35,8 @@ typedef struct structb_tag
    short int   s;
    char        c;
    int         i;
-} __attribute__((packed, aligned(4)))  structb_t;
+} //__attribute__((packed, aligned(4)))
+structb_t;
 
 // structure C
 typedef struct structc_tag
@@ -42,7 +44,8 @@ typedef struct structc_tag
    char        c;
    double      d;
    int         s;
-} __attribute__((packed, aligned(4))) structc_t;
+} //__attribute__((packed, aligned(4)))
+structc_t;
 
 // structure D
 typedef struct structd_tag
@@ -50,7 +53,8 @@ typedef struct structd_tag
    double      d;
    int         s;
    char        c;
-} __attribute__((packed, aligned(4))) structd_t;
+} //__attribute__((packed, aligned(4)))
+structd_t;
 
 int test()
 {
