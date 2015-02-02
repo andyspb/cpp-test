@@ -8,19 +8,25 @@
 #ifndef GOOGLE_H_
 #define GOOGLE_H_
 
+#if _WIN32
+  // windows code goes here
+ typedef uint64_t uint;
+#endif
+
 #include <pthread.h>
 
 #include <mutex>
 
 namespace google_test {
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+//
 
 struct ScopeLock {
   ScopeLock() {
-    pthread_mutex_lock (&mutex);  // lock
+//    pthread_mutex_lock (&mutex);  // lock
   }
   ~ScopeLock() {
-    pthread_mutex_unlock (&mutexl);  // unlock
+//    pthread_mutex_unlock (&mutex);  // unlock
   }
 };
 

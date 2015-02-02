@@ -28,11 +28,9 @@ int test() {
   clock_t start = clock();
   long long sum = 0;
 
-  for (unsigned i = 0; i < 100000; ++i)
-  {
+  for (unsigned i = 0; i < 100000; ++i) {
     // Primary loop
-    for (unsigned c = 0; c < arraySize; ++c)
-    {
+    for (unsigned c = 0; c < arraySize; ++c) {
       if (data[c] >= 128)
         sum += data[c];
     }
@@ -45,7 +43,6 @@ int test() {
   return 1;
 }
 
-} // namespace clock_
-
+}  // namespace clock_
 
 #endif /* CLOCK_H_ */

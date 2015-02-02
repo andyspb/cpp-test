@@ -36,6 +36,7 @@
 #include "quicksort.h"
 #include "quicksort_2linked_list.h"
 #include "tree_traversal.h"
+#include "is_linked_list_palindrome.h"
 
 #include "../logger/logger.h"
 
@@ -65,7 +66,7 @@ int test() {
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(merge_sort::test());
-  assert(mergesort_linkedlist::test());
+//  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
 //  assert(reverse_char_array::test());
@@ -74,6 +75,8 @@ int test() {
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
+
+  assert(linked_list_is_palindrome_with_stack::test());
   return 1;
 }
 

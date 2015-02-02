@@ -51,7 +51,7 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(cpp0x::test());
 //  assert(cracking::test());
 //  assert(cracking5::test());
