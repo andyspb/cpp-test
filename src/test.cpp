@@ -40,6 +40,8 @@
 
 #include "last/last_1.h"
 #include "epam/epam.h"
+#include "epam/google.h"
+
 #include "ms/ms.h"
 #include "memory/alignment.h"
 
@@ -86,7 +88,7 @@ int main(int argc, char **argv) {
 //  assert(epam::test() );
 //  assert(ms::test() );
 
-  assert(alignment::test());
+//  assert(alignment::test());
 
   int arr[10];
   int *pa = arr;

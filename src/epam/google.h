@@ -1,36 +1,52 @@
 /*
  * google.h
  *
- *  Created on: 26 ÿíâ. 2015 ã.
+ *  Created on: 26 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
 #ifndef GOOGLE_H_
 #define GOOGLE_H_
 
-https://docs.google.com/document/d/1OaKufEI1JDjaKsUjQsSpjQY11UoTkPfYI7L3DBoxgqE/edit
+#include <pthread.h>
 
-comp 3 Mh/s, 4 cores * 2 = 8 processes , no timers
+#include <mutex>
 
+namespace google_test {
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
+struct ScopeLock {
+  ScopeLock() {
+    pthread_mutex_lock (&mutex);  // lock
+  }
+  ~ScopeLock() {
+    pthread_mutex_unlock (&mutexl);  // unlock
+  }
+};
 
-3000000 * 8 = 24000000;
+// https://docs.google.com/document/d/1OaKufEI1JDjaKsUjQsSpjQY11UoTkPfYI7L3DBoxgqE/edit
+// calculate operations on processor
+// comp 3 Mh/s, 4 cores * 2 = 8 processes , no timers
+// 3000000 * 8 = 24000000;
 
 // global
 volatile uint g_uid;
 uint getId() {
-     lock l;
-     return ++guid;
+  ScopeLock scopeLock;
+  return ++g_uid;
 }
 
-?? assignId(Event& ev) {
-    uint id = (int)ev.getAddress();
+struct Event {
+  uint getAddress() {
+    return 0;
+  }
+};
+
+uint assignId(Event& ev) {
+  uint id = (uint) ev.getAddress();
+  return id;
 }
 
-
-
-
-
-
+}  // namespace google_test
 
 #endif /* GOOGLE_H_ */
