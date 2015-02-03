@@ -49,12 +49,12 @@ int test() {
   std::cout << "Test: square root --->" << std::endl;
   for (int m = 0; m < 225; m += 15) {
     std::cout << "number=" << m << " using std::sqrt() " << std::sqrt(m)
-        << std::endl;
+              << std::endl;
     std::cout << "number=" << m << " using sqroot()" << sqroot(m) << std::endl;
     std::cout << "number=" << m << " using sqroot2()" << sqroot2(m)
-        << std::endl;
+              << std::endl;
   }
   return 1;
 }
-} //namespace square_root
+}  //namespace square_root
 #endif // _SQUARE_ROOT_H_

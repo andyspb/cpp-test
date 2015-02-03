@@ -8,6 +8,15 @@
 #ifndef ALGORITMS_H_
 #define ALGORITMS_H_
 
+#include <algorithm>
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <string>
+
+#include "../logger/logger.h"
+
+
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
 #include "big_little_endian.h"
@@ -54,10 +63,30 @@
 #include "median_of_2arrays.h"
 #include "merge_overlapping_itnervals.h"
 #include "merge_sort_linked_list.h"
+#include "merge_sort.h"
+#include "multiply_7.h"
+#include "multiply_by_7.h"
+#include "my_atoi.h"
+#include "num_to_str.h"
+#include "palindrom_rec.h"
+#include "palindrome.h"
+#include "permutation_of_string.h"
+#include "piramid_sort.h"
+#include "pow.h"
 
-#include "../logger/logger.h"
+#include "shell_sort.h"
+#include "singleton_with_mutex.h"
+#include "singleton.h"
+#include "sorted_linked_list_to_balanced_bst.h"
+#include "sorted_list_to_bst.h"
+#include "square_root.h"
+#include "string_unique_chars.h"
+#include "substr_search.h"
+#include "sum_1_to_N.h"
+#include "swap_bits.h"
+#include "tree_traversal.h"
+#include "turn_off_bit_in_number.h"
 
-#include <iostream>
 
 namespace algorithms {
 int test() {

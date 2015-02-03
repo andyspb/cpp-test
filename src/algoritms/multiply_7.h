@@ -2,14 +2,14 @@
 #define _MULTIPLY_7_H
 
 //Give a fast way to multiply a number by 7.
-
+namespace multiply_by_7_ {
 int multiply_by_7(int x) {
   int temp = x;
   x = x << 3;
   return x - temp;
 }
 
-void algo_15() {
+void test() {
   printf("algo 15:a fast way to multiply a number by 7\n");
 
   int x = 0;
@@ -28,4 +28,5 @@ void algo_15() {
   printf("multiply_by_7(%d)=%d\n", x, multiply_by_7(x));
 }
 
+}  // multiply_by_7
 #endif  //_MULTIPLY_7_H

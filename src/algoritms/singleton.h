@@ -1,28 +1,30 @@
 #pragma once
+#ifdef __WIN32__
 #include "stdafx.h"
+#endif
 namespace singleton {
 
 using namespace std;
 
 class ScopeLock {
-  public:
-    ScopeLock() {
-      //       InitializeCriticalSection(&cs);
-      Lock();
-    }
-    virtual ~ScopeLock() {
-      //       DeleteCriticalSection(&cs);
-      Unlock();
-    }
+ public:
+  ScopeLock() {
+    //       InitializeCriticalSection(&cs);
+    Lock();
+  }
+  virtual ~ScopeLock() {
+    //       DeleteCriticalSection(&cs);
+    Unlock();
+  }
 
-  private:
-    //     CRITICAL_SECTION cs;
-    void Lock() {
-      //       EnterCriticalSection(&cs);
-    }
-    void Unlock() {
-      //       LeaveCriticalSection(&cs);
-    }
+ private:
+  //     CRITICAL_SECTION cs;
+  void Lock() {
+    //       EnterCriticalSection(&cs);
+  }
+  void Unlock() {
+    //       LeaveCriticalSection(&cs);
+  }
 };
 
 //
@@ -32,19 +34,19 @@ class ScopeLock {
 // may still pose problems at program termination time.
 //
 class Singleton {
-  private:
-    Singleton() {
-    }
-    ~Singleton() {
-    }
-    Singleton(const Singleton &);             // intentionally undefined
-    Singleton & operator=(const Singleton &); // intentionally undefined
+ private:
+  Singleton() {
+  }
+  ~Singleton() {
+  }
+  Singleton(const Singleton &);             // intentionally undefined
+  Singleton & operator=(const Singleton &);  // intentionally undefined
 
-    static mutable Singleton * volatile _instance;
+  static mutable Singleton * volatile _instance;
 
-  public:
-    static Singleton * getInstance();
-    static ScopeLock lock;
+ public:
+  static Singleton * getInstance();
+  static ScopeLock lock;
 };
 
 Singleton* Singleton::_instance = 0;

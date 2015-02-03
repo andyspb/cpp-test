@@ -1,14 +1,14 @@
 /*
  * pow.h
  *
- *  Created on: 25 ÿíâ. 2015 ã.
+ *  Created on: 25 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
 #ifndef POW_H_
 #define POW_H_
 
-namespace pow {
+namespace pow2 {
 
 /* Function to calculate x raised to the power y */
 int power(int x, unsigned int y)

@@ -1,5 +1,7 @@
 #pragma once
+#ifdef __WIN32__
 #include "stdafx.h"
+#endif
 namespace singleton_with_muex {
 
 using namespace std;
