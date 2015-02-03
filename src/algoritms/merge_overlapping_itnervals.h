@@ -1,7 +1,7 @@
 /*
  * merge_overlapping_itnervals.h
  *
- *  Created on: 30 ÿíâ. 2015 ã.
+ *  Created on: 30 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -46,7 +46,7 @@ void mergeIntervals(vector<Interval>& intervals) {
   s.push(intervals[0]);
 
   // Start from the next interval and merge if necessary
-  for (int i = 1; i < intervals.size(); i++) {
+  for (size_t i = 1; i < intervals.size(); ++i) {
     // get interval from stack top
     Interval top = s.top();
 

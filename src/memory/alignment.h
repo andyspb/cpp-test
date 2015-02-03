@@ -58,10 +58,17 @@ structd_t;
 
 int test()
 {
-   printf("sizeof(structa_t) = %d\n", sizeof(structa_t));
-   printf("sizeof(structb_t) = %d\n", sizeof(structb_t));
-   printf("sizeof(structc_t) = %d\n", sizeof(structc_t));
-   printf("sizeof(structd_t) = %d\n", sizeof(structd_t));
+#ifdef __linux__
+  printf("sizeof(structa_t) = %lu\n", sizeof(structa_t));
+  printf("sizeof(structb_t) = %lu\n", sizeof(structb_t));
+  printf("sizeof(structc_t) = %lu\n", sizeof(structc_t));
+  printf("sizeof(structd_t) = %lu\n", sizeof(structd_t));
+#else
+  printf("sizeof(structa_t) = %d\n", sizeof(structa_t));
+  printf("sizeof(structb_t) = %d\n", sizeof(structb_t));
+  printf("sizeof(structc_t) = %d\n", sizeof(structc_t));
+  printf("sizeof(structd_t) = %d\n", sizeof(structd_t));
+#endif
 
    return 1;
 }

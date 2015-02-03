@@ -1,7 +1,7 @@
 /*
  * linked_list_is_palindrome.h
  *
- *  Created on: 02 февр. 2015 г.
+ *  Created on: 02 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -47,8 +47,8 @@ bool isPalindrome(Node* head) {
 bool is_palindrome_with_stack(Node *head) {
   if (!head)
     return false;
-//  if (!head->next)
-//    return true;
+  if (!head->next)
+    return true;
   Node* slow = head, *fast = head;
   stack<int> stack;
   while (fast && fast->next) {
@@ -75,7 +75,7 @@ bool is_palindrome_with_stack(Node *head) {
 void print_list(Node* node) {
   while (node) {
     cout << node->data << " ";
-    node=node->next;
+    node = node->next;
   }
   cout << endl;
 }
@@ -100,7 +100,7 @@ int test() {
   bool b = is_palindrome_with_stack(&n1);
 //  bool b = isPalindrome(&n1);
 
-  cout<<" list is palindrome:" << b << "\n";
+  cout << " list is palindrome:" << b << "\n";
   return 1;
 }
 
@@ -140,6 +140,6 @@ int test() {
 //}
 //
 
-}  // namespace linked_list_is_palindrome
+}// namespace linked_list_is_palindrome
 
 #endif /* LINKED_LIST_IS_PALINDROME_H_ */

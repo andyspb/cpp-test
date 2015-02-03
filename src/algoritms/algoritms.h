@@ -10,23 +10,36 @@
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
+#include "big_little_endian.h"
 #include "binary_search.h"
 #include "btree_depth.h"
+#include "bubble_sort.h"
 #include "bubblesort.h"
 #include "byte_array_2_string.h"
+#include "circular_buffer.h"
 #include "circular_que.h"
+#include "common_data.h"
 #include "compare_linked_list.h"
 #include "count_1_in_binary.h"
+#include "count_inversions_in_array_with_merge.h"
+#include "count_inversions_in_array.h"
 #include "drawcircle.h"
 #include "duplication.h"
+#include "encode_string_google.h"
+//#include "encode_string_google2.h"
 #include "heapsort.h"
 #include "encode_string_google.h"
 #include "fibbonachi.h"
 #include "find_largest_sum_in_array.h"
+#include "find_minimum_length_unsorted_subarray.h"
+#include "find_sum_overlapping_intervals.h"
 #include "free_linked_list.h"
 #include "google_test.h"
+#include "heapsort.h"
 #include "insert_into_sorted_list.h"
 #include "insertsort.h"
+#include "intersection_point_of_two_linked_lists.h"
+#include "is_linked_list_palindrome.h"
 #include "merge_sort.h"
 #include "merge_sort_linked_list.h"
 #include "multiply_by_7.h"
@@ -37,6 +50,10 @@
 #include "quicksort_2linked_list.h"
 #include "tree_traversal.h"
 #include "is_linked_list_palindrome.h"
+#include "median_of_2_arr_2.h"
+#include "median_of_2arrays.h"
+#include "merge_overlapping_itnervals.h"
+#include "merge_sort_linked_list.h"
 
 #include "../logger/logger.h"
 
@@ -46,7 +63,7 @@ namespace algorithms {
 int test() {
   logger::LogMethodWrapper l("algorithms\n");
 //  assert(binary_search::test());
-  //  assert(btree_depth::test());
+//    assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
 //  assert(circular_buffer::test());

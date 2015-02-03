@@ -88,41 +88,6 @@ int find_sum_of_intervals_with_array(std::vector<Interval>& vector_intervals) {
   return count;
 }
 
-int intLength2_wrong(std::vector<Interval>& vector_intervals) {
-  if (vector_intervals.empty()) {
-    return 0;
-  }
-  std::sort(vector_intervals.begin(), vector_intervals.end(), IntervalLess);
-  printIntervals(vector_intervals);
-
-  int start(0), end(0);
-  int l = 0;
-  std::queue<int> sq;
-  for (size_t i = 0; i < vector_intervals.size(); ++i) {
-    int t = std::numeric_limits<int>::min();
-    std::cout << "\ni=" << i << " v[" << i << "].start="
-              << vector_intervals[i].start << " v[" << i << "].end="
-              << vector_intervals[i].end << "\t\tt=" << t << "\n";
-    if (sq.empty()) {
-      end = sq.front();
-    }
-    start = vector_intervals[i].start;
-    if (start < t) {
-      start = t + 1;
-    }
-    std::cout << "start=" << start;
-    end = vector_intervals[i].end;
-    std::cout << " end=" << end;
-    if (end > t) {
-      sq.pop();
-      sq.push(end);
-      l += end - start;
-    }
-    std::cout << " l=" << l << std::endl;
-  }
-  return l;
-}
-
 int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   if (vector_intervals.empty()) {
     return 0;

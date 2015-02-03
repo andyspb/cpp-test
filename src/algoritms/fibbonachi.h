@@ -10,31 +10,31 @@ int fib(int n) {
 
 template<int n>
 struct TFib {
-    enum {
-      value = TFib<n - 1>::value + TFib<n - 2>::value
-    };
+  enum {
+    value = TFib<n - 1>::value + TFib<n - 2>::value
+  };
 };
 
 template<>
 struct TFib<2> {
-    enum {
-      value = 1
-    };
+  enum {
+    value = 1
+  };
 };
 
 template<>
 struct TFib<1> {
-    enum {
-      value = 1
-    };
+  enum {
+    value = 1
+  };
 };
 
 template<>
 class TFib<0> {
-  public:
-    enum {
-      value = 0
-    };
+ public:
+  enum {
+    value = 0
+  };
 };
 
 int test() {

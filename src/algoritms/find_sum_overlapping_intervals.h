@@ -1,24 +1,55 @@
 /*
  * find_sum_overlapping_intervals.h
  *
- *  Created on: 30 ÿíâ. 2015 ã.
+ *  Created on: 30 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
 #ifndef FIND_SUM_OVERLAPPING_INTERVALS_H_
 #define FIND_SUM_OVERLAPPING_INTERVALS_H_
 
+#include <algorithm>
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
 namespace find_sum_overlapping_intervals {
 
 struct Interval {
+  Interval(int s, int e)
+      : start(s),
+        end(e) {
+  }
+  ;
   int start;
   int end;
+  int getLength() {
+    if (end <= start) {
+      return 0;
+    }
+    return (end - start - 1);
+  }
 };
+
+struct {
+  bool operator()(Interval a, Interval b) {
+    return a.start < b.start;
+  }
+} IntervalLess;
+
+void printIntervals(std::vector<Interval>& v) {
+  std::for_each(v.begin(), v.end(), [](Interval &i) {std::cout<< "["
+    << i.start << "," << i.end << "] ";});
+  std::cout << std::endl;
+}
+
 int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   if (vector_intervals.empty()) {
     return 0;
   }
   std::sort(vector_intervals.begin(), vector_intervals.end(), IntervalLess);
+  printIntervals(vector_intervals);
 
   int start(0), end(0);
   int l = 0;
@@ -45,6 +76,7 @@ int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
 
   return l;
 }
+
 
 }  // namespace find_sum_overlapping_intervals
 
