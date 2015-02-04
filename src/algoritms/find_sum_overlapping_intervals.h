@@ -51,7 +51,7 @@ int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   std::sort(vector_intervals.begin(), vector_intervals.end(), IntervalLess);
   printIntervals(vector_intervals);
 
-  int start(0), end(0);
+//  int start(0), end(0);
   int l = 0;
   std::stack<Interval> stack;
   stack.push(vector_intervals[0]);

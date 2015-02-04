@@ -1,7 +1,4 @@
 #pragma once
-#ifdef __WIN32__
-#include "stdafx.h"
-#endif
 namespace singleton {
 
 using namespace std;
@@ -42,14 +39,14 @@ class Singleton {
   Singleton(const Singleton &);             // intentionally undefined
   Singleton & operator=(const Singleton &);  // intentionally undefined
 
-  static mutable Singleton * volatile _instance;
+  static Singleton * volatile _instance;
 
  public:
   static Singleton * getInstance();
   static ScopeLock lock;
 };
 
-Singleton* Singleton::_instance = 0;
+Singleton* volatile Singleton::_instance = 0;
 ScopeLock Singleton::lock;
 
 Singleton* Singleton::getInstance() {

@@ -15,7 +15,7 @@ namespace facebook {
 int test() {
   std::cout << "facebook tests --->\n";
   // assert(circ_que::test());
-  // assert(binary_tree::test());
+  assert(binary_tree::test());
 //  assert(node_with_optional_ptr_to_another_list::test());
 //  assert(print_btree_levels::test());
   assert(sqrt_with_precision::test());

@@ -13,7 +13,7 @@
 
 namespace sorted_list_to_bst {
 
-Time Complexity: O(n)
+//Time Complexity: O(n)
 
 /* Link list node */
 struct LNode
@@ -32,6 +32,7 @@ struct TNode
 
 struct TNode* newNode(int data);
 int countLNodes(struct LNode *head);
+
 struct TNode* sortedListToBSTRecur(struct LNode **head_ref, int n);
 
 
