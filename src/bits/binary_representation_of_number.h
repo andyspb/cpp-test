@@ -1,7 +1,7 @@
 /*
  * binary_representation_of_number.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -25,10 +25,11 @@ void bin_rec(unsigned n) {
   printf("%d", n % 2);
 }
 
-int main(void) {
+int test(void) {
   bin_iter(7);
   printf("\n");
   bin_iter(4);
+  return 1;
 }
 }  // binary_representation_of_number
 

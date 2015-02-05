@@ -1,7 +1,7 @@
 /*
  * turn_off_K_bit_in_number.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -26,12 +26,12 @@ int turnOffK(int n, int k)
 }
 
 // Driver program to test above function
-int main()
+int test()
 {
     int n = 15;
     int k = 4;
     cout << turnOffK(n, k);
-    return 0;
+    return 1;
 }
 }
 

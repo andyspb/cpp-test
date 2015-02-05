@@ -1,7 +1,7 @@
 /*
  * is_div_by_9.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -41,13 +41,13 @@ bool isDivBy9_iter(int n) {
 
 
 // Driver program to test above function
-int main() {
+int test() {
   // Let us print all multiples of 9 from 0 to 100
   // using above method
   for (int i = 0; i < 100; i++)
     if (isDivBy9(i))
       cout << i << " ";
-  return 0;
+  return 1;
 }
 
 }  // namespace is_div_by_9

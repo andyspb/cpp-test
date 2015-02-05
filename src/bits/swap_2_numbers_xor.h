@@ -1,7 +1,7 @@
 /*
  * swap_2_numbers_xor.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -12,7 +12,7 @@
 
 namespace swap_2_numbers_xor {
 
-void swap_xor(int& x = 10, int& y = 5) {
+void swap_xor(int& x, int& y) {
 
   // Code to swap 'x' (1010) and 'y' (0101)
   x = x ^ y;  // x now becomes 15 (1111)
@@ -23,7 +23,7 @@ void swap_xor(int& x = 10, int& y = 5) {
 
 }
 
-void swap_sum(int& x = 10, int& y = 5) {
+void swap_sum(int& x, int& y) {
   // Code to swap 'x' and 'y'
   x = x + y;  // x now becomes 15
   y = x - y;  // y becomes 10
@@ -31,6 +31,11 @@ void swap_sum(int& x = 10, int& y = 5) {
 
   printf("After Swapping: x = %d, y = %d", x, y);
 }
+
+int test() {
+  return 1;
+}
+
 
 }  // namespace swap_2_numbers_xor
 

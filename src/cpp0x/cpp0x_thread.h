@@ -5,23 +5,21 @@
 #ifndef CPP0X_THREAD_H_
 #define CPP0X_THREAD_H_
 
-//#include <thread>
+#include <thread>
 #include <iostream>
 
 namespace cpp0x_thread {
 
-using namespace std;
-
 void doSomeWork(void) {
-  cout << "hello from thread..." << endl;
+  std::cout << "hello from thread..." << std::endl;
   return;
 }
 
 int test() {
-  cout << "Test std::thread:------------->\n";
+  std::cout << "Test std::thread:------------->\n";
 
-//  thread t(doSomeWork);
-//  t.join();
+  std::thread t(doSomeWork);
+  t.join();
 
   return 1;
 }

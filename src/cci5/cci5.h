@@ -1,7 +1,7 @@
 /*
  * cracking5.h
  *
- *  Created on: 24 дек. 2014 г.
+ *  Created on: 24 пїЅпїЅпїЅ. 2014 пїЅ.
  *      Author: andy
  */
 
@@ -33,7 +33,7 @@
 
 #include "inheritance/inheritance.h"
 
-namespace cracking5 {
+namespace cci5 {
 int test() {
   // 1
 //  std::cout << "Cracking code interviews (5) tests 1" << std::endl;

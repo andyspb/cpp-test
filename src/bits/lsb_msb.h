@@ -1,7 +1,7 @@
 /*
  * lsb_msb.h
  *
- *  Created on: 02 февр. 2015 г.
+ *  Created on: 02 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -78,6 +78,10 @@ int get_LSB_position(unsigned int x) {
   return pos;
 }
 
+
+int test() {
+  return 1;
+}
 
 }  // lsb_msb
 

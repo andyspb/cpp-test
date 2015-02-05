@@ -1,7 +1,7 @@
 /*
  * swap_all_odd_and_even_bits.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -11,9 +11,6 @@
 #include <stdio.h>
 
 namespace swap_all_odd_and_even_bits {
-
-// C program to swap even and odd bits of a given number
-#include <stdio.h>
 
 unsigned int swapBits(unsigned int x)
 {
@@ -40,8 +37,11 @@ int main()
     return 0;
 }
 
-}  // namespace swap_all_odd_and_even_bits
+int test() {
+  return 1;
+}
 
+}  // namespace swap_all_odd_and_even_bits
 
 
 #endif /* SWAP_ALL_ODD_AND_EVEN_BITS_H_ */

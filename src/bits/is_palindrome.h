@@ -1,7 +1,7 @@
 /*
  * is_palindrome.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -36,12 +36,12 @@ bool isPalindrome(unsigned int x) {
 }
 
 // Driver program to test above function
-int main() {
-  unsigned int x = 1 << 15 + 1 << 16;
+int test() {
+  unsigned int x = (1 << 15) + (1 << 16);
   cout << isPalindrome(x) << endl;
-  x = 1 << 31 + 1;
+  x = (1 << 31) + 1;
   cout << isPalindrome(x) << endl;
-  return 0;
+  return 1;
 }
 
 }

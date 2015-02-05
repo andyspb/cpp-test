@@ -1,7 +1,7 @@
 /*
  * count_set_bits_in_an_integer.h
  *
- *  Created on: 02 ôåâğ. 2015 ã.
+ *  Created on: 02 ï¿½ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -29,7 +29,7 @@ int test1() {
   return 1;
 }
 
-// Brian Kernighan’s Algorithm:
+// Brian Kernighanï¿½s Algorithm:
 
 /* Function to get no of set bits in binary
  representation of passed binary no. */
@@ -43,11 +43,11 @@ int countSetBits2(int n) {
 }
 
 /* Program to test function countSetBits */
-int main() {
+int test() {
   int i = 9;
   printf("%d", countSetBits2(i));
   getchar();
-  return 0;
+  return 1;
 }
 
 }  // count_set_bits_in_an_integer

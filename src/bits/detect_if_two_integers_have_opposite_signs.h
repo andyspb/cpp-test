@@ -1,7 +1,7 @@
 /*
  * detect_if_two_integers_have_opposite_signs.h
  *
- *  Created on: 01 февр. 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -14,6 +14,10 @@ namespace detect_if_two_integers_have_opposite_signs {
 
 bool oppositeSigns(int x, int y) {
   return ((x ^ y) >> ((sizeof(int)*CHAR_BIT)-1));
+}
+
+int test() {
+  return 1;
 }
 
 }  // namespace  detect_if_two_integers_have_opposite_signs

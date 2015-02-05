@@ -11,10 +11,11 @@
 
 #include "algoritms/algoritms.h"
 #include "array/array.h"
+#include "bits/bits.h"
 #include "clock/clock.h"
 #include "cpp0x/cpp0x.h"
-#include "cci4/cracking4.h"
-#include "cci5/cracking5.h"
+#include "cci4/cci4.h"
+#include "cci5/cci5.h"
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "func/func.h"
@@ -41,6 +42,7 @@
 #include "last/last_1.h"
 #include "epam/epam.h"
 #include "epam/google.h"
+#include "epam/google2.h"
 
 #include "ms/ms.h"
 #include "memory/alignment.h"
@@ -52,10 +54,11 @@ int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
 // assert(algorithms::test());
-   assert(binary_tree::test());
-//  assert(cpp0x::test());
-//  assert(cracking::test());
-//  assert(cracking5::test());
+//   assert(binary_tree::test());
+  assert(bits::test());
+  assert(cpp0x::test());
+  assert(cci4::test());
+  assert(cci5::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
@@ -91,8 +94,8 @@ int main(int argc, char **argv) {
 
 //  assert(alignment::test());
 
-  int arr[10];
-  int *pa = arr;
+//  int arr[10];
+//  int *pa = arr;
 
   return 0;
 
