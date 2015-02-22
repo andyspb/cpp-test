@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
   assert(cpp0x::test());
   assert(cci4::test());
   assert(cci5::test());
-//  assert(exceptions::test());
+  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
 //  assert(hashcodes::test());

@@ -58,11 +58,11 @@ structd_t;
 
 int test()
 {
-#ifdef __linux__
-  printf("sizeof(structa_t) = %lu\n", sizeof(structa_t));
-  printf("sizeof(structb_t) = %lu\n", sizeof(structb_t));
-  printf("sizeof(structc_t) = %lu\n", sizeof(structc_t));
-  printf("sizeof(structd_t) = %lu\n", sizeof(structd_t));
+#if defined(__linux__) || defined(__mingw64__)
+  printf("sizeof(structa_t) = %lu\n", (long unsigned)sizeof(structa_t));
+  printf("sizeof(structb_t) = %lu\n", (long unsigned)sizeof(structb_t));
+  printf("sizeof(structc_t) = %lu\n", (long unsigned)sizeof(structc_t));
+  printf("sizeof(structd_t) = %lu\n", (long unsigned)sizeof(structd_t));
 #else
   printf("sizeof(structa_t) = %d\n", sizeof(structa_t));
   printf("sizeof(structb_t) = %d\n", sizeof(structb_t));

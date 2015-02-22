@@ -18,7 +18,7 @@ int test() {
   std::cout << "exceptions tests start:\n";
   assert(exception_::test());
   std::cout << "exceptions tests end:\n";
-  return 0;
+  return 1;
 }
 
 }  // namespace exceptions
