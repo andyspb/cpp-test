@@ -8,18 +8,18 @@ class A;
 void fcn(A*);
 
 class A {
-  public:
-    virtual ~A() {
-    }
-    virtual void f() = 0;
-    A() {
-      fcn(this);
-    }
+ public:
+  virtual ~A() {
+  }
+  virtual void f() = 0;
+  A() {
+    fcn(this);
+  }
 };
 
-class B: A {
-    void f() {
-    }
+class B : A {
+  void f() {
+  }
 };
 
 void fcn(A* p) {
@@ -38,6 +38,6 @@ int test() {
   return 1;
 }
 
-} // pure_virt_call
+}  // pure_virt_call
 
 #endif // _PURE_VIRTUAL_CALL_H_

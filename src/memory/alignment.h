@@ -12,7 +12,6 @@
 
 namespace alignment {
 
-
 // Alignment requirements
 // (typical 32 bit machine)
 
@@ -22,47 +21,42 @@ namespace alignment {
 // double       8 bytes
 
 // structure A
-typedef struct structa_tag
-{
-   char        c;
-   short int   s;
-} //__attribute__((packed, aligned(4)))
+typedef struct structa_tag {
+  char c;
+  short int s;
+}  //__attribute__((packed, aligned(4)))
 structa_t;
 
 // structure B
-typedef struct structb_tag
-{
-   short int   s;
-   char        c;
-   int         i;
-} //__attribute__((packed, aligned(4)))
+typedef struct structb_tag {
+  short int s;
+  char c;
+  int i;
+}  //__attribute__((packed, aligned(4)))
 structb_t;
 
 // structure C
-typedef struct structc_tag
-{
-   char        c;
-   double      d;
-   int         s;
-} //__attribute__((packed, aligned(4)))
+typedef struct structc_tag {
+  char c;
+  double d;
+  int s;
+}  //__attribute__((packed, aligned(4)))
 structc_t;
 
 // structure D
-typedef struct structd_tag
-{
-   double      d;
-   int         s;
-   char        c;
-} //__attribute__((packed, aligned(4)))
+typedef struct structd_tag {
+  double d;
+  int s;
+  char c;
+}  //__attribute__((packed, aligned(4)))
 structd_t;
 
-int test()
-{
+int test() {
 #if defined(__linux__) || defined(__mingw64__)
-  printf("sizeof(structa_t) = %lu\n", (long unsigned)sizeof(structa_t));
-  printf("sizeof(structb_t) = %lu\n", (long unsigned)sizeof(structb_t));
-  printf("sizeof(structc_t) = %lu\n", (long unsigned)sizeof(structc_t));
-  printf("sizeof(structd_t) = %lu\n", (long unsigned)sizeof(structd_t));
+  printf("sizeof(structa_t) = %lu\n", (long unsigned) sizeof(structa_t));
+  printf("sizeof(structb_t) = %lu\n", (long unsigned) sizeof(structb_t));
+  printf("sizeof(structc_t) = %lu\n", (long unsigned) sizeof(structc_t));
+  printf("sizeof(structd_t) = %lu\n", (long unsigned) sizeof(structd_t));
 #else
   printf("sizeof(structa_t) = %d\n", sizeof(structa_t));
   printf("sizeof(structb_t) = %d\n", sizeof(structb_t));
@@ -70,9 +64,8 @@ int test()
   printf("sizeof(structd_t) = %d\n", sizeof(structd_t));
 #endif
 
-   return 1;
+  return 1;
 }
 }
-
 
 #endif /* ALIGNMENT_H_ */

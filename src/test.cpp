@@ -53,13 +53,13 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
-// assert(algorithms::test());
+ assert(algorithms::test());
 //   assert(binary_tree::test());
-  assert(bits::test());
-  assert(cpp0x::test());
-  assert(cci4::test());
-  assert(cci5::test());
-  assert(exceptions::test());
+//  assert(bits::test());
+//  assert(cpp0x::test());
+//  assert(cci4::test());
+//  assert(cci5::test());
+//  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
 //  assert(hashcodes::test());
@@ -91,7 +91,7 @@ int main(int argc, char **argv) {
 
 //  assert(epam::test() );
 //  assert(ms::test() );
-
+//    assert(google_2::test());
 //  assert(alignment::test());
 
 //  int arr[10];

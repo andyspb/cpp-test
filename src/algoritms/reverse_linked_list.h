@@ -16,8 +16,9 @@ template<typename T>
 List<T> * reverse_iterate(List<T> * head) {
   if (!head || !head->next)
     return head;
-  List<T> *t(0), *r(0);
-  while (head) {
+
+  List<T> *t=0, *r=0;
+  while(head) {
     t = head;
     head = head->next;
     t->next = r;
@@ -30,7 +31,7 @@ template<typename T>
 List<T> * reverse_recursive(List<T> *head) {
   if (!head || !head->next)
     return head;
-  List<T>* rec(reverse_recursive(head->next));
+  List<T>* rec = reverse_recursive(head->next);
   head->next->next = head;
   head->next = 0;
   return rec;
@@ -46,8 +47,16 @@ void print_slist_int(List<T> * head) {
   std::endl(std::cout);
 }
 
-template<typename T>
-void fill_slist(List<T> * head, int size) {
+template<int>
+void fill_slist(List<int> * head, int size) {
+  List<int> *temp = head;
+  for (int i = 1; i < size ; ++i) {
+    List<int> *node= new List<int>();
+    node->val = i;
+    node->next = NULL;
+    temp->next = node;
+    temp = node;
+  }
 }
 
 int test() {

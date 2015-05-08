@@ -47,6 +47,7 @@
 #include "heapsort.h"
 #include "insert_into_sorted_list.h"
 #include "insertsort.h"
+#include "interpolation_search.h"
 #include "intersection_point_of_two_linked_lists.h"
 #include "is_linked_list_palindrome.h"
 #include "merge_sort.h"
@@ -88,42 +89,46 @@
 #include "tree_traversal.h"
 #include "turn_off_bit_in_number.h"
 
+#include "check_if_braces_match.h"
+
 
 namespace algorithms {
 int test() {
   logger::LogMethodWrapper l("algorithms\n");
-  assert(binary_search::test());
-    assert(btree_depth::test());
-  assert(bubblesort::test());
-  assert(byte_array_2_string::test());
-  assert(circular_buffer::test());
-  assert(circular_que::test());
-  assert(compare_linked_lists::test());
-  assert(count_ones_in_binary::test());
-  assert(drawcircle::test());
-  assert(duplication::test());
-  assert(encode_string_google::test());
-  assert(fibbonachi::test());
-  assert(find_dup_in_array::test());
-  assert(find_largest_sum_in_array::test());
-  assert(free_linkedlist::test());
-  assert(google_test::test());
-  assert(heapsort::test());
-  assert(reverse_char_array::test());
-  assert(insert_into_sorted_slist::test());
-  assert(insertsort::test());
-  assert(merge_sort::test());
-  assert(mergesort_linkedlist::test());
-  assert(my_atoi::test());
-  assert(multiply_by_7::test());
-  assert(reverse_char_array::test());
-  assert(reverse_linkedlist::test());
-  assert(reverse_string_1::test());
-  assert(quicksort::test());
-  assert(qsort_2linked_list::test());
-  assert(tree_traversal::test());
-
-  assert(linked_list_is_palindrome_with_stack::test());
+//  assert(binary_search::test());
+//  assert(btree_depth::test());
+//  assert(bubblesort::test());
+//  assert(byte_array_2_string::test());
+//  assert(circular_buffer::test());
+//  assert(circular_que::test());
+//  assert(compare_linked_lists::test());
+//  assert(count_ones_in_binary::test());
+//  assert(drawcircle::test());
+//  assert(duplication::test());
+//  assert(encode_string_google::test());
+//  assert(fibbonachi::test());
+//  assert(find_dup_in_array::test());
+//  assert(find_largest_sum_in_array::test());
+//  assert(free_linkedlist::test());
+//  assert(google_test::test());
+//  assert(heapsort::test());
+//  assert(reverse_char_array::test());
+//  assert(insert_into_sorted_slist::test());
+//  assert(insertsort::test());
+//  assert(interpolation_search::test());
+//  assert(merge_sort::test());
+//  assert(mergesort_linkedlist::test());
+//  assert(my_atoi::test());
+//  assert(multiply_by_7::test());
+//  assert(reverse_char_array::test());
+//  assert(reverse_linkedlist::test());
+  assert(check_if_braces_match::test());
+//  assert(reverse_string_1::test());
+//  assert(quicksort::test());
+//  assert(qsort_2linked_list::test());
+//  assert(tree_traversal::test());
+//
+//  assert(linked_list_is_palindrome_with_stack::test());
   return 1;
 }
 

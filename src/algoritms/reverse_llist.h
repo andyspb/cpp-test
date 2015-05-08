@@ -1,17 +1,38 @@
-#ifndef _ALGO_25_H
-#define _ALGO_25_H
+#ifndef _REVERSE_LLIST_H
+#define _REVERSE_LLIST_H
 #include "common_data.h"
 
 namespace reverse_llist_test {
 class SList {
+    SList(): data(0) {}
+    SList(int d): data(d) {}
     int data;
     SList *next;
 };
 
-
 SList * iter_rev_llist(SList *);
 SList * rec_rev_llist(SList *);
 SList * recursive_reverse_linked_list_2(SList * node, SList * prev);
+
+void fill_slist(SList * head, int size) {
+  SList *temp = head;
+  for (int i = 1; i < size ; ++i) {
+    SList *node= new SList();
+    node->data = i;
+    node->next = NULL;
+    temp->next = node;
+    temp = node;
+  }
+}
+
+void print_slist(SList * head) {
+  SList * temp = head;
+  while (temp) {
+    printf(" %d", temp->data);
+    temp = temp->next;
+  }
+  printf("\n");
+}
 
 //Reverse a linked list.
 int test() {
@@ -71,4 +92,4 @@ SList * recursive_reverse_linked_list_2(SList * node, SList * prev) {
 }
 
 }
-#endif //_ALGO_25_H
+#endif //_REVERSE_LLIST_H

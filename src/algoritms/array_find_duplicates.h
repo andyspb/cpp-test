@@ -10,7 +10,7 @@
 
 namespace find_dup_in_array {
 int test() {
-  std::cout << "\n\tTest: find duplicates in array ----> " << std::endl;
+  std::cout << "Test: find duplicates in array ----> " << std::endl;
   int a[100], b[100];
 
   for (int i = 0; i < 100; ++i) {
@@ -30,7 +30,7 @@ int test() {
     } else
       b[a[i]] = 1;
   }
-  std::cout << "\t<--- passed" << std::endl;
+  std::cout << "<--- passed" << std::endl;
   return 1;
 }
 }  // namesapce array_find_duplicates
