@@ -17,7 +17,7 @@ int test() {
   v.push_back(1);
   v.push_back(2);
   //...
-  std::for_each(v.begin(), v.end(), [] (int val){std::cout<<val << ' ';});
+//  std::for_each(v.begin(), v.end(), [] (int val){std::cout<<val << ' ';});
   std::endl(std::cout);
   return 1;
 }

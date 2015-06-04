@@ -18,8 +18,10 @@ bool solve(Node* n) {
   if the leaf is a goal node, return true
   else return false
 } else {
-for each child c of n {
-  if solve(c) succeeds, return true
+for (auto c : n) {
+  if (solve(c)) {
+    return true;
+  }
 }
 return false
 }

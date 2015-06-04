@@ -14,6 +14,7 @@
 #include "bits/bits.h"
 #include "clock/clock.h"
 #include "cpp0x/cpp0x.h"
+#include "cpp11/cpp11.h"
 #include "cci4/cci4.h"
 #include "cci5/cci5.h"
 #include "exception/exceptions.h"
@@ -30,6 +31,7 @@
 #include "sqrt/sqrt.h"
 #include "static/static.h"
 #include "stl/stl.h"
+#include "thread/tests.h"
 #include "tests/tests.h"
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
@@ -53,7 +55,8 @@
 int main(int argc, char **argv) {
   logger::LogMethodWrapper l("All test cases");
 
- assert(algorithms::test());
+//  assert(cpp11::test());
+// assert(algorithms::test());
 //   assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(cpp0x::test());
@@ -88,6 +91,9 @@ int main(int argc, char **argv) {
 //  assert(clock_::test());
 
 //  assert(quicksort_cpp11::test());
+
+//  assert(threads::test());
+  assert(futures::test());
 
 //  assert(epam::test() );
 //  assert(ms::test() );
