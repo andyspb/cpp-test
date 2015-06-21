@@ -19,17 +19,17 @@ void print_vector(const std::vector<int>& v) {
   std::cout << std::endl;
 }
 
-//template<class Compare = std::less<std::vector<int>::iterator>>
-//void quickSort(std::vector<int>::iterator first,
-//               std::vector<int>::iterator last, Compare cmp = Compare { }) {
-//  auto const N = std::distance(first, last);
-//  if (N <= 1)
-//    return;
-//  auto const pivot = std::next(first, N / 2);
-//  std::nth_element(first, pivot, last, cmp);
-//  quickSort(first, pivot, cmp);
-//  quickSort(pivot, last, cmp);
-//}
+template<class Compare = std::less<std::vector<int>::iterator>>
+void quickSort(std::vector<int>::iterator first,
+               std::vector<int>::iterator last, Compare cmp = Compare { }) {
+  auto const N = std::distance(first, last);
+  if (N <= 1)
+    return;
+  auto const pivot = std::next(first, N / 2);
+  std::nth_element(first, pivot, last, cmp);
+  quickSort(first, pivot, cmp);
+  quickSort(pivot, last, cmp);
+}
 
 int test() {
 
