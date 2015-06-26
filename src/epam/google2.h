@@ -14,59 +14,82 @@
 namespace google_2 {
 
 struct TreeNode {
-  TreeNode() : data(0), left(0), right(0) {}
-  TreeNode(int d) : data(d), left(0), right(0) {}
+  TreeNode()
+      : data(0),
+        left(0),
+        right(0) {
+  }
+  TreeNode(int d)
+      : data(d),
+        left(0),
+        right(0) {
+  }
   int data;
   TreeNode* left;
   TreeNode* right;
 };
 
-
 /*
-Given a binary tree, print the nodes out grouping by level
+ Given a binary tree, print the nodes out grouping by level
 
-   a
-  /  \
+ a
+ /  \
   b  d
-  \
-   c
+ c
 
-a
-bd
-c
-*/
+ a
+ bd
+ c
+ */
 
-void swapEmptyQueWithSrc(std::queue<TreeNode*>& dest, std::queue<TreeNode*>& src) {
+void swapEmptyQueWithSrc(std::queue<TreeNode*>& dest,
+                         std::queue<TreeNode*>& src) {
   if (!dest.empty()) {
     dest = std::queue<TreeNode*>();
   }
 
-  while(!src.empty()) {
-    TreeNode* treeNode = src.front();
-    dest.push(treeNode);
+  while (!src.empty()) {
+    TreeNode* node = src.front();
+    dest.push(node);
     src.pop();
   }
 }
 
 void printLevelOrder(TreeNode* root) {
-   if (!root) {
-     return;
-   }
-   std::queue<TreeNode*> currentLevel, nextLevel;
-   currentLevel.push(root);
-   while(!currentLevel.empty()) {
-       TreeNode* currentNode = currentLevel.front();
-       currentLevel.pop();
-       if (currentNode) {
-         std::cout << currentNode->data << " ";
-         nextLevel.push(currentNode->left);
-         nextLevel.push(currentNode->right);
-       }
-       if (currentLevel.empty()) {
-          std::cout << '\n';
-          swapEmptyQueWithSrc(currentLevel, nextLevel);
-       }
-   }
+  if (!root) {
+    return;
+  }
+  ::std::queue<TreeNode*> curr_level, next_level;
+  curr_level.push(root);
+  while(!curr_level.empty()){
+    TreeNode* curr_node = curr_level.front();
+    curr_level.pop();
+    if (curr_node) {
+      ::std::cout << curr_node->data << " ";
+      next_level.push(curr_node->left);
+      next_level.push(curr_node->right);
+    }
+    if (curr_level.empty()) {
+      ::std::cout << ::std::endl;
+      swapEmptyQueWithSrc(curr_level, next_level);
+    }
+  }
+
+//  std::queue<TreeNode*> currentLevel, nextLevel;
+//  currentLevel.push(root);
+//  while (!currentLevel.empty()) {
+//    TreeNode* currentNode = currentLevel.front();
+//    currentLevel.pop();
+//    if (currentNode) {
+//      std::cout << currentNode->data << " ";
+//      nextLevel.push(currentNode->left);
+//      nextLevel.push(currentNode->right);
+//    }
+//    if (currentLevel.empty()) {
+//      std::cout << '\n';
+//      swapEmptyQueWithSrc(currentLevel, nextLevel);
+//    }
+//  }
 }
 
 int test() {
@@ -97,5 +120,5 @@ int test() {
   return 1;
 }
 
-} // namespace google_2
+}  // namespace google_2
 #endif /* GOOGLE2_H_ */

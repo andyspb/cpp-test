@@ -81,7 +81,7 @@ int test() {
 //  assert(delete_::test());
 //  assert(dynamic_cast_::test());
 //  assert(dynamic_cast_2::test());
-  assert(dynamic_cast_3::test());
+//  assert(dynamic_cast_3::test());
 //  assert(function_parameter::test());
 
 //  assert(goto_::test());
@@ -105,7 +105,7 @@ int test() {
 
   //    assert(static_cast_::test());
 //	assert(string_literal::test());
-//	assert(size_of::test());
+	assert(size_of::test());
 //  assert(stl_tests::test());
 //	assert(strlen_test::test());
 //  assert(union_::test());

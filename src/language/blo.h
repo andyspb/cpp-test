@@ -120,7 +120,7 @@ void test() {
     char buffer[32] = { 0 };
     itoa(i, buffer, 2);
     printf("MSB of %d \t(binary \t\t%s) \t= %d\n", i, buffer,
-        get_MSB_position(i));
+           get_MSB_position(i));
   }
 
   printf("###################################\n");
@@ -131,7 +131,7 @@ void test() {
       char buffer[33] = { 0 };
       itoa(i, buffer, 2);
       printf("LSB of %d \t(binary %s) \t= %d\n", i, buffer,
-          get_LSB_position(i));
+             get_LSB_position(i));
     }
   }
 
@@ -142,6 +142,6 @@ void test() {
 
   return;
 }
-} //namespace blo
+}  //namespace blo
 
 #endif // _BLO_H_

@@ -10,7 +10,7 @@
 
 namespace permutation_of_string {
 
-# include <stdio.h>
+#include <stdio.h>
 
 /* Function to swap values at two pointers */
 void swap(char *x, char *y) {
@@ -27,10 +27,11 @@ void swap(char *x, char *y) {
  3. Ending index of the string. */
 void permute(char *a, int i, int n) {
   int j;
-  if (i == n)
+  if (i == n) {
     printf("%s\n", a);
+  }
   else {
-    for (j = i; j <= n; j++) {
+    for (j = i; j <= n; ++j) {
       swap((a + i), (a + j));
       permute(a, i + 1, n);
       swap((a + i), (a + j));  //backtrack
@@ -40,9 +41,8 @@ void permute(char *a, int i, int n) {
 
 /* Driver program to test above functions */
 int test() {
-  char a[] = "ABC";
+  char a[] = "ABCD";
   permute(a, 0, 2);
-  getchar();
   return 1;
 }
 }  // permutation_of_string

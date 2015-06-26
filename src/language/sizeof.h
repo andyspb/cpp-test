@@ -26,34 +26,47 @@ struct S {
 };
 
 struct Ref {
-  Ref() : i(0), ref_i(i) {}
+  Ref()
+      : i(0),
+        ref_i(i) {
+  }
   int i;
   int& ref_i;
 };
 
+struct Date {
+  int day :5;
+  int month :4;
+  int year;
+};
+
 int test() {
-  std::cout << "sizeof(A)=" << sizeof(A) << std::endl;
-  std::cout << "sizeof(B)=" << sizeof(B) << std::endl;
-  std::cout << "sizeof(S)=" << sizeof(S) << std::endl;
+  std::cout << "sizeof(int)=" << sizeof(int) << std::endl;
+  std::cout << "sizeof(Date)=" << sizeof(Date) << std::endl;
 
-  char c = 1;
-  std::cout << "sizeof(c)=" << sizeof(c) << std::endl;
-
-  int i = 1;
-  std::cout << "sizeof(i)=" << sizeof(i) << std::endl;
-
-  float f = 1.0;
-  std::cout << "sizeof(f)=" << sizeof(f) << std::endl;
-
-  double d = 1.0;
-  std::cout << "sizeof(d)=" << sizeof(d) << std::endl;
-
-  int& ref_to_i = i;
-  std::cout << "sizeof(ref_to_i)=" << sizeof(ref_to_i) << std::endl;
-
-  Ref ref;
-  std::cout << "sizeof(Ref)=" << sizeof(Ref) << std::endl;
-  std::cout << "sizeof(ref)=" << sizeof(ref) << std::endl;
+  //  std::cout << "sizeof(A)=" << sizeof(A) << std::endl;
+//  std::cout << "sizeof(B)=" << sizeof(B) << std::endl;
+//  std::cout << "sizeof(S)=" << sizeof(S) << std::endl;
+//
+//  char c = 1;
+//  std::cout << "sizeof(c)=" << sizeof(c) << std::endl;
+//
+//  int i = 1;
+//  std::cout << "sizeof(i)=" << sizeof(i) << std::endl;
+//
+//  float f = 1.0;
+//  std::cout << "sizeof(f)=" << sizeof(f) << std::endl;
+//
+//  double d = 1.0;
+//  std::cout << "sizeof(d)=" << sizeof(d) << std::endl;
+//
+//  int& ref_to_i = i;
+//  std::cout << "sizeof(ref_to_i)=" << sizeof(ref_to_i)
+//  << std::endl;
+//
+//  Ref ref;
+//  std::cout << "sizeof(Ref)=" << sizeof(Ref) << std::endl;
+//  std::cout << "sizeof(ref)=" << sizeof(ref) << std::endl;
   return 1;
 }
 }  // namespace size_of

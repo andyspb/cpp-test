@@ -5,11 +5,18 @@
 #include <iostream>
 #include <algorithm>
 
-namespace reverse_string {
+namespace reverse_string2 {
 int test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   std::string hello("Hello, how are you?");
 
   std::string s(hello.begin(), hello.end());
+  std::string r(s);
+  std::reverse(r.begin(), r.end());
+
+  std::cout << "s: " << s << std::endl;
+  std::cout << "r: " << r << std::endl;
 
   // iterate through all of the characters
   std::string::iterator pos;
@@ -17,10 +24,10 @@ int test() {
     std::cout << *pos;
   }
   std::endl(std::cout);
-  reverse(s.begin(), s.end());
+  std::reverse(s.begin(), s.end());
   std::cout << "reverse:       " << s << std::endl;
   return 1;
 }
-} // namespace reverse_string
+} // namespace reverse_string2
 
 #endif // _REVERSE_STRING_H_

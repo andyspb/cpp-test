@@ -7,7 +7,7 @@ namespace char_array {
 int test() {
   std::cout << "Test: char array --->" << std::endl;
   char test[] = "Hello";
-  std::cout << "sizeof(test)=" << sizeof(test) /sizeof(test[0])<< std::endl;
+  std::cout << "sizeof(test)=" << sizeof(test) / sizeof(test[0]) << std::endl;
   std::cout << "strlen(test)=" << strlen(test) << std::endl;
   char * ch = test;
   std::cout << "strlen(ch)=" << strlen(ch) << std::endl;
@@ -23,6 +23,6 @@ int test() {
   delete[] t;
   return 1;
 }
-} // namespace char_array
+}  // namespace char_array
 
 #endif // _CHAR_ARRAY_H_

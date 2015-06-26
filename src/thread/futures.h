@@ -44,20 +44,21 @@ int test ()
 
 
   std::string foo = "foo-string";
-    std::string bar = "bar-string";
+  std::string bar = "bar-string";
 
-    std::cout << "bar:"<<bar<<"\n";
+  std::cout << "bar:" << bar << "\n";
 
-    std::vector<std::string> myvector;
+  std::vector<std::string> myvector;
 
-    myvector.push_back (foo);                    // copies
-    myvector.push_back (std::move(bar));         // moves
+  myvector.push_back(foo);                    // copies
+  myvector.push_back(std::move(bar));         // moves
 
-    std::cout << "myvector contains:";
-    for (std::string& x:myvector) std::cout << ' ' << x;
-    std::cout << '\n';
+  std::cout << "myvector contains:";
+  for (std::string& x : myvector)
+    std::cout << ' ' << x;
+  std::cout << '\n';
 
-    std::cout << "bar:"<<bar<<"\n";
+  std::cout << "bar:" << bar << "\n";
 
   return 1;
 }

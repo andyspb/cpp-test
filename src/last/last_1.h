@@ -8,7 +8,6 @@
 #ifndef LAST_1_H_
 #define LAST_1_H_
 
-
 //Given:
 //int array A of size 10^6
 //target int X
@@ -27,32 +26,28 @@
 
 namespace last_1 {
 
-void findpair(int arr[], int len, int sum)
-{
-    std::sort(arr, arr+len);
-    int i = 0;
-    int j = len -1;
-    while( i < j){
-        while((arr[i] + arr[j]) <= sum && i < j)
-        {
-            if((arr[i] + arr[j]) == sum)
-                std::cout << "(" << arr[i] << "," << arr[j] << ")" << std::endl;
-            i++;
-        }
-        j--;
-        while((arr[i] + arr[j]) >= sum && i < j)
-        {
-            if((arr[i] + arr[j]) == sum)
-              std::cout << "(" << arr[i] << "," << arr[j] << ")" << std::endl;
-            j--;
-        }
+void findpair(int arr[], int len, int sum) {
+  ::std::sort(arr, arr + len);
+  int i = 0;
+  int j = len - 1;
+  while (i < j) {
+    while ((arr[i] + arr[j]) <= sum && i < j) {
+      if ((arr[i] + arr[j]) == sum)
+        std::cout << "(" << arr[i] << "," << arr[j] << ")" << std::endl;
+      ++i;
     }
+    --j;
+    while ((arr[i] + arr[j]) >= sum && i < j) {
+      if ((arr[i] + arr[j]) == sum)
+        std::cout << "(" << arr[i] << "," << arr[j] << ")" << std::endl;
+      j--;
+    }
+  }
 }
-int test()
-{
-    int arr [10] = {0, 1, 2, 5, 10};
-    findpair(arr, 5, 4);
-    return 1;
+int test() {
+  int arr[10] = { 0, 1, 2, 5, 10 };
+  findpair(arr, 5, 4);
+  return 1;
 }
 
 }

@@ -43,7 +43,7 @@ int template_test() {
 }
 
 int test() {
-  logger::LogMethodWrapper l("Templates tests");
+  logger::Log().Get(INFO) << "Templates tests";
 
   template_test();
 

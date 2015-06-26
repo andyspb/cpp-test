@@ -16,10 +16,10 @@
 
 namespace check_open_closed_brackets {
 
-typedef std::stack<char> Brackets;
+typedef ::std::stack<char> Brackets;
 
 constexpr char open_brackets[] = {'(', '['};
-const std::map<char, char> closing = {{'(', ')'}, {'[', ']'}};
+const ::std::map<char, char> closing = {{'(', ')'}, {'[', ']'}};
 
 void pushOpeningBrackets(Brackets& opening, char bracket) {
   for (char open_bracket : open_brackets) {
@@ -32,7 +32,7 @@ bool errorsFound(Brackets& stack, char openingBracket, char closingBracket)
 {
     if(stack.empty())
     {
-        std::cout << "Unmatched " << closingBracket;
+        ::std::cout << "Unmatched " << closingBracket;
         return true;
     }
 
@@ -86,6 +86,7 @@ bool CheckBracketsMatching() {
     return true;
   }
 }
-}
+
+}  // namespace check_open_closed_brackets
 
 #endif /* CHECK_OPEN_CLOSED_BRACKETS_H_ */

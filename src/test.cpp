@@ -9,6 +9,9 @@
 #include "common/circular_que.h"
 #include "common/node.h"
 
+#include "logger/log_template.h"
+#include "logger/logger.h"
+
 #include "algoritms/algoritms.h"
 #include "array/array.h"
 #include "bits/bits.h"
@@ -39,8 +42,6 @@
 #include "overloading/overloading.h"
 #include "moto/moto.h"
 
-#include "logger/logger.h"
-
 #include "last/last_1.h"
 #include "epam/epam.h"
 #include "epam/google.h"
@@ -53,10 +54,11 @@
 
 
 int main(int argc, char **argv) {
-  logger::LogMethodWrapper l("All test cases");
+//  logger::Log().Get(LogLevel::INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
 //  assert(cpp11::test());
-// assert(algorithms::test());
+ assert(algorithms::test());
 //   assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(cpp0x::test());
@@ -93,7 +95,7 @@ int main(int argc, char **argv) {
 //  assert(quicksort_cpp11::test());
 
 //  assert(threads::test());
-  assert(futures::test());
+//  assert(futures::test());
 
 //  assert(epam::test() );
 //  assert(ms::test() );
@@ -104,6 +106,5 @@ int main(int argc, char **argv) {
 //  int *pa = arr;
 
   return 0;
-
 }
 

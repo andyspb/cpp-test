@@ -2,29 +2,29 @@
 namespace dino_class {
 
 class A {
-  public:
-    A() {
-      std::cout << __FUNCTION__ << std::endl;
-    }
-  private:
-    int i;
-  public:
-    static void ST_test() {
-      cout << __FUNCTION__ << endl;
-    }
-    void test1() {
-      cout << "A::test1()" << endl;
-      i = 5;
-    }
-    void test2() {
-      cout << "A::test2()" << endl;
-      i++;
-    }
+ public:
+  A()
+      : i(0) {
+    ::std::cout << __FUNCTION__ << std::endl;
+  }
+  static void ST_test() {
+    ::std::cout << __FUNCTION__ << ::std::endl;
+  }
+  void test1() {
+    ::std::cout << "A::test1()" << ::std::endl;
+    i = 5;
+  }
+  void test2() {
+    ::std::cout << "A::test2()" << ::std::endl;
+    ++i;
+  }
+ private:
+  int i;
 
 };
 
 void test() {
-  std::cout << __FUNCTION__ << std::endl;
+  ::std::cout << __FUNCTION__ << ::std::endl;
   A * a = NULL;
 
   A::ST_test();

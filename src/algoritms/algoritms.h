@@ -15,7 +15,7 @@
 #include <string>
 
 #include "../logger/logger.h"
-
+#include "../logger/log_template.h"
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
@@ -69,6 +69,7 @@
 #include "multiply_by_7.h"
 #include "my_atoi.h"
 #include "num_to_str.h"
+#include "reverse_string.h"
 #include "palindrom_rec.h"
 #include "palindrome.h"
 #include "permutation_of_string.h"
@@ -94,7 +95,7 @@
 
 namespace algorithms {
 int test() {
-  logger::LogMethodWrapper l("algorithms\n");
+  LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(binary_search::test());
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
@@ -129,6 +130,8 @@ int test() {
 //  assert(tree_traversal::test());
 //
 //  assert(linked_list_is_palindrome_with_stack::test());
+  assert(reverse_string2::test());
+//  assert(permutation_of_string::test());
   return 1;
 }
 

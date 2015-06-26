@@ -27,7 +27,7 @@ float SquareRoot(float num) {
 }
 
 int test() {
-  logger::LogMethodWrapper log("Test sqrt");
+  logger::Log().Get(INFO) << "Test sqrt";
   std::cout << "SquareRoot(4) " << SquareRoot(4) << std::endl;
   std::cout << "SquareRoot(9) " << SquareRoot(9) << std::endl;
   std::cout << "SquareRoot(25) " << SquareRoot(25) << std::endl;
