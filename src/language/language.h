@@ -35,6 +35,7 @@
 #include "ctor_test.h"
 #include "function_parameter.h"
 #include "function_pointers.h"
+#include "hash_map.h"
 #include "initialization_with_this.h"
 #include "inheritance.h"
 #include "namespace_test.h"

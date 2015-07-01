@@ -30,7 +30,9 @@
 #include "memory/mem_test.h"
 #include "patterns/patterns.h"
 #include "templates/templates.h"
+
 #include "smart_ptr/smart_ptr.h"
+#include "spb/spb.h"
 #include "sqrt/sqrt.h"
 #include "static/static.h"
 #include "stl/stl.h"
@@ -38,6 +40,7 @@
 #include "tests/tests.h"
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
+
 
 #include "overloading/overloading.h"
 #include "moto/moto.h"
@@ -75,7 +78,8 @@ int main(int argc, char **argv) {
 //  assert(mem_test::test());
 //assert(moto::test());
 //    assert(templates::test());
-
+//  assert(spb::test());
+//  assert(hashmap::test());
 //  assert(overloading::test());
 
   //  assert(patterns::test());

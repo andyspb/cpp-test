@@ -41,10 +41,12 @@ void permute(char *a, int i, int n) {
 
 /* Driver program to test above functions */
 int test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   char a[] = "ABCD";
   permute(a, 0, 2);
   return 1;
 }
+
 }  // permutation_of_string
 
 #endif /* PERMUTATION_OF_STRING_H_ */

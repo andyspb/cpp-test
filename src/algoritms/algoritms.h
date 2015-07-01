@@ -91,7 +91,7 @@
 #include "turn_off_bit_in_number.h"
 
 #include "check_if_braces_match.h"
-
+#include "pow_x_n.h"
 
 namespace algorithms {
 int test() {
@@ -130,7 +130,8 @@ int test() {
 //  assert(tree_traversal::test());
 //
 //  assert(linked_list_is_palindrome_with_stack::test());
-  assert(reverse_string2::test());
+//  assert(reverse_string2::test());
+  assert(pow_x_n::test());
 //  assert(permutation_of_string::test());
   return 1;
 }
