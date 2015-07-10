@@ -91,16 +91,16 @@ int test() {
 #pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
 #endif
 
-  int x = x;
-  int y = y;
+  int x = ::functors::x;
+  int y = ::functors::y;
 
   int arr[s];
 
   std::cout << "x: "<< x << std::endl;
   std::cout << "y: "<< y << std::endl;
-  std::cout << "sizeof arr: "<< sizeof(arr)/sizeof(arr[0]) << std::endl;
+  std::cout << "sizeof(arr): "<< sizeof(arr)/sizeof(arr[0]) << std::endl;
 
-  std::cout << "sizeof string literal: " << sizeof("a") << std::endl;
+  std::cout << "sizeof(string literal): " << sizeof("a") << std::endl;
 
 
 

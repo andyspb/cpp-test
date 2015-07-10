@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
 //  assert(cpp11::test());
- assert(algorithms::test());
+// assert(algorithms::test());
 //   assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(cpp0x::test());
@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
 //assert(moto::test());
-//    assert(templates::test());
+    assert(templates::test());
 //  assert(spb::test());
 //  assert(hashmap::test());
 //  assert(overloading::test());

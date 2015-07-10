@@ -21,10 +21,29 @@ namespace templates {
 
 template<class T> void f() {
 }
-;
+
 template<int i> void f() {
 }
-;
+
+
+template <typename... U> void g() {
+}
+
+template<class ... Types> struct Tuple {};
+Tuple<> t0;           // Types contains no arguments
+Tuple<int> t1;        // Types contains one argument: int
+Tuple<int, float> t2; // Types contains two arguments: int and float
+Tuple<float, float> error;       // error: 0 is not a type
+
+template<class ...Us> void f(Us... pargs) {
+
+  while(pargs)
+  std::cout << pargs<< std::endl;
+}
+template<class ...Ts> void g(Ts... args) {
+    f(&args...); // “&args...” is a pack expansion
+                 // “&args” is its pattern
+}
 
 template<class T, int size>
 class Myfilebuf {
@@ -43,7 +62,7 @@ int template_test() {
 }
 
 int test() {
-  logger::Log().Get(INFO) << "Templates tests";
+  LOG(INFO) << __FUNCTION__;
 
   template_test();
 
@@ -57,6 +76,10 @@ int test() {
 //    assert(template_test3::test());
 //    assert(template_test4::test());
 //  assert(template_test5::test());
+
+  g(1, 0.2, "a");
+
+
   return 1;
 }
 }  // namespace templates
