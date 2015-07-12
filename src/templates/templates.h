@@ -36,13 +36,30 @@ Tuple<int, float> t2; // Types contains two arguments: int and float
 Tuple<float, float> error;       // error: 0 is not a type
 
 template<class ...Us> void f(Us... pargs) {
-
-  while(pargs)
-  std::cout << pargs<< std::endl;
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  std::cout << "f templ"<< std::endl;
 }
+
+//template<class U1, class U2, class U3>
+//void f(U1 u1, U2 u2, U3 u3 ) {
+//  LOG(INFO) << __PRETTY_FUNCTION__;
+//  std::cout << *u1<< std::endl;
+//  std::cout << *u2<< std::endl;
+//  std::cout << *u3<< std::endl;
+//}
+
+template<int* , class U2, class U3>
+void f(int* u1, U2 u2, U3 u3 ) {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO) << "f int";
+  std::cout << *u1<< std::endl;
+  std::cout << *u2<< std::endl;
+  std::cout << *u3<< std::endl;
+}
+
 template<class ...Ts> void g(Ts... args) {
-    f(&args...); // “&args...” is a pack expansion
-                 // “&args” is its pattern
+    f(&args...); // &args... is a pack expansion
+                 // &args is its pattern
 }
 
 template<class T, int size>
@@ -62,12 +79,12 @@ int template_test() {
 }
 
 int test() {
-  LOG(INFO) << __FUNCTION__;
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
-  template_test();
+//  template_test();
 
   //    assert(template_factorial::test());
-  assert(template_fibonacci::test());
+//  assert(template_fibonacci::test());
 //    assert(template_keyword::test());
 //    assert(template_method_in_non_template_class::test());
 //    assert(template_mycontainer::test());
