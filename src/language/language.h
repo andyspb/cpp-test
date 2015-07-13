@@ -23,6 +23,7 @@
 #include "class_initialization.h"
 #include "const_char_test.h"
 #include "const_method.h"
+#include "constexpr_test.h"
 #include "constructor_exception.h"
 #include "cout.h"
 #include "delete.h"
@@ -32,12 +33,14 @@
 #include "generic_list_test.h"
 #include "goto_.h"
 #include "que_test.h"
+#include "cast_const.h"
 #include "ctor_test.h"
 #include "function_parameter.h"
 #include "function_pointers.h"
 #include "hash_map.h"
 #include "initialization_with_this.h"
 #include "inheritance.h"
+#include "lambda.h"
 #include "namespace_test.h"
 #include "my_queue.h"
 #include "stl_tests.h"
@@ -62,7 +65,7 @@
 
 namespace language {
 int test() {
-  std::cout << "language:" << std::endl;
+  LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(binary::test());
 //  assert(bind1st_::test());
 //  assert(bind2nd_::test());
@@ -77,6 +80,9 @@ int test() {
 //  assert(const_method::test());
 //  assert(container_stack_test::test());
 //  assert(const_char_test::test());
+
+//  assert(cast_const::test());
+//  assert(constexpr_test::test());
   //	assert(constructor_exception::test());
 //  assert(cout_::test());
 //  assert(delete_::test());
@@ -90,7 +96,10 @@ int test() {
 //  assert(function_pointers::test());
 //  assert(intialization_with_this::test());
   //	assert(inheritance::test());
-//    assert(namespace_test::test());
+
+  assert(language_lambda::test());
+
+  //    assert(namespace_test::test());
 //  assert(method_hiding::test());
 //  assert(my_queue::test());
 //  assert(my_stack::test());
@@ -106,7 +115,7 @@ int test() {
 
   //    assert(static_cast_::test());
 //	assert(string_literal::test());
-	assert(size_of::test());
+//	assert(size_of::test());
 //  assert(stl_tests::test());
 //	assert(strlen_test::test());
 //  assert(union_::test());

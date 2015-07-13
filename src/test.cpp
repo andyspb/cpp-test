@@ -5,8 +5,9 @@
 #include <assert.h>
 
 #include "common/binary_tree.h"
-#include "common/linked_list.h"
 #include "common/circular_que.h"
+#include "common/constants.h"
+#include "common/linked_list.h"
 #include "common/node.h"
 
 #include "logger/log_template.h"
@@ -72,12 +73,12 @@ int main(int argc, char **argv) {
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
-//  assert(language::test());
+  assert(language::test());
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
 //assert(moto::test());
-    assert(templates::test());
+//    assert(templates::test());
 //  assert(spb::test());
 //  assert(hashmap::test());
 //  assert(overloading::test());
