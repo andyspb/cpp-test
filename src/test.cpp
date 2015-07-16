@@ -28,7 +28,7 @@
 #include "language/language.h"
 #include "lambda/lambda.h"
 #include "lock-free/lock_free.h"
-#include "memory/mem_test.h"
+#include "memory/memory.h"
 #include "patterns/patterns.h"
 #include "templates/templates.h"
 
@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
-  assert(language::test());
+//  assert(language::test());
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
@@ -110,6 +110,7 @@ int main(int argc, char **argv) {
 //  int arr[10];
 //  int *pa = arr;
 
+  LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;
 }
 

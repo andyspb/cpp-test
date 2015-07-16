@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "template_factorial.h"
 #include "template_fibonacci.h"
+#include "template_func.h"
 #include "template_keyword.h"
 #include "template_method_in_non_template_class.h"
 #include "template_mycontainer.h"
@@ -50,6 +51,8 @@ int test() {
 
   //    assert(template_factorial::test());
 //  assert(template_fibonacci::test());
+
+  assert(template_func::test());
 //    assert(template_keyword::test());
 //    assert(template_method_in_non_template_class::test());
 //    assert(template_mycontainer::test());
@@ -58,7 +61,7 @@ int test() {
 //    assert(template_test3::test());
 //    assert(template_test4::test());
 //  assert(template_test5::test());
-  assert(templates_param_pack::test());
+//  assert(templates_param_pack::test());
 
   return 1;
 }
