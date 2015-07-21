@@ -8,10 +8,11 @@
 #ifndef SRC_MEMORY_MEMORY_H_
 #define SRC_MEMORY_MEMORY_H_
 
-#include "mem_test.h"
-#include "habrhabr.h"
 #include "alignment.h"
 #include "allocate_1024_bytes_of_memory.h"
+#include "allocator.h"
+#include "habrhabr.h"
+#include "mem_test.h"
 
 namespace memory {
 

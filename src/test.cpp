@@ -24,6 +24,7 @@
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "func/func.h"
+#include "hashtable/hashtable.h"
 #include "hashcode/hashcodes.h"
 #include "language/language.h"
 #include "lambda/lambda.h"
@@ -36,6 +37,7 @@
 #include "spb/spb.h"
 #include "sqrt/sqrt.h"
 #include "static/static.h"
+#include "stackoverflow/stackoverflow.h"
 #include "stl/stl.h"
 #include "thread/tests.h"
 #include "tests/tests.h"
@@ -86,6 +88,9 @@ int main(int argc, char **argv) {
   //  assert(patterns::test());
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
+
+  assert(stackoverflow::test());
+
 //  assert(stl::test());
 //  assert(binary_tree::test());
 //  assert(tests::test());
