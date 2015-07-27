@@ -1,14 +1,14 @@
 /*
  * cpp0x_move.h
  *
- *  Created on: 26 июля 2015 г.
+ *  Created on: 26 пїЅпїЅпїЅпїЅ 2015 пїЅ.
  *      Author: andy
  */
 
-#ifndef SRC_CPP0X_CPP0X_MOVE_H_
-#define SRC_CPP0X_CPP0X_MOVE_H_
+#ifndef SRC_CPP1X_CPP0X_MOVE_H_
+#define SRC_CPP1X_CPP0X_MOVE_H_
 
-namespace cpp0x_move {
+namespace cpp1x_move {
 
 class Base {
  public:
@@ -60,6 +60,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-}  // namespace cpp0x_move
+}  // namespace cpp1x_move
 
-#endif /* SRC_CPP0X_CPP0X_MOVE_H_ */
+#endif /* SRC_CPP1X_CPP1X_MOVE_H_ */

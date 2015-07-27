@@ -1,12 +1,12 @@
 /*
  * rvalues.h
  *
- *  Created on: 01 июня 2015 г.
+ *  Created on: 01 пїЅпїЅпїЅпїЅ 2015 пїЅ.
  *      Author: andy
  */
 
-#ifndef SRC_CPP11_RVALUES_H_
-#define SRC_CPP11_RVALUES_H_
+#ifndef SRC_CPP1X_CPP1X_RVALUES_H_
+#define SRC_CPP1X_CPP1X_RVALUES_H_
 
 #include <utility>      // std::move
 #include <iostream>     // std::cout
@@ -39,4 +39,4 @@ int test() {
 
 }
 
-#endif /* SRC_CPP11_RVALUES_H_ */
+#endif /* SRC_CPP1X_CPP1X_RVALUES_H_ */

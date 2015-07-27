@@ -17,10 +17,11 @@
 #include "array/array.h"
 #include "bits/bits.h"
 #include "clock/clock.h"
-#include "cpp0x/cpp0x.h"
-#include "cpp11/cpp11.h"
+#include "cpp1x/cpp1x.h"
 #include "cci4/cci4.h"
 #include "cci5/cci5.h"
+#include "cpp1x/cpp1x.h"
+#include "cpp1x/cpp1x_quick_sort.h"
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "func/func.h"
@@ -56,18 +57,16 @@
 #include "ms/ms.h"
 #include "memory/alignment.h"
 
-#include "cpp11/quick_sort.h"
 
 
 int main(int argc, char **argv) {
-//  logger::Log().Get(LogLevel::INFO) << __PRETTY_FUNCTION__;
   LOG(INFO) << __PRETTY_FUNCTION__;
 
 //  assert(cpp11::test());
 // assert(algorithms::test());
 //   assert(binary_tree::test());
 //  assert(bits::test());
-  assert(cpp0x::test());
+  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(exceptions::test());
