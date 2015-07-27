@@ -30,9 +30,9 @@ void function2(::std::shared_ptr<Image<T>> v) {
 int test(void) {
   LOG(INFO) << __PRETTY_FUNCTION__;
   Image<int>::Ptr test = ::std::make_shared<Image<int>>();
-  function1(test);       // Does NOT compile
-  function1<int>(test);  // Does compile
-  function2(test);       // Does compile
+//  function1(test);       // Does NOT compile
+//  function1<int>(test);  // Does compile
+//  function2(test);       // Does compile
   return 1;
 }
 
