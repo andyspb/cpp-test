@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 // assert(algorithms::test());
 //   assert(binary_tree::test());
 //  assert(bits::test());
-//  assert(cpp0x::test());
+  assert(cpp0x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(exceptions::test());
@@ -89,7 +89,7 @@ int main(int argc, char **argv) {
 //  assert(quiz::test());
 //  assert(smart_ptr::test());
 
-  assert(stackoverflow::test());
+//  assert(stackoverflow::test());
 
 //  assert(stl::test());
 //  assert(binary_tree::test());
