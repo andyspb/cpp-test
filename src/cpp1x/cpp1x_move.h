@@ -41,21 +41,22 @@ TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
   Base b(5);
-  LOG (INFO)
-  << "b.v=" << b.v
-  << " b.ref="<< b.ref
-  << " b.pv=" << b.pv;
+  LOG(INFO) << "b.v=" << b.v << " b.ref=" << b.ref << " b.pv=" << b.pv;
 
   Base b1(std::move(b));
 
-  LOG(INFO) << "b1.v=" << b1.v << " b1.ref=" << b1.ref
-      << " b1.pv=" << b1.pv;
+  LOG(INFO) << "b1.v=" << b1.v << " b1.ref=" << b1.ref << " b1.pv=" << b1.pv;
 
-  LOG(INFO) << "b.v=" << b.v << " b.ref=" << b.ref
-      << " b.pv=" << b.pv;
+  LOG(INFO) << "b.v=" << b.v << " b.ref=" << b.ref << " b.pv=" << b.pv;
 
   int n = 3;
-  int&& rv = 3 ;
+  int&& rv = 3;
+
+  LOG(INFO) << "n=" << n << " rv=" << rv << "\n";
+
+  int v2 = std::move(rv);
+
+  LOG(INFO) << "v2=" << v2 << " rv=" << rv << "\n";
 
   RETURN_OK();
 }
