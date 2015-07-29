@@ -22,15 +22,15 @@ class InnertemplateTest {
 
 template<class T>  //SOMETHING WRONG WITH THIS DEFINITION
 void InnertemplateTest::foo_templ(const T& obj) {
-  std::cout << "From foo_templ()" << std::endl;
+  LOG(INFO) << "From foo_templ()";
 }
 
-int test() {
-  std::cout << "Test: template method in non template class --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   InnertemplateTest stack;
   stack.foo_templ<int>(5);
 
-  return 1;
+  RETURN_OK();
 }
 }  // namespace template_method_in_non_template_class
 

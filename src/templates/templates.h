@@ -44,7 +44,7 @@ int template_test() {
   return 1;
 }
 
-int test() {
+TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
 //  template_test();
@@ -52,9 +52,9 @@ int test() {
   //    assert(template_factorial::test());
 //  assert(template_fibonacci::test());
 
-  assert(template_func::test());
+//  assert(template_func::test());
 //    assert(template_keyword::test());
-//    assert(template_method_in_non_template_class::test());
+    assert(template_method_in_non_template_class::test());
 //    assert(template_mycontainer::test());
 //    assert(template_test1::test());
 //    assert(template_test2::test());
@@ -63,7 +63,7 @@ int test() {
 //  assert(template_test5::test());
 //  assert(templates_param_pack::test());
 
-  return 1;
+  RETURN_OK();
 }
 }  // namespace templates
 

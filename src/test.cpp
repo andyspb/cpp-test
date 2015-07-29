@@ -62,11 +62,10 @@
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-//  assert(cpp11::test());
-// assert(algorithms::test());
-//   assert(binary_tree::test());
+//  assert(algorithms::test());
+//  assert(binary_tree::test());
 //  assert(bits::test());
-  assert(cpp1x::test());
+//  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(exceptions::test());
