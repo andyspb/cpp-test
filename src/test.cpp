@@ -73,7 +73,7 @@ int main(int argc, char **argv) {
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
-//  assert(language::test());
+  assert(language::test());
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());

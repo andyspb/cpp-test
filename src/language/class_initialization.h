@@ -15,13 +15,13 @@ class Class{
     int b;
 };
 
-int test() {
-  std::cout << "Test: class initialization --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   Struct s = { 'a', 2 };
-  std::cout << "s.a="<< s.a << " s.b=" << s.b << std::endl;
+  LOG(INFO) << "s.a="<< s.a << " s.b=" << s.b;
   Class c = { 3, 4 };
-  std::cout << "c.a="<< c.a << " c.b=" << c.b << std::endl;
-  return 1;
+  LOG(INFO) << "c.a="<< c.a << " c.b=" << c.b;
+  RETURN_OK();
 }
 } // namespace class_initialization
 

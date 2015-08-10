@@ -64,7 +64,7 @@
 #include "virtuals.h"
 
 namespace language {
-int test() {
+TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(binary::test());
 //  assert(bind1st_::test());
@@ -97,7 +97,7 @@ int test() {
 //  assert(intialization_with_this::test());
   //	assert(inheritance::test());
 
-  assert(language_lambda::test());
+//  assert(language_lambda::test());
 
   //    assert(namespace_test::test());
 //  assert(method_hiding::test());
@@ -113,7 +113,7 @@ int test() {
 //  assert(pure_virt_call::test());
 //  assert(set_test::test());
 
-  //    assert(static_cast_::test());
+    assert(static_cast_::test());
 //	assert(string_literal::test());
 //	assert(size_of::test());
 //  assert(stl_tests::test());
@@ -125,7 +125,7 @@ int test() {
 //  assert(virtual_method::test());
 //  assert(virtual_function_default_param::test());
 //  assert(virtuals::test());
-	return 1;
+	RETURN_OK();
 }
 } // namespace language
 

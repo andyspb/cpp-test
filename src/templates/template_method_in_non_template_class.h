@@ -20,7 +20,7 @@ class InnertemplateTest {
     void* ptr_;
 };
 
-template<class T>  //SOMETHING WRONG WITH THIS DEFINITION
+template<class T>
 void InnertemplateTest::foo_templ(const T& obj) {
   LOG(INFO) << "From foo_templ()";
 }
