@@ -17,16 +17,15 @@ class Class {
 typedef void (*func)();
 typedef void (Class::*class_func)();
 
-
-int test() {
-  std::cout << "Test: test poonters to functions and class members --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   Class c;
   func  f1 = &f;
   f1();
   class_func f2 = &Class::f;
   (c.*f2)();
 //  class_func f3 = &c.g();
-  return 1;
+  RETURN_OK();
 }
 
 } // namespace pointer_to_function

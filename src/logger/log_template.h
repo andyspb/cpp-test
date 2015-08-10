@@ -1,7 +1,7 @@
 /*
  * log_template.h
  *
- *  Created on: 25 июня 2015 г.
+ *  Created on: 25 пїЅпїЅпїЅпїЅ 2015 пїЅ.
  *      Author: andy
  */
 
