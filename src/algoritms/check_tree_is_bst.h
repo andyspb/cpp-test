@@ -15,7 +15,7 @@ struct node {
 };
 
 namespace check_tree_is_bst {
-int test(struct node* node) {
+TEST_RESULT test(struct node* node) {
   if (!node)
     return 1;
 
@@ -34,6 +34,6 @@ int test(struct node* node) {
   /* passing all that, it's a BST */
   return 1;
 }
-}  // check_tree_is_bst
+}  // namespace check_tree_is_bst
 
 #endif /* CHECK_TREE_IS_BST_H_ */

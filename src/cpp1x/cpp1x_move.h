@@ -54,7 +54,7 @@ TEST_RESULT test() {
 
   LOG(INFO) << "n=" << n << " rv=" << rv << "\n";
 
-  int v2 = std::move(rv);
+  int v2 = ::std::move(rv);
 
   LOG(INFO) << "v2=" << v2 << " rv=" << rv << "\n";
 
