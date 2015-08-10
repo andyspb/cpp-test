@@ -9,28 +9,38 @@
 #define _CHECK_TREE_IS_BS_TREE_H_
 
 
-// 4.5 Imp/emen t a function to check if a binary tree is a binary search tree.
+// 4.5 Implement a function to check
+// if a binary tree is a binary search tree.
 
 namespace check_tree_is_bst {
 
+struct TreeNode {
+  TreeNode() : data(0), left(0), right(0), size(10) {}
+  int data;
+  TreeNode* left;
+  TreeNode* right;
+  constexpr int size;
+};
+
 //4.5 Imp/emen t a function to check if a binary tree is a binary search tree.
-1 public static int index = 0;
- public static void copyBST(TreeNode root, int[] array) {
- 3 if (root == null) return;
- 4 copyBST(root.left, array);
- array[index] = root.data;
- 6 index++;
- copyBST(root.right, array);
- 8 }
- 9
- 10 public static boolean checkBST(TreeNode root) {
- 11 int[] array = new int[root.size];
- 12 copyBST(root, array);
- 13 for (int i = 1; i < array.length; i++) {
- 14 if (array[i] <= array[i - 1]) return false;
- 15 }
- 16 return true;
- 17 }
+static int index = 0;
+ void copyBST(TreeNode* root, int& array[]) {
+  if (!root)
+    return;
+    copyBST(root->left, array);
+    array[index] = root->data;
+    ++index;
+    copyBST(root->right, array);
+  }
+
+  bool checkBST(TreeNode* root) {
+  int array* = new int[root->size];
+  copyBST(root, array);
+  for (int i = 1; i < array->size; i++) {
+  if (array[i] <= array[i - 1]) return false;
+  }
+  return true;
+  }
 
 }
 

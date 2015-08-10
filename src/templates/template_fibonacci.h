@@ -40,7 +40,7 @@ class Fibonacci<0> {
 };
 
 int test() {
-  const int c = 10;
+  constexpr int c = 3;
   std::cout << "Fibonacci(10)=" << Fibonacci<c>::value << std::endl;
 
   return 1;

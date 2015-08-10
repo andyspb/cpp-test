@@ -33,6 +33,7 @@
 #include "memory/memory.h"
 #include "patterns/patterns.h"
 #include "templates/templates.h"
+#include "teramind/teramind.h"
 
 #include "smart_ptr/smart_ptr.h"
 #include "spb/spb.h"
@@ -78,7 +79,8 @@ int main(int argc, char **argv) {
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
 //assert(moto::test());
-//    assert(templates::test());
+//  assert(templates::test());
+  assert(teramind::test());
 //  assert(spb::test());
 //  assert(hashmap::test());
 //  assert(overloading::test());

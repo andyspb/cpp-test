@@ -50,11 +50,11 @@ TEST_RESULT test() {
 //  template_test();
 
   //    assert(template_factorial::test());
-//  assert(template_fibonacci::test());
+  assert(template_fibonacci::test());
 
 //  assert(template_func::test());
 //    assert(template_keyword::test());
-    assert(template_method_in_non_template_class::test());
+//    assert(template_method_in_non_template_class::test());
 //    assert(template_mycontainer::test());
 //    assert(template_test1::test());
 //    assert(template_test2::test());

@@ -57,6 +57,7 @@ TEST_RESULT test() {
 //  std::cout << "Answer is " << x;
 
   int* p = NULL;
+  LOG(INFO) << "p=" << p;
 
   RETURN_OK();
 }
