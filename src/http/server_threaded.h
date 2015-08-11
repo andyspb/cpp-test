@@ -8,10 +8,12 @@
 #ifndef SRC_HTTP_SERVER_THREADED_H_
 #define SRC_HTTP_SERVER_THREADED_H_
 
-/* For sockaddr_in */
+#ifdef __WIN32__
+# include <winsock2.h>
+#else
 #include <netinet/in.h>
-/* For socket functions */
 #include <sys/socket.h>
+#endif
 
 #include <unistd.h>
 #include <string.h>
@@ -57,16 +59,16 @@ void run(void) {
 
   listener = socket(AF_INET, SOCK_STREAM, 0);
 
-//#ifndef WIN32
-//  {
+#ifndef WIN32
+  {
     int one = 1;
     setsockopt(listener, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(one));
-//  }
-//#endif
+  }
+#endif
 
   if (bind(listener, (struct sockaddr*) &sin, sizeof(sin)) < 0) {
     close(listener);
-    LOG(ERROR) << "can't bind";
+    LOG(INFO) << "can't bind";
     return;
   }
 
@@ -82,10 +84,14 @@ void run(void) {
     if (fd < 0) {
       perror("accept");
     } else {
+#ifndef WIN32
       if (fork() == 0) {
         child(fd);
         exit(0);
       }
+#else
+      std::thread(child, fd);
+#endif
     }
   }
 }

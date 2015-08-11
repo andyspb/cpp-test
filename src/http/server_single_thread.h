@@ -12,11 +12,18 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/socket.h>
+#ifdef __WIN32__
+# include <winsock2.h>
+#else
+# include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
-#include <err.h>
+#endif
+
+#ifdef __WIN32__
+typedef int socklen_t;
+#endif
 
 namespace server_single_thread {
 
@@ -36,10 +43,15 @@ TEST_RESULT test() {
   socklen_t sin_len = sizeof(cli_addr);
 
   int sock = socket(AF_INET, SOCK_STREAM, 0);
-  if (sock < 0)
-    err(1, "can't open socket");
-
+  if (sock < 0) {
+    LOG(INFO) << "can't open socket";
+    return 0;
+  }
+#ifndef WIN32
+  {
   setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(int));
+  }
+#endif
 
   int port = 8080;
   svr_addr.sin_family = AF_INET;
@@ -48,7 +60,8 @@ TEST_RESULT test() {
 
   if (bind(sock, (struct sockaddr *) &svr_addr, sizeof(svr_addr)) == -1) {
     close(sock);
-    err(1, "Can't bind");
+    LOG(INFO) << "Can't bind";
+    return 0;
   }
 
   listen(sock, 5);

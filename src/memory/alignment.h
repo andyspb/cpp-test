@@ -58,10 +58,10 @@ int test() {
   printf("sizeof(structc_t) = %lu\n", (long unsigned) sizeof(structc_t));
   printf("sizeof(structd_t) = %lu\n", (long unsigned) sizeof(structd_t));
 #else
-  printf("sizeof(structa_t) = %d\n", sizeof(structa_t));
-  printf("sizeof(structb_t) = %d\n", sizeof(structb_t));
-  printf("sizeof(structc_t) = %d\n", sizeof(structc_t));
-  printf("sizeof(structd_t) = %d\n", sizeof(structd_t));
+//  printf("sizeof(structa_t) = %lld\n", sizeof(structa_t));
+//  printf("sizeof(structb_t) = %lld\n", sizeof(structb_t));
+//  printf("sizeof(structc_t) = %lld\n", sizeof(structc_t));
+//  printf("sizeof(structd_t) = %lld\n", sizeof(structd_t));
 #endif
 
   return 1;

@@ -16,8 +16,8 @@ namespace http_server {
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-//  assert(server_single_thread::test());
-  assert(server_threaded::test());
+  assert(server_single_thread::test());
+//  assert(server_threaded::test());
 
   RETURN_OK();
 }
