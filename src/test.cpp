@@ -54,6 +54,7 @@
 #include "epam/epam.h"
 #include "epam/google.h"
 #include "epam/google2.h"
+#include "http/server.h"
 
 #include "ms/ms.h"
 #include "memory/alignment.h"
@@ -62,7 +63,7 @@
 
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
-
+  assert(http_server::test());
 //  assert(algorithms::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -74,13 +75,13 @@ int main(int argc, char **argv) {
 //  assert(func::test());
 //  assert(hashcodes::test());
 //  assert(lambda::test());
-  assert(language::test());
+//  assert(language::test());
 
 //  assert(sqrt_::test());
 //  assert(mem_test::test());
 //assert(moto::test());
 //  assert(templates::test());
-  assert(teramind::test());
+//  assert(teramind::test());
 //  assert(spb::test());
 //  assert(hashmap::test());
 //  assert(overloading::test());
