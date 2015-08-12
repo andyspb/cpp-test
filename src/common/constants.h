@@ -9,8 +9,13 @@
 #define SRC_COMMON_CONSTANTS_H_
 
 #define RESULT_OK 1
+#define RESULT_FAIL 0
+
 #define RETURN_OK() \
   return RESULT_OK
+
+#define RETURN_FAIL() \
+  return RESULT_FAIL
 
 #define TEST_RESULT int
 #define TEST_OK 1

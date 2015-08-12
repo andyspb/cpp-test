@@ -16,6 +16,7 @@
 #include "cpp1x_insert_sort.h"
 #include "cpp1x_move.h"
 #include "cpp1x_quick_sort.h"
+#include "cpp1x_selection_sort.h"
 #include "cpp1x_thread.h"
 
 
