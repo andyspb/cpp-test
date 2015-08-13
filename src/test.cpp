@@ -55,6 +55,7 @@
 #include "epam/google.h"
 #include "epam/google2.h"
 #include "http/server.h"
+#include "diff/diff.h"
 
 #include "ms/ms.h"
 #include "memory/alignment.h"
@@ -63,7 +64,8 @@
 
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
-  assert(http_server::test());
+  assert(diff::test());
+//  assert(http_server::test());
 //  assert(algorithms::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
