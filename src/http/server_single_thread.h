@@ -42,15 +42,21 @@ TEST_RESULT test() {
   struct sockaddr_in svr_addr, cli_addr;
   socklen_t sin_len = sizeof(cli_addr);
 
+#ifndef WIN32
   int sock = socket(AF_INET, SOCK_STREAM, 0);
+#else
+  int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+#endif
   if (sock < 0) {
-    LOG(INFO) << "can't open socket";
+    LOG(INFO) << "can't open socket, sock:"<<sock;
     return 0;
   }
 #ifndef WIN32
   {
   setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(int));
   }
+#else
+  setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, (char*)&one, sizeof(int));
 #endif
 
   int port = 8080;
