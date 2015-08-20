@@ -41,7 +41,7 @@
 #include "static/static.h"
 #include "stackoverflow/stackoverflow.h"
 #include "stl/stl.h"
-#include "thread/tests.h"
+#include "thread/threads.h"
 #include "tests/tests.h"
 #include "quiz/quiz.h"
 #include "virtual/virtuals.h"
@@ -64,7 +64,10 @@
 
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
-  assert(diff::test());
+
+  assert(threads::test());
+
+//  assert(diff::test());
 //  assert(http_server::test());
 //  assert(algorithms::test());
 //  assert(binary_tree::test());

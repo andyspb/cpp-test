@@ -1,13 +1,12 @@
 /*
  * futures.h
  *
- *  Created on: 31 мая 2015 г.
+ *  Created on: 31 пїЅпїЅпїЅ 2015 пїЅ.
  *      Author: andy
  */
 
 #ifndef SRC_THREAD_FUTURES_H_
 #define SRC_THREAD_FUTURES_H_
-
 
 // future example
 #include <iostream>       // std::cout
@@ -22,15 +21,16 @@
 namespace futures {
 
 // a non-optimized way of checking for prime numbers:
-bool is_prime (int x) {
-  for (int i=2; i<x; ++i) if (x%i==0) return false;
+bool is_prime(int x) {
+  for (int i = 2; i < x; ++i)
+    if (x % i == 0)
+      return false;
   return true;
 }
 
-int test ()
-{
+TEST_RESULT test() {
   // call function asynchronously:
-  std::future<bool> fut = std::async (is_prime,444444443);
+  std::future<bool> fut = std::async(is_prime, 444444443);
 
   // do something while waiting for function to set future:
 //  std::cout << "checking, please wait";
@@ -40,8 +40,7 @@ int test ()
 //
 //  bool x = fut.get();     // retrieve return value
 //
-//  std::cout << "\n444444443 " << (x?"is":"is not") << " prime.\n";
-
+//  std::cout << "\n4444414443 " << (x?"is":"is not") << " prime.\n";
 
   std::string foo = "foo-string";
   std::string bar = "bar-string";
@@ -60,10 +59,9 @@ int test ()
 
   std::cout << "bar:" << bar << "\n";
 
-  return 1;
+  RETURN_OK();
 }
 
 }
-
 
 #endif /* SRC_THREAD_FUTURES_H_ */

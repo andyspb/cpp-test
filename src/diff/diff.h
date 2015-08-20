@@ -10,8 +10,8 @@
 
 namespace diff {
 
-constexpr char* file1 = "file1.txt";
-constexpr char* file2 = "file2.txt";
+constexpr char file1[] = "file1.txt";
+constexpr char file2[] = "file2.txt";
 
 
 TEST_RESULT test() {
