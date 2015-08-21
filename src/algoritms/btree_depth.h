@@ -1,8 +1,6 @@
 #ifndef _BTREE_DEPTH_H
 #define _BTREE_DEPTH_H
 
-#include "../logger/logger.h"
-
 #include <iostream>
 //Write a function to find the depth of a binary tree. Write a function to find the depth of a binary tree.
 
@@ -54,7 +52,7 @@ int btree_depth(BinaryTreeNode<T> *node) {
 }
 
 int test() {
-  logger::Log().Get(INFO) << "Tests: binary tree depth";
+  LOG(INFO) << "Tests: binary tree depth";
   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(0);
   int elements = 3;
   fill_tree<int>(root, elements);

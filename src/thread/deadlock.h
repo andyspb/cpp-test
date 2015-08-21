@@ -41,11 +41,26 @@ void bar(int x) {
   LOG(INFO) << "<<< bar(" << x << ")";
 }
 
+void foo1() {
+  LOG(INFO) << "foo1() >>> ";
+  std::lock(m2,m1);
+  LOG(INFO) << "<<< foo1()";
+  m1.unlock();
+  m2.unlock();
+}
+
+void bar1(int x) {
+  LOG(INFO) << "bar1(" << x << ") >>>";
+  std::lock(m1,m2);
+  LOG(INFO) << "<<< bar1(" << x << ")";
+  m2.unlock();
+  m1.unlock();
+}
 
 TEST_RESULT test() {
 
-  std::thread t1(foo);
-  std::thread t2(bar,1);
+  std::thread t1(foo1);
+  std::thread t2(bar1,1);
 
   t1.join();
   t2.join();

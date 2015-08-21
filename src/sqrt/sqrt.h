@@ -1,7 +1,7 @@
 /*
  * sqrt.h
  *
- *  Created on: 30 нояб. 2014 г.
+ *  Created on: 30 пїЅпїЅпїЅпїЅ. 2014 пїЅ.
  *      Author: andy
  */
 
@@ -27,7 +27,7 @@ float SquareRoot(float num) {
 }
 
 int test() {
-  logger::Log().Get(INFO) << "Test sqrt";
+  LOG(INFO) << __PRETTY_FUNCTION__ << " Test sqrt";
   std::cout << "SquareRoot(4) " << SquareRoot(4) << std::endl;
   std::cout << "SquareRoot(9) " << SquareRoot(9) << std::endl;
   std::cout << "SquareRoot(25) " << SquareRoot(25) << std::endl;

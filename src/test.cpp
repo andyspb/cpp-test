@@ -4,13 +4,8 @@
 #include <iostream>
 #include <assert.h>
 
-#include "common/binary_tree.h"
-#include "common/circular_que.h"
-#include "common/constants.h"
-#include "common/linked_list.h"
-#include "common/node.h"
+#include "common/common.h"
 
-#include "logger/log_template.h"
 #include "logger/logger.h"
 
 #include "algoritms/algoritms.h"
@@ -60,12 +55,13 @@
 #include "ms/ms.h"
 #include "memory/alignment.h"
 
-
+#include "sqllite/sqllite.h"
 
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-  assert(threads::test());
+  assert(sqllite::test());
+//  assert(threads::test());
 
 //  assert(diff::test());
 //  assert(http_server::test());

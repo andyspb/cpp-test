@@ -1,7 +1,7 @@
 /*
  * binary_search_tree.h
  *
- *  Created on: 24 ÿíâ. 2015 ã.
+ *  Created on: 24 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -17,34 +17,33 @@ struct TreeNode {
   TreeNode* right;
 };
 
-bool add(int value) {
-      if (root == NULL) {
-            root = new BSTNode(value);
-            return true;
-      } else
-            return root->add(value);
-}
+//bool add(int value) {
+//  if (root == NULL) {
+//    root = new BSTNode(value);
+//    return true;
+//  } else
+//    return root->add(value);
+//}
+//
+//bool add(int value) {
+//  if (value == this->value)
+//    return false;
+//  else if (value < this->value) {
+//  if (left == NULL) {
+//    left = new BSTNode(value);
+//    return true;
+//  } else
+//  not return left->add(value);
+//} else if (value > this->value) {
+//  if (right == NULL) {
+//    right = new BSTNode(value);
+//    return true;
+//  } else
+//    return right->add(value);
+//}
+//return false;
+//}
 
-bool add(int value) {
-      if (value == this->value)
-            return false;
-      else if (value < this->value) {
-            if (left == NULL) {
-                  left = new BSTNode(value);
-                  return true;
-            } else
-                  return left->add(value);
-      } else if (value > this->value) {
-            if (right == NULL) {
-                  right = new BSTNode(value);
-                  return true;
-            } else
-                  return right->add(value);
-      }
-      return false;
-}
-}
-
-
+}  // namespace binary_search_tree
 
 #endif /* BINARY_SEARCH_TREE_H_ */
