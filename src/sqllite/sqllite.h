@@ -14,6 +14,7 @@
 
 namespace sqllite {
 
+#ifdef __linux__
 static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
   int i;
   for (i = 0; i < argc; i++) {
@@ -22,6 +23,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
   printf("\n");
   return 0;
 }
+#endif
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
@@ -49,7 +51,6 @@ TEST_RESULT test() {
       "AGE            INT     NOT NULL,"
       "ADDRESS        CHAR(50),"
       "SALARY         REAL );";
-
   /* Execute SQL statement */
   rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
   if (rc != SQLITE_OK) {
@@ -61,7 +62,7 @@ TEST_RESULT test() {
   sqlite3_close(db);
 
 #else
-  LOG(ERROR) << "NOT IMPLEMENTED";
+  LOG(INFO) << "NOT IMPLEMENTED";
 
 #endif
   RETURN_OK();

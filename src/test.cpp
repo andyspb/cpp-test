@@ -60,7 +60,7 @@
 int main(int argc, char **argv) {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-  assert(sqllite::test());
+//  assert(sqllite::test());
 //  assert(threads::test());
 
 //  assert(diff::test());
@@ -96,7 +96,7 @@ int main(int argc, char **argv) {
 //  assert(stl::test());
 //  assert(binary_tree::test());
 //  assert(tests::test());
-//  assert(virtuals::test());
+  assert(virtuals::test());
 
 //  assert(last_1::test());
 //  assert(static_::test());

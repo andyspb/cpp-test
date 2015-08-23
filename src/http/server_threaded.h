@@ -98,7 +98,7 @@ TEST_RESULT test() {
     int client_fd = accept(listener, (struct sockaddr*) &ss, &slen);
     LOG(INFO) << "got connection, client_fd:" << client_fd;
     if (client_fd < 0) {
-      LOG(ERROR) << "Failed accept, client_fd:" << client_fd;
+      LOG(INFO) << "Failed accept, client_fd:" << client_fd;
     } else {
       std::thread t(child, client_fd);
       t.detach();

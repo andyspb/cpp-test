@@ -1,9 +1,8 @@
 #ifndef VIRTUALS_H_
 #define VIRTUALS_H_
 
-#include <stdio.h>
-
 #include <assert.h>
+#include "pure_virtual.h"
 #include "virt_access.h"
 #include "virt_cast_1.h"
 #include "virt_cast_2.h"
@@ -21,8 +20,8 @@
 
 namespace virtuals {
 
-int test() {
-    printf("virtuals::test\n");
+TEST_RESULT test() {
+    LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(virt_cast_1::test());
 //  assert(virt_cast_2::test());
 //  assert(virt_func_1::test());
@@ -35,8 +34,9 @@ int test() {
 //  assert(virt_func_6::test());
 //    assert(virt_func_7::test());
 //    assert(virt_func_8::test());
-    assert(virt_func_9::test());
-  return 1;
+//    assert(virt_func_9::test());
+    assert(pure_virtual::test());
+  RETURN_OK();
 }
 } // namespace virtuals
 

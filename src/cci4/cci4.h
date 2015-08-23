@@ -12,8 +12,8 @@
 #include "trees_and_graphs/trees_and_graphs.h"
 
 namespace cci4 {
-int test() {
-  std::cout << "Cracking code interviews tests" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << "Cracking code interviews tests" << std::endl;
   assert(arrays_and_strings::test());
   assert(cplusplus::test());
   assert(linked_lists::test());
@@ -22,7 +22,7 @@ int test() {
   assert(stacks_and_queues::test());
   assert(trees_and_graphs::test());
   std::cout << "<--- tests done" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }
 

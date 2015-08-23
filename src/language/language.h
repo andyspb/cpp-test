@@ -61,7 +61,7 @@
 #include "virtual_destr.h"
 #include "virtual_method.h"
 #include "virtual_function_default_param.h"
-#include "virtuals.h"
+#include "virtual_method_2.h"
 
 namespace language {
 TEST_RESULT test() {

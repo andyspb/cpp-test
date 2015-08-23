@@ -13,6 +13,7 @@
 #include <sstream>
 
 #define LOG(LEVEL) tlog::Log<tlog::Level::LEVEL>().Get()
+#define _PF_ __PRETTY_FUNCTION__
 
 namespace tlog {
 
