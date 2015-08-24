@@ -8,6 +8,8 @@
 #ifndef SRC_VIRTUAL_PURE_VIRTUAL_H_
 #define SRC_VIRTUAL_PURE_VIRTUAL_H_
 
+#include <iostream>
+
 namespace pure_virtual {
 
 class Base {
@@ -34,6 +36,8 @@ TEST_RESULT test() {
   d.print();
   Base* b = new Derived();
   b->print();
+
+  b->Base::print();
 
   RETURN_OK();
 }
