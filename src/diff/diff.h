@@ -8,14 +8,20 @@
 #ifndef SRC_DIFF_DIFF_H_
 #define SRC_DIFF_DIFF_H_
 
+#include <iostream>
+
 namespace diff {
 
-constexpr char file1[] = "file1.txt";
-constexpr char file2[] = "file2.txt";
+constexpr char file1[] = "This long piece of text will have a "
+    "common part found by LCS.\n";
 
+constexpr char file2[] = "This extra long piece of text will "
+    "have some common parts found by LCS.\n";
 
 TEST_RESULT test() {
-
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  std::cout << "file1:\n" << file1;
+  std::cout << "file2:\n" << file2;
   RETURN_OK();
 }
 

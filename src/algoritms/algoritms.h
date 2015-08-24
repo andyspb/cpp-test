@@ -92,10 +92,12 @@
 
 #include "check_if_braces_match.h"
 #include "pow_x_n.h"
+#include "longest_common_subseq.h"
 
 namespace algorithms {
 int test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
+  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());

@@ -31,7 +31,6 @@ TEST_RESULT test() {
   sqlite3 *db;
   char *zErrMsg = 0;
   int rc;
-  char *sql;
 
   LOG(INFO) << "open database";
   rc = sqlite3_open("test.db", &db);
@@ -45,7 +44,7 @@ TEST_RESULT test() {
   }
 
   /* Create SQL statement */
-  sql = "CREATE TABLE COMPANY("
+  const char* sql = "CREATE TABLE COMPANY("
       "ID INT PRIMARY KEY     NOT NULL,"
       "NAME           TEXT    NOT NULL,"
       "AGE            INT     NOT NULL,"

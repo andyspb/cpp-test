@@ -8,8 +8,8 @@
 //How would you reverse it without using indexing in the array.
 namespace reverse_char_array {
 
-int test() {
-  std::cout << "Reverse characters in array" << std::endl;
+TEST_RESULT test() {
+  LOG(ERROR) << __PRETTY_FUNCTION__ << " Reverse characters in array";
   char str[] = { 'a', 'b', 'c', 'd', 'e' };
   unsigned int size = sizeof(str) / sizeof(str[0]);
   for (unsigned int i = 0; i < size; ++i) {
@@ -31,7 +31,7 @@ int test() {
   }
   std::endl(std::cout);
   std::cout << "<--- end" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace array_characters_reverse
 
