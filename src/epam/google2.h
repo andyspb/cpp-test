@@ -59,37 +59,23 @@ void printLevelOrder(TreeNode* root) {
   if (!root) {
     return;
   }
-  ::std::queue<TreeNode*> curr_level, next_level;
-  curr_level.push(root);
-  while(!curr_level.empty()){
-    TreeNode* curr_node = curr_level.front();
-    curr_level.pop();
-    if (curr_node) {
-      ::std::cout << curr_node->data << " ";
-      next_level.push(curr_node->left);
-      next_level.push(curr_node->right);
+
+
+  std::queue<TreeNode*> current_level, next_level;
+  current_level.push(root);
+  while(!current_level.empty()) {
+    TreeNode* node = current_level.front();
+    current_level.pop();
+    if (node) {
+      std::cout << node->data << " ";
+      next_level.push(node->left);
+      next_level.push(node->right);
     }
-    if (curr_level.empty()) {
-      ::std::cout << ::std::endl;
-      swapEmptyQueWithSrc(curr_level, next_level);
+    if (current_level.empty()) {
+      std::endl(std::cout);
+      std::swap(current_level,next_level);
     }
   }
-
-//  std::queue<TreeNode*> currentLevel, nextLevel;
-//  currentLevel.push(root);
-//  while (!currentLevel.empty()) {
-//    TreeNode* currentNode = currentLevel.front();
-//    currentLevel.pop();
-//    if (currentNode) {
-//      std::cout << currentNode->data << " ";
-//      nextLevel.push(currentNode->left);
-//      nextLevel.push(currentNode->right);
-//    }
-//    if (currentLevel.empty()) {
-//      std::cout << '\n';
-//      swapEmptyQueWithSrc(currentLevel, nextLevel);
-//    }
-//  }
 }
 
 int test() {

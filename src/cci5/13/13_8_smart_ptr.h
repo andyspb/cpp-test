@@ -1,7 +1,7 @@
 /*
  * 13_8_smart_ptr.h
  *
- *  Created on: 05 ÿíâ. 2015 ã.
+ *  Created on: 05 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -64,8 +64,9 @@ class SmartPointer {
   unsigned * ref_count;
 };
 
-int test() {
-  return 1;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  RETURN_OK();
 }
 
 }  // smart_ptr

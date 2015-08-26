@@ -51,15 +51,15 @@ int btree_depth(BinaryTreeNode<T> *node) {
   return (h1 > h2 ? h1 + 1 : h2 + 1);
 }
 
-int test() {
-  LOG(INFO) << "Tests: binary tree depth";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__<< "Tests: binary tree depth";
   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(0);
   int elements = 3;
   fill_tree<int>(root, elements);
   int depth = btree_depth<int>(root);
   std::cout << "\t\tBTree with " << elements << " elements depth is " << depth
             << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace btree_depth
 

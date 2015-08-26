@@ -89,17 +89,17 @@ template<typename T>
 void breadth_first_traverse(Node<T>* node) {
   if (!node)
     return;
-  std::queue<Node<T>*> q;
-  q.push(node);
+  std::queue<Node<T>*> que;
+  que.push(node);
   Node<T>* t;
-  while(!q.empty()) {
-    t = q.front();
+  while(!que.empty()) {
+    t = que.front();
     std::cout << t->value << ' ';
-    q.pop();
+    que.pop();
     if (t->left)
-      q.push(t->left);
+      que.push(t->left);
     if (t->right)
-      q.push(t->right);
+      que.push(t->right);
   }
   std::cout << std::endl;
 }

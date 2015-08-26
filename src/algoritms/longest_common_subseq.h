@@ -14,6 +14,21 @@
 
 namespace longest_common_subseq {
 
+/* Utility function to get max of 2 integers */
+int max(int a, int b) {
+  return (a > b) ? a : b;
+}
+
+/* Returns length of LCS for X[0..m-1], Y[0..n-1] */
+int lcs_rec(const std::string& X, const std::string& Y, int m, int n) {
+  if (m == 0 || n == 0)
+    return 0;
+  if (X[m - 1] == Y[n - 1])
+    return 1 + lcs_rec(X, Y, m - 1, n - 1);
+  else
+    return max(lcs_rec(X, Y, m, n - 1), lcs_rec(X, Y, m - 1, n));
+}
+
 /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
 void lcs(const std::string& str1, const std::string& str2) {
   size_t i, j, size1 = str1.size(), size2 = str2.size();
@@ -21,13 +36,20 @@ void lcs(const std::string& str1, const std::string& str2) {
   // Size of columns is based on the size of the biggest string
   int max_size = (size1 < size2) ? size2 : size1;
 
-  int temp[size1 + 1][size2 + 1];
+  //  warning: array of array of runtime bound [-Wvla]
+  //int temp[size1 + 1][size2 + 1];
+
+  int **temp = new int*[max_size];
+  for (int i = 0; i < max_size; ++i) {
+    temp[i] = new int[max_size];
+  }
 
   /* Following steps build L[m+1][n+1] in bottom up fashion. Note
    that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */
   for (i = 0; i <= size1; i++) {
     for (j = 0; j <= size2; j++) {
       if (i == 0 || j == 0) {
+        // for zero indexes set 0
         temp[i][j] = 0;
       } else if (str1[i - 1] == str2[j - 1]) {
         temp[i][j] = temp[i - 1][j - 1] + 1;
@@ -66,7 +88,13 @@ void lcs(const std::string& str1, const std::string& str2) {
   }
 
   // Print the lcs
-  cout << "LCS of " << str1 << " and " << str2 << " is " << lcs;
+  std::cout << "LCS of \n" << str1 << "\n" << str2 << "\nis " << lcs
+            << std::endl;
+
+  for (int i = 0; i < max_size; ++i) {
+    delete[] temp[i];
+  }
+  delete[] temp;
 }
 
 TEST_RESULT test() {
@@ -75,6 +103,14 @@ TEST_RESULT test() {
   std::string str1 = "AGGTAB";
   std::string str2 = "GXTXAYB";
   lcs(str1, str2);
+
+  std::string X = "AGGTAB";
+  std::string Y = "GXTXAYB";
+
+  int m = X.size();
+  int n = Y.size();
+
+  std::cout << "Length of LCS is " << lcs_rec(X, Y, m, n) << std::endl;
 
   RETURN_OK();
 }

@@ -3,7 +3,7 @@
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -14,6 +14,7 @@ int main(int argc, char **argv) {
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(func::test());
+//    assert(google_2::test());
 //  assert(hashcodes::test());
 //  assert(hashmap::test());
 //  assert(http_server::test());
@@ -25,7 +26,7 @@ int main(int argc, char **argv) {
 //  assert(quiz::test());
 //  assert(overloading::test());
 //  assert(patterns::test());
-//  assert(smart_ptr::test());
+//    assert(smart_ptr_::test());
 //  assert(spb::test());
 //  assert(sqllite::test());
 //  assert(sqrt_::test());
@@ -52,6 +53,9 @@ int main(int argc, char **argv) {
 
 //  int arr[10];
 //  int *pa = arr;
+
+  std::vector<int> v(2000);
+  std::cout << "sizeof(v)" << sizeof(v);
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;

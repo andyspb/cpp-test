@@ -30,6 +30,7 @@
 #include "3/3_6_sort_stack_ascending.h"
 
 #include "5/5_2_print_binary_of_double.h"
+#include "13/13_8_smart_ptr.h"
 
 #include "inheritance/inheritance.h"
 
@@ -45,12 +46,12 @@ int test() {
 //  assert(rotate_matrix::test());
 //  assert(set_matrix_col_row_zero::test());
 
-  // 2
+// 2
 //  std::cout << "Cracking code interviews (5) tests 2 " << std::endl;
 //  assert(remove_dup_from_unsorted_llist::test());
 //  assert(find_the_kth_from_list_end::test());
 
-  //3
+//3
 //  assert(partition_llist_around_value::test());
 //  assert(is_linked_list_palindrome::test());
 //  assert(stack_with_min::test());
@@ -58,7 +59,10 @@ int test() {
 
 //  assert(inheritance_::test());
 
-  assert(print_binary_of_double::test());
+//  assert(print_binary_of_double::test());
+
+// 18
+  assert(smart_ptr::test());
 
   std::cout << "<--- tests done" << std::endl;
   return 1;
