@@ -54,8 +54,11 @@ int main(int argc, char **argv) {
 //  int arr[10];
 //  int *pa = arr;
 
-  std::vector<int> v(2000);
-  std::cout << "sizeof(v)" << sizeof(v);
+//  std::vector<int> v(2000);
+//  std::cout << "sizeof(v)" << sizeof(v);
+
+//  int is[1];
+//  is[2] = 1;
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;

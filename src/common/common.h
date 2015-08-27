@@ -10,11 +10,23 @@
 
 #include "binary_tree.h"
 #include "binary_search_tree.h"
+#include "bplustree.h"
 #include "circular_que.h"
 #include "constants.h"
 #include "graph.h"
 #include "linked_list.h"
 #include "node.h"
 #include "red_black_tree.h"
+
+namespace common {
+
+TEST_RESULT test() {
+
+  assert(bplus_tree::test());
+
+  RETURN_OK();
+}
+
+}  // namespace common
 
 #endif /* SRC_COMMON_COMMON_H_ */
