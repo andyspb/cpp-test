@@ -20,6 +20,13 @@
 #define TEST_RESULT int
 #define TEST_OK 1
 
+class Result {
+  void operator()() {
+
+  }
+};
+
+
 namespace constants {
 
 }  // constants

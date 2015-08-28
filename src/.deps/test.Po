@@ -1,0 +1,1681 @@
+test.o: test.cpp /usr/include/stdc-predef.h test.h /usr/include/stdio.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h \
+ /usr/include/c++/4.9/iostream \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/os_defines.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/cpu_defines.h \
+ /usr/include/c++/4.9/ostream /usr/include/c++/4.9/ios \
+ /usr/include/c++/4.9/iosfwd /usr/include/c++/4.9/bits/stringfwd.h \
+ /usr/include/c++/4.9/bits/memoryfwd.h \
+ /usr/include/c++/4.9/bits/postypes.h /usr/include/c++/4.9/cwchar \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/xlocale.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+ /usr/include/c++/4.9/exception \
+ /usr/include/c++/4.9/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.9/bits/exception_ptr.h \
+ /usr/include/c++/4.9/bits/exception_defines.h \
+ /usr/include/c++/4.9/bits/nested_exception.h \
+ /usr/include/c++/4.9/bits/char_traits.h \
+ /usr/include/c++/4.9/bits/stl_algobase.h \
+ /usr/include/c++/4.9/bits/functexcept.h \
+ /usr/include/c++/4.9/bits/cpp_type_traits.h \
+ /usr/include/c++/4.9/ext/type_traits.h \
+ /usr/include/c++/4.9/ext/numeric_traits.h \
+ /usr/include/c++/4.9/bits/stl_pair.h /usr/include/c++/4.9/bits/move.h \
+ /usr/include/c++/4.9/bits/concept_check.h \
+ /usr/include/c++/4.9/type_traits \
+ /usr/include/c++/4.9/bits/stl_iterator_base_types.h \
+ /usr/include/c++/4.9/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/4.9/debug/debug.h \
+ /usr/include/c++/4.9/bits/stl_iterator.h \
+ /usr/include/c++/4.9/bits/ptr_traits.h \
+ /usr/include/c++/4.9/bits/predefined_ops.h /usr/include/c++/4.9/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/c++/4.9/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/c++locale.h \
+ /usr/include/c++/4.9/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.9/cctype \
+ /usr/include/ctype.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
+ /usr/include/c++/4.9/bits/ios_base.h \
+ /usr/include/c++/4.9/ext/atomicity.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/gthr.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/atomic_word.h \
+ /usr/include/c++/4.9/bits/locale_classes.h /usr/include/c++/4.9/string \
+ /usr/include/c++/4.9/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/c++allocator.h \
+ /usr/include/c++/4.9/ext/new_allocator.h /usr/include/c++/4.9/new \
+ /usr/include/c++/4.9/bits/ostream_insert.h \
+ /usr/include/c++/4.9/bits/cxxabi_forced.h \
+ /usr/include/c++/4.9/bits/stl_function.h \
+ /usr/include/c++/4.9/backward/binders.h \
+ /usr/include/c++/4.9/bits/range_access.h \
+ /usr/include/c++/4.9/bits/basic_string.h \
+ /usr/include/c++/4.9/initializer_list \
+ /usr/include/c++/4.9/ext/string_conversions.h \
+ /usr/include/c++/4.9/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/c++/4.9/cstdio \
+ /usr/include/c++/4.9/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.9/bits/functional_hash.h \
+ /usr/include/c++/4.9/bits/hash_bytes.h \
+ /usr/include/c++/4.9/bits/basic_string.tcc \
+ /usr/include/c++/4.9/bits/locale_classes.tcc \
+ /usr/include/c++/4.9/streambuf /usr/include/c++/4.9/bits/streambuf.tcc \
+ /usr/include/c++/4.9/bits/basic_ios.h \
+ /usr/include/c++/4.9/bits/locale_facets.h /usr/include/c++/4.9/cwctype \
+ /usr/include/wctype.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/ctype_base.h \
+ /usr/include/c++/4.9/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/ctype_inline.h \
+ /usr/include/c++/4.9/bits/locale_facets.tcc \
+ /usr/include/c++/4.9/bits/basic_ios.tcc \
+ /usr/include/c++/4.9/bits/ostream.tcc /usr/include/c++/4.9/istream \
+ /usr/include/c++/4.9/bits/istream.tcc /usr/include/assert.h \
+ common/common.h common/binary_tree.h /usr/include/c++/4.9/queue \
+ /usr/include/c++/4.9/deque /usr/include/c++/4.9/bits/stl_construct.h \
+ /usr/include/c++/4.9/ext/alloc_traits.h \
+ /usr/include/c++/4.9/bits/alloc_traits.h \
+ /usr/include/c++/4.9/bits/stl_uninitialized.h \
+ /usr/include/c++/4.9/bits/stl_deque.h \
+ /usr/include/c++/4.9/bits/deque.tcc /usr/include/c++/4.9/vector \
+ /usr/include/c++/4.9/bits/stl_vector.h \
+ /usr/include/c++/4.9/bits/stl_bvector.h \
+ /usr/include/c++/4.9/bits/vector.tcc \
+ /usr/include/c++/4.9/bits/stl_heap.h \
+ /usr/include/c++/4.9/bits/stl_queue.h \
+ /usr/include/c++/4.9/bits/uses_allocator.h \
+ /usr/include/c++/4.9/algorithm /usr/include/c++/4.9/utility \
+ /usr/include/c++/4.9/bits/stl_relops.h \
+ /usr/include/c++/4.9/bits/stl_algo.h \
+ /usr/include/c++/4.9/bits/algorithmfwd.h \
+ /usr/include/c++/4.9/bits/stl_tempbuf.h /usr/include/c++/4.9/random \
+ /usr/include/c++/4.9/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+ /usr/include/x86_64-linux-gnu/bits/inf.h \
+ /usr/include/x86_64-linux-gnu/bits/nan.h \
+ /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /usr/include/c++/4.9/limits /usr/include/c++/4.9/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/opt_random.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/x86intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/ia32intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/tmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/ammintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/smmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/popcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/wmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/immintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512fintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512erintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512pfintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512cdintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/shaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/lzcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/bmiintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/bmi2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/fmaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/f16cintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/rtmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xtestintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm3dnow.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/prfchwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/fma4intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xopintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/lwpintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/tbmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/rdseedintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/fxsrintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xsaveintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xsaveoptintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/adxintrin.h \
+ /usr/include/c++/4.9/bits/random.tcc /usr/include/c++/4.9/numeric \
+ /usr/include/c++/4.9/bits/stl_numeric.h common/binary_search_tree.h \
+ common/bplustree.h common/../logger/logger.h \
+ common/../logger/log_template.h /usr/include/c++/4.9/ctime \
+ /usr/include/c++/4.9/sstream /usr/include/c++/4.9/bits/sstream.tcc \
+ common/constants.h common/circular_que.h common/graph.h \
+ /usr/include/c++/4.9/list /usr/include/c++/4.9/bits/stl_list.h \
+ /usr/include/c++/4.9/bits/list.tcc common/linked_list.h common/node.h \
+ common/red_black_tree.h logger/logger.h algoritms/algoritms.h \
+ /usr/include/c++/4.9/stack /usr/include/c++/4.9/bits/stl_stack.h \
+ algoritms/../logger/logger.h algoritms/../logger/log_template.h \
+ algoritms/array_characters_reverse.h algoritms/array_find_duplicates.h \
+ algoritms/big_little_endian.h algoritms/binary_search.h \
+ /usr/include/c++/4.9/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h algoritms/btree_depth.h \
+ algoritms/bubble_sort.h algoritms/bubblesort.h \
+ algoritms/byte_array_2_string.h algoritms/circular_buffer.h \
+ algoritms/circular_que.h algoritms/common_data.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ algoritms/compare_linked_list.h algoritms/count_1_in_binary.h \
+ algoritms/count_inversions_in_array_with_merge.h \
+ algoritms/count_inversions_in_array.h algoritms/drawcircle.h \
+ algoritms/duplication.h algoritms/encode_string_google.h \
+ algoritms/heapsort.h algoritms/fibbonachi.h \
+ algoritms/find_largest_sum_in_array.h /usr/include/c++/4.9/typeinfo \
+ algoritms/find_minimum_length_unsorted_subarray.h \
+ algoritms/find_sum_overlapping_intervals.h algoritms/free_linked_list.h \
+ algoritms/google_test.h /usr/include/c++/4.9/complex \
+ algoritms/insert_into_sorted_list.h algoritms/insertsort.h \
+ algoritms/interpolation_search.h \
+ algoritms/intersection_point_of_two_linked_lists.h \
+ algoritms/is_linked_list_palindrome.h algoritms/merge_sort.h \
+ algoritms/merge_sort_linked_list.h algoritms/multiply_by_7.h \
+ algoritms/my_atoi.h algoritms/reverse_linked_list.h \
+ algoritms/reverse_string_1.h algoritms/quicksort.h \
+ algoritms/quicksort_2linked_list.h algoritms/tree_traversal.h \
+ algoritms/median_of_2_arr_2.h algoritms/median_of_2arrays.h \
+ algoritms/merge_overlapping_itnervals.h algoritms/multiply_7.h \
+ algoritms/num_to_str.h algoritms/reverse_string.h \
+ algoritms/palindrom_rec.h algoritms/palindrome.h \
+ algoritms/permutation_of_string.h algoritms/piramid_sort.h \
+ algoritms/pow.h algoritms/shell_sort.h algoritms/singleton_with_mutex.h \
+ algoritms/singleton.h algoritms/singleton_static.h \
+ algoritms/sorted_linked_list_to_balanced_bst.h \
+ algoritms/sorted_list_to_bst.h algoritms/square_root.h \
+ algoritms/string_unique_chars.h algoritms/substr_search.h \
+ algoritms/sum_1_to_N.h algoritms/swap_bits.h \
+ algoritms/turn_off_bit_in_number.h algoritms/check_if_braces_match.h \
+ algoritms/pow_x_n.h algoritms/longest_common_subseq.h \
+ /usr/include/c++/4.9/cstring array/array.h bits/bits.h \
+ bits/add_two_bit_strings.h bits/binary_representation_of_number.h \
+ bits/count_set_bits_in_an_integer.h \
+ bits/count_total_set\ bits_in_all_numbers_from_1_to_n.h \
+ bits/detect_if_two_integers_have_opposite_signs.h bits/is_div_by_9.h \
+ bits/is_palindrome.h bits/lsb_msb.h bits/swap_2_numbers_xor.h \
+ bits/swap_all_odd_and_even_bits.h bits/swap_two_nibbles_in_a_byte.h \
+ bits/turn_off_K_bit_in_number.h clock/clock.h cpp1x/cpp1x.h \
+ cpp1x/cpp1x_constexpr_factorial.h /usr/include/c++/4.9/stdexcept \
+ cpp1x/cpp1x_constexpr.h cpp1x/cpp1x_insert_sort.h cpp1x/cpp1x_move.h \
+ cpp1x/cpp1x_quick_sort.h /usr/include/c++/4.9/functional \
+ /usr/include/c++/4.9/tuple /usr/include/c++/4.9/array \
+ cpp1x/cpp1x_selection_sort.h cpp1x/cpp1x_thread.h \
+ /usr/include/c++/4.9/thread /usr/include/c++/4.9/chrono \
+ /usr/include/c++/4.9/ratio /usr/include/c++/4.9/bits/parse_numbers.h \
+ /usr/include/c++/4.9/memory \
+ /usr/include/c++/4.9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/4.9/ext/concurrence.h \
+ /usr/include/c++/4.9/bits/unique_ptr.h \
+ /usr/include/c++/4.9/bits/shared_ptr.h \
+ /usr/include/c++/4.9/bits/shared_ptr_base.h \
+ /usr/include/c++/4.9/ext/aligned_buffer.h \
+ /usr/include/c++/4.9/backward/auto_ptr.h cci4/cci4.h \
+ cci4/arrays_and_strings/arrays_and_strings.h \
+ cci4/arrays_and_strings/test_1_1_string_has_all_unique_characters.h \
+ cci4/arrays_and_strings/test_1_2_reverse_c_string.h \
+ cci4/arrays_and_strings/test_1_3_remove_duplicates_form_string.h \
+ cci4/arrays_and_strings/test_1_4_strings_are_anagram.h \
+ cci4/arrays_and_strings/test_1_5_replace_all_spaces_in_string_with_pers20.h \
+ cci4/arrays_and_strings/test_1_6_rotate_image.h \
+ cci4/arrays_and_strings/test_1_7_if_element_matrix_is_0_entire_row_and_column_set_0.h \
+ cci4/arrays_and_strings/test_1_8_check_string_rotation_if_has_substr.h \
+ cci4/cplusplus/cplusplus.h cci4/cplusplus/test_13_1_print_last_k_lines.h \
+ /usr/include/c++/4.9/fstream /usr/include/c++/4.9/bits/codecvt.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/c++io.h \
+ /usr/include/c++/4.9/bits/fstream.tcc \
+ cci4/cplusplus/test_13_8_copy_node_to_structure.h \
+ /usr/include/c++/4.9/map /usr/include/c++/4.9/bits/stl_tree.h \
+ /usr/include/c++/4.9/bits/stl_map.h \
+ /usr/include/c++/4.9/bits/stl_multimap.h \
+ cci4/cplusplus/test_13_9_smart_ptr.h cci4/linked_lists/linked_lists.h \
+ cci4/linked_lists/test_2_1_remove_duplicates\ from_unsorted_linked)list.h \
+ /usr/include/c++/4.9/set /usr/include/c++/4.9/bits/stl_set.h \
+ /usr/include/c++/4.9/bits/stl_multiset.h \
+ cci4/linked_lists/test_2_2_find_nth_to\ last_element_of_slist.h \
+ cci4/linked_lists/test_2_3_delete_in_middle_slist.h \
+ cci4/linked_lists/test_2_4_sum_linked_list.h \
+ cci4/linked_lists/test_2_5_find_beginning_of_loop_in_circular_ilst.h \
+ cci4/low_level/low_level.h cci4/low_level/test_16_5_little_big_endian.h \
+ cci4/low_level/test_16_10_two_dim_array.h /usr/include/malloc.h \
+ cci4/stacks_and_queues.h/stacks_and_queues.h \
+ cci4/stacks_and_queues.h/test_3_5_myque_using_two_stacks.h \
+ cci4/stacks_and_queues.h/test_3_6_sort_stack.h \
+ cci4/threads_and_locks/threads_and_locks.h \
+ cci4/threads_and_locks/test_18_3_singleton_with_lock.h \
+ cci4/trees_and_graphs/trees_and_graphs.h \
+ cci4/trees_and_graphs/test_4_1.h cci5/cci5.h \
+ cci5/1/1_1_string_has_all_uniq_characters.h cci5/1/1_2_reverse_string.h \
+ cci5/1/1_3_string_permutation_of_other.h \
+ cci5/1/1_4_replace_space_to_20.h cci5/1/1_5_perform_string_compression.h \
+ cci5/1/1_6_rotate_image_NxN_matrix.h \
+ cci5/1/1_7_if_elem_in_MxN_is_0_then_row_column_0.h \
+ cci5/1/1_8_check_if_s2_is_rotation_of_s1.h \
+ cci5/2/2_1_remove_duplicates_from_unsorted_linked_list.h \
+ cci5/2/2_2_find_kth_elem_of_list.h \
+ cci5/2/2_3_del_node_in_middle_with_access_the_node_only.h \
+ cci5/2/2_4_partition_llist_around_a_value.h \
+ cci5/2/2_5_check_linked_list_is_palindrome.h \
+ cci5/3/3_1_impl_three_stack_with_array.h cci5/3/3_2_stack_with_min.h \
+ cci5/3/3_5_impl_que_with_two_stacks.h cci5/3/3_6_sort_stack_ascending.h \
+ cci5/5/5_2_print_binary_of_double.h cci5/13/13_8_smart_ptr.h \
+ cci5/inheritance/inheritance.h cpp1x/cpp1x_quick_sort.h diff/diff.h \
+ epam/epam.h /usr/include/c++/4.9/iterator \
+ /usr/include/c++/4.9/bits/stream_iterator.h epam/google.h \
+ /usr/include/c++/4.9/mutex /usr/include/c++/4.9/system_error \
+ /usr/include/x86_64-linux-gnu/c++/4.9/bits/error_constants.h \
+ epam/google2.h exception/exceptions.h exception/exception.h \
+ facebook/facebook.h facebook/circ_que.h facebook/binary_tree.h \
+ facebook/node_with_optional_ptr_to_another_list.h \
+ facebook/print_btree_levels.h facebook/sqrt_with_precision.h func/func.h \
+ func/functors.h hashtable/hashtable.h hashcode/hashcodes.h \
+ hashcode/hash_function_sample.h http/server.h \
+ http/server_single_thread.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/netdb.h \
+ /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/siginfo.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h /usr/include/arpa/inet.h \
+ http/server_threaded.h last/last_1.h language/language.h \
+ language/binary.h language/bind1st.h language/bind2nd.h \
+ language/binder1st.h language/binder2nd.h language/bits_arithmetic.h \
+ language/cast_1.h language/cast_2.h language/char_array.h \
+ language/class_initialization.h language/const_char_test.h \
+ language/const_method.h language/constexpr_test.h \
+ language/constructor_exception.h language/cout.h language/delete.h \
+ language/dynamic_cast.h language/dynamic_cast_2.h \
+ language/dynamic_cast_3.h language/generic_list_test.h language/goto_.h \
+ language/que_test.h language/cast_const.h language/ctor_test.h \
+ language/function_parameter.h language/function_pointers.h \
+ language/hash_map.h language/initialization_with_this.h \
+ language/inheritance.h language/lambda.h language/namespace_test.h \
+ language/my_queue.h language/stl_tests.h language/method_hiding.h \
+ language/my_stack.h language/pointer_as_param.h \
+ language/pointer_2_function.h language/private_constructor.h \
+ language/pure_virtual_call.h language/set_test.h language/sizeof.h \
+ language/stack_container.h language/static_cast.h \
+ language/string_literal.h language/strlen_test.h language/union.h \
+ language/vector_pointer_arithmetic.h language/virtual_destr.h \
+ language/virtual_method.h language/virtual_function_default_param.h \
+ language/virtual_method_2.h lambda/lambda.h lambda/lambda_test1.h \
+ lambda/lambda_test2.h lambda/lambda_test3.h lock-free/lock_free.h \
+ memory/alignment.h memory/memory.h memory/alignment.h \
+ memory/allocate_1024_bytes_of_memory.h /usr/include/inttypes.h \
+ memory/allocator.h memory/habrhabr.h memory/mem_test.h moto/moto.h \
+ ms/ms.h overloading/overloading.h patterns/patterns.h \
+ patterns/abstract_factory.h patterns/adapter.h patterns/bridge.h \
+ patterns/builder.h patterns/chain_of_responsibility.h patterns/command.h \
+ patterns/composite.h patterns/decorator.h patterns/facade.h \
+ patterns/factory_method.h patterns/flyweight.h patterns/interpreter.h \
+ patterns/lazy_initialization.h patterns/mediator.h patterns/memento.h \
+ patterns/observer.h patterns/profiler.h patterns/prototype.h \
+ patterns/proxy.h patterns/state.h patterns/strategy.h \
+ patterns/template_method.h patterns/visitor.h quiz/quiz.h quiz/quiz_38.h \
+ quiz/quiz_39.h quiz/quiz_42.h quiz/quiz_43.h smart_ptr/smart_ptr.h \
+ sqrt/sqrt.h sqrt/../logger/logger.h spb/spb.h spb/tbriks.h \
+ sqllite/sqllite.h /usr/include/sqlite3.h stackoverflow/stackoverflow.h \
+ stackoverflow/so_1.h static/static.h stl/stl.h templates/templates.h \
+ templates/../logger/logger.h templates/template_factorial.h \
+ templates/template_fibonacci.h templates/template_func.h \
+ templates/template_keyword.h \
+ templates/template_method_in_non_template_class.h \
+ templates/template_mycontainer.h templates/template_test1.h \
+ templates/template_test2.h templates/template_test3.h \
+ templates/template_test4.h templates/template_test5.h \
+ templates/templates_param_pack.h teramind/teramind.h tests/tests.h \
+ tests/tests1.h tests/tests2.h tests/tests3.h tests/tests4.h \
+ tests/tests5.h tests/tests6.h tests/tests7.h tests/tests8.h \
+ tests/tests9.h tests/tests10.h tests/tests11.h tests/tests12.h \
+ tests/tests13.h tests/tests14.h tests/tests15.h tests/tests16.h \
+ tests/tests17.h tests/tests18.h tests/tests19.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/float.h tests/tests20.h \
+ tests/tests21.h tests/tests22.h thread/threads.h thread/conditional.h \
+ /usr/include/c++/4.9/condition_variable thread/deadlock.h \
+ thread/futures.h /usr/include/c++/4.9/future /usr/include/c++/4.9/atomic \
+ /usr/include/c++/4.9/bits/atomic_base.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h thread/join.h \
+ thread/promises.h virtual/virtuals.h virtual/pure_virtual.h \
+ virtual/virt_access.h virtual/virt_cast_1.h virtual/virt_cast_2.h \
+ virtual/virt_func_1.h virtual/virt_func_2.h virtual/virt_func_3.h \
+ virtual/virt_func_4.h virtual/virt_func_5.h virtual/virt_func_6.h \
+ virtual/virt_func_7.h virtual/virt_func_8.h virtual/virt_func_9.h \
+ virtual/virt_inheritance.h virtual/virt_private_access.h
+
+/usr/include/stdc-predef.h:
+
+test.h:
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/c++/4.9/iostream:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/c++config.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/os_defines.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/cpu_defines.h:
+
+/usr/include/c++/4.9/ostream:
+
+/usr/include/c++/4.9/ios:
+
+/usr/include/c++/4.9/iosfwd:
+
+/usr/include/c++/4.9/bits/stringfwd.h:
+
+/usr/include/c++/4.9/bits/memoryfwd.h:
+
+/usr/include/c++/4.9/bits/postypes.h:
+
+/usr/include/c++/4.9/cwchar:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+
+/usr/include/c++/4.9/exception:
+
+/usr/include/c++/4.9/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/4.9/bits/exception_ptr.h:
+
+/usr/include/c++/4.9/bits/exception_defines.h:
+
+/usr/include/c++/4.9/bits/nested_exception.h:
+
+/usr/include/c++/4.9/bits/char_traits.h:
+
+/usr/include/c++/4.9/bits/stl_algobase.h:
+
+/usr/include/c++/4.9/bits/functexcept.h:
+
+/usr/include/c++/4.9/bits/cpp_type_traits.h:
+
+/usr/include/c++/4.9/ext/type_traits.h:
+
+/usr/include/c++/4.9/ext/numeric_traits.h:
+
+/usr/include/c++/4.9/bits/stl_pair.h:
+
+/usr/include/c++/4.9/bits/move.h:
+
+/usr/include/c++/4.9/bits/concept_check.h:
+
+/usr/include/c++/4.9/type_traits:
+
+/usr/include/c++/4.9/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/4.9/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/4.9/debug/debug.h:
+
+/usr/include/c++/4.9/bits/stl_iterator.h:
+
+/usr/include/c++/4.9/bits/ptr_traits.h:
+
+/usr/include/c++/4.9/bits/predefined_ops.h:
+
+/usr/include/c++/4.9/cstdint:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/c++/4.9/bits/localefwd.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/c++locale.h:
+
+/usr/include/c++/4.9/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/c++/4.9/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/c++/4.9/bits/ios_base.h:
+
+/usr/include/c++/4.9/ext/atomicity.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/gthr.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/atomic_word.h:
+
+/usr/include/c++/4.9/bits/locale_classes.h:
+
+/usr/include/c++/4.9/string:
+
+/usr/include/c++/4.9/bits/allocator.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/c++allocator.h:
+
+/usr/include/c++/4.9/ext/new_allocator.h:
+
+/usr/include/c++/4.9/new:
+
+/usr/include/c++/4.9/bits/ostream_insert.h:
+
+/usr/include/c++/4.9/bits/cxxabi_forced.h:
+
+/usr/include/c++/4.9/bits/stl_function.h:
+
+/usr/include/c++/4.9/backward/binders.h:
+
+/usr/include/c++/4.9/bits/range_access.h:
+
+/usr/include/c++/4.9/bits/basic_string.h:
+
+/usr/include/c++/4.9/initializer_list:
+
+/usr/include/c++/4.9/ext/string_conversions.h:
+
+/usr/include/c++/4.9/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/c++/4.9/cstdio:
+
+/usr/include/c++/4.9/cerrno:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/4.9/bits/functional_hash.h:
+
+/usr/include/c++/4.9/bits/hash_bytes.h:
+
+/usr/include/c++/4.9/bits/basic_string.tcc:
+
+/usr/include/c++/4.9/bits/locale_classes.tcc:
+
+/usr/include/c++/4.9/streambuf:
+
+/usr/include/c++/4.9/bits/streambuf.tcc:
+
+/usr/include/c++/4.9/bits/basic_ios.h:
+
+/usr/include/c++/4.9/bits/locale_facets.h:
+
+/usr/include/c++/4.9/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/ctype_base.h:
+
+/usr/include/c++/4.9/bits/streambuf_iterator.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/ctype_inline.h:
+
+/usr/include/c++/4.9/bits/locale_facets.tcc:
+
+/usr/include/c++/4.9/bits/basic_ios.tcc:
+
+/usr/include/c++/4.9/bits/ostream.tcc:
+
+/usr/include/c++/4.9/istream:
+
+/usr/include/c++/4.9/bits/istream.tcc:
+
+/usr/include/assert.h:
+
+common/common.h:
+
+common/binary_tree.h:
+
+/usr/include/c++/4.9/queue:
+
+/usr/include/c++/4.9/deque:
+
+/usr/include/c++/4.9/bits/stl_construct.h:
+
+/usr/include/c++/4.9/ext/alloc_traits.h:
+
+/usr/include/c++/4.9/bits/alloc_traits.h:
+
+/usr/include/c++/4.9/bits/stl_uninitialized.h:
+
+/usr/include/c++/4.9/bits/stl_deque.h:
+
+/usr/include/c++/4.9/bits/deque.tcc:
+
+/usr/include/c++/4.9/vector:
+
+/usr/include/c++/4.9/bits/stl_vector.h:
+
+/usr/include/c++/4.9/bits/stl_bvector.h:
+
+/usr/include/c++/4.9/bits/vector.tcc:
+
+/usr/include/c++/4.9/bits/stl_heap.h:
+
+/usr/include/c++/4.9/bits/stl_queue.h:
+
+/usr/include/c++/4.9/bits/uses_allocator.h:
+
+/usr/include/c++/4.9/algorithm:
+
+/usr/include/c++/4.9/utility:
+
+/usr/include/c++/4.9/bits/stl_relops.h:
+
+/usr/include/c++/4.9/bits/stl_algo.h:
+
+/usr/include/c++/4.9/bits/algorithmfwd.h:
+
+/usr/include/c++/4.9/bits/stl_tempbuf.h:
+
+/usr/include/c++/4.9/random:
+
+/usr/include/c++/4.9/cmath:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
+
+/usr/include/x86_64-linux-gnu/bits/inf.h:
+
+/usr/include/x86_64-linux-gnu/bits/nan.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathdef.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/usr/include/c++/4.9/limits:
+
+/usr/include/c++/4.9/bits/random.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/opt_random.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/x86intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/ia32intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/pmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/tmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/ammintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/popcntintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/wmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/immintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx2intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512fintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512erintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512pfintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/avx512cdintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/shaintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/lzcntintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/bmi2intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/fmaintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/f16cintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/rtmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xtestintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm3dnow.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/prfchwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/fma4intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xopintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/lwpintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/rdseedintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/fxsrintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xsaveintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/adxintrin.h:
+
+/usr/include/c++/4.9/bits/random.tcc:
+
+/usr/include/c++/4.9/numeric:
+
+/usr/include/c++/4.9/bits/stl_numeric.h:
+
+common/binary_search_tree.h:
+
+common/bplustree.h:
+
+common/../logger/logger.h:
+
+common/../logger/log_template.h:
+
+/usr/include/c++/4.9/ctime:
+
+/usr/include/c++/4.9/sstream:
+
+/usr/include/c++/4.9/bits/sstream.tcc:
+
+common/constants.h:
+
+common/circular_que.h:
+
+common/graph.h:
+
+/usr/include/c++/4.9/list:
+
+/usr/include/c++/4.9/bits/stl_list.h:
+
+/usr/include/c++/4.9/bits/list.tcc:
+
+common/linked_list.h:
+
+common/node.h:
+
+common/red_black_tree.h:
+
+logger/logger.h:
+
+algoritms/algoritms.h:
+
+/usr/include/c++/4.9/stack:
+
+/usr/include/c++/4.9/bits/stl_stack.h:
+
+algoritms/../logger/logger.h:
+
+algoritms/../logger/log_template.h:
+
+algoritms/array_characters_reverse.h:
+
+algoritms/array_find_duplicates.h:
+
+algoritms/big_little_endian.h:
+
+algoritms/binary_search.h:
+
+/usr/include/c++/4.9/climits:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+algoritms/btree_depth.h:
+
+algoritms/bubble_sort.h:
+
+algoritms/bubblesort.h:
+
+algoritms/byte_array_2_string.h:
+
+algoritms/circular_buffer.h:
+
+algoritms/circular_que.h:
+
+algoritms/common_data.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+algoritms/compare_linked_list.h:
+
+algoritms/count_1_in_binary.h:
+
+algoritms/count_inversions_in_array_with_merge.h:
+
+algoritms/count_inversions_in_array.h:
+
+algoritms/drawcircle.h:
+
+algoritms/duplication.h:
+
+algoritms/encode_string_google.h:
+
+algoritms/heapsort.h:
+
+algoritms/fibbonachi.h:
+
+algoritms/find_largest_sum_in_array.h:
+
+/usr/include/c++/4.9/typeinfo:
+
+algoritms/find_minimum_length_unsorted_subarray.h:
+
+algoritms/find_sum_overlapping_intervals.h:
+
+algoritms/free_linked_list.h:
+
+algoritms/google_test.h:
+
+/usr/include/c++/4.9/complex:
+
+algoritms/insert_into_sorted_list.h:
+
+algoritms/insertsort.h:
+
+algoritms/interpolation_search.h:
+
+algoritms/intersection_point_of_two_linked_lists.h:
+
+algoritms/is_linked_list_palindrome.h:
+
+algoritms/merge_sort.h:
+
+algoritms/merge_sort_linked_list.h:
+
+algoritms/multiply_by_7.h:
+
+algoritms/my_atoi.h:
+
+algoritms/reverse_linked_list.h:
+
+algoritms/reverse_string_1.h:
+
+algoritms/quicksort.h:
+
+algoritms/quicksort_2linked_list.h:
+
+algoritms/tree_traversal.h:
+
+algoritms/median_of_2_arr_2.h:
+
+algoritms/median_of_2arrays.h:
+
+algoritms/merge_overlapping_itnervals.h:
+
+algoritms/multiply_7.h:
+
+algoritms/num_to_str.h:
+
+algoritms/reverse_string.h:
+
+algoritms/palindrom_rec.h:
+
+algoritms/palindrome.h:
+
+algoritms/permutation_of_string.h:
+
+algoritms/piramid_sort.h:
+
+algoritms/pow.h:
+
+algoritms/shell_sort.h:
+
+algoritms/singleton_with_mutex.h:
+
+algoritms/singleton.h:
+
+algoritms/singleton_static.h:
+
+algoritms/sorted_linked_list_to_balanced_bst.h:
+
+algoritms/sorted_list_to_bst.h:
+
+algoritms/square_root.h:
+
+algoritms/string_unique_chars.h:
+
+algoritms/substr_search.h:
+
+algoritms/sum_1_to_N.h:
+
+algoritms/swap_bits.h:
+
+algoritms/turn_off_bit_in_number.h:
+
+algoritms/check_if_braces_match.h:
+
+algoritms/pow_x_n.h:
+
+algoritms/longest_common_subseq.h:
+
+/usr/include/c++/4.9/cstring:
+
+array/array.h:
+
+bits/bits.h:
+
+bits/add_two_bit_strings.h:
+
+bits/binary_representation_of_number.h:
+
+bits/count_set_bits_in_an_integer.h:
+
+bits/count_total_set\ bits_in_all_numbers_from_1_to_n.h:
+
+bits/detect_if_two_integers_have_opposite_signs.h:
+
+bits/is_div_by_9.h:
+
+bits/is_palindrome.h:
+
+bits/lsb_msb.h:
+
+bits/swap_2_numbers_xor.h:
+
+bits/swap_all_odd_and_even_bits.h:
+
+bits/swap_two_nibbles_in_a_byte.h:
+
+bits/turn_off_K_bit_in_number.h:
+
+clock/clock.h:
+
+cpp1x/cpp1x.h:
+
+cpp1x/cpp1x_constexpr_factorial.h:
+
+/usr/include/c++/4.9/stdexcept:
+
+cpp1x/cpp1x_constexpr.h:
+
+cpp1x/cpp1x_insert_sort.h:
+
+cpp1x/cpp1x_move.h:
+
+cpp1x/cpp1x_quick_sort.h:
+
+/usr/include/c++/4.9/functional:
+
+/usr/include/c++/4.9/tuple:
+
+/usr/include/c++/4.9/array:
+
+cpp1x/cpp1x_selection_sort.h:
+
+cpp1x/cpp1x_thread.h:
+
+/usr/include/c++/4.9/thread:
+
+/usr/include/c++/4.9/chrono:
+
+/usr/include/c++/4.9/ratio:
+
+/usr/include/c++/4.9/bits/parse_numbers.h:
+
+/usr/include/c++/4.9/memory:
+
+/usr/include/c++/4.9/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/4.9/ext/concurrence.h:
+
+/usr/include/c++/4.9/bits/unique_ptr.h:
+
+/usr/include/c++/4.9/bits/shared_ptr.h:
+
+/usr/include/c++/4.9/bits/shared_ptr_base.h:
+
+/usr/include/c++/4.9/ext/aligned_buffer.h:
+
+/usr/include/c++/4.9/backward/auto_ptr.h:
+
+cci4/cci4.h:
+
+cci4/arrays_and_strings/arrays_and_strings.h:
+
+cci4/arrays_and_strings/test_1_1_string_has_all_unique_characters.h:
+
+cci4/arrays_and_strings/test_1_2_reverse_c_string.h:
+
+cci4/arrays_and_strings/test_1_3_remove_duplicates_form_string.h:
+
+cci4/arrays_and_strings/test_1_4_strings_are_anagram.h:
+
+cci4/arrays_and_strings/test_1_5_replace_all_spaces_in_string_with_pers20.h:
+
+cci4/arrays_and_strings/test_1_6_rotate_image.h:
+
+cci4/arrays_and_strings/test_1_7_if_element_matrix_is_0_entire_row_and_column_set_0.h:
+
+cci4/arrays_and_strings/test_1_8_check_string_rotation_if_has_substr.h:
+
+cci4/cplusplus/cplusplus.h:
+
+cci4/cplusplus/test_13_1_print_last_k_lines.h:
+
+/usr/include/c++/4.9/fstream:
+
+/usr/include/c++/4.9/bits/codecvt.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/c++io.h:
+
+/usr/include/c++/4.9/bits/fstream.tcc:
+
+cci4/cplusplus/test_13_8_copy_node_to_structure.h:
+
+/usr/include/c++/4.9/map:
+
+/usr/include/c++/4.9/bits/stl_tree.h:
+
+/usr/include/c++/4.9/bits/stl_map.h:
+
+/usr/include/c++/4.9/bits/stl_multimap.h:
+
+cci4/cplusplus/test_13_9_smart_ptr.h:
+
+cci4/linked_lists/linked_lists.h:
+
+cci4/linked_lists/test_2_1_remove_duplicates\ from_unsorted_linked)list.h:
+
+/usr/include/c++/4.9/set:
+
+/usr/include/c++/4.9/bits/stl_set.h:
+
+/usr/include/c++/4.9/bits/stl_multiset.h:
+
+cci4/linked_lists/test_2_2_find_nth_to\ last_element_of_slist.h:
+
+cci4/linked_lists/test_2_3_delete_in_middle_slist.h:
+
+cci4/linked_lists/test_2_4_sum_linked_list.h:
+
+cci4/linked_lists/test_2_5_find_beginning_of_loop_in_circular_ilst.h:
+
+cci4/low_level/low_level.h:
+
+cci4/low_level/test_16_5_little_big_endian.h:
+
+cci4/low_level/test_16_10_two_dim_array.h:
+
+/usr/include/malloc.h:
+
+cci4/stacks_and_queues.h/stacks_and_queues.h:
+
+cci4/stacks_and_queues.h/test_3_5_myque_using_two_stacks.h:
+
+cci4/stacks_and_queues.h/test_3_6_sort_stack.h:
+
+cci4/threads_and_locks/threads_and_locks.h:
+
+cci4/threads_and_locks/test_18_3_singleton_with_lock.h:
+
+cci4/trees_and_graphs/trees_and_graphs.h:
+
+cci4/trees_and_graphs/test_4_1.h:
+
+cci5/cci5.h:
+
+cci5/1/1_1_string_has_all_uniq_characters.h:
+
+cci5/1/1_2_reverse_string.h:
+
+cci5/1/1_3_string_permutation_of_other.h:
+
+cci5/1/1_4_replace_space_to_20.h:
+
+cci5/1/1_5_perform_string_compression.h:
+
+cci5/1/1_6_rotate_image_NxN_matrix.h:
+
+cci5/1/1_7_if_elem_in_MxN_is_0_then_row_column_0.h:
+
+cci5/1/1_8_check_if_s2_is_rotation_of_s1.h:
+
+cci5/2/2_1_remove_duplicates_from_unsorted_linked_list.h:
+
+cci5/2/2_2_find_kth_elem_of_list.h:
+
+cci5/2/2_3_del_node_in_middle_with_access_the_node_only.h:
+
+cci5/2/2_4_partition_llist_around_a_value.h:
+
+cci5/2/2_5_check_linked_list_is_palindrome.h:
+
+cci5/3/3_1_impl_three_stack_with_array.h:
+
+cci5/3/3_2_stack_with_min.h:
+
+cci5/3/3_5_impl_que_with_two_stacks.h:
+
+cci5/3/3_6_sort_stack_ascending.h:
+
+cci5/5/5_2_print_binary_of_double.h:
+
+cci5/13/13_8_smart_ptr.h:
+
+cci5/inheritance/inheritance.h:
+
+cpp1x/cpp1x_quick_sort.h:
+
+diff/diff.h:
+
+epam/epam.h:
+
+/usr/include/c++/4.9/iterator:
+
+/usr/include/c++/4.9/bits/stream_iterator.h:
+
+epam/google.h:
+
+/usr/include/c++/4.9/mutex:
+
+/usr/include/c++/4.9/system_error:
+
+/usr/include/x86_64-linux-gnu/c++/4.9/bits/error_constants.h:
+
+epam/google2.h:
+
+exception/exceptions.h:
+
+exception/exception.h:
+
+facebook/facebook.h:
+
+facebook/circ_que.h:
+
+facebook/binary_tree.h:
+
+facebook/node_with_optional_ptr_to_another_list.h:
+
+facebook/print_btree_levels.h:
+
+facebook/sqrt_with_precision.h:
+
+func/func.h:
+
+func/functors.h:
+
+hashtable/hashtable.h:
+
+hashcode/hashcodes.h:
+
+hashcode/hash_function_sample.h:
+
+http/server.h:
+
+http/server_single_thread.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/x86_64-linux-gnu/sys/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
+
+/usr/include/asm-generic/socket.h:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket2.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
+
+/usr/include/netdb.h:
+
+/usr/include/rpc/netdb.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo.h:
+
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
+
+/usr/include/arpa/inet.h:
+
+http/server_threaded.h:
+
+last/last_1.h:
+
+language/language.h:
+
+language/binary.h:
+
+language/bind1st.h:
+
+language/bind2nd.h:
+
+language/binder1st.h:
+
+language/binder2nd.h:
+
+language/bits_arithmetic.h:
+
+language/cast_1.h:
+
+language/cast_2.h:
+
+language/char_array.h:
+
+language/class_initialization.h:
+
+language/const_char_test.h:
+
+language/const_method.h:
+
+language/constexpr_test.h:
+
+language/constructor_exception.h:
+
+language/cout.h:
+
+language/delete.h:
+
+language/dynamic_cast.h:
+
+language/dynamic_cast_2.h:
+
+language/dynamic_cast_3.h:
+
+language/generic_list_test.h:
+
+language/goto_.h:
+
+language/que_test.h:
+
+language/cast_const.h:
+
+language/ctor_test.h:
+
+language/function_parameter.h:
+
+language/function_pointers.h:
+
+language/hash_map.h:
+
+language/initialization_with_this.h:
+
+language/inheritance.h:
+
+language/lambda.h:
+
+language/namespace_test.h:
+
+language/my_queue.h:
+
+language/stl_tests.h:
+
+language/method_hiding.h:
+
+language/my_stack.h:
+
+language/pointer_as_param.h:
+
+language/pointer_2_function.h:
+
+language/private_constructor.h:
+
+language/pure_virtual_call.h:
+
+language/set_test.h:
+
+language/sizeof.h:
+
+language/stack_container.h:
+
+language/static_cast.h:
+
+language/string_literal.h:
+
+language/strlen_test.h:
+
+language/union.h:
+
+language/vector_pointer_arithmetic.h:
+
+language/virtual_destr.h:
+
+language/virtual_method.h:
+
+language/virtual_function_default_param.h:
+
+language/virtual_method_2.h:
+
+lambda/lambda.h:
+
+lambda/lambda_test1.h:
+
+lambda/lambda_test2.h:
+
+lambda/lambda_test3.h:
+
+lock-free/lock_free.h:
+
+memory/alignment.h:
+
+memory/memory.h:
+
+memory/alignment.h:
+
+memory/allocate_1024_bytes_of_memory.h:
+
+/usr/include/inttypes.h:
+
+memory/allocator.h:
+
+memory/habrhabr.h:
+
+memory/mem_test.h:
+
+moto/moto.h:
+
+ms/ms.h:
+
+overloading/overloading.h:
+
+patterns/patterns.h:
+
+patterns/abstract_factory.h:
+
+patterns/adapter.h:
+
+patterns/bridge.h:
+
+patterns/builder.h:
+
+patterns/chain_of_responsibility.h:
+
+patterns/command.h:
+
+patterns/composite.h:
+
+patterns/decorator.h:
+
+patterns/facade.h:
+
+patterns/factory_method.h:
+
+patterns/flyweight.h:
+
+patterns/interpreter.h:
+
+patterns/lazy_initialization.h:
+
+patterns/mediator.h:
+
+patterns/memento.h:
+
+patterns/observer.h:
+
+patterns/profiler.h:
+
+patterns/prototype.h:
+
+patterns/proxy.h:
+
+patterns/state.h:
+
+patterns/strategy.h:
+
+patterns/template_method.h:
+
+patterns/visitor.h:
+
+quiz/quiz.h:
+
+quiz/quiz_38.h:
+
+quiz/quiz_39.h:
+
+quiz/quiz_42.h:
+
+quiz/quiz_43.h:
+
+smart_ptr/smart_ptr.h:
+
+sqrt/sqrt.h:
+
+sqrt/../logger/logger.h:
+
+spb/spb.h:
+
+spb/tbriks.h:
+
+sqllite/sqllite.h:
+
+/usr/include/sqlite3.h:
+
+stackoverflow/stackoverflow.h:
+
+stackoverflow/so_1.h:
+
+static/static.h:
+
+stl/stl.h:
+
+templates/templates.h:
+
+templates/../logger/logger.h:
+
+templates/template_factorial.h:
+
+templates/template_fibonacci.h:
+
+templates/template_func.h:
+
+templates/template_keyword.h:
+
+templates/template_method_in_non_template_class.h:
+
+templates/template_mycontainer.h:
+
+templates/template_test1.h:
+
+templates/template_test2.h:
+
+templates/template_test3.h:
+
+templates/template_test4.h:
+
+templates/template_test5.h:
+
+templates/templates_param_pack.h:
+
+teramind/teramind.h:
+
+tests/tests.h:
+
+tests/tests1.h:
+
+tests/tests2.h:
+
+tests/tests3.h:
+
+tests/tests4.h:
+
+tests/tests5.h:
+
+tests/tests6.h:
+
+tests/tests7.h:
+
+tests/tests8.h:
+
+tests/tests9.h:
+
+tests/tests10.h:
+
+tests/tests11.h:
+
+tests/tests12.h:
+
+tests/tests13.h:
+
+tests/tests14.h:
+
+tests/tests15.h:
+
+tests/tests16.h:
+
+tests/tests17.h:
+
+tests/tests18.h:
+
+tests/tests19.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/float.h:
+
+tests/tests20.h:
+
+tests/tests21.h:
+
+tests/tests22.h:
+
+thread/threads.h:
+
+thread/conditional.h:
+
+/usr/include/c++/4.9/condition_variable:
+
+thread/deadlock.h:
+
+thread/futures.h:
+
+/usr/include/c++/4.9/future:
+
+/usr/include/c++/4.9/atomic:
+
+/usr/include/c++/4.9/bits/atomic_base.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdbool.h:
+
+thread/join.h:
+
+thread/promises.h:
+
+virtual/virtuals.h:
+
+virtual/pure_virtual.h:
+
+virtual/virt_access.h:
+
+virtual/virt_cast_1.h:
+
+virtual/virt_cast_2.h:
+
+virtual/virt_func_1.h:
+
+virtual/virt_func_2.h:
+
+virtual/virt_func_3.h:
+
+virtual/virt_func_4.h:
+
+virtual/virt_func_5.h:
+
+virtual/virt_func_6.h:
+
+virtual/virt_func_7.h:
+
+virtual/virt_func_8.h:
+
+virtual/virt_func_9.h:
+
+virtual/virt_inheritance.h:
+
+virtual/virt_private_access.h:

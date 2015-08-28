@@ -1,0 +1,7 @@
+This is a demonstration HelloWorld package for GNU Automake.
+Type `info Automake' to read the Automake manual.
+
+# set of tests
+
+# install SQLITE as described
+# http://www.tutorialspoint.com/sqlite/sqlite_installation.htm
