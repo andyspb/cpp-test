@@ -8,7 +8,7 @@
 #ifndef SRC_HTTP_SERVER_THREADED_H_
 #define SRC_HTTP_SERVER_THREADED_H_
 
-#ifdef __WIN32__
+#if defined(__WIN32__) || defined (__WIN64__)
 # include <winsock2.h>
 #else
 #include <netinet/in.h>
