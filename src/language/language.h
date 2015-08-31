@@ -11,6 +11,7 @@
 #include <assert.h>
 #include <iostream>
 
+#include "atomic.h"
 #include "binary.h"
 #include "bind1st.h"
 #include "bind2nd.h"
@@ -66,6 +67,8 @@
 namespace language {
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
+
+  assert(atomic_::test());
 //  assert(binary::test());
 //  assert(bind1st_::test());
 //  assert(bind2nd_::test());
@@ -113,7 +116,7 @@ TEST_RESULT test() {
 //  assert(pure_virt_call::test());
 //  assert(set_test::test());
 
-    assert(static_cast_::test());
+//    assert(static_cast_::test());
 //	assert(string_literal::test());
 //	assert(size_of::test());
 //  assert(stl_tests::test());
