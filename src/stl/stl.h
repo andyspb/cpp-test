@@ -1,7 +1,7 @@
 /*
  * stl.h
  *
- *  Created on: 10 ÿíâ. 2015 ã.
+ *  Created on: 10 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -26,8 +26,8 @@ void print(std::pair<const std::string, int>& p) {
   std::cout << " print " << p.first << " " << p.second << std::endl;
 }
 
-int test() {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
   str_map mymap;
   str_set myset;
@@ -41,8 +41,9 @@ int test() {
 
   std::for_each(mymap.begin(), mymap.end(), print);
 
-  std::for_each(myset.begin(), myset.end(), [](std::string s){std::cout<<s<<" ";});
-  std::cout<<std::endl;
+  std::for_each(myset.begin(), myset.end(),
+                [](std::string s) {std::cout<<s<<" ";});
+  std::cout << std::endl;
   str_que myque;
   str_stack mystack;
 
@@ -54,22 +55,22 @@ int test() {
   }
 
   std::cout << " myque ";
-  while(!myque.empty()) {
+  while (!myque.empty()) {
     std::string s = myque.front();
-    std::cout << s << " " ;
+    std::cout << s << " ";
     myque.pop();
   }
   std::cout << std::endl;
 
   std::cout << " mystack ";
-  while(!mystack.empty()) {
+  while (!mystack.empty()) {
     std::string s = mystack.top();
-    std::cout << s << " " ;
+    std::cout << s << " ";
     mystack.pop();
   }
   std::cout << std::endl;
 
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace stl

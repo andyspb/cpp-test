@@ -20,6 +20,7 @@
 #include "node.h"
 #include "red_black_tree.h"
 #include "avl_tree.h"
+#include "iterator.h"
 
 namespace common {
 

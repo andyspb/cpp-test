@@ -1,5 +1,5 @@
-#ifndef ITERATOR_H
-#define ITERATOR_H
+#ifndef LANGUAGE_ITERATOR_H
+#define LANGUAGE_ITERATOR_H
 
 namespace _iterator {
 class StringIterator {
@@ -33,16 +33,16 @@ void hello_world(StringIterator & iterator) {
 
 }
 
-int test() {
-  printf("Iterator pattern test\n");
-  const char * str = "This Is Iterator test!\n";
+TEST_RESULT test() {
+  LOG(INFO) << "Iterator pattern test";
+  const char * str = "This Is Iterator test!";
   std::cout << str;
   StringIterator iterator(str);
   hello_world(iterator);
   printf("\n");
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace _iterator
 
-#endif  // ITERATOR_H
+#endif  // LANGUAGE_ITERATOR_H
