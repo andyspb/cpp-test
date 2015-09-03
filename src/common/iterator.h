@@ -11,15 +11,32 @@
 namespace my_iterator {
 
 template<class T>
-struct Node {
+class Node {
+ public:
   T data;
-  Node* next;
-
   Node* get_next() {
     return next;
   }
 
+ private:
+  Node* next;
+
 };
+
+template<>
+class Node<int[]> {
+ public:
+  int data[];
+  Node* get_next() {
+    return next;
+  }
+
+ private:
+  Node* next;
+};
+
+typedef Node<int[]> NodeIntArr;
+
 
 template<class T>
 class MyIterator {
@@ -32,7 +49,7 @@ class MyIterator {
       : itr(iter.itr) {
   }
   MyIterator& operator++() {
-    itr = itr->next;
+    itr = itr->get_next();
     return *this;
   }
   bool operator==(const MyIterator& rhs) {
@@ -57,15 +74,20 @@ OutputIt copy_n(InputIt first, Size count, OutputIt result) {
   return result;
 }
 
-template<>
-MyIterator<int[]> copy_n() {
+typedef MyIterator<NodeIntArr> MyIteratorInt;
 
+template<>
+MyIteratorInt copy_n(MyIteratorInt inputIter, size_t count,
+                     MyIteratorInt outputIter) {
+  if (count) {
+
+  }
+  return outputIter;
 }
 
 TEST_RESULT test() {
   RETURN_OK();
 }
-
 
 }  // namespace iterator_
 

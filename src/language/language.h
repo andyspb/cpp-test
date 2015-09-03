@@ -26,6 +26,7 @@
 #include "const_method.h"
 #include "constexpr_test.h"
 #include "constructor_exception.h"
+#include "copy.h"
 #include "cout.h"
 #include "delete.h"
 #include "dynamic_cast.h"
@@ -41,6 +42,7 @@
 #include "hash_map.h"
 #include "initialization_with_this.h"
 #include "inheritance.h"
+#include "iterator.h"
 #include "lambda.h"
 #include "namespace_test.h"
 #include "my_queue.h"
@@ -57,6 +59,7 @@
 #include "static_cast.h"
 #include "string_literal.h"
 #include "strlen_test.h"
+#include "type_traits.h"
 #include "union.h"
 #include "vector_pointer_arithmetic.h"
 #include "virtual_destr.h"
@@ -68,7 +71,7 @@ namespace language {
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-  assert(atomic_::test());
+//  assert(atomic_::test());
 //  assert(binary::test());
 //  assert(bind1st_::test());
 //  assert(bind2nd_::test());
@@ -87,6 +90,9 @@ TEST_RESULT test() {
 //  assert(cast_const::test());
 //  assert(constexpr_test::test());
   //	assert(constructor_exception::test());
+
+  assert(copy_::test());
+
 //  assert(cout_::test());
 //  assert(delete_::test());
 //  assert(dynamic_cast_::test());
@@ -121,6 +127,9 @@ TEST_RESULT test() {
 //	assert(size_of::test());
 //  assert(stl_tests::test());
 //	assert(strlen_test::test());
+
+//  assert(type_traits::test());
+
 //  assert(union_::test());
 
 //  assert(vector_pointer_arithmetic::test());
