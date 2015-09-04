@@ -19,7 +19,7 @@ int main(int argc, char **argv) {
 //  assert(hashmap::test());
 //  assert(http_server::test());
 //  assert(lambda::test());
-  assert(language::test());
+//  assert(language::test());
 //  assert(last_1::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
@@ -50,6 +50,8 @@ int main(int argc, char **argv) {
 //  assert(ms::test() );
 //  assert(google_2::test());
 //  assert(alignment::test());
+
+  assert(yandex::test());
 
 //  int arr[10];
 //  int *pa = arr;

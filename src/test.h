@@ -62,5 +62,6 @@
 #include "tests/tests.h"
 #include "thread/threads.h"
 #include "virtual/virtuals.h"
+#include "yandex/yandex.h"
 
 #endif /* TEST_H_ */
