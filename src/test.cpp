@@ -1,5 +1,7 @@
 #include "test.h"
 
+__private_extern__ int i;
+
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
 
@@ -61,6 +63,10 @@ int main(int argc, char **argv) {
 
 //  int is[1];
 //  is[2] = 1;
+
+
+  register int ri = 0;
+  int * ptr = &ri;
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;

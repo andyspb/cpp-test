@@ -23,11 +23,11 @@ void print_array(const array_int8& arr) {
   std::endl(std::cout);
 }
 
-bool find_same_in_distance(const array_int8& arr, int distance) {
+bool find_same_in_distance(const array_int8& arr, size_t distance) {
   bool found = false;
 
   hash_set hs;
-  int i(0), count (0);
+  size_t i(0), count (0);
   while(i < distance && count < arr.size()) {
     hs.insert(arr[i++]);
   }
