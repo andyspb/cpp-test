@@ -10,6 +10,7 @@
   #pragma GCC diagnostic ignored "-Wuninitialized"
   #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
   #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 #endif
 
 #include <stdio.h>

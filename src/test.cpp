@@ -1,6 +1,5 @@
 #include "test.h"
 
-__private_extern__ int i;
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
