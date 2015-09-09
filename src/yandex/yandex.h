@@ -32,8 +32,6 @@ bool find_same_in_distance(const array_int8& arr, int distance) {
     hs.insert(arr[i++]);
   }
 
-
-
   return found;
 }
 

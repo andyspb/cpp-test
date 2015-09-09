@@ -46,6 +46,7 @@
 #include "memory/memory.h"
 #include "moto/moto.h"
 #include "ms/ms.h"
+#include "net/net.h"
 #include "overloading/overloading.h"
 #include "patterns/patterns.h"
 #include "quiz/quiz.h"
