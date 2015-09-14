@@ -20,6 +20,7 @@
 #include "bits_arithmetic.h"
 #include "cast_1.h"
 #include "cast_2.h"
+#include "cast_sidecast.h"
 #include "char_array.h"
 #include "class_initialization.h"
 #include "const_char_test.h"
@@ -80,6 +81,7 @@ TEST_RESULT test() {
 //  assert(bits_arithmetic::test());
 //  assert(cast_1::test());
 //  assert(cast_2::test());
+//  assert(cast_sidecast::test());
 //  assert(char_array::test());
 //  assert(class_initialization::test());
 //  assert(generic_list_test::test());
@@ -91,7 +93,7 @@ TEST_RESULT test() {
 //  assert(constexpr_test::test());
   //	assert(constructor_exception::test());
 
-  assert(copy_::test());
+//  assert(copy_::test());
 
 //  assert(cout_::test());
 //  assert(delete_::test());

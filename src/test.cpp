@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 //  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
-//  assert(bits::test());
+  assert(bits::test());
 //  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 //  assert(hashmap::test());
 //  assert(http_server::test());
 //  assert(lambda::test());
-//  assert(language::test());
+  assert(language::test());
 //  assert(last_1::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
 //  assert(google_2::test());
 //  assert(alignment::test());
 
-  assert(yandex::test());
+//  assert(yandex::test());
 
 //  int arr[10];
 //  int *pa = arr;
@@ -64,8 +64,8 @@ int main(int argc, char **argv) {
 //  is[2] = 1;
 
 
-  register int ri = 0;
-  int * ptr = &ri;
+//  register int ri = 0;
+//  int * ptr = &ri;
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;

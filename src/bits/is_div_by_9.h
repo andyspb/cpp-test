@@ -41,13 +41,14 @@ bool isDivBy9_iter(int n) {
 
 
 // Driver program to test above function
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   // Let us print all multiples of 9 from 0 to 100
   // using above method
   for (int i = 0; i < 100; i++)
     if (isDivBy9(i))
       cout << i << " ";
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace is_div_by_9
