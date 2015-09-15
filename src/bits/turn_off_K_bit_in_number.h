@@ -15,26 +15,24 @@ namespace turn_off_K_bit_in_number {
 
 // Returns a number that has all bits same as n
 // except the k'th bit which is made 0
-int turnOffK(int n, int k)
-{
-    // k must be greater than 0
-    if (k <= 0) return n;
+int turnOffK(int n, int k) {
+  // k must be greater than 0
+  if (k <= 0)
+    return n;
 
-    // Do & of n with a number with all set bits except
-    // the k'th bit
-    return (n & ~(1 << (k - 1)));
+  // Do & of n with a number with all set bits except
+  // the k'th bit
+  return (n & ~(1 << (k - 1)));
 }
 
 // Driver program to test above function
-int test()
-{
-    int n = 15;
-    int k = 4;
-    cout << turnOffK(n, k);
-    return 1;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  int n = 15;
+  int k = 4;
+  cout << turnOffK(n, k);
+  RETURN_OK();
 }
 }
-
-
 
 #endif /* TURN_OFF_K_BIT_IN_NUMBER_H_ */

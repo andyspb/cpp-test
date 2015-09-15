@@ -24,7 +24,7 @@ bool isUniqueChars2(std::string str) {
 
 // We can reduce our space usage a little bit by using a bit vector
 // We will assume, in the below code, that the string is only lower
-// case a-x through A-Õ This will allow us to use just a single int
+// case a-x through A-ï¿½ This will allow us to use just a single int
 bool isUniqueChars(std::string str) {
   int checker = 0;
   for (int i = 0; i < (int) str.length(); ++i) {
@@ -37,7 +37,7 @@ bool isUniqueChars(std::string str) {
   return true;
 }
 
-int test() {
+TEST_RESULT test() {
   std::cout << "Test 1.1" << std::endl;
   std::string str = "Andrey";
   std::string res = isUniqueChars2(str) ? "uniq" : "not uniq";
@@ -52,7 +52,7 @@ int test() {
   str = "qwerty";
   res = isUniqueChars(str) ? "uniq" : "not uniq";
   std::cout << "Chars in '" << str << "' are " << res << std::endl;
-  return 1;
+  RETURN_OK();
 }
 
 } // namespace test_1_1

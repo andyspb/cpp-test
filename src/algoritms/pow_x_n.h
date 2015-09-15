@@ -1,7 +1,7 @@
 /*
  * pow_x_n.h
  *
- *  Created on: 29 июня 2015 г.
+ *  Created on: 29 пїЅпїЅпїЅпїЅ 2015 пїЅ.
  *      Author: andy
  */
 
@@ -20,12 +20,12 @@ int power(int x, unsigned int y) {
   }
 }
 
-int test() {
+TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
   int x = 2;
   unsigned int y = 3;
   LOG(INFO) << x << "^" << y << "= " << power(x, y);
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace pow_x_n
