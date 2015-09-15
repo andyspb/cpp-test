@@ -25,11 +25,12 @@ void bin_rec(unsigned n) {
   printf("%d", n % 2);
 }
 
-int test(void) {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   bin_iter(7);
   printf("\n");
   bin_iter(4);
-  return 1;
+  RETURN_OK();
 }
 }  // binary_representation_of_number
 

@@ -9,7 +9,6 @@
 #define ADD_TWO_BIT_STRINGS_H_
 
 #include <iostream>
-using namespace std;
 
 namespace add_two_bit_strings {
 
@@ -64,12 +63,14 @@ string addBitStrings(string first, string second) {
 }
 
 // Driver program to test above functions
-int test() {
-  string str1 = "1100011";
-  string str2 = "10";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  std::string str1 = "1100011";
+  std::string str2 = "10";
 
-  cout << "Sum is " << addBitStrings(str1, str2);
-  return 1;
+  std::cout << "Sum is " << addBitStrings(str1, str2);
+  std::endl(std::cout);
+  RETURN_OK();
 }
 
 }  // namespace add_two_bit_strings

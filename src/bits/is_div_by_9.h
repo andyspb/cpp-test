@@ -45,9 +45,11 @@ TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
   // Let us print all multiples of 9 from 0 to 100
   // using above method
-  for (int i = 0; i < 100; i++)
-    if (isDivBy9(i))
+  for (int i = 0; i < 100; i++) {
+    if (isDivBy9(i)) {
       cout << i << " ";
+    }
+  }
   RETURN_OK();
 }
 

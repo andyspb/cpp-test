@@ -43,11 +43,12 @@ int countSetBits2(int n) {
 }
 
 /* Program to test function countSetBits */
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   int i = 9;
   printf("%d", countSetBits2(i));
   getchar();
-  return 1;
+  RETURN_OK();
 }
 
 }  // count_set_bits_in_an_integer

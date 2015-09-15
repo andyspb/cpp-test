@@ -8,8 +8,7 @@
 #ifndef IS_PALINDROME_H_
 #define IS_PALINDROME_H_
 
-#include<iostream>
-using namespace std;
+#include <iostream>
 
 namespace is_palindrome {
 
@@ -36,12 +35,13 @@ bool isPalindrome(unsigned int x) {
 }
 
 // Driver program to test above function
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   unsigned int x = (1 << 15) + (1 << 16);
-  cout << isPalindrome(x) << endl;
+  std::cout << x << " is palindrome: " << isPalindrome(x) << std::endl;
   x = (1 << 31) + 1;
-  cout << isPalindrome(x) << endl;
-  return 1;
+  std::cout << x << " is palindrome: " << isPalindrome(x) << std::endl;
+  RETURN_OK();
 }
 
 }

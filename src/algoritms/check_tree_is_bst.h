@@ -15,7 +15,8 @@ struct node {
 };
 
 namespace check_tree_is_bst {
-TEST_RESULT test(struct node* node) {
+
+int test(struct node* node) {
   if (!node)
     return 1;
 
