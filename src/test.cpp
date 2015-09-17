@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 //  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
-  assert(bits::test());
+//  assert(bits::test());
 //  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
@@ -66,6 +66,16 @@ int main(int argc, char **argv) {
 
 //  register int ri = 0;
 //  int * ptr = &ri;
+
+
+  const int& temp = int(12);
+
+  std::string s1 = "123";
+  std::string s2 = "456";
+
+  std::string s3_copy = s1 + s2;
+  const std::string& s3_reference = s1 + s2;
+
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;
