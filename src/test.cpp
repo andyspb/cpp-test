@@ -67,6 +67,11 @@ int main(int argc, char **argv) {
 //  register int ri = 0;
 //  int * ptr = &ri;
 
+  const std::string str1 = "Hello, ";
+  const std::string str2 = "World!";
+
+  const std::string& str = str1 + str2;
+
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;
 }

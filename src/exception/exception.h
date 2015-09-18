@@ -27,8 +27,8 @@ struct your_exc3 : my_exc1, my_exc2 {
 
 };
 
-int test() {
-  std::cout << "exception_::test() --->\n";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << "exception_::test() --->";
   try {
     throw your_exc3();
   }
@@ -39,7 +39,7 @@ int test() {
     std::cout << "whoops!" << std::endl;
   }
   std::cout << "<---\n";
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace exception_
