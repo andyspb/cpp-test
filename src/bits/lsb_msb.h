@@ -78,7 +78,6 @@ int get_LSB_position(unsigned int x) {
   return pos;
 }
 
-
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
   RETURN_OK();
