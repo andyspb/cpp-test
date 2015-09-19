@@ -35,8 +35,8 @@ TEST_RESULT test() {
 //  assert(count_total_set_bits_in_all_numbers_from_1_to_n::test());
 //  assert(detect_if_two_integers_have_opposite_signs::test());
 //  assert(is_div_by_9::test());
-  assert(is_palindrome::test());
-//  assert(lsb_msb::test());
+//  assert(is_palindrome::test());
+  assert(lsb_msb::test());
 //  assert(swap_2_numbers_xor::test());
 //  assert(swap_all_odd_and_even_bits::test());
 //  assert(swap_two_nibbles_in_a_byte::test());

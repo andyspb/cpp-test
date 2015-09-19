@@ -124,8 +124,8 @@ void fill_tree(Node<T>* tree) {
 
 }
 
-int test() {
-  std::cout << "Test: tree traversal --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << "Test: tree traversal >>>";
   Node<int> *tree = new Node<int>(1);
   fill_tree(tree);
 
@@ -144,7 +144,7 @@ int test() {
   std::endl(std::cout);
 
   std::cout << "<--- tree traversal tests passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace tree_traversal_tests
 

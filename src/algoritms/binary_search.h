@@ -1,7 +1,7 @@
 /*
  * binary_search.h
  *
- *  Created on: 06 ÿíâ. 2015 ã.
+ *  Created on: 06 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -56,8 +56,8 @@ int binary_search_iter(int arr[], int key, int min, int max) {
   return KEY_NOT_FOUND;
 }
 
-int test() {
-  std::cout << "Binary search >>>" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << "Binary search >>>";
   int arr[] = {1,2,3,5,6,7,8,9,11,22,33,44,55};
 
   int rec = binary_search_rec(arr, 33, 0, 13);
@@ -67,7 +67,7 @@ int test() {
   std::cout << "iter=" << iter << std::endl;
 
   std::cout << "<<<" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 
 

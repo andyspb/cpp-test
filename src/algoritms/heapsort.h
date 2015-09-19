@@ -45,8 +45,8 @@ void heapsort(T a[], long size) {
   }
 }
 
-int test() {
-  std::cout << "Test heapsort:\n";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   const int size = 11;
   int arr[size] = { 13, 2, 3, 1, 7, 8, 9, 11, 6, 5, 4 };
   for (int i = 0; i < size; ++i) {
@@ -58,7 +58,7 @@ int test() {
     std::cout << arr[i] << ' ';
   }
   std::endl(std::cout);
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace heapsort

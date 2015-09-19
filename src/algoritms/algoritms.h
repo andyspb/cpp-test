@@ -97,9 +97,9 @@
 namespace algorithms {
 int test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
-  assert(longest_common_subseq::test());
+//  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
-//  assert(btree_depth::test());
+  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
 //  assert(circular_buffer::test());
@@ -132,8 +132,8 @@ int test() {
 //  assert(tree_traversal::test());
 //
 //  assert(linked_list_is_palindrome_with_stack::test());
-//  assert(reverse_string2::test());
-  assert(pow_x_n::test());
+  assert(reverse_string2::test());
+//  assert(pow_x_n::test());
 //  assert(permutation_of_string::test());
   return 1;
 }

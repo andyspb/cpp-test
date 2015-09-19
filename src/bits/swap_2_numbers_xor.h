@@ -32,8 +32,10 @@ void swap_sum(int& x, int& y) {
   printf("After Swapping: x = %d, y = %d", x, y);
 }
 
-int test() {
-  return 1;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
+  RETURN_OK();
 }
 
 

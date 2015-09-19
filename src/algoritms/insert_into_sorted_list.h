@@ -56,15 +56,15 @@ void insert(SList** list, int n) {
   }
 }
 
-int test() {
-  std::cout << "Test: Insert in a sorted list test --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   SList *list = new SList(-1);
   fill_slist(list);
   print_slist(list);
   insert(&list, 111);
   print_slist(list);
   std::cout << "<--- test insertsort passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 } // namespace insert_into_sorted_slist
 

@@ -6,7 +6,7 @@
 #include <algorithm>
 
 namespace reverse_string2 {
-int test() {
+TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
   std::string hello("Hello, how are you?");
@@ -26,8 +26,8 @@ int test() {
   std::endl(std::cout);
   std::reverse(s.begin(), s.end());
   std::cout << "reverse:       " << s << std::endl;
-  return 1;
+  RETURN_OK();
 }
-} // namespace reverse_string2
+}  // namespace reverse_string2
 
 #endif // _REVERSE_STRING_H_
