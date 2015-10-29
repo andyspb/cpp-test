@@ -5,14 +5,20 @@
 #ifndef LOCK_FREE1_H_
 #define LOCK_FREE1_H_
 
+#include <atomic>
+
 namespace lock_free1 {
 
 template<class T>
-class TLockFreeQueue {
-  struct TListNode {
-    TListNode * volatile Next;
-    T Data;
+class LockFreeQueue {
+  /** A node in the linked list. */
+  template <typename T>
+  struct node
+  {
+      T t /**< Value */;
+      std::atomic<node<T>*> next /**< Next node in list */;
   };
+
 
   struct TRootNode {
     TListNode * volatile PushQueue;
@@ -39,6 +45,9 @@ class TLockFreeQueue {
   TRootNode * volatile JobQueue;
   volatile long FreememCounter;
   TRootNode * volatile FreePtr;
+
+  bool atomic_add(volatile long& )
+
 
   void TryToFreeAsyncMemory() {
     TRootNode *current = FreePtr;
@@ -133,17 +142,17 @@ class TLockFreeQueue {
     }
   };
 
-  TLockFreeQueue(const TLockFreeQueue&) {
+  LockFreeQueue(const LockFreeQueue&) {
   }
-  void operator=(const TLockFreeQueue&) {
+  void operator=(const LockFreeQueue&) {
   }
  public:
-  TLockFreeQueue()
+  LockFreeQueue()
       : JobQueue(new TRootNode),
         FreememCounter(0),
         FreePtr(0) {
   }
-  ~TLockFreeQueue() {
+  ~LockFreeQueue() {
     AsyncRef();
     AsyncUnref();
     EraseList(JobQueue->PushQueue);

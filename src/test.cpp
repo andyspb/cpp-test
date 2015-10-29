@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -22,6 +22,9 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
+
+  assert(lock_free::test());
+
 //  assert(mem_test::test());
 //  assert(moto::test());
 //  assert(quiz::test());
@@ -67,18 +70,18 @@ int main(int argc, char **argv) {
 //  register int ri = 0;
 //  int * ptr = &ri;
 
-  const int& temp = int(12);
-
-  std::string s1 = "123";
-  std::string s2 = "456";
-
-  std::string s3_copy = s1 + s2;
-  const std::string& s3_reference = s1 + s2;
-
-  const std::string str1 = "Hello, ";
-  const std::string str2 = "World!";
-
-  const std::string& str = str1 + str2;
+//  const int& temp = int(12);
+//
+//  std::string s1 = "123";
+//  std::string s2 = "456";
+//
+//  std::string s3_copy = s1 + s2;
+//  const std::string& s3_reference = s1 + s2;
+//
+//  const std::string str1 = "Hello, ";
+//  const std::string str2 = "World!";
+//
+//  const std::string& str = str1 + str2;
 
   LOG(INFO) << "<< return from " << __FUNCTION__;
   return 0;

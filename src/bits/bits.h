@@ -19,6 +19,7 @@
 #include "is_div_by_9.h"
 #include "is_palindrome.h"
 #include "lsb_msb.h"
+#include "revert_all_bits.h"
 #include "swap_2_numbers_xor.h"
 #include "swap_all_odd_and_even_bits.h"
 #include "swap_two_nibbles_in_a_byte.h"
