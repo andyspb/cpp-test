@@ -9,14 +9,18 @@
 
 namespace lock_free1 {
 
+struct TListNode {
+  int Data;
+  TListNode* Next;
+};
+
 template<class T>
 class LockFreeQueue {
   /** A node in the linked list. */
-  template <typename T>
   struct node
   {
-      T t /**< Value */;
-      std::atomic<node<T>*> next /**< Next node in list */;
+      int t /**< Value */;
+      std::atomic<node*> next /**< Next node in list */;
   };
 
 
@@ -46,7 +50,7 @@ class LockFreeQueue {
   volatile long FreememCounter;
   TRootNode * volatile FreePtr;
 
-  bool atomic_add(volatile long& )
+  bool atomic_add(volatile long& );
 
 
   void TryToFreeAsyncMemory() {
