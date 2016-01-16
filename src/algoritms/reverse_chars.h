@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <algorithm>
+
+#include "common/constants.h"
+
 using namespace std;
 namespace reverse_chars {
-void test() {
+TEST_RESULT test() {
 //        const char * str = "Hello World!";
 
   char chars[256] = "Hello World!";
@@ -17,6 +20,8 @@ void test() {
   }
 
   printf("chars=%s\n", chars);
+
+  RETURN_OK();
 }
 }
 

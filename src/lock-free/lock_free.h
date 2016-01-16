@@ -5,7 +5,7 @@
 #ifndef _LOCK_FREE_LOCK_FREE_H_
 #define _LOCK_FREE_LOCK_FREE_H_
 
-#include "lock_free_que.h"
+#include "lock_free_queue.h"
 
 namespace lock_free {
 

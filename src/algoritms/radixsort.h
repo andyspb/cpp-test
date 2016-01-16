@@ -73,6 +73,6 @@ slist *radix_list(slist *l, int t) {
   return (out);
 }
 
-} // namespace radix_sort
+}  // namespace radix_sort
 
 #endif _ALGO_RADIX_SORT_H_
