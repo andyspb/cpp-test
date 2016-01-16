@@ -121,8 +121,8 @@ int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   return l;
 }
 
-int test() {
-  std::cout << "ms test:\n";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << "ms test";
 
   //[1, 5], [2, 7] 6
   Interval intervals_1[] = { Interval(2, 7), Interval(1, 5) };
@@ -146,7 +146,7 @@ int test() {
   std::cout << find_sum_of_intervals_with_stack(vec) << std::endl;
 
   std::cout << std::endl;
-  return 1;
+  RETURN_OK();
 }
 
 }

@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
   assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
-//  assert(bits::test());
+  assert(bits::test());
 //  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());

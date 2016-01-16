@@ -1,32 +1,53 @@
 /*
  * revert_all_bits.h
  *
- *  Created on: 29 окт. 2015 г.
+ *  Created on: 29 пїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
 #ifndef SRC_BITS_REVERT_ALL_BITS_H_
 #define SRC_BITS_REVERT_ALL_BITS_H_
 
+#include <string>
+#include <sstream>
+
 namespace revert_all_bits_in_byte {
 
-template <typename T>
-T reverse(T n)
+
+const char* byte_to_binary( int x )
 {
-    T rv = 0;
-    for (size_t i = 0; i < b; ++i, n >>= 1)
-        rv = (rv >> 1) | (n & 0x01);
-    return rv;
+    static char b[sizeof(int)*8+1] = {0};
+    int y;
+    long long z;
+    for (z=1LL<<sizeof(int)*8-1,y=0; z>0; z>>=1,y++)
+    {
+        b[y] = ( ((x & z) == z) ? '1' : '0');
+    }
+
+    b[y] = 0;
+
+    return b;
 }
 
-int test() {
+unsigned char reverse(unsigned char original) {
+  unsigned char reversed = 0;
+  for (int i = 0; i < 8; i++)
+    reversed |= ((original >> i) & 0b1) << (7 - i);
 
-  return 1;
+  return reversed;
 }
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
+  unsigned char data = 8;
+  unsigned char rev = reverse(data);
+  LOG(INFO) << "original:" << data <<") "
+      << " reversed:" << rev;
+
+
+  RETURN_OK();
+}
 
 }  // namespace revert_all_bits_in_byte
-
-
 
 #endif /* SRC_BITS_REVERT_ALL_BITS_H_ */
