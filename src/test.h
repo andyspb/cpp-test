@@ -42,6 +42,7 @@
 #include "last/last_1.h"
 #include "language/language.h"
 #include "lambda/lambda.h"
+#include "lge/test.h"
 #include "lock-free/lock_free.h"
 #include "memory/alignment.h"
 #include "memory/memory.h"
