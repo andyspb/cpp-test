@@ -9,11 +9,12 @@
 
 namespace lambda_test1 {
 
-int test() {
-  auto func = []() {std::cout << "Hello world!\n";};
+TEST_RESULT test() {
+  auto func = []() {
+    std::cout << "Hello world!\n";};
 
   func();
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace lambda_test1

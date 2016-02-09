@@ -15,6 +15,12 @@ struct node {
   std::atomic<node<T>*> next /**< Next node in list */;
 };
 
+template<>
+struct node<int> {
+  int value;
+  std::atomic<int*> next /**< Next node in list */;
+};
+
 struct _Queue {
 //    node *head;
 //    node *tail;

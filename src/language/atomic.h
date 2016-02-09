@@ -14,7 +14,7 @@ class B { /* */
 };
 
 class A {
-  vector<unique_ptr<B>> vb;
+  std::vector<std::unique_ptr<B>> vb;
  public:
   void add(unique_ptr<B>& b) {
     vb.push_back(move(b));

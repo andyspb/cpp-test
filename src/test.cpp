@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 //  assert(hashmap::test());
 //  assert(http_server::test());
 //  assert(lambda::test());
-//  assert(language::test());
+  assert(language::test());
 //  assert(last_1::test());
 
 //  assert(lock_free::test());

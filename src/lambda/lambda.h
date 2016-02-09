@@ -14,12 +14,12 @@
 
 namespace lambda {
 
-int test() {
-
+TEST_RESULT test() {
+  LOG(INFO) << __FUNCTION__;
   assert(lambda_test1::test());
   assert(lambda_test2::test());
   assert(lambda_test3::test());
-  return 1;
+  RETURN_OK();
 }
 
 }
