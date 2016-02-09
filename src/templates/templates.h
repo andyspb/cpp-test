@@ -6,6 +6,7 @@
 #include "../logger/logger.h"
 
 #include <assert.h>
+#include "sfinae.h"
 #include "template_factorial.h"
 #include "template_fibonacci.h"
 #include "template_func.h"
@@ -50,7 +51,7 @@ TEST_RESULT test() {
 //  template_test();
 
   //    assert(template_factorial::test());
-  assert(template_fibonacci::test());
+//  assert(template_fibonacci::test());
 
 //  assert(template_func::test());
 //    assert(template_keyword::test());
@@ -62,6 +63,8 @@ TEST_RESULT test() {
 //    assert(template_test4::test());
 //  assert(template_test5::test());
 //  assert(templates_param_pack::test());
+
+  assert(sfinae::test());
 
   RETURN_OK();
 }

@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
 
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 
 //  assert(lock_free::test());
 
-  assert(lge::test());
+//  assert(lge::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
 //  assert(quiz::test());
@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
 //  assert(static_::test());
 //  assert(stl::test());
 //  assert(threads::test());
-//  assert(templates::test());
+  assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
 //  assert(virtuals::test());

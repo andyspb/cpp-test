@@ -16,8 +16,8 @@ struct node {
 };
 
 struct _Queue {
-    node *head;
-    node *tail;
+//    node *head;
+//    node *tail;
 };
 
 class LockFreeQueue {
