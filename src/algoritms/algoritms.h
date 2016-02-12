@@ -68,6 +68,7 @@
 #include "multiply_7.h"
 #include "multiply_by_7.h"
 #include "my_atoi.h"
+#include "norm_filepath.h"
 #include "num_to_str.h"
 #include "reverse_string.h"
 #include "palindrom_rec.h"
@@ -99,7 +100,7 @@ int test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
-  assert(btree_depth::test());
+//  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
 //  assert(circular_buffer::test());
@@ -119,6 +120,7 @@ int test() {
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(interpolation_search::test());
+    assert(norm_filepath::test());
 //  assert(merge_sort::test());
 //  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
@@ -132,7 +134,7 @@ int test() {
 //  assert(tree_traversal::test());
 //
 //  assert(linked_list_is_palindrome_with_stack::test());
-  assert(reverse_string2::test());
+//  assert(reverse_string2::test());
 //  assert(pow_x_n::test());
 //  assert(permutation_of_string::test());
   return 1;
