@@ -3,7 +3,6 @@
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
-
   assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
