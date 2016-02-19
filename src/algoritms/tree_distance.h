@@ -8,14 +8,15 @@
 #ifndef SRC_ALGORITMS_TREE_DISTANCE_H_
 #define SRC_ALGORITMS_TREE_DISTANCE_H_
 
-// Given a list o unique integers, first construct a binary search tree by inserting each integer in
-// the order provided, then print the distance between two nodes A and B . We define distance as the number of edges
+// Given a list o unique integers, first construct a binary search tree by
+// inserting each integer in the order provided, then print the distance
+// between two nodes A and B. We define distance as the number of edges
 // on the path (traversing each edge only once) between nodes
 
 // Input format
-// The first line will contain A, the value of the firat node
+// The first line will contain A, the value of the first node
 // The second line will contain B, the value of the second node
-// the third line will contain an integer N, the nuber of nodes in the tree
+// the third line will contain an integer N, the number of nodes in the tree
 // the fourth node line will contain N integers, the node values
 
 // Constraints
@@ -36,6 +37,19 @@
 // 2
 
 namespace tree_distance {
+struct node {
+  int data;
+  struct node *left;
+  struct node *right;
+};
+
+// An utility function to create a node
+struct node* newNode(int data) {
+  struct node* temp = (struct node *) malloc(sizeof(struct node));
+  temp->data = data;
+  temp->left = temp->right = NULL;
+  return temp;
+}
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
   RETURN_OK();
