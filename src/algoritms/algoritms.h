@@ -89,6 +89,7 @@
 #include "sum_1_to_N.h"
 #include "swap_bits.h"
 #include "tree_traversal.h"
+#include "tree_distance.h"
 #include "turn_off_bit_in_number.h"
 
 #include "check_if_braces_match.h"
@@ -120,7 +121,7 @@ int test() {
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(interpolation_search::test());
-    assert(norm_filepath::test());
+//    assert(norm_filepath::test());
 //  assert(merge_sort::test());
 //  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
@@ -132,7 +133,7 @@ int test() {
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
-//
+    assert(tree_distance::test());
 //  assert(linked_list_is_palindrome_with_stack::test());
 //  assert(reverse_string2::test());
 //  assert(pow_x_n::test());
