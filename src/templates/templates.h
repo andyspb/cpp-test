@@ -6,6 +6,8 @@
 #include "../logger/logger.h"
 
 #include <assert.h>
+
+#include "array_size.h"
 #include "sfinae.h"
 #include "template_factorial.h"
 #include "template_fibonacci.h"
@@ -50,6 +52,7 @@ TEST_RESULT test() {
 
 //  template_test();
 
+ assert(array_size::test());
   //    assert(template_factorial::test());
 //  assert(template_fibonacci::test());
 
@@ -64,7 +67,7 @@ TEST_RESULT test() {
 //  assert(template_test5::test());
 //  assert(templates_param_pack::test());
 
-  assert(sfinae::test());
+//  assert(sfinae::test());
 
   RETURN_OK();
 }

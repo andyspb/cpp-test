@@ -23,6 +23,7 @@
 #include "algoritms/algoritms.h"
 #include "array/array.h"
 #include "bits/bits.h"
+#include "blockchain/blockchain.h"
 #include "clock/clock.h"
 #include "cpp1x/cpp1x.h"
 #include "cci4/cci4.h"

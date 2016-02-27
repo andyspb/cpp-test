@@ -14,8 +14,6 @@
 #include <stack>
 #include <string>
 
-#include "../logger/logger.h"
-#include "../logger/log_template.h"
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
