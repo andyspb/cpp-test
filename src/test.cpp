@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
-
+  assert(blockchain::test());
 //  assert(lock_free::test());
 
 //  assert(lge::test());
@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
 //  assert(static_::test());
 //  assert(stl::test());
 //  assert(threads::test());
-  assert(templates::test());
+//  assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
 //  assert(virtuals::test());

@@ -10,7 +10,10 @@
 
 namespace hash_function {
 
-
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  RETURN_OK();
+}
 
 
 }  // namespace hash_function
