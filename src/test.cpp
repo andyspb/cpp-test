@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
-  assert(blockchain::test());
+//  assert(blockchain::test());
 //  assert(lock_free::test());
 
 //  assert(lge::test());
