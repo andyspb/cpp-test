@@ -85,6 +85,7 @@
 #include "string_unique_chars.h"
 #include "substr_search.h"
 #include "sum_1_to_N.h"
+#include "sum_array.h"
 #include "swap_bits.h"
 #include "tree_traversal.h"
 #include "tree_distance.h"
@@ -131,11 +132,12 @@ int test() {
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
-    assert(tree_distance::test());
+//    assert(tree_distance::test());
 //  assert(linked_list_is_palindrome_with_stack::test());
 //  assert(reverse_string2::test());
 //  assert(pow_x_n::test());
 //  assert(permutation_of_string::test());
+  assert(sum_array::test());
   return 1;
 }
 
