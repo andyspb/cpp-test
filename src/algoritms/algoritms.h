@@ -52,6 +52,7 @@
 #include "merge_sort_linked_list.h"
 #include "multiply_by_7.h"
 #include "my_atoi.h"
+#include "radix_sort.h"
 #include "reverse_linked_list.h"
 #include "reverse_string_1.h"
 #include "quicksort.h"
@@ -128,6 +129,7 @@ int test() {
 //  assert(reverse_char_array::test());
 //  assert(reverse_linkedlist::test());
 //  assert(check_if_braces_match::test());
+  assert(radix_sort::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
@@ -137,7 +139,7 @@ int test() {
 //  assert(reverse_string2::test());
 //  assert(pow_x_n::test());
 //  assert(permutation_of_string::test());
-  assert(sum_array::test());
+//  assert(sum_array::test());
   return 1;
 }
 

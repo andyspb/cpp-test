@@ -23,17 +23,17 @@ int print_arr(std::vector<int>& arr) {
       sum += arr[i];
     }
 //    return sum;
-    return std::accumulate(arr.begin(), arr.end(), 0);
+    return ::std::accumulate(arr.begin(), arr.end(), 0);
 }
 TEST_RESULT test(){
     LOG(INFO) << __PRETTY_FUNCTION__;
     int n;
-    cin >> n;
-    std::vector<int> arr(n);
+    ::std::cin >> n;
+    ::std::vector<int> arr(n);
     for(int arr_i = 0;arr_i < n;arr_i++){
        cin >> arr[arr_i];
     }
-    std::cout << print_arr(arr) << std::endl;
+    ::std::cout << print_arr(arr) << std::endl;
     RETURN_OK();
 }
 }  // namespace sum_array

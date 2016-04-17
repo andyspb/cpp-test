@@ -51,7 +51,6 @@ enum Level {
   }
 }
 
-
 template<Level logLevel>
 class Log {
  public:
@@ -72,16 +71,20 @@ class Log {
 };
 
 template<>
-Log<ERROR>::Log() : log_level_(ERROR){
+Log<ERROR>::Log()
+    : log_level_(ERROR) {
 }
 template<>
-Log<WARNING>::Log() : log_level_(WARNING){
+Log<WARNING>::Log()
+    : log_level_(WARNING) {
 }
 template<>
-Log<INFO>::Log() : log_level_(INFO){
+Log<INFO>::Log()
+    : log_level_(INFO) {
 }
 template<>
-Log<DEBUG>::Log() : log_level_(DEBUG){
+Log<DEBUG>::Log()
+    : log_level_(DEBUG) {
 }
 
 template<Level logLevel>

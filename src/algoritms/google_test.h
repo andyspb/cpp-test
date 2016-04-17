@@ -6,8 +6,8 @@
 #include <complex>
 #include <iostream>
 #include <stdio.h>
-namespace google_test {
 
+namespace google_test {
 class A {
  public:
   A() {

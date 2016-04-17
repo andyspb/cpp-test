@@ -15,8 +15,8 @@
 
 namespace rvalues {
 
-int test() {
-
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   std::string foo = "foo-string";
   std::string bar = "bar-string";
 
@@ -34,7 +34,7 @@ int test() {
 
   std::cout << "bar:" << bar << "\n";
 
-  return 1;
+  RETURN_OK();
 }
 
 }

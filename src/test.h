@@ -39,7 +39,7 @@
 #include "func/func.h"
 #include "hashtable/hashtable.h"
 #include "hashcode/hashcodes.h"
-#include "http/server.h"
+#include "http/http.h"
 #include "last/last_1.h"
 #include "language/language.h"
 #include "lambda/lambda.h"

@@ -16,8 +16,8 @@ class List {
     List *next;
 };
 
-int test() {
-  std::cout << "Test: free linked list";
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   List * head = new List(0);
   List * temp = head;
   for (int i = 1; i <= 10; ++i) {
@@ -31,7 +31,7 @@ int test() {
     delete (listptr);
   }
   head = 0;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace free_linkedlist
 
