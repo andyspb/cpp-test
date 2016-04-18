@@ -17,7 +17,7 @@ void print(int arr[], int n) {
 }
 
 // A utility function to get maximum value in arr[]
-int get_max(int arr[], int arr_size) {
+int get_max_in_arr(int arr[], int arr_size) {
   int max = arr[0];
   if (arr_size > 1) {
     for (int i = 1; i < arr_size; ++i)
@@ -26,6 +26,7 @@ int get_max(int arr[], int arr_size) {
   }
   return max;
 }
+
 
 // A function to do counting sort of arr[] according to
 // the digit represented by exp.
@@ -37,6 +38,7 @@ void count_sort(int arr[], int arr_size, int exp) {
   for (i = 0; i < arr_size; ++i) {
     count[(arr[i] / exp) % 10]++;
   }
+  std::cout << "Store count of occurrences in count[]" << std::endl;
   print(count, 10);
 
   // Change count[i] so that count[i] now contains actual
@@ -44,6 +46,7 @@ void count_sort(int arr[], int arr_size, int exp) {
   for (i = 1; i < 10; ++i) {
     count[i] += count[i - 1];
   }
+  std::cout << "Change count[i] so that count[i] now contains actual position of this digit in output[]" << std::endl;
   print(count, 10);
 
   // Build the output array
@@ -69,7 +72,7 @@ void count_sort(int arr[], int arr_size, int exp) {
 // Radix Sort
 void radix_sort(int arr[], int n) {
   // Find the maximum number to know number of digits
-  int m = get_max(arr, n);
+  int m = get_max_in_arr(arr, n);
 
   // Do counting sort for every digit. Note that instead
   // of passing digit number, exp is passed. exp is 10^i
@@ -83,10 +86,14 @@ void radix_sort(int arr[], int n) {
 // Driver program to test above functions
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
-  int arr[] = { 170, 45, 75, 90, 802, 24, 2, 66 };
+//  int arr[] = { 170, 45, 75, 90, 802, 24, 2, 66 };
+  int arr[] = { 123, 321, 213, 111, 222};
   int n = sizeof(arr) / sizeof(arr[0]);
+  std::cout << "Origin array: ";
   print(arr, n);
   radix_sort(arr, n);
+
+  std::cout << "Sorted array: ";
   print(arr, n);
   RETURN_OK();
 }

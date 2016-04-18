@@ -59,8 +59,6 @@ void printLevelOrder(TreeNode* root) {
   if (!root) {
     return;
   }
-
-
   std::queue<TreeNode*> current_level, next_level;
   current_level.push(root);
   while(!current_level.empty()) {

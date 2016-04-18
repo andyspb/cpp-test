@@ -14,6 +14,7 @@ namespace blockchain {
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
+  assert(hash_function::test());
   RETURN_OK();
 }
 

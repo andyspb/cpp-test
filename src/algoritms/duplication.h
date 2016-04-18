@@ -1,5 +1,5 @@
-#ifndef _DUPLICATION_H
-#define _DUPLICATION_H
+#ifndef _ALGORITHMS_DUPLICATION_H
+#define _ALGORITHMS_DUPLICATION_H
 
 #include <iostream>
 //Given an array of size N in which every number is between 1 and N,
@@ -8,8 +8,17 @@
 //[ I ended up giving about 4 or 5 different solutions for this, each supposedly better than the others ].
 
 namespace duplication {
-int test() {
-  std::cout << "Test: Duplication test --->" << std::endl;
+
+// A utility function to print an array
+void print_array(int arr[], int n) {
+  for (int i = 0; i < n; i++)
+    ::std::cout << arr[i] << " ";
+  ::std::cout << ::std::endl;
+}
+
+
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   int a[100], b[100];
 
   for (int i = 0; i < 100; i++) {
@@ -17,6 +26,9 @@ int test() {
   }
   a[33] = 22;
   a[11] = 44;
+  int n = sizeof(a) / sizeof(a[0]);
+  print_array(a,n);
+
   for (int i = 0; i < 100; ++i) {
     b[i] = 0;
   }
@@ -26,9 +38,8 @@ int test() {
     } else
       b[a[i]] = 1;
   }
-  std::cout << "<--- test passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace duplication
 
-#endif //_DUPLICATION_H
+#endif // _ALGORITHMS_DUPLICATION_H

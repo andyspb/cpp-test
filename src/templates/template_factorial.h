@@ -19,14 +19,14 @@ struct Factorial<0> {
     };
 };
 
-int test() {
-  std::cout << "Test: template factorial --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   int x = Factorial<4>::value;  // == 24
   int y = Factorial<0>::value;  // == 1
   std::cout << "\t4!=" << x << std::endl;
   std::cout << "\t0!=" << y << std::endl;
   std::cout << "<--- test passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace template_factorial
 

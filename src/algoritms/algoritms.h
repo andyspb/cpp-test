@@ -19,6 +19,7 @@
 #include "array_find_duplicates.h"
 #include "big_little_endian.h"
 #include "binary_search.h"
+#include "blum_filter.h"
 #include "btree_depth.h"
 #include "bubble_sort.h"
 #include "bubblesort.h"
@@ -109,7 +110,7 @@ int test() {
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
 //  assert(drawcircle::test());
-//  assert(duplication::test());
+  assert(duplication::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(find_dup_in_array::test());
@@ -129,7 +130,7 @@ int test() {
 //  assert(reverse_char_array::test());
 //  assert(reverse_linkedlist::test());
 //  assert(check_if_braces_match::test());
-  assert(radix_sort::test());
+//  assert(radix_sort::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
