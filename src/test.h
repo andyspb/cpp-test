@@ -55,6 +55,7 @@
 #include "patterns/patterns.h"
 #include "quiz/quiz.h"
 #include "smart_ptr/smart_ptr.h"
+#include "serialization/serialization.h"
 #include "sqrt/sqrt.h"
 #include "spb/spb.h"
 #include "sqllite/sqllite.h"
