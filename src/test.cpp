@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
 //  assert(quiz::test());
 //  assert(overloading::test());
 //  assert(patterns::test());
-  assert(serialization::test());
+//  assert(serialization::test());
 //    assert(smart_ptr_::test());
 //  assert(spb::test());
 //  assert(sqllite::test());

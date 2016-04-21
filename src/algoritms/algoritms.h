@@ -14,7 +14,6 @@
 #include <stack>
 #include <string>
 
-
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
 #include "big_little_endian.h"
@@ -110,7 +109,7 @@ int test() {
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
 //  assert(drawcircle::test());
-  assert(duplication::test());
+//  assert(duplication::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(find_dup_in_array::test());
@@ -122,23 +121,23 @@ int test() {
 //  assert(insert_into_sorted_slist::test());
 //  assert(insertsort::test());
 //  assert(interpolation_search::test());
-//    assert(norm_filepath::test());
 //  assert(merge_sort::test());
 //  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
+  //  assert(norm_filepath::test());
+  //  assert(radix_sort::test());
 //  assert(reverse_char_array::test());
-//  assert(reverse_linkedlist::test());
+  assert(reverse_linkedlist::test());
 //  assert(check_if_braces_match::test());
-//  assert(radix_sort::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
 //    assert(tree_distance::test());
 //  assert(linked_list_is_palindrome_with_stack::test());
-//  assert(reverse_string2::test());
 //  assert(pow_x_n::test());
+//  assert(reverse_string2::test());
 //  assert(permutation_of_string::test());
 //  assert(sum_array::test());
   return 1;

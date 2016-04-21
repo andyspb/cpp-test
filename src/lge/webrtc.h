@@ -14,8 +14,9 @@ namespace webrtc {
 
 TEST_RESULT test() {
 
-  std::string str =
-      "nm=audio 9 RTP\/SAVPF 103 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:8J0epX4yFusINNaN\r";
+//  std::string str =
+//      "nm=audio 9 RTP\/SAVPF 103 126\r\nc=IN IP4 0.0.0.0\r\na=rtcp:9 IN IP4 0.0.0.0\r\na=ice-ufrag:8J0epX4yFusINNaN\r";
+  std::string str = "";
 
 
   std::cout << "str=" << str << '\n';

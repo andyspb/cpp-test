@@ -14,24 +14,24 @@ struct List {
 
 template<typename T>
 List<T> * reverse_iterate(List<T> * head) {
-  if (!head || !head->next)
+  if (!head || !head->next) {
     return head;
-
-  List<T> *t=0, *r=0;
-  while(head) {
-    t = head;
-    head = head->next;
-    t->next = r;
-    r = t;
   }
-  return r;
+  List<T> *temp(0), *rev(0);
+  while (head) {
+    temp = head;
+    head = head->next;
+    temp->next = rev;
+    rev = temp;
+  }
+  return rev;
 }
 
 template<typename T>
 List<T> * reverse_recursive(List<T> *head) {
   if (!head || !head->next)
     return head;
-  List<T>* rec = reverse_recursive(head->next);
+  List<T> *rec = reverse_recursive(head->next);
   head->next->next = head;
   head->next = 0;
   return rec;
@@ -59,8 +59,8 @@ void fill_slist(List<int> * head, int size) {
   }
 }
 
-int test() {
-  std::cout << "Test: reverse liked list --->" << std::endl;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ <<  " Test: reverse liked list --->";
 
   List<int> *list = new List<int>();
   list->val = 0;
@@ -75,15 +75,18 @@ int test() {
     temp = l;
   }
 
+  LOG(INFO) << __PRETTY_FUNCTION__ << " Print origin list" ;
+
   print_slist_int(list);
+
+  LOG(INFO) << __PRETTY_FUNCTION__ << " Reverse iterative";
   list = reverse_iterate(list);
   print_slist_int(list);
 
+  LOG(INFO) << __PRETTY_FUNCTION__ << " Reverse recursive";
   list = reverse_recursive(list);
   print_slist_int(list);
-
-  std::cout << "<--- test passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 
 
