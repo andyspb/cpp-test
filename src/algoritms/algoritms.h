@@ -69,12 +69,14 @@
 #include "my_atoi.h"
 #include "norm_filepath.h"
 #include "num_to_str.h"
-#include "reverse_string.h"
 #include "palindrom_rec.h"
 #include "palindrome.h"
 #include "permutation_of_string.h"
 #include "piramid_sort.h"
 #include "pow.h"
+#include "staircase.h"
+
+#include "reverse_string_3.h"
 
 #include "shell_sort.h"
 #include "singleton_with_mutex.h"
@@ -95,6 +97,8 @@
 #include "check_if_braces_match.h"
 #include "pow_x_n.h"
 #include "longest_common_subseq.h"
+#include "reverse_string_2.h"
+#include "reverse_string_3.h"
 
 namespace algorithms {
 int test() {
@@ -128,7 +132,10 @@ int test() {
   //  assert(norm_filepath::test());
   //  assert(radix_sort::test());
 //  assert(reverse_char_array::test());
-  assert(reverse_linkedlist::test());
+//  assert(reverse_linkedlist::test());
+//  assert(reverse_string_2::test());
+//  assert(reverse_string_3::test());
+  assert(staircase::test());
 //  assert(check_if_braces_match::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
@@ -140,7 +147,7 @@ int test() {
 //  assert(reverse_string2::test());
 //  assert(permutation_of_string::test());
 //  assert(sum_array::test());
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace algorithms

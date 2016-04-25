@@ -1,11 +1,11 @@
-#ifndef  _REVERSE_STRING_H_
-#define _REVERSE_STRING_H_
+#ifndef  _SRC_ALGORITMS_REVERSE_STRING_2_H_
+#define _SRC_ALGORITMS_REVERSE_STRING_2_H_
 
 #include <string>
 #include <iostream>
 #include <algorithm>
 
-namespace reverse_string2 {
+namespace reverse_string_2 {
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
@@ -28,6 +28,6 @@ TEST_RESULT test() {
   std::cout << "reverse:       " << s << std::endl;
   RETURN_OK();
 }
-}  // namespace reverse_string2
+}  // namespace reverse_string_2
 
-#endif // _REVERSE_STRING_H_
+#endif // _SRC_ALGORITMS_REVERSE_STRING_H_

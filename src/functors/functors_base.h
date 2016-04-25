@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-namespace functors {
+namespace functors_base {
 
 class BaseFunctor {
  public:
@@ -32,18 +32,24 @@ template<class T> class SpecificFunctor : public BaseFunctor {
   SpecificFunctor(T* _pt2Object, void (T::*_fpt)(const char*)) {
     pt2Object = _pt2Object;
     fpt = _fpt;
+    LOG(INFO) << __PRETTY_FUNCTION__ <<
+        "pt2Object:"<< pt2Object;
   }
 
   virtual ~SpecificFunctor() {
+    LOG(INFO) << __PRETTY_FUNCTION__ <<
+        " pt2Object:"<< pt2Object;
     if (pt2Object) {
-      delete pt2Object;
+//      delete pt2Object;
     }
   }
   virtual void operator()(const char* string) {
+    LOG(INFO) << __PRETTY_FUNCTION__;
     (*pt2Object.*fpt)(string);
   }
 
   virtual void Call(const char* string) {
+    LOG(INFO) << __PRETTY_FUNCTION__;
     (*pt2Object.*fpt)(string);
   }
 };
@@ -51,9 +57,11 @@ template<class T> class SpecificFunctor : public BaseFunctor {
 class A {
  public:
   A() {
+    LOG(INFO) << __PRETTY_FUNCTION__;
   }
 
   void Display(const char* text) {
+    LOG(INFO) << __PRETTY_FUNCTION__;
     std::cout << text << std::endl;
   }
 };
@@ -73,7 +81,8 @@ int x = 1;
 int y = 2;
 const int s = 3;
 
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__ << " >>>";
   A a;
   B b;
 
@@ -91,20 +100,17 @@ int test() {
 #pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
 #endif
 
-  int x = ::functors::x;
-  int y = ::functors::y;
+  int x = ::functors_base::x;
+  int y = ::functors_base::y;
 
   int arr[s];
 
-  std::cout << "x: "<< x << std::endl;
-  std::cout << "y: "<< y << std::endl;
-  std::cout << "sizeof(arr): "<< sizeof(arr)/sizeof(arr[0]) << std::endl;
-
+  std::cout << "x: " << x << std::endl;
+  std::cout << "y: " << y << std::endl;
+  std::cout << "sizeof(arr): " << sizeof(arr) / sizeof(arr[0]) << std::endl;
   std::cout << "sizeof(string literal): " << sizeof("a") << std::endl;
-
-
-
-  return 1;
+  LOG(INFO) << __PRETTY_FUNCTION__ << " <<<";
+  RETURN_OK();
 }
 
 }  // namespace functors

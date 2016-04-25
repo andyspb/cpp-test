@@ -12,7 +12,6 @@
 
 namespace serialization {
 
-
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 

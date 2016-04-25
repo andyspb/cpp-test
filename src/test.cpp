@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 //  assert(diff::test());
 //  assert(exceptions::test());
 //  assert(facebook::test());
-//  assert(func::test());
+//  assert(functors::test());
 //    assert(google_2::test());
 //  assert(hashcodes::test());
 //  assert(hashmap::test());
@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
 //
 //  const std::string& str = str1 + str2;
 
-  LOG(INFO) << "<< return from " << __FUNCTION__;
+  LOG(INFO) << __PRETTY_FUNCTION__ << " <<<";
   return 0;
 }
 

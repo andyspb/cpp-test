@@ -36,7 +36,7 @@
 #include "epam/google2.h"
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
-#include "func/func.h"
+#include "functors/functors.h"
 #include "hashtable/hashtable.h"
 #include "hashcode/hashcodes.h"
 #include "http/http.h"
