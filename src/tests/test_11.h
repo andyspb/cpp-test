@@ -7,9 +7,11 @@
 
 #include <stdio.h>
 
-namespace tests11 {
+namespace test_11 {
 //auto int a=5;
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
 //  int a = 5;
 //  float b;
 //  printf("%d\n", sizeof(++a + b));
@@ -29,7 +31,7 @@ int main() {
 //    x=~a+a&a+a<<a;
   printf("%d", x);
 
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests11

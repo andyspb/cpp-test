@@ -12,7 +12,7 @@
 
 using namespace std;
 
-namespace tests9 {
+namespace test_9 {
 
 // предолагаем что класс Locker корректно реализован
 
@@ -57,7 +57,7 @@ namespace tests9 {
 //};
 
 // typedef pthread_mutex_t Mutex;
-// 
+//
 // class Locker {
 //  public:
 //   Locker(Mutex m)
@@ -71,7 +71,7 @@ namespace tests9 {
 //  private:
 //   Mutex mutex;
 // };
-// 
+//
 // class Bar {
 //  public:
 //   void Add(int i, double d) {
@@ -81,7 +81,7 @@ namespace tests9 {
 //     integers_.push_back(i);
 //     doubles_.push_back(d);
 //   }
-// 
+//
 //   bool Find(int i) {
 //     cout << "Find(int)" << endl;
 //     Locker auto_lock(m_integers_);
@@ -91,13 +91,13 @@ namespace tests9 {
 //       return Find(double(i));
 //     }
 //   }
-// 
+//
 //   bool Find(double d) {
 //     cout << "Find(double)" << endl;
 //     Locker auto_lock(m_doubles_);
 //     return (std::find(doubles_.begin(), doubles_.end(), d) != doubles_.end());
 //   }
-// 
+//
 //   void print() {
 //     cout << "integers_: ";
 //     for (int i = 0 ; i < (int)integers_.size(); ++i ) {
@@ -110,14 +110,14 @@ namespace tests9 {
 //     }
 //     endl(cout);
 //   }
-// 
+//
 //   void doSomeWork(void) {
 //     cout << "Bar::doSomeWork()\n";
 //     for (int i = 0; i < 10 ; ++i) {
 //       Add(i, double(i+1));
 //     }
 //   }
-// 
+//
 //  private:
 //   std::vector<int> integers_;
 //   std::vector<double> doubles_;
@@ -125,22 +125,24 @@ namespace tests9 {
 //   Mutex m_doubles_;
 // };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
 //   Bar bar;
 //   bar.Add(0, 1);
-// 
+//
 //   boost::thread t1(boost::bind( &Bar::doSomeWork, &bar ));
 //   boost::thread t2(boost::bind( &Bar::doSomeWork, &bar ));
-// 
+//
 //   bar.print();
 //   bool found = bar.Find(3);
 //   cout << "found: " << found << std::endl;
-// 
+//
 //   t1.join();
 //   t2.join();
-// 
-// 
-  return 0;
+//
+//
+  RETURN_OK();
 }
 }  // namespace tests9
 

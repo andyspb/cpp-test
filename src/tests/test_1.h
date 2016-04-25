@@ -9,7 +9,7 @@
 #include <assert.h>
 
 
-namespace tests1 {
+namespace test_1 {
 
 //typedef int[] IntArray;
 
@@ -94,7 +94,8 @@ int* ReorderIDs(int *someIDs) {
 #pragma GCC diagnostic ignored "-Wunused-variable"
 #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   int theFirst;
 
   int *someIDs, *r;
@@ -113,9 +114,9 @@ int test() {
   r = 0;
 
   //assert(!r);
-  return 1;
+  RETURN_OK();
 }
 
-}  // namespace test1
+}  // namespace test_1
 
 #endif  // TEST1_H_

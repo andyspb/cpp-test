@@ -12,9 +12,11 @@
 
 //#include "misc_log_ex.h"
 
-namespace tests19 {
+namespace test_19 {
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
 #ifndef _MSC_VER
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsequence-point"
@@ -56,7 +58,7 @@ int main() {
 #pragma GCC diagnostic pop
 #endif
 
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests19

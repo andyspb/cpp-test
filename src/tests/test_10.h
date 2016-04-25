@@ -11,7 +11,7 @@
 //#include <boost/lexical_cast.hpp>
 using namespace std;
 
-namespace tests10 {
+namespace test_10 {
 
 string convertInt(int number) {
   if (number == 0)
@@ -33,7 +33,9 @@ string convertInt2(int number) {
   return ss.str();  //return a string with the contents of the stream
 }
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
 //  string s = boost::lexical_cast<string>(10);
 //  cout << "s: " << s << endl;
 //
@@ -44,7 +46,7 @@ int main() {
 //  cout << "buffer: " << buffer << endl;
 //  string ss(buffer);
 //  cout << "ss: " << ss << endl;
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests10

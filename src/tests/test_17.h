@@ -5,7 +5,7 @@
 #ifndef TESTS17_H_
 #define TESTS17_H_
 
-namespace tests17 {
+namespace test_17 {
 
 class Base {
  public:
@@ -31,7 +31,9 @@ class Pri : private Base {
   }
 };
 
-int main() {
+TEST_RESULT main() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   // Outside access uses the access specifiers of the class being accessed.
   // Note that because Pri has inherited privately from Base,
   // all members of Base have become private when access through Pri.
@@ -47,7 +49,7 @@ int main() {
 //  cBase.m_nPrivate = 2;  // not okay, m_nPrivate is private
 //  cBase.m_nProtected = 3;  // not okay, m_nProtected is protected
 
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests17

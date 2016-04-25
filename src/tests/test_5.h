@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-namespace tests5 {
+namespace test_5 {
 
 class Base {
  public:
@@ -57,13 +57,15 @@ class T : public Base{
   int v;
 };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   T t1, t2;
 
   t2 = t1;
-  return 0;
+  RETURN_OK();
 }
 
-}  // namespace tests5
+}  // namespace test_5
 
 #endif  // TESTS5_H_

@@ -6,7 +6,7 @@
 #define TESTS22_H_
 
 //#include "logger.h"
-namespace tests22 {
+namespace test_22 {
 
 class Base {
  public:
@@ -29,10 +29,11 @@ class Derived {
   }
 };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
 //  LOG("Tests22");
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests22

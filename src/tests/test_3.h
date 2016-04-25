@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-namespace tests3 {
+namespace test_3 {
 
 typedef void (*UserFunc)(int& p1, int p2);
 
@@ -31,7 +31,9 @@ void Increment(int& arg, int value) {
   arg+=value;
 }
 
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   std::cout << "Test3: " << std::endl;
   int arr[] = {1,2,3,4,5};
   for (int i = 0; i < 5; ++i) {
@@ -43,7 +45,7 @@ int test() {
     printf("%d ", arr[i]);
   }
   printf("%c", '\n');
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace test3

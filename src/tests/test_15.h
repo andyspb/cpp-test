@@ -7,13 +7,15 @@
 
 #include <stdio.h>
 
-namespace tests15 {
+namespace test_15 {
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
 #ifndef _MSC_VER
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wsequence-point"
-#endif 
+#endif
 
   int i = 0;
   i = i++ + ++i;
@@ -39,7 +41,7 @@ int main() {
 #pragma GCC diagnostic pop
 #endif
 
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests15

@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-namespace tests12 {
+namespace test_12 {
 
 class Layer {
 };
@@ -23,7 +23,8 @@ private:
 //    Cell &current_cell;
 };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
   int i = 5;
   std::cout << i << std::endl;
@@ -31,7 +32,7 @@ int main() {
   std::cout << i << std::endl;
 
 //  Player p;
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests12

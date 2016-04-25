@@ -13,8 +13,6 @@
 #include <sstream>
 
 #define LOG(LEVEL) tlog::Log<tlog::Level::LEVEL>().Get()
-#define _PF_ __PRETTY_FUNCTION__
-#define __pretty_function__ __PRETTY_FUNCTION__
 
 namespace tlog {
 

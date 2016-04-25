@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-namespace tests2 {
+namespace test_2 {
 
 /* suppose to use int as struct data*/
 struct DList {
@@ -37,7 +37,9 @@ DList* ArrayToDList(int* arr, int size) {
   return head;
 }
 
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   std::cout << "Test2" << std::endl;
 
   int arr[] = { 3, 4, 5, 6 };
@@ -49,7 +51,7 @@ int test() {
   }
 
   std::endl(std::cout);
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace test2

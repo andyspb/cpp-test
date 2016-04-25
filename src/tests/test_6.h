@@ -37,7 +37,7 @@
 #include <iostream>
 using namespace std;
 
-namespace tests6 {
+namespace test_6 {
 
 class Foo {
  public:
@@ -99,7 +99,9 @@ class Bar : public Foo {
   char* c;
 };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   Foo* f = new Foo(100);
   Foo* b = new Bar(200);
   *f = *b;
@@ -107,7 +109,7 @@ int main() {
   delete f;
   cout << "delete b:\n";
   delete b;
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests6

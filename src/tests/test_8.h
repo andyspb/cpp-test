@@ -15,7 +15,7 @@
 
 using namespace std;
 
-namespace tests8 {
+namespace test_8 {
 
 template <int n>
 class T {
@@ -38,8 +38,10 @@ class A {
   }
 };
 
-int main() {
-  return 0;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
+  RETURN_OK();
 }
 
 }  // namespace tests8

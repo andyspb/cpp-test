@@ -17,7 +17,7 @@
 
 using namespace std;
 
-namespace tests13 {
+namespace test_13 {
 inline std::string stringify(int x) {
   std::ostringstream o;
   if (!(o << x))
@@ -43,7 +43,9 @@ class A {
   string name;
 };
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   int i = 0;
   vector<A> ACollection;
   string tempString;
@@ -59,7 +61,8 @@ int main() {
   for (i = 0; i < 10; i++) {
     cout << ACollection[i].name << endl;
   }
-  return 0;
+
+  RETURN_OK();
 }
 
 }  // namespace tests13

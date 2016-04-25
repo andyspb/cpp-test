@@ -11,9 +11,9 @@
 
 //using namespace std;
 
-namespace tests14 {
+namespace test_14 {
 
-int main() {
+TEST_RESULT test() {
 
   int *i = new int;
   std::auto_ptr<int> aptr(i);
@@ -21,7 +21,7 @@ int main() {
 //  std::vector<std::auto_ptr<int>> v;
 //  v.push_back(aptr);
 
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests14

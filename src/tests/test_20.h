@@ -9,14 +9,16 @@
 //#include <boost/asio.hpp>
 //#include "misc_log_ex.h"
 
-namespace tests20 {
+namespace test_20 {
 
-int main() {
-  return 0;
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
+  RETURN_OK();
 }
 
 
-}  // namespace tests20
+}  // namespace test_20
 
 
 

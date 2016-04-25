@@ -8,7 +8,7 @@
 //#include <iostream>
 //#include <memory>
 
-namespace tests18 {
+namespace test_18 {
 
 struct Foo {
   Foo() {
@@ -26,7 +26,9 @@ void f(const Foo &foo) {
   std::cout << "f(const Foo&)\n";
 }
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   std::unique_ptr<Foo> p1(new Foo);  // p1 owns Foo
   if (p1) {
     p1->bar();
@@ -43,7 +45,7 @@ int main() {
     p1->bar();
   }
   // Foo instance is destroyed when p1 goes out of scope
-  return 0;
+  RETURN_OK();
 }
 
 }  // namespace tests18

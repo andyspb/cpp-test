@@ -13,9 +13,11 @@
 using namespace std;
 
 
-namespace tests7 {
+namespace test_7 {
 
-int main() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
   list<int> l;
   vector<int> v;
   set<int> s;
@@ -23,7 +25,7 @@ int main() {
   std::sort(v.begin(), v.end());
   l.sort();
 
-  return 0;
+  RETURN_OK();
 }
 
 

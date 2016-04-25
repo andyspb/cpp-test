@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-namespace tests4 {
+namespace test_4 {
 
 class A {
  public:
@@ -12,21 +12,22 @@ class A {
   void hello() {
     std::cout << "hello()" << std::endl;
   }
-  virtual void hello1() {
+  virtual void hello_1() {
     std::cout << "hello1()" << std::endl;
   }
 };
 // ...
 
-int test() {
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
   A* a;
 //  a->hello();
 
 #pragma GCC diagnostic ignored "-Wuninitialized"
- a->hello1();
+ a->hello_1();
 
-  return 1;
+  RETURN_OK();
 }
 
 }

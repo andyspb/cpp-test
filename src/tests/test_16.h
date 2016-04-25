@@ -10,7 +10,7 @@
 using namespace std;
 
 
-namespace tests16 {
+namespace test_16 {
 
 class B;
 
@@ -35,10 +35,12 @@ class B : A {
   }
 };
 
-int main() {
+TEST_RESULT main() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
+
  // A* a = new B();
 //  delete a;
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace tests16
