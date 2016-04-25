@@ -24,6 +24,7 @@
 #include "test_22.h"
 #include "test_23.h"
 #include "test_24.h"
+#include "test_25.h"
 #include "test_3.h"
 #include "test_4.h"
 #include "test_5.h"
@@ -56,10 +57,11 @@ TEST_RESULT test() {
 //  assert(test_18::test());
 //  assert(test_19::test());
 //  assert(test_20::test());
-  assert(test_21::test());
-  assert(test_22::test());
-  assert(test_23::test());
-  assert(test_24::test());
+//  assert(test_21::test());
+//  assert(test_22::test());
+//  assert(test_23::test());
+//  assert(test_24::test());
+  assert(test_25::test());
   RETURN_OK();
 }
 
