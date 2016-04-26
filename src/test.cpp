@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
 //  assert(threads::test());
 //  assert(templates::test());
 //  assert(teramind::test());
-  assert(tests::test());
+//  assert(tests::test());
 //  assert(virtuals::test());
 //
 //  assert(clock_::test());

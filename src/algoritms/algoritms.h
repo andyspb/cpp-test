@@ -37,6 +37,7 @@
 #include "heapsort.h"
 #include "encode_string_google.h"
 #include "fibbonachi.h"
+#include "fibbonachi_sum.h"
 #include "find_largest_sum_in_array.h"
 #include "find_minimum_length_unsorted_subarray.h"
 #include "find_sum_overlapping_intervals.h"
@@ -116,6 +117,7 @@ int test() {
 //  assert(duplication::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
+  assert(fibbonachi_sum::test());
 //  assert(find_dup_in_array::test());
 //  assert(find_largest_sum_in_array::test());
 //  assert(free_linkedlist::test());
@@ -135,7 +137,7 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
 //  assert(reverse_string_3::test());
-  assert(staircase::test());
+//  assert(staircase::test());
 //  assert(check_if_braces_match::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
