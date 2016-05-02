@@ -16,9 +16,11 @@
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
+#include "balance_bst.h"
 #include "big_little_endian.h"
 #include "binary_search.h"
 #include "blum_filter.h"
+#include "breadth_first_traversal_for_a_graph.h"
 #include "btree_depth.h"
 #include "bubble_sort.h"
 #include "bubblesort.h"
@@ -106,6 +108,9 @@ int test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
+//  assert(balance_bst::test());
+//  assert(breadth_first_traversal_for_a_graph::test());
+
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
 //  assert(byte_array_2_string::test());
@@ -117,7 +122,7 @@ int test() {
 //  assert(duplication::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
-  assert(fibbonachi_sum::test());
+//  assert(fibbonachi_sum::test());
 //  assert(find_dup_in_array::test());
 //  assert(find_largest_sum_in_array::test());
 //  assert(free_linkedlist::test());
@@ -131,8 +136,8 @@ int test() {
 //  assert(mergesort_linkedlist::test());
 //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
-  //  assert(norm_filepath::test());
-  //  assert(radix_sort::test());
+//  assert(norm_filepath::test());
+//  assert(radix_sort::test());
 //  assert(reverse_char_array::test());
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
@@ -143,7 +148,7 @@ int test() {
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
 //  assert(tree_traversal::test());
-//    assert(tree_distance::test());
+//  assert(tree_distance::test());
 //  assert(linked_list_is_palindrome_with_stack::test());
 //  assert(pow_x_n::test());
 //  assert(reverse_string2::test());

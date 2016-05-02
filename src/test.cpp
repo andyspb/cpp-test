@@ -3,10 +3,11 @@
 
 int main(int argc, char **argv) {
   LOG(INFO)<< __PRETTY_FUNCTION__;
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
+//  assert(blockchain::test());
 //  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
@@ -14,14 +15,13 @@ int main(int argc, char **argv) {
 //  assert(exceptions::test());
 //  assert(facebook::test());
 //  assert(functors::test());
-//    assert(google_2::test());
+//  assert(google_2::test());
 //  assert(hashcodes::test());
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
-//  assert(blockchain::test());
 //  assert(lock_free::test());
 
 //  assert(lge::test());
@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 //  assert(overloading::test());
 //  assert(patterns::test());
 //  assert(serialization::test());
-//    assert(smart_ptr_::test());
+//  assert(smart_ptr_::test());
 //  assert(spb::test());
 //  assert(sqllite::test());
 //  assert(sqrt_::test());
@@ -39,7 +39,7 @@ int main(int argc, char **argv) {
 //  assert(static_::test());
 //  assert(stl::test());
 //  assert(threads::test());
-//  assert(templates::test());
+  assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
 //  assert(virtuals::test());

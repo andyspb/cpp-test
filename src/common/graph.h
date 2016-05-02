@@ -1,7 +1,7 @@
 /*
  * graph.h
  *
- *  Created on: 25 ÿíâ. 2015 ã.
+ *  Created on: 25 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -20,6 +20,7 @@ class Graph {
   void DFSUtil(int v, bool visited[]);  // A function used by DFS
  public:
   Graph(int V);  // Constructor
+  virtual ~Graph();  // Constructor
   void addEdge(int v, int w);  // function to add an edge to graph
   void BFS(int s);  // prints BFS traversal from a given source s
   void DFS(int v);    // DFS traversal of the vertices reachable from v
@@ -30,8 +31,13 @@ Graph::Graph(int V) {
   adj = new std::list<int>[V];
 }
 
+Graph::~Graph() {
+  delete adj;
+}
+
+
 void Graph::addEdge(int v, int w) {
-  adj[v].push_back(w);  // Add w to v’s list.
+  adj[v].push_back(w);  // Add w to vï¿½s list.
 }
 
 void Graph::BFS(int s) {
@@ -93,25 +99,6 @@ void Graph::DFS(int v)
     DFSUtil(v, visited);
 }
 
-// Driver program to test methods of graph class
-int main() {
-  // Create a graph given in the above diagram
-  Graph g(4);
-  g.addEdge(0, 1);
-  g.addEdge(0, 2);
-  g.addEdge(1, 2);
-  g.addEdge(2, 0);
-  g.addEdge(2, 3);
-  g.addEdge(3, 3);
-
-  std::cout << "Following is Breadth First Traversal (starting from vertex 2) \n";
-  g.BFS(2);
-
-  std::cout << "Following is Depth First Traversal (starting from vertex 2) \n";
-  g.DFS(2);
-
-  return 0;
-}
-}  // namespace graph
+}// namespace graph
 
 #endif /* GRAPH_H_ */
