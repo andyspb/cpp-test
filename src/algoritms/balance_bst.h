@@ -10,6 +10,7 @@
 
 #include <vector>
 
+/*
 // Given a BST (Binary Search Tree) that may be unbalanced, convert it into a
 // balanced BST that has minimum possible height.
 // Input:
@@ -26,6 +27,8 @@
 //    2      6
 //  /  \    /  \
 // 1    3  5    7
+*/
+
 namespace balance_bst {
 struct Node {
   int data;
