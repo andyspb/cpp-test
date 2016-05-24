@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 //  assert(language::test());
 //  assert(last_1::test());
 //  assert(lock_free::test());
-
+    assert(array_::test());
 //  assert(lge::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 //
 //  assert(cpp11_quicksort::test());
 //
-  assert(threads::test());
+//  assert(threads::test());
 //  assert(futures::test());
 //
 //  assert(epam::test() );

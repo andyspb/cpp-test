@@ -8,52 +8,17 @@
 #ifndef ARRAY_H_
 #define ARRAY_H_
 
+#include "array_2d.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
 namespace array_ {
 
 TEST_RESULT test() {
-  int row = 3, column = 4;
-  int *arr = (int *) malloc(row * column * sizeof(int));
-  int i, j, count = 100;
+  LOG(INFO) << __PRETTY_FUNCTION__;
 
-  for (i = 0; i < row; i++)
-    for (j = 0; j < column; j++)
-      *(arr + i * column + j) = ++count;
-
-  for (i = 0; i < row; i++) {
-    for (j = 0; j < column; j++) {
-      printf("%d ", *(arr + i * column + j));
-    }
-    printf("%s", "\n");
-  }
-  /* Code for further processing and free the
-   dynamically allocated memory */
-
-  RETURN_OK();
-}
-
-TEST_RESULT test1() {
-  int r = 3, c = 4, i, j, count;
-
-  int *arr[r];
-  for (i = 0; i < r; i++)
-    arr[i] = (int *) malloc(c * sizeof(int));
-
-  // Note that arr[i][j] is same as *(*(arr+i)+j)
-  count = 0;
-  for (i = 0; i < r; i++)
-    for (j = 0; j < c; j++)
-      arr[i][j] = ++count;  // Or *(*(arr+i)+j) = ++count
-
-  for (i = 0; i < r; i++) {
-    for (j = 0; j < c; j++)
-      printf("%d ", arr[i][j]);
-    printf("%s", "\n");
-  }
-  /* Code for further processing and free the
-   dynamically allocated memory */
+  assert(array_2d::test());
 
   RETURN_OK();
 }
