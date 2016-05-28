@@ -80,7 +80,7 @@ TEST_RESULT test() {
 
   std::thread worker(worker_thread);
 
-  std::this_thread::sleep_for(2s);
+  std::this_thread::sleep_for(std::chrono::seconds(2));
 
   data = "Example data";
   // send data to the worker thread

@@ -25,7 +25,7 @@ TEST_RESULT test() {
 //  a->hello();
 
 #pragma GCC diagnostic ignored "-Wuninitialized"
- a->hello_1();
+  a->hello_1();
 
   RETURN_OK();
 }

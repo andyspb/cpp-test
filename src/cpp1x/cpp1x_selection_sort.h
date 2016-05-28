@@ -4,7 +4,7 @@
 
 namespace cpp1y_selection_sort {
 
-template<class FwdIt, class Compare = std::less<>>
+template<class FwdIt, class Compare = std::less<int>>
 void selection_sort(FwdIt first, FwdIt last, Compare cmp = Compare{})
 {
     for (auto it = first; it != last; ++it) {

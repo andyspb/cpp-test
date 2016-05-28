@@ -74,6 +74,7 @@
 #include "num_to_str.h"
 #include "palindrom_rec.h"
 #include "palindrome.h"
+#include "pcm_buffer.h"
 #include "permutation_of_string.h"
 #include "piramid_sort.h"
 #include "pow.h"
@@ -154,6 +155,8 @@ int test() {
 //  assert(reverse_string2::test());
 //  assert(permutation_of_string::test());
 //  assert(sum_array::test());
+  assert(pcm_buffer::test());
+
   RETURN_OK();
 }
 
