@@ -13,12 +13,16 @@
 
 #include <memory>
 #include <mutex>
+#include <thread>
+#include <functional>
+
 
 #define DEFAULT_MAX 100
 
 namespace pcm_buffer {
 
-class PcmData {
+struct PcmData {
+  PcmData(): data(0), size(0) {}
   void* data;
   size_t size;
 };
@@ -28,7 +32,7 @@ class PcmBuffer {
   std::deque<PcmData> deque_;
   size_t size_;
   size_t max_size_;
-  std::mutex mutex_;
+  mutable std::mutex mutex_;
  public:
   PcmBuffer()
       : size_(0),
@@ -65,10 +69,45 @@ class PcmBuffer {
   }
 };
 
+void thread_func_write(void* buffer) {
+  PcmBuffer<DEFAULT_MAX>* pcm_buffer = reinterpret_cast<PcmBuffer<DEFAULT_MAX>*>(buffer);
+
+  for (int i = 0; i <DEFAULT_MAX; ++i) {
+    int data = i;
+    PcmData pcm_data;
+    pcm_data.data = static_cast<void*>(&data);
+    pcm_buffer->Push(pcm_data);
+    std::cout << "write:" <<data << " " << std::endl;
+    std::this_thread::sleep_for(std::chrono::milliseconds(5));
+  }
+}
+
+void thread_func_read(void* buffer) {
+  PcmBuffer<DEFAULT_MAX>* pcm_buffer = reinterpret_cast<PcmBuffer<DEFAULT_MAX>*>(buffer);
+  for (int i = 0; i <DEFAULT_MAX; ++i) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    PcmData pcm_data;
+    if (pcm_buffer->Pop(&pcm_data) ) {
+      int* data = static_cast<int*>(pcm_data.data);
+      std::cout << "read:" << *data << " " << std::endl;
+    }
+  }
+}
+
 // test
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
   PcmBuffer<DEFAULT_MAX> pcm_buffer;
+
+  PcmBuffer<DEFAULT_MAX> buffer;
+
+
+  std::thread t1(thread_func_write, &buffer);
+  std::thread t2(thread_func_read, &buffer);
+
+  t1.join();
+  t2.join();
+
   RETURN_OK();
 }
 }  // namespace pcm_buffer
