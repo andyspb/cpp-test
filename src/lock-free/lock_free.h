@@ -8,6 +8,7 @@
 #include "lock_free_queue.h"
 #include "lock_free_buffer.h"
 #include "lock_free_circular_que.h"
+#include "lock_free_ring_buffer.h"
 
 namespace lock_free {
 
@@ -16,8 +17,8 @@ TEST_RESULT test() {
 
 //  assert(lock_free_queue::test());
 //  assert(lock_free_buffer::test());
-  assert(lock_free_circular_que::test());
-
+//  assert(lock_free_circular_que::test());
+  assert(lock_free_ring_buffer::test());
 
   RETURN_OK();
 }
