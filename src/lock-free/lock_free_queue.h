@@ -29,8 +29,8 @@ struct _Queue {
 class LockFreeQueue {
 };
 
-TEST_RESULT main() {
-
+TEST_RESULT test() {
+  LOG(INFO) << __PRETTY_FUNCTION__;
   RETURN_OK();
 }
 

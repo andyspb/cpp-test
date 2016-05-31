@@ -6,11 +6,19 @@
 #define _LOCK_FREE_LOCK_FREE_H_
 
 #include "lock_free_queue.h"
+#include "lock_free_buffer.h"
+#include "lock_free_circular_que.h"
 
 namespace lock_free {
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
+
+//  assert(lock_free_queue::test());
+//  assert(lock_free_buffer::test());
+  assert(lock_free_circular_que::test());
+
+
   RETURN_OK();
 }
 
