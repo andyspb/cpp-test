@@ -19,19 +19,21 @@
 #include "cpp1x_quick_sort.h"
 #include "cpp1x_selection_sort.h"
 #include "cpp1x_thread.h"
-
+#include "ring_buffer_locked.h"
 
 namespace cpp1x {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   //  assert(cpp1x_thread::test());
 //  assert(cpp1x_move::test());
 //  assert(cpp11_insertsort::test());
 //  assert(cpp11_quicksort::test());
-  assert(cpp1x_constexpr::test());
+//  assert(cpp1x_constexpr::test());
 //  assert(cpp1x_constexpr_factorial::test());
+  assert(ring_buffer_locked::test());
 
+  LOG(INFO) << __PRETTY_FUNCTION__ << __EXIT__;
   RETURN_OK();
 }
 }

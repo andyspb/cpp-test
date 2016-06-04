@@ -13,6 +13,9 @@
 #include <sstream>
 
 #define LOG(LEVEL) tlog::Log<tlog::Level::LEVEL>().Get()
+#define __ENTER__ " >>> "
+#define __EXIT__ " <<< "
+
 
 namespace tlog {
 
@@ -101,5 +104,20 @@ template<Level logLevel>
 }
 
 }  // namespace tlog
+
+class ScopeLog {
+public:
+  ScopeLog(const std::string& from) : from_(from){
+    LOG(INFO) << from_ << __ENTER__;
+  }
+  ~ScopeLog() {
+    LOG(INFO) << from_ << __EXIT__;
+  }
+
+private:
+  const std::string from_;
+};
+
+#define __SCOPE_LOG__ ScopeLog _(__PRETTY_FUNCTION__)
 
 #endif /* SRC_LOGGER_LOG_TEMPLATE_H_ */

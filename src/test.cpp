@@ -2,7 +2,7 @@
 
 
 int main(int argc, char **argv) {
-  LOG(INFO) << __PRETTY_FUNCTION__ << " >>>";
+  __SCOPE_LOG__;
 //    assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
-  assert(lock_free::test());
+//  assert(lock_free::test());
 //    assert(array_::test());
 //  assert(lge::test());
 //  assert(mem_test::test());
@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
 //
 //  assert(clock_::test());
 //
-//  assert(cpp11_quicksort::test());
+  assert(cpp1x::test());
 //
 //  assert(threads::test());
 //  assert(futures::test());
@@ -83,8 +83,6 @@ int main(int argc, char **argv) {
 //  const std::string str2 = "World!";
 //
 //  const std::string& str = str1 + str2;
-
-  LOG(INFO) << __PRETTY_FUNCTION__ << " <<<";
   return 0;
 }
 
