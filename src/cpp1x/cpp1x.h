@@ -20,6 +20,7 @@
 #include "cpp1x_selection_sort.h"
 #include "cpp1x_thread.h"
 #include "ring_buffer_locked.h"
+#include "ring_buffer_lock_free.h"
 
 namespace cpp1x {
 
@@ -31,7 +32,8 @@ TEST_RESULT test() {
 //  assert(cpp11_quicksort::test());
 //  assert(cpp1x_constexpr::test());
 //  assert(cpp1x_constexpr_factorial::test());
-  assert(ring_buffer_locked::test());
+//  assert(ring_buffer_locked::test());
+  assert(ring_buffer_lock_free::test());
 
   LOG(INFO) << __PRETTY_FUNCTION__ << __EXIT__;
   RETURN_OK();
