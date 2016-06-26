@@ -11,7 +11,7 @@
 namespace ring_buffer_lock_free {
 
 TEST_RESULT test() {
-
+  __SCOPE_LOG__;
   RETURN_OK();
 }
 
