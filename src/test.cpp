@@ -5,6 +5,7 @@ int main(int argc, char **argv) {
   __SCOPE_LOG__;
 //    assert(algorithms::test());
 //  assert(array_::test());
+//    assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
@@ -23,7 +24,6 @@ int main(int argc, char **argv) {
 //  assert(language::test());
 //  assert(last_1::test());
 //  assert(lock_free::test());
-//    assert(array_::test());
 //  assert(lge::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
@@ -42,11 +42,12 @@ int main(int argc, char **argv) {
 //  assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
+  assert(terramind::test());
 //  assert(virtuals::test());
 //
 //  assert(clock_::test());
 //
-  assert(cpp1x::test());
+//  assert(cpp1x::test());
 //
 //  assert(threads::test());
 //  assert(futures::test());
