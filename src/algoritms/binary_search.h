@@ -57,7 +57,7 @@ int binary_search_iter(int arr[], int key, int min, int max) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ << "Binary search >>>";
+  __SCOPE_LOG__;
   int arr[] = {1,2,3,5,6,7,8,9,11,22,33,44,55};
 
   int rec = binary_search_rec(arr, 33, 0, 13);

@@ -62,6 +62,7 @@
 #include "quicksort_2linked_list.h"
 #include "tree_traversal.h"
 #include "is_linked_list_palindrome.h"
+#include "linear_search.h"
 #include "median_of_2_arr_2.h"
 #include "median_of_2arrays.h"
 #include "merge_overlapping_itnervals.h"

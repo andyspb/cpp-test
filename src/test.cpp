@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
-//  assert(cpp1x::test());
+    assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(diff::test());
@@ -42,16 +42,12 @@ int main(int argc, char **argv) {
 //  assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
-  assert(terramind::test());
+//  assert(terramind::test());
 //  assert(virtuals::test());
-//
 //  assert(clock_::test());
-//
 //  assert(cpp1x::test());
-//
 //  assert(threads::test());
 //  assert(futures::test());
-//
 //  assert(epam::test() );
 //  assert(ms::test() );
 //  assert(google_2::test());
