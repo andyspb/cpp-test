@@ -55,17 +55,17 @@ void prepare_path(char* out, const char* dir, const char* file, int& counter)
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
 
-  char out[256] = {0};
+//  char out[256] = {0};
+//
+//  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
+//  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
+//  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
+//  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
+//
+//  std::cout << "out:" << out << std::endl;
 
-  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
-  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
-  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
-  prepare_path(out, pathDecIn, videofileDecIn, iCounterDecIn);
 
-  std::cout << "out:" << out << std::endl;
-
-
-//    assert(algorithms::test());
+    assert(algorithms::test());
 //  assert(array_::test());
 //    assert(array_::test());
 //  assert(binary_tree::test());
@@ -79,6 +79,7 @@ int main(int argc, char **argv) {
 //  assert(facebook::test());
 //  assert(functors::test());
 //  assert(google_2::test());
+//  assert(hashtable::test());
 //  assert(hashcodes::test());
 //  assert(hashmap::test());
 //  assert(http::test());

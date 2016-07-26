@@ -68,6 +68,7 @@
 #include "merge_overlapping_itnervals.h"
 #include "merge_sort_linked_list.h"
 #include "merge_sort.h"
+#include "minimax.h"
 #include "multiply_7.h"
 #include "multiply_by_7.h"
 #include "my_atoi.h"
@@ -136,7 +137,8 @@ int test() {
 //  assert(interpolation_search::test());
 //  assert(merge_sort::test());
 //  assert(mergesort_linkedlist::test());
-//  assert(my_atoi::test());
+  assert(minimax::test());
+  //  assert(my_atoi::test());
 //  assert(multiply_by_7::test());
 //  assert(norm_filepath::test());
 //  assert(radix_sort::test());
@@ -156,7 +158,7 @@ int test() {
 //  assert(reverse_string2::test());
 //  assert(permutation_of_string::test());
 //  assert(sum_array::test());
-  assert(pcm_buffer::test());
+//  assert(pcm_buffer::test());
 
   RETURN_OK();
 }
