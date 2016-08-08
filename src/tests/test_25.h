@@ -15,8 +15,12 @@ namespace test_25 {
 char* format_int_value_1(const char* format, int value)
 {
     char buffer[80];
-    sprintf(buffer, format, value);
+#pragma GCC diagnostic ignored "-Wreturn-local-addr"
+#pragma GCC diagnostic push
+//    static char buffer[80];
+      sprintf(buffer, format, value);
     return buffer;
+#pragma GCC diagnostic pop
 }
 char* format_int_value_2(const char* format, int value)
 {

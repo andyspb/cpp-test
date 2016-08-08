@@ -24,8 +24,10 @@ TEST_RESULT test() {
   A* a;
 //  a->hello();
 
-#pragma GCC diagnostic ignored "-Wuninitialized"
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#pragma GCC diagnostic push
   a->hello_1();
+#pragma GCC diagnostic pop
 
   RETURN_OK();
 }

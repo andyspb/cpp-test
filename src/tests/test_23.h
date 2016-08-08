@@ -21,9 +21,12 @@ void copy(int& a, const int& b) {
 }
 
 char* format_int_value_1(const char* format, int value) {
+#pragma GCC diagnostic ignored "-Wreturn-local-addr"
+#pragma GCC diagnostic push
   char buffer[80];  // // warning: address of local variable ‘buffer’ returned
   sprintf(buffer, format, value);
   return buffer;
+#pragma GCC diagnostic pop
 }
 char* format_int_value_2(const char* format, int value) {
   static char buffer[80];

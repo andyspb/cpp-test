@@ -37,7 +37,6 @@
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "functors/functors.h"
-#include "hashtable/hashtable.h"
 #include "hashcode/hashcodes.h"
 #include "http/http.h"
 #include "last/last_1.h"

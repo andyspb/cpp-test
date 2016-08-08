@@ -28,8 +28,8 @@ int hash2(string word) {
   return result;
 }
 
-int test() {
-  std::cout << "Test hash_function_test:" << std::endl;
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::vector<std::string> test_strings;
   test_strings.push_back("one");
   test_strings.push_back("two");
@@ -46,7 +46,7 @@ int test() {
     std::cout << "hash2(\"" << *it << "\") = " << hash2(*it) << std::endl;
   }
 
-  return 1;
+  RETURN_OK();
 }
 
 }  //hash_function_test

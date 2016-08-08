@@ -44,7 +44,7 @@ void Trace2(const char* msg, const char* msg1, ...) {
   char temp_buff[MAX_MESSAGE_SIZE];
   char* pStr = 0;
   va_list args;
-  va_start(args, msg);
+  va_start(args, msg1);
   vsnprintf(temp_buff, MAX_MESSAGE_SIZE - 1, msg1, args);
 
   std::string str(pStr);

@@ -71,7 +71,7 @@ int main(int argc, char **argv) {
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
-    assert(cpp1x::test());
+//    assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(diff::test());
@@ -79,8 +79,8 @@ int main(int argc, char **argv) {
 //  assert(facebook::test());
 //  assert(functors::test());
 //  assert(google_2::test());
-//  assert(hashtable::test());
-//  assert(hashcodes::test());
+
+    assert(hashcodes::test());
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(lambda::test());
@@ -88,7 +88,7 @@ int main(int argc, char **argv) {
 //  assert(last_1::test());
 //  assert(lock_free::test());
 
-  assert(logger::test());
+//  assert(logger::test());
 
   //  assert(lge::test());
 //  assert(mem_test::test());

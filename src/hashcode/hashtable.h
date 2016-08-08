@@ -5,10 +5,10 @@
  *      Author: andy
  */
 
-#ifndef SRC_HASHTABLE_HASHTABLE_H_
+#ifndef SRC_HASHCODE_HASHTABLE_H_
 #define SRC_HASHTABLE_HASHTABLE_H_
 
-namespace hashtable {
+namespace hash_table {
 
 class HashEntry {
  public:
@@ -83,4 +83,4 @@ TEST_RESULT test() {
 
 }  // namespace
 
-#endif /* SRC_HASHTABLE_HASHTABLE_H_ */
+#endif /* SRC_HASHCODE_HASHTABLE_H_ */
