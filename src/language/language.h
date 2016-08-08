@@ -62,6 +62,7 @@
 #include "strlen_test.h"
 #include "type_traits.h"
 #include "union.h"
+#include "va_args.h"
 #include "vector_pointer_arithmetic.h"
 #include "virtual_destr.h"
 #include "virtual_method.h"
@@ -133,7 +134,7 @@ TEST_RESULT test() {
 //  assert(type_traits::test());
 
 //  assert(union_::test());
-
+  assert(va_args::test());
 //  assert(vector_pointer_arithmetic::test());
 //  assert(virtual_destr::test());
 //  assert(virtual_method::test());
