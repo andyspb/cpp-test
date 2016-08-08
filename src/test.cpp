@@ -28,7 +28,12 @@ void prepare_path(char* out, const char* dir, const char* file, int& counter)
 
     struct stat st = { 0 };
     if (stat(camera_dump_path, &st) == -1) {
+#if defined(_WIN32)
+        mkdir(camera_dump_path);
+#else
         mkdir(camera_dump_path, 0700);
+#endif
+
     }
     int size = strlen(camera_dump_path)+strlen(dir)+sizeof(char);
     char dir_dump_path[size];
@@ -39,7 +44,12 @@ void prepare_path(char* out, const char* dir, const char* file, int& counter)
     std::cout << "dump_path:" << dir_dump_path << std::endl;
 
     if (stat(dir_dump_path, &st) == -1) {
+
+#if defined(_WIN32)
+      mkdir(dir_dump_path);
+#else
         mkdir(dir_dump_path, 0700);
+#endif
     }
 
     size = strlen(dir_dump_path)+strlen(file)+32;
@@ -84,7 +94,7 @@ int main(int argc, char **argv) {
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(lambda::test());
-  assert(language::test());
+//  assert(language::test());
 //  assert(last_1::test());
 //  assert(lock_free::test());
 

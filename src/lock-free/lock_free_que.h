@@ -57,7 +57,7 @@ class LockFreeQueue {
     TRootNode *current = FreePtr;
     if (current == 0)
       return;
-    if (atomic_add(FreememCounter, 0) == 1) {
+    if (atomic_add(static_cast<long int>(FreememCounter), 0) == 1) {
       // we are the last thread, try to cleanup
       if (cas(&FreePtr, (TRootNode*) 0, current)) {
         // free list
