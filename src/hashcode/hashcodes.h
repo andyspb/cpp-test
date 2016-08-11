@@ -10,6 +10,7 @@
 #include "hash_function_sample.h"
 #include "hashtable.h"
 #include "perfect_hash_function.h"
+#include "string_hash_function.h"
 
 namespace hashcodes {
 
