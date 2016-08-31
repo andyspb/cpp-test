@@ -60,7 +60,7 @@ void fill_slist(List<int> * head, int size) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ <<  " Test: reverse liked list --->";
+  __SCOPE_LOG__;
 
   List<int> *list = new List<int>();
   list->val = 0;
@@ -75,15 +75,15 @@ TEST_RESULT test() {
     temp = l;
   }
 
-  LOG(INFO) << __PRETTY_FUNCTION__ << " Print origin list" ;
+  LOG(INFO) << " Print origin list" ;
 
   print_slist_int(list);
 
-  LOG(INFO) << __PRETTY_FUNCTION__ << " Reverse iterative";
+  LOG(INFO) << " Reverse iterative";
   list = reverse_iterate(list);
   print_slist_int(list);
 
-  LOG(INFO) << __PRETTY_FUNCTION__ << " Reverse recursive";
+  LOG(INFO) << " Reverse recursive";
   list = reverse_recursive(list);
   print_slist_int(list);
   RETURN_OK();

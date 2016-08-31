@@ -17,7 +17,7 @@ class List {
 };
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   List * head = new List(0);
   List * temp = head;
   for (int i = 1; i <= 10; ++i) {

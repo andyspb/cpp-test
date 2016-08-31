@@ -244,7 +244,7 @@ void BTreeNode::splitChild(int i, BTreeNode *tree_node) {
 
 // Driver program to test above functions
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   BTree t(3);  // A B-Tree with minium degree 3
   t.insert(10);
   t.insert(20);

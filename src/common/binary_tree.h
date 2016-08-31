@@ -161,7 +161,7 @@ void destroy(TreeNode<T> *node) {
 }
 
 int test() {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  __SCOPE_LOG__;
 
   TreeNode<int> t1(1);
   TreeNode<int> t2(2);

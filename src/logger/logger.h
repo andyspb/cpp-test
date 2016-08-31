@@ -59,7 +59,12 @@ int test(){
 
   const char test[] = "This is a test string";
   //Trace("[ [%s:%d] %s, %d ]", __PRETTY_FUNCTION__, __LINE__, test, 123);
+  
+#ifdef _WIN32
+  Trace("[ [%s:%d] %s, %d ]", __FUNCTION__, __LINE__, test, 123);
+#else
   Trace("[ [%s:%d] %s, %d ]", __PRETTY_FUNCTION__, __LINE__, test, 123);
+#endif
   return 1;
 }
 

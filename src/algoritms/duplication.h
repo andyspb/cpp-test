@@ -18,7 +18,7 @@ void print_array(int arr[], int n) {
 
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   int a[100], b[100];
 
   for (int i = 0; i < 100; i++) {

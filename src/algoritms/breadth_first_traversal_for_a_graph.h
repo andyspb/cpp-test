@@ -72,7 +72,7 @@ void Graph::addEdge(int v, int w) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   Graph g(4);
   g.addEdge(0, 1);

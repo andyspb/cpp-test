@@ -125,7 +125,7 @@ void fill_tree(Node<T>* tree) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ << "Test: tree traversal >>>";
+  __SCOPE_LOG__;
   Node<int> *tree = new Node<int>(1);
   fill_tree(tree);
 

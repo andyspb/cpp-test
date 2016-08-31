@@ -57,7 +57,7 @@ void insert(SList** list, int n) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   SList *list = new SList(-1);
   fill_slist(list);
   print_slist(list);

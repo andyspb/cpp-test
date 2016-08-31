@@ -97,7 +97,7 @@ void preOrder(Node* node) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   /* Constructed skewed binary tree is
                   10
                  /

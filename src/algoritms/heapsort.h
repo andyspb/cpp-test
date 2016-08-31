@@ -46,7 +46,7 @@ void heapsort(T a[], long size) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   const int size = 11;
   int arr[size] = { 13, 2, 3, 1, 7, 8, 9, 11, 6, 5, 4 };
   for (int i = 0; i < size; ++i) {

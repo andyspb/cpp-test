@@ -52,7 +52,7 @@ int btree_depth(BinaryTreeNode<T> *node) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__<< "Tests: binary tree depth";
+  __SCOPE_LOG__;
   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(0);
   int elements = 3;
   fill_tree<int>(root, elements);

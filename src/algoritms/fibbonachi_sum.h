@@ -30,7 +30,7 @@ void print_fibboonachi_sum(int n) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   print_fibboonachi_sum(4);
   RETURN_OK();
 }

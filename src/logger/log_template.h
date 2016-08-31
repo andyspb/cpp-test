@@ -118,6 +118,10 @@ private:
   const std::string from_;
 };
 
+#ifdef _WIN32
+#define __SCOPE_LOG__ ScopeLog _(__FUNCTION__)
+#else
 #define __SCOPE_LOG__ ScopeLog _(__PRETTY_FUNCTION__)
+#endif
 
 #endif /* SRC_LOGGER_LOG_TEMPLATE_H_ */

@@ -26,7 +26,7 @@ class Node {
 template<>
 class Node<int[]> {
  public:
-  int data[];
+  int* data;
   Node* get_next() {
     return next;
   }

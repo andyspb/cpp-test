@@ -85,7 +85,7 @@ void radix_sort(int arr[], int n) {
 
 // Driver program to test above functions
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 //  int arr[] = { 170, 45, 75, 90, 802, 24, 2, 66 };
   int arr[] = { 123, 321, 213, 111, 222};
   int n = sizeof(arr) / sizeof(arr[0]);

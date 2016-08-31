@@ -9,7 +9,7 @@
 namespace reverse_char_array {
 
 TEST_RESULT test() {
-  LOG(ERROR) << __PRETTY_FUNCTION__ << " Reverse characters in array";
+  __SCOPE_LOG__;
   char str[] = { 'a', 'b', 'c', 'd', 'e' };
   unsigned int size = sizeof(str) / sizeof(str[0]);
   for (unsigned int i = 0; i < size; ++i) {

@@ -81,7 +81,7 @@ struct normal_path {
 };
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   std::string sample1 = "/a/b/c";
   std::string sample2 = "/a/b/../c";
   std::string sample3 = "/a/b/c/../";

@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <array>
+#include <stdint.h>
 
 namespace blum_filter {
 
