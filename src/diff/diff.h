@@ -19,7 +19,7 @@ constexpr char file2[] = "This extra long piece of text will "
     "have some common parts found by LCS.\n";
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   std::cout << "file1:\n" << file1;
   std::cout << "file2:\n" << file2;
   RETURN_OK();

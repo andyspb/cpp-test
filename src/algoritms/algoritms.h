@@ -108,7 +108,7 @@
 
 namespace algorithms {
 int test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());

@@ -9,6 +9,7 @@
 #define SRC_LGE_TEST_H_
 
 #include "antipattern.h"
+#include "camera.h"
 #include "webrtc.h"
 
 namespace lge {
@@ -19,7 +20,7 @@ TEST_RESULT test() {
 
 //  assert(webrtc::test());
   assert(anti_pattern::test());
-
+  assert(camera::test());
 
   RETURN_OK();
 }

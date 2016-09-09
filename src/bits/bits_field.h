@@ -27,7 +27,7 @@ struct S2 {
 };
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   std::cout << "sizeof(S1)=" << sizeof(S1) << std::endl;
   std::cout << "sizeof(S2)=" << sizeof(S2) << std::endl;
   RETURN_OK();

@@ -15,7 +15,7 @@
 namespace copy_ {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   std::vector<int> orig;
   orig.push_back(1);

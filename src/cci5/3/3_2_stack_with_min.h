@@ -61,8 +61,9 @@ class StackWithMin : public Stack {
 };
 
 void StackWithMin::push(int x) {
-  std::cout << __PRETTY_FUNCTION__ << " x=" << x << std::endl;
-  if (isEmpty() == true) {
+	__SCOPE_LOG__;
+	LOG(INFO) << " x=" << x << std::endl;
+	if (isEmpty() == true) {
     Stack::push(x);
     min.push(x);
   } else {
@@ -77,15 +78,14 @@ void StackWithMin::push(int x) {
 }
 
 int StackWithMin::pop() {
-  std::cout << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   int x = Stack::pop();
   min.pop();
   return x;
 }
 
 int StackWithMin::getMin() {
-  std::cout << __PRETTY_FUNCTION__;
-
+  __SCOPE_LOG__;
   int x = min.pop();
   std::cout << " x=" << x << std::endl;
   min.push(x);
@@ -93,7 +93,7 @@ int StackWithMin::getMin() {
 }
 
 int test() {
-  std::cout << "Test with stack" << std::endl;
+	__SCOPE_LOG__;
 
   StackWithMin s;
   s.push(10);

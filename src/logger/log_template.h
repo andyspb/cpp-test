@@ -16,6 +16,9 @@
 #define __ENTER__ " >>> "
 #define __EXIT__ " <<< "
 
+#ifndef __PRETTY_FUNCTION__
+#define __PRETTY_FUNCTION__  __FUNCTION__
+#endif
 
 namespace tlog {
 

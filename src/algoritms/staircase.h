@@ -38,7 +38,7 @@ void print_stair(int n) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   print_stair(6);
   RETURN_OK();
 }

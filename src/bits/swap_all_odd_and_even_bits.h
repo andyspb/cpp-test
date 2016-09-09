@@ -27,7 +27,7 @@ unsigned int swap_bits(unsigned int x) {
 
 // Driver program to test above function
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   unsigned int x = 23;  // 00010111
 
   // Output is 43 (00101011)

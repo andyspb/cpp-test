@@ -16,7 +16,7 @@
 namespace array_ {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   assert(array_2d::test());
 

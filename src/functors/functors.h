@@ -13,7 +13,7 @@
 
 namespace functors {
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   assert(functors_base::test());
 //  assert(increment::test());
   RETURN_OK();

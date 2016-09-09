@@ -27,7 +27,7 @@ int turnOffK(int n, int k) {
 
 // Driver program to test above function
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   int n = 15;
   int k = 4;
   cout << turnOffK(n, k);

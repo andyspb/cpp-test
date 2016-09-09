@@ -11,6 +11,9 @@
 #include <queue>
 #include <iostream>
 
+#ifdef __GNUC__
+
+
 namespace google_2 {
 
 struct TreeNode {
@@ -105,4 +108,5 @@ int test() {
 }
 
 }  // namespace google_2
+#endif // __GNUC__
 #endif /* GOOGLE2_H_ */

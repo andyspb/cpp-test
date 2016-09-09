@@ -57,11 +57,11 @@ template<class T> class SpecificFunctor : public BaseFunctor {
 class A {
  public:
   A() {
-    LOG(INFO) << __PRETTY_FUNCTION__;
+    __SCOPE_LOG__;
   }
 
   void Display(const char* text) {
-    LOG(INFO) << __PRETTY_FUNCTION__;
+    __SCOPE_LOG__;
     std::cout << text << std::endl;
   }
 };
@@ -82,7 +82,7 @@ int y = 2;
 const int s = 3;
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ << " >>>";
+  __SCOPE_LOG__;
   A a;
   B b;
 
@@ -109,7 +109,6 @@ TEST_RESULT test() {
   std::cout << "y: " << y << std::endl;
   std::cout << "sizeof(arr): " << sizeof(arr) / sizeof(arr[0]) << std::endl;
   std::cout << "sizeof(string literal): " << sizeof("a") << std::endl;
-  LOG(INFO) << __PRETTY_FUNCTION__ << " <<<";
   RETURN_OK();
 }
 

@@ -16,7 +16,7 @@ class Class{
 };
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   Struct s = { 'a', 2 };
   LOG(INFO) << "s.a="<< s.a << " s.b=" << s.b;
   Class c = { 3, 4 };

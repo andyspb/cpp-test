@@ -33,7 +33,7 @@ void swap_sum(int& x, int& y) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   RETURN_OK();
 }

@@ -32,7 +32,7 @@ T const* bar() {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   unique_ptr<T const> p1(bar());        // OK
   unique_ptr<T const[]> a1(bar());        // OK

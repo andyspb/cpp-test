@@ -64,7 +64,7 @@ string addBitStrings(string first, string second) {
 
 // Driver program to test above functions
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   std::string str1 = "1100011";
   std::string str2 = "10";
 

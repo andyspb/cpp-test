@@ -28,7 +28,7 @@
 namespace bits {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 //  assert(add_two_bit_strings::test());
 //  assert(binary_representation_of_number::test());
 ///  assert(bits_field::test());

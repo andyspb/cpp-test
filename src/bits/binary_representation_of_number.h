@@ -26,7 +26,7 @@ void bin_rec(unsigned n) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   bin_iter(7);
   printf("\n");
   bin_iter(4);

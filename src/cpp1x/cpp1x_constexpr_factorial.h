@@ -20,7 +20,7 @@ constexpr int factorial(int n) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+	__SCOPE_LOG__;
 
   int f = factorial(5);
   LOG(INFO) <<

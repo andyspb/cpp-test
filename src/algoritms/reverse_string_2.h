@@ -7,7 +7,7 @@
 
 namespace reverse_string_2 {
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   std::string hello("Hello, how are you?");
 

@@ -11,7 +11,7 @@
 namespace array_2d {
 
 TEST_RESULT allocate_2d() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   int row = 3, column = 4;
   int *arr = (int *) malloc(row * column * sizeof(int));
@@ -34,9 +34,10 @@ TEST_RESULT allocate_2d() {
 }
 
 TEST_RESULT allocate_2d_1() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
-  int r = 3, c = 4, i, j, count;
+  const int r = 3;
+  int c = 4, i, j, count;
 
   int *arr[r];
   for (i = 0; i < r; i++)
@@ -60,7 +61,7 @@ TEST_RESULT allocate_2d_1() {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   allocate_2d();
   allocate_2d_1();

@@ -29,7 +29,7 @@ int test1() {
   return 1;
 }
 
-// Brian Kernighan�s Algorithm:
+// Brian Kernighan's Algorithm:
 
 /* Function to get no of set bits in binary
  representation of passed binary no. */
@@ -44,7 +44,7 @@ int countSetBits2(int n) {
 
 /* Program to test function countSetBits */
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   int i = 9;
   printf("%d", countSetBits2(i));
   getchar();

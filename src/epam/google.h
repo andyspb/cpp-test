@@ -13,7 +13,9 @@
  typedef uint64_t uint;
 #endif
 
+#ifdef __GNUC__
 #include <pthread.h>
+
 
 #include <mutex>
 
@@ -53,6 +55,8 @@ uint assignId(Event& ev) {
   return id;
 }
 
+
 }  // namespace google_test
 
+#endif // __GNUC__
 #endif /* GOOGLE_H_ */

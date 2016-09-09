@@ -12,15 +12,15 @@
 #include <deque>
 
 #include <memory>
-#include <mutex>
-#include <thread>
+//#include <mutex>
+//#include <thread>
 #include <functional>
 
 
 #define DEFAULT_MAX 100
 
 namespace pcm_buffer {
-
+/*
 struct PcmData {
   PcmData(): data(0), size(0) {}
   void* data;
@@ -94,9 +94,12 @@ void thread_func_read(void* buffer) {
   }
 }
 
+*/
 // test
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
+
+/*
   PcmBuffer<DEFAULT_MAX> pcm_buffer;
 
   PcmBuffer<DEFAULT_MAX> buffer;
@@ -107,7 +110,7 @@ TEST_RESULT test() {
 
   t1.join();
   t2.join();
-
+*/
   RETURN_OK();
 }
 }  // namespace pcm_buffer

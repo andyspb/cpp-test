@@ -41,7 +41,7 @@ void permute(char *a, int i, int n) {
 
 /* Driver program to test above functions */
 int test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   char a[] = "ABCD";
   permute(a, 0, 2);
   return 1;

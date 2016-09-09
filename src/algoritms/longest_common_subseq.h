@@ -13,7 +13,7 @@
 #include <cstdlib>
 
 namespace longest_common_subseq {
-
+#ifdef __GNUC__
 /* Utility function to get max of 2 integers */
 int max(int a, int b) {
   return (a > b) ? a : b;
@@ -63,7 +63,8 @@ void lcs(const std::string& str1, const std::string& str2) {
   int index = temp[size1][size2];
 
   // Create a character array to store the lcs string
-  char lcs[index + 1];
+  const int size = index + 1;
+  char lcs[size];
   lcs[index] = '\0';  // Set the terminating character
 
   // Start from the right-most-bottom-most corner and
@@ -96,10 +97,11 @@ void lcs(const std::string& str1, const std::string& str2) {
   }
   delete[] temp;
 }
+#endif
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
-
+  __SCOPE_LOG__;
+#ifdef __GNUC__
   std::string str1 = "AGGTAB";
   std::string str2 = "GXTXAYB";
   lcs(str1, str2);
@@ -112,6 +114,7 @@ TEST_RESULT test() {
 
   std::cout << "Length of LCS is " << lcs_rec(X, Y, m, n) << std::endl;
 
+#endif // __GNUC__
   RETURN_OK();
 }
 

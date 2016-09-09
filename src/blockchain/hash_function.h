@@ -28,7 +28,7 @@ size_t test_std_hash(const std::string& in_str) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   std::string s1 = "aaa";
   std::string s2 = "bbb";

@@ -16,7 +16,7 @@ constexpr int mult(int i, int j) {
 
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   auto r = mult(2,3);
   std::cout<< "r = " << r << std::endl;
   return RESULT_OK;

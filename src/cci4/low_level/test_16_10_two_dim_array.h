@@ -25,8 +25,8 @@ int** My2DAlloc(int rows, int cols) {
   return rowptr;
 }
 
-int test() {
-  std::cout << "test_16_10_two_dim_array:" << std::cout;
+TEST_RESULT test() {
+  __SCOPE_LOG__;
 
   int ** arr = My2DAlloc(10, 10);
   for (int i = 0; i < 10; ++i) {
@@ -35,7 +35,7 @@ int test() {
     }
     std::endl(std::cout);
   }
-  return 1;
+  RETURN_OK();
 }
 }  // test_16_10_two_dim_array
 

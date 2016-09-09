@@ -24,7 +24,7 @@ void reverse_string_3(string &str) {
 
 // Driver program
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   string str = "geeksforgeeks";
   std::cout << str << std::endl;
   reverse_string_3(str);

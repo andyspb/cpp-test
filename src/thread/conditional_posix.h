@@ -8,9 +8,12 @@
 #ifndef SRC_THREAD_CONDITIONAL_POSIX_H_
 #define SRC_THREAD_CONDITIONAL_POSIX_H_
 
+#ifdef __GNUC__
 #include <pthread.h>
+#endif // __GNUC__
 
 namespace conditional_posix {
+#ifdef __GNUC__
 
 pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t condition_mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -22,17 +25,6 @@ int count = 0;
 #define COUNT_DONE  10
 #define COUNT_HALT1  3
 #define COUNT_HALT2  6
-
-TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
-  pthread_t thread1, thread2;
-
-  pthread_create(&thread1, 0, &functionCount1, 0);
-  pthread_create(&thread2, 0, &functionCount2, 0);
-  pthread_join(thread1, NULL);
-  pthread_join(thread2, NULL);
-  RETURN_OK();
-}
 
 void *functionCount1(void* ptr) {
   for (;;) {
@@ -70,8 +62,22 @@ void *functionCount2(void* ptr) {
       return (NULL);
   }
   return 0;
-
 }
+#endif // __GNUC__
+
+TEST_RESULT test() {
+  __SCOPE_LOG__;
+#ifdef __GNUC__
+  pthread_t thread1, thread2;
+
+  pthread_create(&thread1, 0, &functionCount1, 0);
+  pthread_create(&thread2, 0, &functionCount2, 0);
+  pthread_join(thread1, NULL);
+  pthread_join(thread2, NULL);
+#endif // __GNUC__
+  RETURN_OK();
+}
+
 }  // namespace conditional_posix
 
 #endif /* SRC_THREAD_CONDITIONAL_POSIX_H_ */

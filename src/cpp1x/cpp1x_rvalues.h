@@ -16,7 +16,7 @@
 namespace rvalues {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   std::string foo = "foo-string";
   std::string bar = "bar-string";
 

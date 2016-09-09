@@ -7,6 +7,9 @@
 
 #ifndef SRC_HTTP_SERVER_SINGLE_THREAD_H_
 #define SRC_HTTP_SERVER_SINGLE_THREAD_H_
+#ifdef __GNUC__
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,4 +92,5 @@ TEST_RESULT test() {
 
 }
 
+#endif // __GNUC__
 #endif /* SRC_HTTP_SERVER_SINGLE_THREAD_H_ */

@@ -18,9 +18,9 @@ int TestByteOrder() {
 }
 
 int test() {
-  std::cout << "test_16_5_little_big_endian:" << std::cout;
+  __SCOPE_LOG__;
 
-  std::cout << "TestByteOrder() = " << TestByteOrder() << std::endl;
+  LOG(INFO) << "TestByteOrder() = " << TestByteOrder() << std::endl;
   return 1;
 }
 

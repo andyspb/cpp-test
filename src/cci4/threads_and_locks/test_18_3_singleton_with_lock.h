@@ -66,7 +66,7 @@ template<class T>
 Lock Singleton<T>::lock;
 
 int test() {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+	__SCOPE_LOG__;
 
 #pragma GCC diagnostic ignored "-Wunused-variable"
   A* singleton = Singleton<A>::Instance();

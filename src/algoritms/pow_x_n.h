@@ -21,7 +21,7 @@ int power(int x, unsigned int y) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   int x = 2;
   unsigned int y = 3;
   LOG(INFO) << x << "^" << y << "= " << power(x, y);

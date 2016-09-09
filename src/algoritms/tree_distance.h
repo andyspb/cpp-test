@@ -51,7 +51,7 @@ struct node* newNode(int data) {
   return temp;
 }
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   RETURN_OK();
 }
 }  // namespace tree_distance

@@ -42,7 +42,7 @@ bool isDivBy9_iter(int n) {
 
 // Driver program to test above function
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   // Let us print all multiples of 9 from 0 to 100
   // using above method
   for (int i = 0; i < 100; i++) {

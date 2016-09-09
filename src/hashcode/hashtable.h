@@ -71,7 +71,7 @@ class HashTable {
   HashEntry **table;
 };
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   HashTable table;
   table.put(1,1);
   table.put(2,2);

@@ -34,7 +34,7 @@ unsigned char reverse(unsigned char original) {
   return reversed;
 }
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   unsigned char data = 8;
   unsigned char rev = reverse(data);

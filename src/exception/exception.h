@@ -28,7 +28,7 @@ struct your_exc3 : my_exc1, my_exc2 {
 };
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ << "exception_::test() --->";
+  __SCOPE_LOG__;
   try {
     throw your_exc3();
   }

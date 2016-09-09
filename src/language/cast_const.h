@@ -43,7 +43,7 @@ struct Base {
 
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
 //  int* x = (const int*)malloc(10);  // illegal
   const int* x = (const int*)malloc(10);  // legal

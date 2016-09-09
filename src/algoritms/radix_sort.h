@@ -31,6 +31,7 @@ int get_max_in_arr(int arr[], int arr_size) {
 // A function to do counting sort of arr[] according to
 // the digit represented by exp.
 void count_sort(int arr[], int arr_size, int exp) {
+#ifdef __GNUC__
   int output[arr_size];  // output array
   int i, count[10] = { 0 };
 
@@ -66,6 +67,7 @@ void count_sort(int arr[], int arr_size, int exp) {
     arr[i] = output[i];
   }
   print(arr, arr_size);
+#endif
 }
 
 // The main function to that sorts arr[] of size n using

@@ -36,7 +36,7 @@ bool isPalindrome(unsigned int x) {
 
 // Driver program to test above function
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   unsigned int x = (1 << 15) + (1 << 16);
   std::cout << x << " is palindrome: " << isPalindrome(x) << std::endl;
   x = (1 << 31) + 1;

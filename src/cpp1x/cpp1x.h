@@ -36,7 +36,6 @@ TEST_RESULT test() {
   //  assert(ring_buffer_locked::test());
   assert(ring_buffer_lock_free::test());
 
-  LOG(INFO) << __PRETTY_FUNCTION__ << __EXIT__;
   RETURN_OK();
 }
 }

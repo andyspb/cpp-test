@@ -17,7 +17,7 @@ unsigned char swapNibbles(unsigned char x) {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
   unsigned char x = 100;
   printf("%u", swapNibbles(x));
   RETURN_OK();

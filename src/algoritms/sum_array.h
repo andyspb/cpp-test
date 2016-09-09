@@ -26,7 +26,7 @@ int print_arr(std::vector<int>& arr) {
     return ::std::accumulate(arr.begin(), arr.end(), 0);
 }
 TEST_RESULT test(){
-    LOG(INFO) << __PRETTY_FUNCTION__;
+    __SCOPE_LOG__;
     int n;
     ::std::cin >> n;
     ::std::vector<int> arr(n);

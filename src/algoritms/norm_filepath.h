@@ -45,6 +45,8 @@ struct normal_path {
 
     std::deque<std::string> deque;
 //    std::cout << "vec size="<< vec.size()<< std::endl;
+
+#ifdef __GNUC__
     for (std::string v : vec) {
       if (!valid(v)) {
         std::cout << "incorrect path element:" << v << std::endl;
@@ -62,7 +64,7 @@ struct normal_path {
         deque.push_back(v);
       }
     }
-
+#endif
     std::cout << std::endl;
 //    std::cout << "deque.size=" << deque.size() << std::endl;
 

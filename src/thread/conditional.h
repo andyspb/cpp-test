@@ -8,6 +8,10 @@
 #ifndef SRC_THREAD_CONDITIONAL_H_
 #define SRC_THREAD_CONDITIONAL_H_
 
+#ifdef __GNUC__
+
+
+
 #include <mutex>
 #include <condition_variable>
 #include <thread>
@@ -23,7 +27,7 @@ typedef std::conditional<sizeof(int) <= 4,
                          std::mt19937,
                          std::mt19937_64>::type Engine;
 
-void fun(int n)
+void fun(const int n)
 {
   int arr[n];
   // ......
@@ -68,6 +72,7 @@ void worker_thread() {
   cv.notify_one();
 }
 
+
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
@@ -104,4 +109,5 @@ TEST_RESULT test() {
 
 }  // namespace conditional_variable
 
+#endif // __GNUC__
 #endif /* SRC_THREAD_CONDITIONAL_H_ */

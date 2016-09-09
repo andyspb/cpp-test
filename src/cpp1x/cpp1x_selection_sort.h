@@ -15,7 +15,7 @@ void selection_sort(FwdIt first, FwdIt last, Compare cmp = Compare{})
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
   RETURN_OK();
 }
