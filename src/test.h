@@ -51,6 +51,7 @@
 #include "net/net.h"
 #include "opencv/test.h"
 #include "overloading/overloading.h"
+#include "parser/parser.h"
 #include "patterns/patterns.h"
 #include "quiz/quiz.h"
 #include "smart_ptr/smart_ptr.h"

@@ -1,7 +1,7 @@
 /*
  * check_open_closed_brackets.h
  *
- *  Created on: 24 апр. 2015 г.
+ *  Created on: 24 пїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -19,7 +19,7 @@ namespace check_open_closed_brackets {
 typedef ::std::stack<char> Brackets;
 
 constexpr char open_brackets[] = {'(', '['};
-const ::std::map<char, char> closing = {{'(', ')'}, {'[', ']'}};
+constexpr ::std::map<char, char> closing = {{'(', ')'}, {'[', ']'}};
 
 void pushOpeningBrackets(Brackets& opening, char bracket) {
   for (char open_bracket : open_brackets) {

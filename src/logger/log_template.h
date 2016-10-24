@@ -16,7 +16,7 @@
 #define __ENTER__ " >>> "
 #define __EXIT__ " <<< "
 
-#ifndef __PRETTY_FUNCTION__
+#ifdef _MSC_VER
 #define __PRETTY_FUNCTION__  __FUNCTION__
 #endif
 

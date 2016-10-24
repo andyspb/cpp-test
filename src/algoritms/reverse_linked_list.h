@@ -6,18 +6,24 @@
 namespace reverse_linkedlist {
 
 // single linked list
-template<typename T>
-struct List {
+template<typename T = int>
+struct Node {
     T val;
-    struct List *next;
+    Node *next;
 };
 
+//template <>
+//struct Node<int> {
+//    int val;
+//    Node *next;
+//};
+
 template<typename T>
-List<T> * reverse_iterate(List<T> * head) {
+Node<T> * reverse_iterate(Node<T> * head) {
   if (!head || !head->next) {
     return head;
   }
-  List<T> *temp(0), *rev(0);
+  Node<T> *temp(0), *rev(0);
   while (head) {
     temp = head;
     head = head->next;
@@ -28,18 +34,18 @@ List<T> * reverse_iterate(List<T> * head) {
 }
 
 template<typename T>
-List<T> * reverse_recursive(List<T> *head) {
+Node<T> * reverse_recursive(Node<T> *head) {
   if (!head || !head->next)
     return head;
-  List<T> *rec = reverse_recursive(head->next);
+  Node<T> *rec = reverse_recursive(head->next);
   head->next->next = head;
   head->next = 0;
   return rec;
 }
 
 template<typename T>
-void print_slist_int(List<T> * head) {
-  List<T> * temp = head;
+void print_slist_int(Node<T> * head) {
+  Node<T> * temp = head;
   while (temp) {
     std::cout << " " << static_cast<int>(temp->val);
     temp = temp->next;
@@ -47,11 +53,10 @@ void print_slist_int(List<T> * head) {
   std::endl(std::cout);
 }
 
-template<int>
-void fill_slist(List<int> * head, int size) {
-  List<int> *temp = head;
+void fill_slist(Node<> * head, int size) {
+  Node<> *temp = head;
   for (int i = 1; i < size ; ++i) {
-    List<int> *node= new List<int>();
+    Node<> *node= new Node<>();
     node->val = i;
     node->next = NULL;
     temp->next = node;
@@ -62,13 +67,13 @@ void fill_slist(List<int> * head, int size) {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-  List<int> *list = new List<int>();
+  Node<int> *list = new Node<int>();
   list->val = 0;
   list->next = NULL;
 
-  List<int> *temp = list;
+  Node<int> *temp = list;
   for (int i = 1; i < 20 ; ++i) {
-    List<int> *l = new List<int>();
+    Node<int> *l = new Node<int>();
     l->val = i;
     l->next = NULL;
     temp->next = l;

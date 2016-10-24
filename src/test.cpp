@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
-//    assert(algorithms::test());
+    assert(algorithms::test());
 //  assert(array_::test());
 //    assert(array_::test());
 //  assert(binary_tree::test());
@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
 //  assert(functors::test());
 //  assert(google_2::test());
 
-    assert(hashcodes::test());
+//    assert(hashcodes::test());
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(lambda::test());
@@ -32,7 +32,8 @@ int main(int argc, char **argv) {
 //  assert(moto::test());
 //  assert(quiz::test());
 //  assert(overloading::test());
-//  assert(patterns::test());
+//  assert(parser::test());
+  //  assert(patterns::test());
 //  assert(serialization::test());
 //  assert(smart_ptr_::test());
 //  assert(spb::test());

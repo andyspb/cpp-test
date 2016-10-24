@@ -1,7 +1,7 @@
 /*
  * check_if_braces_match.h
  *
- *  Created on: 24 апр. 2015 г.
+ *  Created on: 24 пїЅпїЅпїЅ. 2015 пїЅ.
  *      Author: andy
  */
 
@@ -45,41 +45,40 @@ bool CheckBracesMatch(const std::string& str) {
   return braces_stack.empty();
 }
 
-int test() {
-  std::cout << "test braces" << std::endl;
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::string test_str = "(b*x[0]^2) - x(sin(x))";
   bool b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "[a[1][1] - a[2])";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "([)]";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = ")))";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = ")))";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "1";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "[)(]";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "[assdferf(dfgrgtr[sdfegr[f]])]";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
   test_str = "\0";
   b = CheckBracesMatch(test_str);
-  std::cout << "test str:" << test_str << " b=" << b << std::endl;
-  return 1;
+  LOG(INFO) << "test str:" << test_str << " braces_ok: " << std::boolalpha << b;
+  RETURN_OK();
 }
-
-}
+}  // namespace check_if_braces_match
 
 #endif /* CHECK_IF_BRACES_MATCH_H_ */
