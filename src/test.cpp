@@ -2,6 +2,7 @@
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
+    //assert(alignment::test());
     assert(algorithms::test());
 //  assert(array_::test());
 //    assert(array_::test());
@@ -55,35 +56,9 @@ int main(int argc, char **argv) {
 //  assert(epam::test() );
 //  assert(ms::test() );
 //  assert(google_2::test());
-//  assert(alignment::test());
 
 //  assert(yandex::test());
 
-//  int arr[10];
-//  int *pa = arr;
-
-//  std::vector<int> v(2000);
-//  std::cout << "sizeof(v)" << sizeof(v);
-
-//  int is[1];
-//  is[2] = 1;
-
-
-//  register int ri = 0;
-//  int * ptr = &ri;
-
-//  const int& temp = int(12);
-//
-//  std::string s1 = "123";
-//  std::string s2 = "456";
-//
-//  std::string s3_copy = s1 + s2;
-//  const std::string& s3_reference = s1 + s2;
-//
-//  const std::string str1 = "Hello, ";
-//  const std::string str2 = "World!";
-//
-//  const std::string& str = str1 + str2;
-  return 0;
+  RETURN_OK();
 }
 

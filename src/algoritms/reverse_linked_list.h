@@ -23,6 +23,7 @@ Node<T> * reverse_iterate(Node<T> * head) {
   if (!head || !head->next) {
     return head;
   }
+
   Node<T> *temp(0), *rev(0);
   while (head) {
     temp = head;
@@ -30,16 +31,19 @@ Node<T> * reverse_iterate(Node<T> * head) {
     temp->next = rev;
     rev = temp;
   }
+
   return rev;
 }
 
 template<typename T>
 Node<T> * reverse_recursive(Node<T> *head) {
-  if (!head || !head->next)
+  if (!head || head->next)
     return head;
+
   Node<T> *rec = reverse_recursive(head->next);
   head->next->next = head;
   head->next = 0;
+
   return rec;
 }
 

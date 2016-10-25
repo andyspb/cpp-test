@@ -57,6 +57,7 @@
 #include "my_atoi.h"
 #include "radix_sort.h"
 #include "reverse_linked_list.h"
+#include "reverse_sentense.h"
 #include "reverse_string_1.h"
 #include "quicksort.h"
 #include "quicksort_2linked_list.h"
@@ -144,10 +145,11 @@ int test() {
 //  assert(norm_filepath::test());
 //  assert(radix_sort::test());
 //  assert(reverse_char_array::test());
-  assert(reverse_linkedlist::test());
+//  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
 //  assert(reverse_string_3::test());
 //  assert(staircase::test());
+  assert(reverse_sentense::test());
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());

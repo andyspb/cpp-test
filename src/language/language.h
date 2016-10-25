@@ -11,6 +11,7 @@
 #include <assert.h>
 #include <iostream>
 
+#include "array.h"
 #include "atomic.h"
 #include "binary.h"
 #include "bind1st.h"

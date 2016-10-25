@@ -33,13 +33,13 @@ void rev_sentense(char * str) {
   }
 }
 
-int test() {
-  std::cout << "Test reverse sentense" << std::endl;
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   char str[] = "The dog is fast";
   std::cout << str << std::endl;
   rev_sentense(str);
   std::cout << str << std::endl;
-  return 1;
+  RETURN_OK();
 }
 } // namespace reverse_sentense
 
