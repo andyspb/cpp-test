@@ -23,9 +23,7 @@
 
 namespace conditional_variable {
 
-typedef std::conditional<sizeof(int) <= 4,
-                         std::mt19937,
-                         std::mt19937_64>::type Engine;
+//typedef std::conditional<sizeof(int) <= 4, std::mt19937, std::mt19937_64>::type Engine;
 
 void fun(const int n)
 {
