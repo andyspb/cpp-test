@@ -5,15 +5,15 @@
 
 namespace quicksort {
 
-void print_arr(int* arr, int size) {
+template<typename T>
+void print_array(T* arr, int size) {
   for (int i = 0; i < size; ++i) {
     std::cout << arr[i] << " ";
   }
   std::cout << std::endl;
-
 }
 
-void qsort(int *arr, int start, int end) {
+void quicksort(int *arr, int start, int end) {
   if (start >= end)
     return;
   int i(start), j(end), p(start - (start - end) / 2);
@@ -33,20 +33,18 @@ void qsort(int *arr, int start, int end) {
     else if (p == j)
       p = i;
   }
-  qsort(arr, start, p);
-  qsort(arr, p + 1, end);
+  quicksort(arr, start, p);
+  quicksort(arr, p + 1, end);
 }
 
-int test() {
-  std::cout << "test: qsort" << std::endl;
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23 };
   int size = sizeof(arr) / sizeof(arr[0]);
-  print_arr(arr, size);
-  qsort(arr, 0, size - 1);
-  print_arr(arr, size);
-  std::cout << std::endl;
-
-  return 1;
+  print_array(arr, size);
+  quicksort(arr, 0, size-1);
+  print_array(arr, size);
+  RETURN_OK();
 }
 }  // namespace quicksort
 

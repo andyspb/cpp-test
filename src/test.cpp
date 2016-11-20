@@ -3,7 +3,7 @@
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
     //assert(alignment::test());
-//    assert(algorithms::test());
+    assert(algorithms::test());
 //  assert(array_::test());
 //    assert(array_::test());
 //  assert(binary_tree::test());
@@ -44,7 +44,7 @@ int main(int argc, char **argv) {
 //  assert(static_::test());
 //  assert(stl::test());
 //  assert(threads::test());
-   assert(templates::test());
+//   assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());
 //  assert(terramind::test());
