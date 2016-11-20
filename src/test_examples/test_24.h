@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_TESTS_TEST_24_H_
-#define SRC_TESTS_TEST_24_H_
+#ifndef SRC_TEST_EXAMPLES_TEST_24_H_
+#define SRC_TEST_EXAMPLES_TEST_24_H_
 
 namespace test_24 {
 
@@ -46,4 +46,4 @@ TEST_RESULT test() {
 
 }  // namespace test_24
 
-#endif /* SRC_TESTS_TEST_24_H_ */
+#endif /* SRC_TEST_EXAMPLES_TEST_24_H_ */

@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_TESTS_TEST_25_H_
-#define SRC_TESTS_TEST_25_H_
+#ifndef SRC_TEST_EXAMPLES_TEST_25_H_
+#define SRC_TEST_EXAMPLES_TEST_25_H_
 
 #include <stdio.h>
 
@@ -63,4 +63,4 @@ TEST_RESULT test() {
 
 
 
-#endif /* SRC_TESTS_TEST_25_H_ */
+#endif /* SRC_TEST_EXAMPLES_TEST_25_H_ */

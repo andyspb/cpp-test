@@ -64,7 +64,7 @@
 #include "stl/stl.h"
 #include "templates/templates.h"
 #include "teramind/teramind.h"
-#include "tests/tests.h"
+#include "test_examples/test_examples.h"
 #include "thread/threads.h"
 #include "virtual/virtuals.h"
 #include "yandex/yandex.h"

@@ -22,6 +22,7 @@
 #include "template_test5.h"
 #include "templates_param_pack.h"
 #include "template_default_param.h"
+#include "variadic_template.h"
 
 
 namespace templates {
@@ -53,7 +54,7 @@ TEST_RESULT test() {
 
 //  template_test();
 
- assert(array_size::test());
+// assert(array_size::test());
 //    assert(template_factorial::test());
 //  assert(template_fibonacci::test());
 
@@ -69,7 +70,7 @@ TEST_RESULT test() {
 //  assert(templates_param_pack::test());
 
 //  assert(sfinae::test());
-
+  assert(variadic_template::test());
   RETURN_OK();
 }
 }  // namespace templates

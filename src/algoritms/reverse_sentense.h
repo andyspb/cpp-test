@@ -36,9 +36,9 @@ void rev_sentense(char * str) {
 TEST_RESULT test() {
   __SCOPE_LOG__;
   char str[] = "The dog is fast";
-  std::cout << str << std::endl;
+  LOG(INFO) << str;
   rev_sentense(str);
-  std::cout << str << std::endl;
+  LOG(INFO) << str;
   RETURN_OK();
 }
 } // namespace reverse_sentense

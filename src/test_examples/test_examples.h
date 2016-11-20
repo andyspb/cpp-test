@@ -5,6 +5,8 @@
 #ifndef TESTS_H_
 #define TESTS_H_
 
+//#include "common/common.h"
+//#include "logger/logger.h"
 #include <assert.h>
 
 #include "test_1.h"
@@ -33,7 +35,7 @@
 #include "test_8.h"
 #include "test_9.h"
 
-namespace tests {
+namespace test_examples {
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
@@ -65,6 +67,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-}  // namespace tests
+}  // namespace test_examples
 
 #endif  // TEST_H_
