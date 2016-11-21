@@ -5,13 +5,9 @@
 
 namespace radix_sort {
 
-// C++ implementation of Radix Sort
-#include<iostream>
-using namespace std;
-
 // A utility function to print an array
-void print(int arr[], int n) {
-  for (int i = 0; i < n; i++)
+void print_array(int arr[], int n) {
+  for (int i = 0; i < n; ++i)
     ::std::cout << arr[i] << " ";
   ::std::cout << ::std::endl;
 }
@@ -40,15 +36,15 @@ void count_sort(int arr[], int arr_size, int exp) {
     count[(arr[i] / exp) % 10]++;
   }
   std::cout << "Store count of occurrences in count[]" << std::endl;
-  print(count, 10);
+  print_array(count, 10);
 
   // Change count[i] so that count[i] now contains actual
-  //  position of this digit in output[]
+  // position of this digit in output[]
   for (i = 1; i < 10; ++i) {
     count[i] += count[i - 1];
   }
   std::cout << "Change count[i] so that count[i] now contains actual position of this digit in output[]" << std::endl;
-  print(count, 10);
+  print_array(count, 10);
 
   // Build the output array
   for (i = arr_size - 1; i >= 0; --i) {
@@ -66,7 +62,7 @@ void count_sort(int arr[], int arr_size, int exp) {
   for (i = 0; i < arr_size; i++) {
     arr[i] = output[i];
   }
-  print(arr, arr_size);
+  print_array(arr, arr_size);
 #endif
 }
 
@@ -80,7 +76,7 @@ void radix_sort(int arr[], int n) {
   // of passing digit number, exp is passed. exp is 10^i
   // where i is current digit number
   for (int exp = 1; m / exp > 0; exp *= 10) {
-    std::cout << "exp=" << exp << std::endl;
+    LOG(INFO) << "exp=" << exp;
     count_sort(arr, n, exp);
   }
 }
@@ -91,12 +87,13 @@ TEST_RESULT test() {
 //  int arr[] = { 170, 45, 75, 90, 802, 24, 2, 66 };
   int arr[] = { 123, 321, 213, 111, 222};
   int n = sizeof(arr) / sizeof(arr[0]);
-  std::cout << "Origin array: ";
-  print(arr, n);
+  LOG(INFO) << "Origin array: ";
+  print_array(arr, n);
+
   radix_sort(arr, n);
 
-  std::cout << "Sorted array: ";
-  print(arr, n);
+  LOG(INFO) << "Sorted array: ";
+  print_array(arr, n);
   RETURN_OK();
 }
 
