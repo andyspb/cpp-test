@@ -3,13 +3,14 @@
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
     //assert(alignment::test());
-    assert(algorithms::test());
+// assert(algorithms::test());
 //  assert(array_::test());
-//    assert(array_::test());
+//  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
-//    assert(cpp1x::test());
+  assert(cast::test());
+//  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(diff::test());
@@ -18,9 +19,10 @@ int main(int argc, char **argv) {
 //  assert(functors::test());
 //  assert(google_2::test());
 
-//    assert(hashcodes::test());
+//  assert(hash::test());
 //  assert(hashmap::test());
 //  assert(http::test());
+//  assert(json::test());
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
@@ -28,13 +30,13 @@ int main(int argc, char **argv) {
 
 //  assert(logger::test());
 
-  //  assert(lge::test());
+//  assert(lge::test());
 //  assert(mem_test::test());
 //  assert(moto::test());
 //  assert(quiz::test());
 //  assert(overloading::test());
 //  assert(parser::test());
-  //  assert(patterns::test());
+//  assert(patterns::test());
 //  assert(serialization::test());
 //  assert(smart_ptr_::test());
 //  assert(spb::test());

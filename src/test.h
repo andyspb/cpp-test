@@ -6,6 +6,7 @@
 #endif
 #if defined(__linux__)
   //linux code goes here
+
   #pragma GCC diagnostic ignored "-Wunused-variable"
   #pragma GCC diagnostic ignored "-Wuninitialized"
   #pragma GCC diagnostic ignored "-Wunused-but-set-variable"
@@ -24,6 +25,7 @@
 #include "array/array.h"
 #include "bits/bits.h"
 #include "blockchain/blockchain.h"
+#include "cast/cast.h"
 #include "clock/clock.h"
 #include "cpp1x/cpp1x.h"
 #include "cci4/cci4.h"
@@ -37,7 +39,8 @@
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "functors/functors.h"
-#include "hashcode/hashcodes.h"
+#include "json/json.h"
+#include "hash/hashcodes.h"
 #include "http/http.h"
 #include "last/last_1.h"
 #include "language/language.h"

@@ -7,12 +7,12 @@
 
 #include <assert.h>
 
-#include "hash_function_sample.h"
-#include "hashtable.h"
-#include "perfect_hash_function.h"
-#include "string_hash_function.h"
+#include "../hash/hash_function_sample.h"
+#include "../hash/hashtable.h"
+#include "../hash/perfect_hash_function.h"
+#include "../hash/string_hash_function.h"
 
-namespace hashcodes {
+namespace hash {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;

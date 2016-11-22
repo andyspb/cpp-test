@@ -129,6 +129,27 @@ void breadth_back_traverse(Node<T>* node) {
   std::cout << std::endl;
 }
 
+// PrintLevelOrder
+template<typename T>
+void print_level_order(Node<T>* root) {
+  if (!root)
+    return;
+  std::queue<Node<T>*> current_level, next_level;
+  current_level.push(root);
+  while(!current_level.empty()) {
+    Node<T>* node = current_level.front();
+    current_level.pop();
+    if (node) {
+      std::cout << node->value;
+      next_level.push(node->left);
+      next_level.push(node->right);
+    }
+    if (current_level.empty()) {
+      std::endl(std::cout);
+      std::swap(current_level, next_level);
+    }
+  }
+}
 
 template<typename T>
 void fill_tree(Node<T>* tree) {
@@ -172,6 +193,10 @@ TEST_RESULT test() {
   std::cout << "\tbreadth back traverse: ";
   breadth_back_traverse(tree);
   //std::endl(std::cout);
+
+  std::cout << "\tprint level order:\n";
+  print_level_order(tree);
+
   RETURN_OK();
 }
 }  // namespace tree_traversal_tests

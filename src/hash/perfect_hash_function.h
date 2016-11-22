@@ -8,6 +8,12 @@
 #ifndef SRC_HASH_FUNCTION_PERFECT_HASH_FUNCTION_H_
 #define SRC_HASH_FUNCTION_PERFECT_HASH_FUNCTION_H_
 
+#include <vector>
+#include <algorithm>
+#include <assert.h>
+#include <fstream>
+#include <string>
+
 namespace perfect_hash_function {
 
 TEST_RESULT test() {

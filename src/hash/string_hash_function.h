@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_HASHCODE_STRING_HASH_FUNCTION_H_
-#define SRC_HASHCODE_STRING_HASH_FUNCTION_H_
+#ifndef SRC_HASH_STRING_HASH_FUNCTION_H_
+#define SRC_HASH_STRING_HASH_FUNCTION_H_
 
 namespace string_hash_function {
 
@@ -22,4 +22,4 @@ TEST_RESULT test() {
 }  // namespace string_hash_function
 
 
-#endif /* SRC_HASHCODE_STRING_HASH_FUNCTION_H_ */
+#endif /* SRC_HASH_STRING_HASH_FUNCTION_H_ */
