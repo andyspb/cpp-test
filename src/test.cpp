@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
-  assert(cast::test());
+//  assert(cast::test());
 //  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
@@ -45,7 +45,7 @@ int main(int argc, char **argv) {
 //  assert(stackoverflow::test());
 //  assert(static_::test());
 //  assert(stl::test());
-//  assert(threads::test());
+   assert(threads::test());
 //   assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());

@@ -23,10 +23,10 @@ TEST_RESULT test() {
 
 //  assert(conditional_variable::test());
 //  assert(conditional_posix::test());
-//  assert(deadlock::test());
+  assert(deadlock::test());
 //  assert(futures::test());
 //  assert(join::test());
-  assert(threads_posix::test());
+//  assert(threads_posix::test());
 
 
   RETURN_OK();
