@@ -1,7 +1,7 @@
 /*
  * node.h
  *
- *  Created on: 10 ÿíâ. 2015 ã.
+ *  Created on: 10 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -14,7 +14,6 @@ struct Node {
   T data;
   Node* next;
 };
-
 
 
 #endif /* NODE_H_ */

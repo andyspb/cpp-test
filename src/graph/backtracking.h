@@ -1,7 +1,7 @@
 /*
  * backtracking.h
  *
- *  Created on: 10 ÿíâ. 2015 ã.
+ *  Created on: 10 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -18,11 +18,11 @@ bool solve(Node* n) {
   if the leaf is a goal node, return true
   else return false
 } else {
-for (auto c : n) {
-  if (solve(c)) {
-    return true;
+  for (auto c : n) {
+    if (solve(c)) {
+      return true;
+    }
   }
-}
 return false
 }
 }

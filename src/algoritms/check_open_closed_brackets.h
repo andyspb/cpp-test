@@ -13,13 +13,14 @@
 #include <iostream>
 #include <stack>
 #include <string>
+#include <map>
 
 namespace check_open_closed_brackets {
 
 typedef ::std::stack<char> Brackets;
 
-constexpr char open_brackets[] = {'(', '['};
-constexpr ::std::map<char, char> closing = {{'(', ')'}, {'[', ']'}};
+constexpr char open_brackets[] = { '(', '[' };
+std::map<char, char> closing = { { '(', ')' }, { '[', ']' } };
 
 void pushOpeningBrackets(Brackets& opening, char bracket) {
   for (char open_bracket : open_brackets) {
@@ -28,29 +29,30 @@ void pushOpeningBrackets(Brackets& opening, char bracket) {
   }
 }
 
-bool errorsFound(Brackets& stack, char openingBracket, char closingBracket)
-{
-    if(stack.empty())
-    {
-        ::std::cout << "Unmatched " << closingBracket;
-        return true;
-    }
+bool errorsFound(Brackets& stack, char openingBracket, char closingBracket) {
+  if (stack.empty()) {
+    ::std::cout << "Unmatched " << closingBracket;
+    return true;
+  }
 
-    char topBracket = stack.top();
-    stack.pop();
+  char topBracket = stack.top();
+  stack.pop();
 
-    if(topBracket != openingBracket) {
-        auto expectedClosing = closing.find(topBracket);
-        std::cout << "Expected " << expectedClosing->second << " but found "
-                  << closingBracket << std::endl;
-        return true;
-    }
+  if (topBracket != openingBracket) {
+    auto expectedClosing = closing.find(topBracket);
+    std::cout << "Expected " << expectedClosing->second << " but found "
+              << closingBracket << std::endl;
+    return true;
+  }
 
-    return false;
+  return false;
 }
-bool CheckBracketsMatching() {
+bool CheckBracketsMatching(std::string input_string = "") {
   std::string input_str;
-  std::getline(std::cin, input_str);
+  if (input_string.length() ==0 )
+    std::getline(std::cin, input_str);
+  else
+    input_str = input_string;
 
   Brackets brackets;
 
@@ -76,8 +78,7 @@ bool CheckBracketsMatching() {
     if ('(' == topBracket) {
       std::cerr << "Missing )";
       return false;
-    }
-    else if ('[' == topBracket) {
+    } else if ('[' == topBracket) {
       std::cerr << "Missing ]";
       return false;
     }
@@ -85,6 +86,19 @@ bool CheckBracketsMatching() {
     std::cout << "All brackets match!";
     return true;
   }
+
+  return true;
+}
+
+TEST_RESULT test() {
+  __SCOPE_LOG__;
+
+  std::string str = "[[[(())]]]";
+
+  bool res = CheckBracketsMatching(str);
+
+  RETURN_OK();
+
 }
 
 }  // namespace check_open_closed_brackets

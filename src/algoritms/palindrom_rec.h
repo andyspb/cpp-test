@@ -1,6 +1,7 @@
 #ifndef _PALINDROM_REC_H
 #define _PALINDROM_REC_H
 
+#include <iomanip>
 #include <iostream>
 #include <string>
 
@@ -23,14 +24,22 @@ bool palindrome(const std::string &str) {
     return isPalindrome(str, 0, (int) str.length() - 1);
 }
 
-void test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::string str = "arosaupalanalapuasora";
+  bool result = palindrome(str);
 
-  std::cout << "true = " << true << std::endl;
-  std::cout << "false = " << false << std::endl;
+  LOG(INFO) << "Is palindrome(" << str
+      << ") = " << std::boolalpha << result;
 
-  std::cout << "is " << str << " palindrome ? " << palindrome(str)
-      << std::endl;
+  str = "some test";
+  result = palindrome(str);
+
+  LOG(INFO) << "Is palindrome(" << str
+      << ") = " << std::boolalpha << result;
+
+
+  RETURN_OK();
 }
 
 }  // namespace palindrom_rec

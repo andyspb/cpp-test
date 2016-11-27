@@ -25,6 +25,7 @@
 #include "bubble_sort.h"
 #include "bubblesort.h"
 #include "byte_array_2_string.h"
+#include "check_open_closed_brackets.h"
 #include "circular_buffer.h"
 #include "circular_que.h"
 #include "common_data.h"
@@ -102,6 +103,7 @@
 #include "turn_off_bit_in_number.h"
 
 #include "check_if_braces_match.h"
+#include "check_tree_is_bst.h"
 #include "pow_x_n.h"
 #include "longest_common_subseq.h"
 #include "reverse_string_2.h"
@@ -128,7 +130,7 @@ int test() {
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(fibbonachi_sum::test());
-//  assert(find_dup_in_array::test());
+  assert(find_dup_in_array::test());
 //  assert(find_largest_sum_in_array::test());
 //  assert(free_linkedlist::test());
 //  assert(google_test::test());
@@ -153,7 +155,7 @@ int test() {
 //  assert(reverse_string_1::test());
 //  assert(quicksort::test());
 //  assert(qsort_2linked_list::test());
-  assert(tree_traversal::test());
+//  assert(tree_traversal::test());
 //  assert(tree_distance::test());
 //  assert(linked_list_is_palindrome_with_stack::test());
 //  assert(pow_x_n::test());
@@ -161,7 +163,10 @@ int test() {
 //  assert(permutation_of_string::test());
 //  assert(sum_array::test());
 //  assert(pcm_buffer::test());
-
+//  assert(palindrome::test());
+//  assert(palindrom_rec::test());
+//  assert(check_tree_is_bst::test());
+//  assert(check_open_closed_brackets::test());
   RETURN_OK();
 }
 

@@ -3,7 +3,7 @@
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
     //assert(alignment::test());
-// assert(algorithms::test());
+ assert(algorithms::test());
 //  assert(array_::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
@@ -23,6 +23,7 @@ int main(int argc, char **argv) {
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(json::test());
+//  assert(ipc::test());
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
@@ -45,7 +46,7 @@ int main(int argc, char **argv) {
 //  assert(stackoverflow::test());
 //  assert(static_::test());
 //  assert(stl::test());
-   assert(threads::test());
+//   assert(threads::test());
 //   assert(templates::test());
 //  assert(teramind::test());
 //  assert(tests::test());

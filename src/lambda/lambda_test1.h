@@ -6,14 +6,27 @@
 #define LAMBDA_TEST1_H_
 
 #include <iostream>
+#include <functional>
 
 namespace lambda_test1 {
 
-TEST_RESULT test() {
-  auto func = []() {
-    std::cout << "Hello world!\n";};
+auto func = []() {
+  std::cout << "Hello world!\n";};
 
-  func();
+std::function<void()> make_function(int& x) {
+  const auto px = &x;
+  return [px] {
+    std::cout << px << std::endl;};
+}
+
+TEST_RESULT test() {
+  __SCOPE_LOG__;
+//  auto f1 = func();
+
+  int i = 3;
+  auto f = make_function(i);
+  i = 5;
+  f();
   RETURN_OK();
 }
 
