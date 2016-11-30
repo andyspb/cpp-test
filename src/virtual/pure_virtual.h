@@ -15,6 +15,7 @@ namespace pure_virtual {
 class Base {
   int x;
  public:
+  virtual ~Base() {}
   virtual void print()=0;
 };
 

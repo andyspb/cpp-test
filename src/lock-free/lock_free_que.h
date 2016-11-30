@@ -14,6 +14,8 @@ struct TListNode {
   TListNode* Next;
 };
 
+#if defined(__GNUC__) and !defined(__WIN64__)
+
 template<class T>
 class LockFreeQueue {
   /** A node in the linked list. */
@@ -232,9 +234,13 @@ class LockFreeQueue {
     return res;
   }
 };
+#endif
+
 
 int main() {
+#if defined(__GNUC__) and !defined(__WIN64__)
 
+#endif
   return 0;
 }
 

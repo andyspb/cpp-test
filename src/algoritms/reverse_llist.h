@@ -4,8 +4,8 @@
 
 namespace reverse_llist_test {
 class SList {
-    SList(): data(0) {}
-    SList(int d): data(d) {}
+    SList(): data(0), next(0) {}
+    SList(int d): data(d), next(0) {}
     int data;
     SList *next;
 };

@@ -96,6 +96,8 @@ TEST_RESULT test() {
   std::string str = "[[[(())]]]";
 
   bool res = CheckBracketsMatching(str);
+  LOG(INFO) << "check matching brackets in (" <<
+      str << "): " << res;
 
   RETURN_OK();
 

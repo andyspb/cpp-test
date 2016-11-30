@@ -39,6 +39,7 @@
 #include "exception/exceptions.h"
 #include "facebook/facebook.h"
 #include "functors/functors.h"
+#include "graph/graph.h"
 #include "hash/hashcodes.h"
 #include "http/http.h"
 #include "json/json.h"
