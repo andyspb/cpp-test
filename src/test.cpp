@@ -61,6 +61,7 @@ int main(int argc, char **argv) {
 //  assert(google_2::test());
 //  assert(yandex::test());
 //  assert(test_examples::test());
+  assert(templates::test());
 
   RETURN_OK();
 }

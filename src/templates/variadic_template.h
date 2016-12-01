@@ -19,30 +19,37 @@ Tuple<int, float> t2; // Types contains two arguments: int and float
 //Tuple<0> error;       // error: 0 is not a type
 
 template<typename ... Types> void f(Types ... args) {
-  LOG(INFO) << "From: template<class ... Types> void f()";
+  LOG(INFO) << "1 From: template<class ... Types> void f()";
   const unsigned numargs = sizeof...(args);
   const int size = sizeof...(args) + 2;
 
   LOG(INFO) << "numargs=" << numargs
       << ", size=" << size;
 
-  std::initializer_list<double> res = {1,args...,-1};
+  double res[size] = {1,args...,-1};
 
-  //LOG(INFO) << "res[1]=" << res.[1] << ", res[2]=" << res[2];
+  LOG(INFO) << "res[1]=" << res[1] << ", res[2]=" << res[2];
 
-  int dummy[sizeof...(Types)] = {
-      (LOG(INFO) << args << " ", 0)...
+  int dummy[sizeof...(Types)+1] = {
+      (LOG(INFO) << "args=" << args << "", 0)...,22
   };
+
+  int s = sizeof...(Types);
+
+  LOG(INFO) << "s=" << s;
+  LOG(INFO) << "dummy[0]=" << dummy[0];
+  LOG(INFO) << "dummy[1]=" << dummy[1];
+
 
 }
 
 template<typename T1, typename T2> void f(T1 i, T2 d) {
-  LOG(INFO) << "template<int, int> void f(int i, int d)";
+  LOG(INFO) << "2 From: template<int, int> void f(int i, int d)";
   LOG(INFO) << "i=" << i << ", d=" << d;
 }
 
 template<> void f() {
-  LOG(INFO) << "From: template<> void f()";
+  LOG(INFO) << "3 From: template<> void f()";
 }
 
 //template<typename T> void f(T i) {
