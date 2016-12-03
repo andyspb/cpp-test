@@ -1,5 +1,5 @@
 #include <limits>
-using namespace std;
+#include <cmath>
 
 namespace c_foo {
 bool foo(float a) {

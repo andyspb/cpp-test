@@ -13,8 +13,6 @@
 #include <iostream>
 // #include <atomic>
 
-using namespace std;
-
 namespace test_8 {
 
 template <int n>

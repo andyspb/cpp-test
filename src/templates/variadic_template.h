@@ -73,7 +73,6 @@ TEST_RESULT test() {
   f<int, double>(2, 1.5); // OK: args contains two arguments: int and double
   f<int, int>(5, 6); // OK: args contains two arguments: int and double
 
-
   RETURN_OK();
 }
 

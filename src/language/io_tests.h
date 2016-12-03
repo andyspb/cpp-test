@@ -3,7 +3,6 @@
 #include <iostream>
 #include <cstring>
 namespace io_tests {
-using namespace std;
 void test() {
   //float fl;
   //std::cin >> fl;
@@ -21,7 +20,7 @@ void test() {
   //cout << "Your initials are " << first << last;
 
   int a;
-  cin >> a;
-  cout << "a=" << a << endl;
+  std::cin >> a;
+  std::cout << "a=" << a << std::endl;
 }
 }  // namespace io_tests

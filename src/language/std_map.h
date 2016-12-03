@@ -2,18 +2,16 @@
 #include <map>
 #include <iterator>
 
-using namespace std;
-
 void StdMapTest() {
-  cout << "std::map Test" << endl;
+  std::cout << "std::map Test" << std::endl;
 
-  map<int, int> imap;
+  std::map<int, int> imap;
 
   for (int i = 0; i < 10; i++) {
     imap[i] = 2 * i;
-    cout << imap[i] << " ";
+    std::cout << imap[i] << " ";
   }
-  cout << endl;
+  std::cout << std::endl;
 
 //   for (map<int, int>::iterator i = imap.begin(); i != imap.end() ; i++)
 //   {
@@ -23,17 +21,17 @@ void StdMapTest() {
 //   }
 
 //imap.clear();
-  cout << "imap size=" << imap.size() << endl;
+  std::cout << "imap size=" << imap.size() << std::endl;
 
-  for (map<int, int>::iterator iter = imap.begin(); iter != imap.end();
+  for (std::map<int, int>::iterator iter = imap.begin(); iter != imap.end();
       iter++) {
-    cout << iter->first << ":" << iter->second << " ";
+    std::cout << iter->first << ":" << iter->second << " ";
   }
-  cout << endl;
+  std::cout << std::endl;
 
   while (!imap.empty()) {
 
-    map<int, int>::iterator iter = imap.begin();
+    std::map<int, int>::iterator iter = imap.begin();
     imap.erase(iter);
   }
 
@@ -42,7 +40,7 @@ void StdMapTest() {
   //    imap[i]= i+i;
   //}
 
-  cout << "imap size=" << imap.size() << endl;
+  std::cout << "imap size=" << imap.size() << std::endl;
 
 }
 

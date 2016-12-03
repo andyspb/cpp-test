@@ -5,7 +5,6 @@
 //(ie "The dog is fast" becomes "fast is dog The")
 
 #include <iostream>
-using namespace std;
 
 void rev(char *l, char *r);
 void ReverseWordsInSentence(char * str) {
@@ -38,9 +37,9 @@ void rev(char *l, char *r) {
 }
 
 void ReverseWordsInSentenceTest() {
-  cout << endl << "Reverse words in a sentence test" << endl;
+  std::cout << "Reverse words in a sentence test" << std::endl;
   char str[] = "The dog is fast";
-  cout << str << endl;
+  std::cout << str << std::endl;
   ReverseWordsInSentence(str);
-  cout << endl;
+  std::cout << std::endl;
 }

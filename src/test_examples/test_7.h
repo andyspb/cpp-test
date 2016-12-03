@@ -2,7 +2,6 @@
 //  author: andrey.krutogolov@gmail.com
 //  date:   19.03.2013
 
-
 #ifndef TESTS7_H_
 #define TESTS7_H_
 
@@ -10,24 +9,20 @@
 #include <vector>
 #include <map>
 
-using namespace std;
-
-
 namespace test_7 {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
-  list<int> l;
-  vector<int> v;
-  set<int> s;
+  std::list<int> l;
+  std::vector<int> v;
+  std::set<int> s;
 
   std::sort(v.begin(), v.end());
   l.sort();
 
   RETURN_OK();
 }
-
 
 }  // namespace tests7
 

@@ -71,7 +71,7 @@ Node* buildTreeUtil(std::vector<Node*> &nodes, int start, int end) {
 // a balanced BST
 Node* buildTree(Node* root) {
   // Store nodes of given BST in sorted order
-  vector<Node *> nodes;
+  std::vector<Node *> nodes;
   storeBSTNodes(root, nodes);
 
   // Constucts BST from nodes[]
@@ -123,9 +123,6 @@ TEST_RESULT test() {
 
   RETURN_OK();
 }
-
 }  // namespace balance_bst
-
-
 
 #endif /* SRC_ALGORITMS_BALANCE_BST_H_ */

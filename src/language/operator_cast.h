@@ -3,10 +3,8 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-ostream& operator<<(ostream& out, const char * s) {
-  string str(s);
+std::ostream& operator<<(std::ostream& out, const char * s) {
+  std::string str(s);
   if (0 == strcmp(s, "Andrey")) {
     str = "andrey krutogolov";
     out << str;
@@ -18,5 +16,5 @@ ostream& operator<<(ostream& out, const char * s) {
 }
 
 void operator_cast() {
-  cout << "Operator casting test\n" << "Hello !\n" << "Andrey" << "\n";
+  std::cout << "Operator casting test\n" << "Hello !\n" << "Andrey" << "\n";
 }

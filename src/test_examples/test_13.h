@@ -15,51 +15,50 @@
 #include <sstream>
 #include <stdexcept>
 
-using namespace std;
 
 namespace test_13 {
 inline std::string stringify(int x) {
   std::ostringstream o;
   if (!(o << x))
-    cout << "bad conversion" << endl;
+    std::cout << "bad conversion" << std::endl;
   return o.str();
 }
 
 class A {
  public:
   A();
-  A(string pstring) {
+  A(std::string pstring) {
     name = pstring;
   }
   A(const A& pA) {
     name = pA.name + "copy";
-    cout << "copy constructor of " << name << " is called" << endl;
+    std::cout << "copy constructor of " << name << " is called" << std::endl;
 
   }
   ~A() {
-    cout << "destructor of " << name << " is called" << endl;
+    std::cout << "destructor of " << name << " is called" << std::endl;
   }
-  ;
-  string name;
+
+  std::string name;
 };
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
   int i = 0;
-  vector<A> ACollection;
-  string tempString;
+  std::vector<A> ACollection;
+  std::string tempString;
 
   for (i = 0; i < 10; i++) {
     tempString = stringify(i);
     A tempA(tempString);
     ACollection.push_back(tempA);
-    cout << "currently adding object " << tempString << endl;
+    std::cout << "currently adding object " << tempString << std::endl;
   }
-  cout << "size of the collection is " << ACollection.size() << endl;
+  std::cout << "size of the collection is " << ACollection.size() << std::endl;
 
   for (i = 0; i < 10; i++) {
-    cout << ACollection[i].name << endl;
+    std::cout << ACollection[i].name << std::endl;
   }
 
   RETURN_OK();

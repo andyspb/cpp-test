@@ -9,7 +9,6 @@
 #define IS_DIV_BY_9_H_
 
 #include<iostream>
-using namespace std;
 
 namespace is_div_by_9 {
 
@@ -47,7 +46,7 @@ TEST_RESULT test() {
   // using above method
   for (int i = 0; i < 100; i++) {
     if (isDivBy9(i)) {
-      cout << i << " ";
+      std::cout << i << " ";
     }
   }
   RETURN_OK();

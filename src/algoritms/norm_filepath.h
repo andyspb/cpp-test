@@ -32,7 +32,7 @@ struct normal_path {
     size_t pos = 0;
     std::string token;
 
-    istringstream iss(s);
+    std::istringstream iss(s);
     std::vector<std::string> vec;
 
     for (std::string token; getline(iss, token, '/');)

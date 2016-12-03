@@ -3,24 +3,23 @@
 
 #include <iostream>
 #include <assert.h>
-using namespace std;
 namespace virt_cast_2 {
 class Base {
   public:
     Base() {
-      cout << "from A\n";
+      std::cout << "from A" << std::endl;
     }
     virtual ~Base() {
-      cout << "delete Base\n";
+      std::cout << "delete Base" << std::endl;
     }
 };
 class Derived: public Base {
   public:
     Derived() {
-      cout << "from Derived\n";
+      std::cout << "from Derived" << std::endl;
     }
     ~Derived() {
-      cout << "delete Derived\n";
+      std::cout << "delete Derived" << std::endl;
     }
 };
 

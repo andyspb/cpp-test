@@ -1,8 +1,7 @@
 #include <iostream>
 
-using namespace std;
 
-ostream& operator<<(ostream& out, const char * s) {
+std::ostream& operator<<(std::ostream& out, const char * s) {
 
   std::string str(s);
   if (0 == strcmp(s, "Hello !")) {
@@ -16,9 +15,9 @@ ostream& operator<<(ostream& out, const char * s) {
 }
 
 void OperatorCastingTest(void) {
-  cout << "Test operator overloading" << endl;
+  std::cout << "Test operator overloading" << std::endl;
 
   std::cout << "Hello !" << std::endl;
 
-  cout << endl;
+  std::cout << std::endl;
 }

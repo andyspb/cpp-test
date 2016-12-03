@@ -8,9 +8,10 @@
 #ifndef SRC_HTTP_SERVER_THREADED_H_
 #define SRC_HTTP_SERVER_THREADED_H_
 
+#include "logger.h"
+#include "constants.h"
+
 #ifdef __GNUC__
-
-
 
 #if defined(__WIN32__) || defined (__WIN64__)
 # include <winsock2.h>

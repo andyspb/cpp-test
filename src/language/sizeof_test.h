@@ -1,10 +1,15 @@
 #include <iostream>
-using namespace std;
+#include <cassert>
+
+namespace size_of_test {
+
+struct aClass {
+};
 
 void AssertMemoryTest() {
-  cout << "AsserMemoryTest" << endl;
+  std::cout << "AsserMemoryTest" << std::endl;
   errno = -1;
-  cout << "errno = " << errno << endl;
+  std::cout << "errno = " << errno << std::endl;
 
   aClass * ptr_a = NULL;
 
@@ -14,13 +19,13 @@ void AssertMemoryTest() {
 
   delete (ptr_a);
 
-  cout << endl << "Global variable test" << endl;
+  std::cout << "Global variable test" << std::endl;
 
   extern int my_global_int;
-  cout << "my_global_int:" << my_global_int << endl;
+  std::cout << "my_global_int:" << my_global_int << std::endl;
 
   extern float my_global_float;
-  cout << "my_global_float:" << my_global_float << endl;
+  std::cout << "my_global_float:" << my_global_float << std::endl;
 
   //extern int my_global_static_int;
   //cout<<"my_global_static_int:"<<my_global_static_int<<endl;
@@ -28,7 +33,10 @@ void AssertMemoryTest() {
   //extern int static_int;
   //cout<<"static_int:"<<static_int<<endl;
 
-  cout << "sizeof(double)=" << sizeof(double) << endl;
-  cout << "sizeof(float)=" << sizeof(float) << endl;
-  cout << "sizeof(long long)=" << sizeof(long long) << endl;
+  std::cout << "sizeof(double)=" << sizeof(double) << std::endl;
+  std::cout << "sizeof(float)=" << sizeof(float) << std::endl;
+  std::cout << "sizeof(long long)=" << sizeof(long long) << std::endl;
 }
+
+}  // namespace size_of_test
+

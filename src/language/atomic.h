@@ -16,8 +16,8 @@ class B { /* */
 class A {
   std::vector<std::unique_ptr<B>> vb;
  public:
-  void add(unique_ptr<B>& b) {
-    vb.push_back(move(b));
+  void add(std::unique_ptr<B>& b) {
+    vb.push_back(std::move(b));
   }
 };
 
@@ -34,13 +34,13 @@ T const* bar() {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-  unique_ptr<T const> p1(bar());        // OK
-  unique_ptr<T const[]> a1(bar());        // OK
+  std::unique_ptr<T const> p1(bar());        // OK
+  std::unique_ptr<T const[]> a1(bar());        // OK
 
-  unique_ptr<T const> p2(foo());        // OK
-  unique_ptr<T const[]> a2(foo());        // ? this is line #15
+  std::unique_ptr<T const> p2(foo());        // OK
+  std::unique_ptr<T const[]> a2(foo());        // ? this is line #15
   A a;
-  unique_ptr<B> b(new B());
+  std::unique_ptr<B> b(new B());
   a.add(b);
 
   RETURN_OK();

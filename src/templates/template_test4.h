@@ -30,7 +30,7 @@ void i() {
 }
 
 void h(int) {
-  cout << "\tcalling h(int)" << endl;
+  std::cout << "\tcalling h(int)" << std::endl;
 }
 
 int test() {

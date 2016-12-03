@@ -35,7 +35,6 @@
 #define TESTS6_H_
 
 #include <iostream>
-using namespace std;
 
 namespace test_6 {
 
@@ -43,16 +42,16 @@ class Foo {
  public:
   Foo(int j)
       : i_size(j) {
-    cout << "Foo()\n";
+    std::cout << "Foo()" << std::endl;
     i = new int[j];
   }
   virtual ~Foo() {
-    cout << "~Foo()\n";
+    std::cout << "~Foo()\n";
     delete[] i;
   }
 
   Foo& operator=(const Foo& foo) {
-    cout << "Foo::operator=()\n";
+    std::cout << "Foo::operator=()" << std::endl;
     // deep copy
     if (foo.i != NULL) {
       this->~Foo();
@@ -78,17 +77,17 @@ class Bar : public Foo {
  public:
   Bar(int j)
       : Foo(j) {
-    cout << "Bar()\n";
+    std::cout << "Bar()" << std::endl;
     c = new char[j];
   }
 
   Bar& operator=(Bar& b) {
-    cout << "Bar::operator=()\n";
+    std::cout << "Bar::operator=()" << std::endl;
     return *this;
   }
 
   virtual ~Bar() {
-    cout << "~Bar()\n";
+    std::cout << "~Bar()" << std::endl;
     if (c) {
       delete[] c;
     }
@@ -105,9 +104,9 @@ TEST_RESULT test() {
   Foo* f = new Foo(100);
   Foo* b = new Bar(200);
   *f = *b;
-  cout << "delete f:\n";
+  std::cout << "delete f:" << std::endl;
   delete f;
-  cout << "delete b:\n";
+  std::cout << "delete b:" << std::endl;
   delete b;
   RETURN_OK();
 }

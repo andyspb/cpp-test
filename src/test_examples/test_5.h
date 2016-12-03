@@ -7,18 +7,17 @@
 #define TESTS5_H_
 
 #include <iostream>
-using namespace std;
 
 namespace test_5 {
 
 class Base {
  public:
   Base() {
-    cout << "from Base()\n";
+    std::cout << "from Base()\n";
   }
 
   virtual ~Base() {
-    cout << "from ~Base()\n";
+    std::cout << "from ~Base()\n";
   }
 
 };
@@ -27,24 +26,24 @@ class T : public Base{
  public:
   T()
       : v(0) {
-    cout << "T::T()\n";
+    std::cout << "T::T()\n";
   }
   virtual ~T() {
-    cout << "T::~T()\n";
+    std::cout << "T::~T()\n";
   }
 
   T(const T& t) {
-    cout << "T::T(const T& t)\n";
+    std::cout << "T::T(const T& t)\n";
     clone(t);
   }
 
   T& operator=(const T& x) {
-    cout << "T::operator=(const T& t)\n";
+    std::cout << "T::operator=(const T& t)\n";
     if (this != &x) {
       this->T::~T();
-      cout << "calling new (this) T(x);\n";
+      std::cout << "calling new (this) T(x);\n";
       new (this) T(x);
-      cout << "after new (this) T(x);\n";
+      std::cout << "after new (this) T(x);\n";
     }
     return *this;
   }

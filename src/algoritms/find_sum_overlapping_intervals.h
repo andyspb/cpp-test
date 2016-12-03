@@ -12,8 +12,6 @@
 #include <iostream>
 #include <stack>
 
-using namespace std;
-
 namespace find_sum_overlapping_intervals {
 
 struct Interval {
@@ -69,7 +67,7 @@ int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   std::cout << "\n The Merged Intervals are: ";
   while (!stack.empty()) {
     Interval t = stack.top();
-    cout << "[" << t.start << "," << t.end << "]" << " ";
+    std::cout << "[" << t.start << "," << t.end << "]" << " ";
     stack.pop();
     l += t.end - t.start;
   }

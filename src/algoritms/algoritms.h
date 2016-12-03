@@ -53,7 +53,6 @@
 #include "intersection_point_of_two_linked_lists.h"
 #include "is_linked_list_palindrome.h"
 #include "merge_sort.h"
-#include "merge_sort_linked_list.h"
 #include "multiply_by_7.h"
 #include "my_atoi.h"
 #include "radix_sort.h"
@@ -68,7 +67,6 @@
 #include "median_of_2_arr_2.h"
 #include "median_of_2arrays.h"
 #include "merge_overlapping_itnervals.h"
-#include "merge_sort_linked_list.h"
 #include "merge_sort.h"
 #include "minimax.h"
 #include "multiply_7.h"
@@ -106,67 +104,72 @@
 #include "check_tree_is_bst.h"
 #include "pow_x_n.h"
 #include "longest_common_subseq.h"
+#include "merge_sort_linked_linkedlist.h"
+#include "merge_sort_linked_linkedlist.h"
 #include "reverse_string_2.h"
 #include "reverse_string_3.h"
+#include "paradox_monti_holl.h"
+#include "paradox_monti_holl_2.h"
 
 namespace algorithms {
 int test() {
   __SCOPE_LOG__;
-//  assert(longest_common_subseq::test());
-//  assert(binary_search::test());
-//  assert(balance_bst::test());
-//  assert(breadth_first_traversal_for_a_graph::test());
+  assert(longest_common_subseq::test());
+  assert(binary_search::test());
+  assert(balance_bst::test());
+  assert(breadth_first_traversal_for_a_graph::test());
 
-//  assert(btree_depth::test());
-//  assert(bubblesort::test());
-//  assert(byte_array_2_string::test());
-  //  assert(check_if_braces_match::test());
-//  assert(circular_buffer::test());
-//  assert(circular_que::test());
-//  assert(compare_linked_lists::test());
-//  assert(count_ones_in_binary::test());
-//  assert(drawcircle::test());
-//  assert(duplication::test());
-//  assert(encode_string_google::test());
-//  assert(fibbonachi::test());
-//  assert(fibbonachi_sum::test());
+  assert(btree_depth::test());
+  assert(bubblesort::test());
+  assert(byte_array_2_string::test());
+    assert(check_if_braces_match::test());
+  assert(circular_buffer::test());
+  assert(circular_que::test());
+  assert(compare_linked_lists::test());
+  assert(count_ones_in_binary::test());
+  assert(drawcircle::test());
+  assert(duplication::test());
+  assert(encode_string_google::test());
+  assert(fibbonachi::test());
+  assert(fibbonachi_sum::test());
   assert(find_dup_in_array::test());
-//  assert(find_largest_sum_in_array::test());
-//  assert(free_linkedlist::test());
-//  assert(google_test::test());
-//  assert(heapsort::test());
-//  assert(reverse_char_array::test());
-//  assert(insert_into_sorted_slist::test());
-//  assert(insertsort::test());
-//  assert(interpolation_search::test());
-//  assert(merge_sort::test());
-//  assert(mergesort_linkedlist::test());
-//  assert(minimax::test());
-  //  assert(my_atoi::test());
-//  assert(multiply_by_7::test());
-//  assert(norm_filepath::test());
-//  assert(radix_sort::test());
-//  assert(reverse_char_array::test());
-//  assert(reverse_linkedlist::test());
-//  assert(reverse_string_2::test());
-//  assert(reverse_string_3::test());
-//  assert(staircase::test());
-//  assert(reverse_sentense::test());
-//  assert(reverse_string_1::test());
-//  assert(quicksort::test());
-//  assert(qsort_2linked_list::test());
-//  assert(tree_traversal::test());
-//  assert(tree_distance::test());
-//  assert(linked_list_is_palindrome_with_stack::test());
-//  assert(pow_x_n::test());
-//  assert(reverse_string2::test());
-//  assert(permutation_of_string::test());
-//  assert(sum_array::test());
-//  assert(pcm_buffer::test());
-//  assert(palindrome::test());
-//  assert(palindrom_rec::test());
-//  assert(check_tree_is_bst::test());
-//  assert(check_open_closed_brackets::test());
+  assert(find_largest_sum_in_array::test());
+  assert(free_linkedlist::test());
+  assert(google_test::test());
+  assert(heapsort::test());
+  assert(reverse_char_array::test());
+  assert(insert_into_sorted_slist::test());
+  assert(insertsort::test());
+  assert(interpolation_search::test());
+  assert(merge_sort::test());
+  assert(mergesort_linkedlist::test());
+  assert(minimax::test());
+    assert(my_atoi::test());
+  assert(multiply_by_7::test());
+  assert(norm_filepath::test());
+  assert(radix_sort::test());
+  assert(reverse_char_array::test());
+  assert(reverse_linkedlist::test());
+  assert(reverse_string_2::test());
+  assert(reverse_string_3::test());
+  assert(staircase::test());
+  assert(reverse_sentense::test());
+  assert(reverse_string_1::test());
+  assert(quicksort::test());
+  assert(qsort_2linked_list::test());
+  assert(tree_traversal::test());
+  assert(tree_distance::test());
+  assert(linked_list_is_palindrome_with_stack::test());
+  assert(pow_x_n::test());
+  assert(permutation_of_string::test());
+  assert(sum_array::test());
+  assert(pcm_buffer::test());
+  assert(palindrome::test());
+  assert(palindrom_rec::test());
+  assert(check_tree_is_bst::test());
+  assert(check_open_closed_brackets::test());
+  assert(paradox_monti_holl::test());
+  assert(paradox_monti_holl_2::test());
   RETURN_OK();
 }
 

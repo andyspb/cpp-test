@@ -8,8 +8,6 @@
 #ifndef SRC_COMMON_AVL_TREE_H_
 #define SRC_COMMON_AVL_TREE_H_
 
-using namespace std;
-
 namespace avl_tree {
 
 struct avl_node {
@@ -48,7 +46,7 @@ int avlTree::height(avl_node *node) {
   if (node != NULL) {
     int l_height = height(node->left);
     int r_height = height(node->right);
-    int max_height = max(l_height, r_height);
+    int max_height = std::max(l_height, r_height);
     h = max_height + 1;
   }
   return h;
@@ -149,10 +147,10 @@ void avlTree::display(avl_node *ptr, int level) {
     display(ptr->right, level + 1);
     printf("\n");
     if (ptr == root)
-      cout << "Root -> ";
+      std::cout << "Root -> ";
     for (i = 0; i < level && ptr != root; i++)
-      cout << "        ";
-    cout << ptr->data;
+      std::cout << "        ";
+    std::cout << ptr->data;
     display(ptr->left, level + 1);
   }
 }
@@ -164,7 +162,7 @@ void avlTree::inorder(avl_node *tree) {
   if (tree == NULL)
     return;
   inorder(tree->left);
-  cout << tree->data << "  ";
+  std::cout << tree->data << "  ";
   inorder(tree->right);
 }
 /*
@@ -173,7 +171,7 @@ void avlTree::inorder(avl_node *tree) {
 void avlTree::preorder(avl_node *tree) {
   if (tree == NULL)
     return;
-  cout << tree->data << "  ";
+  std::cout << tree->data << "  ";
   preorder(tree->left);
   preorder(tree->right);
 
@@ -187,58 +185,58 @@ void avlTree::postorder(avl_node *tree) {
     return;
   postorder(tree->left);
   postorder(tree->right);
-  cout << tree->data << "  ";
+  std::cout << tree->data << "  ";
 }
 
 TEST_RESULT test() {
   int choice, item;
   avlTree avl;
   while (1) {
-    cout << "\n---------------------" << endl;
-    cout << "AVL Tree Implementation" << endl;
-    cout << "\n---------------------" << endl;
-    cout << "1.Insert Element into the tree" << endl;
-    cout << "2.Display Balanced AVL Tree" << endl;
-    cout << "3.InOrder traversal" << endl;
-    cout << "4.PreOrder traversal" << endl;
-    cout << "5.PostOrder traversal" << endl;
-    cout << "6.Exit" << endl;
-    cout << "Enter your Choice: ";
-    cin >> choice;
+    std::cout << "\n---------------------" << std::endl;
+    std::cout << "AVL Tree Implementation" << std::endl;
+    std::cout << "\n---------------------" << std::endl;
+    std::cout << "1.Insert Element into the tree" << std::endl;
+    std::cout << "2.Display Balanced AVL Tree" << std::endl;
+    std::cout << "3.InOrder traversal" << std::endl;
+    std::cout << "4.PreOrder traversal" << std::endl;
+    std::cout << "5.PostOrder traversal" << std::endl;
+    std::cout << "6.Exit" << std::endl;
+    std::cout << "Enter your Choice: ";
+    std::cin >> choice;
     switch (choice) {
       case 1:
-        cout << "Enter value to be inserted: ";
-        cin >> item;
+        std::cout << "Enter value to be inserted: ";
+        std::cin >> item;
         root = avl.insert(root, item);
         break;
       case 2:
         if (root == NULL) {
-          cout << "Tree is Empty" << endl;
+          std::cout << "Tree is Empty" << std::endl;
           continue;
         }
-        cout << "Balanced AVL Tree:" << endl;
+        std::cout << "Balanced AVL Tree:" << std::endl;
         avl.display(root, 1);
         break;
       case 3:
-        cout << "Inorder Traversal:" << endl;
+        std::cout << "Inorder Traversal:" << std::endl;
         avl.inorder(root);
-        cout << endl;
+        std::cout << std::endl;
         break;
       case 4:
-        cout << "Preorder Traversal:" << endl;
+        std::cout << "Preorder Traversal:" << std::endl;
         avl.preorder(root);
-        cout << endl;
+        std::cout << std::endl;
         break;
       case 5:
-        cout << "Postorder Traversal:" << endl;
+        std::cout << "Postorder Traversal:" << std::endl;
         avl.postorder(root);
-        cout << endl;
+        std::cout << std::endl;
         break;
       case 6:
         exit(1);
         break;
       default:
-        cout << "Wrong Choice" << endl;
+        std::cout << "Wrong Choice" << std::endl;
     }
   }
   RETURN_OK();

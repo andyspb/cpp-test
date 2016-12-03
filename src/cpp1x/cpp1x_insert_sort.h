@@ -2,6 +2,7 @@
 #define CPP11_INSERT_SORT_H
 
 #include <algorithm>
+#include <iostream>
 
 namespace cpp11_insertsort {
 

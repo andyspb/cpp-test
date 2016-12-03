@@ -1,8 +1,6 @@
 #pragma once
 namespace singleton {
 
-using namespace std;
-
 class ScopeLock {
  public:
   ScopeLock() {
@@ -74,7 +72,7 @@ void test() {
 }
 
 void func(void *) {
-  cout << "from func";
+  std::cout << "from func";
   Singleton * singl1 = Singleton::getInstance();
   printf("singl1=%p\n", singl1);
 }

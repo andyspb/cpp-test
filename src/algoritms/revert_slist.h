@@ -1,57 +1,56 @@
 #include <iostream>
-#include "ms_common.h"
 
-using namespace std;
+namespace revert_slist {
 
-template<typename T>
-void print_nodes(ms_common::__Node<T> * node);
+class Node {
+ public:
+  Node(int v) : value(v), next(0) {}
+  int value;
+  Node* next;
+};
 
-void ms_test_revert_linked_list(int length)
-{
-	if (length <= 1 )
-	{
-		return;
-	}
-	ms_common::__Node<int> * _node = new ms_common::__Node<int>(0);
-	ms_common::__Node<int> * head = _node;
-	for (int i = 1; i < length ; i++ )
-	{
-		_node->next = new ms_common::__Node<int>(i);
-		_node = _node->next;
-	}
+void print_nodes(Node *node);
 
-	_node = NULL;
-	print_nodes(head);
+void ms_test_revert_linked_list(int length) {
+  if (length <= 1) {
+    return;
+  }
+  Node* _node = new Node(0);
+  Node * head = _node;
+  for (int i = 1; i < length; i++) {
+    _node->next = new Node(i);
+    _node = _node->next;
+  }
 
-	ms_common::__Node<int> * tmp = NULL;
-	ms_common::__Node<int> * reverse_list = NULL;
+  _node = NULL;
+  print_nodes(head);
 
-	while(head)
-	{
+  Node * tmp = NULL;
+  Node * reverse_list = NULL;
 
-		tmp = head;
-		head = head->next;
+  while (head) {
 
-		tmp->next = reverse_list;
-		reverse_list = tmp;
+    tmp = head;
+    head = head->next;
 
+    tmp->next = reverse_list;
+    reverse_list = tmp;
 
-	}
+  }
 
-	head = reverse_list;
-	print_nodes(head);
+  head = reverse_list;
+  print_nodes(head);
 
 }
 
-template<typename T>
-void print_nodes(ms_common::__Node<T> * node)
-{
+void print_nodes(Node * node) {
 
-    while(node != NULL) 
-    {
-        printf("%2d ", node->value);
-        node=node->next;
-    }
+  while (node != NULL) {
+    printf("%2d ", node->value);
+    node = node->next;
+  }
 
-    cout<<'\n';
+  std::cout << '\n';
 }
+}  // namespace revert_slist
+

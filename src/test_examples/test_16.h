@@ -7,7 +7,6 @@
 #define TESTS16_H_
 
 #include <iostream>
-using namespace std;
 
 
 namespace test_16 {

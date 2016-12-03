@@ -11,21 +11,21 @@
 namespace reverse_string_3 {
 
 // Function to reverse a string
-void reverse_string_3(string &str) {
+void reverse_string_3(std::string &str) {
   int n = str.length();
 
   // Swap character starting from two
   // corners
   for (int i = 0; i < n/2; ++i) {
 //    LOG(INFO) << str[i] << " " << str[n - i - 1] << std::endl;
-    swap(str[i], str[n - i - 1]);
+    std::swap(str[i], str[n - i - 1]);
   }
 }
 
 // Driver program
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  string str = "geeksforgeeks";
+  std::string str = "geeksforgeeks";
   std::cout << str << std::endl;
   reverse_string_3(str);
   std::cout << str << std::endl;

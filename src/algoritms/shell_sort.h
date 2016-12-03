@@ -11,7 +11,6 @@
 namespace shell_sort {
 
 #include  <iostream>
-using namespace std;
 
 /* function to sort arr using shellSort */
 int shellSort(int arr[], int n) {
@@ -41,19 +40,19 @@ int shellSort(int arr[], int n) {
 
 void printArray(int arr[], int n) {
   for (int i = 0; i < n; i++)
-    cout << arr[i] << " ";
+    std::cout << arr[i] << " ";
 }
 
 int test() {
   int arr[] = { 12, 34, 54, 2, 3 };
   int n = sizeof(arr) / sizeof(arr[0]);
 
-  cout << "Array before sorting: \n";
+  std::cout << "Array before sorting: \n";
   printArray(arr, n);
 
   shellSort(arr, n);
 
-  cout << "\nArray after sorting: \n";
+  std::cout << "\nArray after sorting: \n";
   printArray(arr, n);
 
   return 1;
