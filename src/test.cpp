@@ -2,8 +2,8 @@
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
-//  assert(algorithms::test());
-  assert(array_::test());
+  assert(algorithms::test());
+//  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
@@ -18,8 +18,8 @@ int main(int argc, char **argv) {
 //  assert(facebook::test());
 //  assert(functors::test());
 //  assert(futures::test());
-//  assert(google_2::test());
-//  assert(hash::test());
+  assert(google_2::test());
+//  assert(hash_function::test());
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(ipc::test());

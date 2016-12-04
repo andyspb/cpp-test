@@ -40,7 +40,7 @@
 #include "facebook/facebook.h"
 #include "functors/functors.h"
 #include "graph/graph.h"
-#include "hash/hashcodes.h"
+#include "hash_function/hash_function.h"
 #include "http/http.h"
 #include "json/json.h"
 #include "ipc/ipc.h"
