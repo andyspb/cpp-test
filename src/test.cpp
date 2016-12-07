@@ -1,5 +1,7 @@
 #include "test.h"
 
+using namespace std;
+
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
   assert(algorithms::test());
@@ -8,7 +10,7 @@ int main(int argc, char **argv) {
 //  assert(bits::test());
 //  assert(blockchain::test());
 //  assert(cast::test());
-//  assert(cpp1x::test());
+  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(clock_::test());
@@ -18,7 +20,7 @@ int main(int argc, char **argv) {
 //  assert(facebook::test());
 //  assert(functors::test());
 //  assert(futures::test());
-  assert(google_2::test());
+//  assert(google_2::test());
 //  assert(hash_function::test());
 //  assert(hashmap::test());
 //  assert(http::test());

@@ -27,17 +27,16 @@ namespace cpp1x {
 TEST_RESULT test() {
   __SCOPE_LOG__;
   assert(conditional_variable_::test());
-  //  assert(cpp1x_thread::test());
-  //  assert(cpp1x_move::test());
-  //  assert(cpp11_insertsort::test());
-  //  assert(cpp11_quicksort::test());
-  //  assert(cpp1x_constexpr::test());
-  //  assert(cpp1x_constexpr_factorial::test());
-  //  assert(ring_buffer_locked::test());
+  assert(cpp1x_thread::test());
+  assert(cpp1x_move::test());
+  assert(cpp11_insertsort::test());
+  assert(cpp11_quicksort::test());
+  assert(cpp1x_constexpr::test());
+  assert(cpp1x_constexpr_factorial::test());
+  assert(ring_buffer_locked::test());
   assert(ring_buffer_lock_free::test());
-
   RETURN_OK();
 }
-}
+}  // namespace cpp1x
 
 #endif /* CPP1X_H_ */
