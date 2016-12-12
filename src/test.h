@@ -31,7 +31,7 @@
 #include "cci4/cci4.h"
 #include "cci5/cci5.h"
 #include "cpp1x/cpp1x.h"
-#include "cpp1x/cpp1x_quick_sort.h"
+#include "cpp1x/quick_sort.h"
 #include "diff/diff.h"
 #include "epam/epam.h"
 #include "epam/google.h"

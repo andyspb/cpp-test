@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());

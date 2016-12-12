@@ -1,7 +1,7 @@
 /*
  * quick_sort.h
  *
- *  Created on: 22 ÿíâ. 2015 ã.
+ *  Created on: 22 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -12,7 +12,11 @@
 #include <functional>
 #include <vector>
 
-namespace cpp11_quicksort {
+using namespace std;
+
+namespace quick_sort {
+
+typedef vector<int>::iterator iterator;
 
 void print_vector(const std::vector<int>& v) {
   for (auto elem : v) {
@@ -21,23 +25,19 @@ void print_vector(const std::vector<int>& v) {
   std::cout << std::endl;
 }
 
-// fix window compile error mingw windows7
-#ifndef __WIN64__
-template<class Compare = std::less<std::vector<int>::iterator>>
-void quickSort(::std::vector<int>::iterator first,
-               ::std::vector<int>::iterator last, Compare cmp = Compare { }) {
+template<class FwdIt, class Compare = std::less<>>
+void quickSort(FwdIt first, FwdIt last, Compare cmp = Compare { }) {
   auto const N = std::distance(first, last);
   if (N <= 1)
     return;
-  auto const pivot = ::std::next(first, N / 2);
-  ::std::nth_element(first, pivot, last, cmp);
+  auto const pivot = std::next(first, N / 2);
+  std::nth_element(first, pivot, last, cmp);
   quickSort(first, pivot, cmp);
   quickSort(pivot, last, cmp);
 }
 
-#endif
-
-int test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::vector<int> v;
   v.emplace_back(9);
   v.emplace_back(3);
@@ -49,11 +49,12 @@ int test() {
 
   print_vector(v);
 #ifndef __WIN64__
-  quickSort<::std::vector<int>::iterator>(v.begin(), v.end());
+  //quickSort<::std::vector<int>::iterator>(v.begin(), v.end());
+  quickSort(v.begin(), v.end());
 #endif
 
   print_vector(v);
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace cpp11_quicksort

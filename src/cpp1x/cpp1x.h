@@ -11,30 +11,36 @@
 #include <assert.h>
 
 #include "conditional_variable.h"
-#include "cpp1x_constexpr_factorial.h"
-#include "cpp1x_constexpr.h"
-#include "cpp1x_insert_sort.h"
-#include "cpp1x_move.h"
-#include "cpp1x_rvalues.h"
-#include "cpp1x_quick_sort.h"
-#include "cpp1x_selection_sort.h"
-#include "cpp1x_thread.h"
+#include "constexpr.h"
+#include "constexpr_factorial.h"
+#include "decltype.h"
+#include "insert_sort.h"
+#include "move.h"
+#include "quick_sort.h"
+#include "permutation.h"
 #include "ring_buffer_locked.h"
 #include "ring_buffer_lock_free.h"
+#include "rvalues.h"
+#include "selection_sort.h"
+#include "slide.h"
+#include "string_trim.h"
+#include "threads.h"
 
 namespace cpp1x {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  assert(conditional_variable_::test());
-  assert(cpp1x_thread::test());
-  assert(cpp1x_move::test());
-  assert(cpp11_insertsort::test());
-  assert(cpp11_quicksort::test());
-  assert(cpp1x_constexpr::test());
-  assert(cpp1x_constexpr_factorial::test());
-  assert(ring_buffer_locked::test());
-  assert(ring_buffer_lock_free::test());
+//  assert(conditional_variable_::test());
+//  assert(threads::test());
+//  assert(move::test());
+//  assert(insert_sort::test());
+  assert(quick_sort::test());
+//  assert(constexpr_::test());
+//  assert(constexpr_factorial::test());
+//  assert(decltype_::test());
+//  assert(permutation::test());
+//  assert(ring_buffer_locked::test());
+//  assert(ring_buffer_lock_free::test());
   RETURN_OK();
 }
 }  // namespace cpp1x

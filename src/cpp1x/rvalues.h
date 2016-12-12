@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_CPP1X_CPP1X_RVALUES_H_
-#define SRC_CPP1X_CPP1X_RVALUES_H_
+#ifndef SRC_CPP1X_RVALUES_H_
+#define SRC_CPP1X_RVALUES_H_
 
 #include <utility>      // std::move
 #include <iostream>     // std::cout
@@ -39,4 +39,4 @@ TEST_RESULT test() {
 
 }
 
-#endif /* SRC_CPP1X_CPP1X_RVALUES_H_ */
+#endif /* SRC_CPP1X_RVALUES_H_ */

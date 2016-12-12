@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <iostream>
 
-namespace cpp11_insertsort {
+namespace insert_sort {
 
 void print_vector(const std::vector<int>& v) {
   for (auto elem: v)  {

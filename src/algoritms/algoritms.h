@@ -44,6 +44,7 @@
 #include "find_largest_sum_in_array.h"
 #include "find_minimum_length_unsorted_subarray.h"
 #include "find_sum_overlapping_intervals.h"
+#include "fizzbuzz.h"
 #include "free_linked_list.h"
 #include "google_test.h"
 #include "heapsort.h"
@@ -80,6 +81,7 @@
 #include "permutation_of_string.h"
 #include "piramid_sort.h"
 #include "pow.h"
+#include "simple_moving_average.h"
 #include "staircase.h"
 
 #include "reverse_string_3.h"
@@ -133,7 +135,8 @@ int test() {
 //  assert(fibbonachi_sum::test());
 //  assert(find_dup_in_array::test());
 //  assert(find_largest_sum_in_array::test());
-//  assert(free_linkedlist::test());
+//  assert(fizzbuzz::test());
+  //  assert(free_linkedlist::test());
 //  assert(google_test::test());
 //  assert(heapsort::test());
 //  assert(reverse_char_array::test());
@@ -151,6 +154,8 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
 //  assert(reverse_string_3::test());
+//  assert(simple_moving_average::test());
+//  assert(singleton::test());
 //  assert(staircase::test());
 //  assert(reverse_sentense::test());
 //  assert(reverse_string_1::test());
