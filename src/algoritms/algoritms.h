@@ -174,6 +174,7 @@ int test() {
 //  assert(check_open_closed_brackets::test());
 //  assert(paradox_monti_holl::test());
 //  assert(paradox_monti_holl_2::test());
+  assert(shellsort::test());
   RETURN_OK();
 }
 

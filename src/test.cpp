@@ -4,13 +4,13 @@ using namespace std;
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
-//  assert(algorithms::test());
+  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
 //  assert(blockchain::test());
 //  assert(cast::test());
-  assert(cpp1x::test());
+//  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(clock_::test());

@@ -52,6 +52,7 @@ Node *mergesort(Node *head) {
 }
 
 TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::cout << "Test: mergesort for linked list --->" << std::endl;
 
   struct Node* list = new Node();
