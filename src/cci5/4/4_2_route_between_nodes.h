@@ -25,36 +25,40 @@ enum State {
   Visiting
 };
 
+class Graph g{
+
+};
+
 bool search(Graph g, Node start, Node end) {
  // operates as Queue
- LinkedList<Node> q = new LinkedList<Node>();
-
-  for (Node u : g.getNodesQ) {
-    u.state = State.Unvisited;
-  }
- start.state = State.Visiting;
- q.add(start);
- Node u;
- while (Iq.isEmptyQ) {
-   u = q.removeFlrst(); // i.e., dequeueQ
-   if (u != null) {
-     for (Node v : u.getAdjacentQ) {
-       if (v.state == State.Unvisited) {
-         if (v == end) {
-           return true;
-         } else {
-           v.state = State.Visiting;
-           q.add(v);
-         }
-       }
- }
-  u.state = State.Visited;
-  }
-  }
-  return false;
-  }
-
-
+// LinkedList<Node> q = new LinkedList<Node>();
+//
+//  for (Node u : g.getNodesQ) {
+//    u.state = State.Unvisited;
+//  }
+// start.state = State.Visiting;
+// q.add(start);
+// Node u;
+// while (Iq.isEmptyQ) {
+//   u = q.removeFlrst(); // i.e., dequeueQ
+//   if (u != null) {
+//     for (Node v : u.getAdjacentQ) {
+//       if (v.state == State.Unvisited) {
+//         if (v == end) {
+//           return true;
+//         } else {
+//           v.state = State.Visiting;
+//           q.add(v);
+//         }
+//       }
+// }
+//  u.state = State.Visited;
+//  }
+//  }
+//  return false;
+//  }
+//
+  return true; //fix it
 }
 
 

@@ -18,7 +18,7 @@ namespace memory {
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
-
+  assert(alignment::test());
   assert(mem_test::test());
 
   RETURN_OK();

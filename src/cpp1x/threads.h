@@ -8,20 +8,21 @@
 #include <thread>
 #include <iostream>
 
-namespace cpp1x_thread {
+namespace threads {
 
-void doSomeWork(void) {
-  std::cout << "hello from thread..." << std::endl;
+void func(void) {
+  LOG(INFO) << " hello from thread...";
   return;
 }
 
-int test() {
-  std::cout << "Test std::thread:------------->\n";
+TEST_RESULT test() {
+  __SCOPE_LOG__;
+  LOG(INFO) << "Test std::thread:------------->\n";
 
-  std::thread t(doSomeWork);
+  std::thread t(func);
   t.join();
 
-  return 1;
+  RETURN_OK();
 }
 
 }  // namespace cpp0x_thread

@@ -33,10 +33,10 @@ class AddressBook {
 
 AddressBook global_address_book;
 
-std::vector<string> findAddressesFromOrgs() {
+std::vector<std::string> findAddressesFromOrgs() {
   return global_address_book.findMatchingAddresses(
   // we're declaring a lambda here; the [] signals the start
-      [] (const string& addr) {return addr.find( ".org" ) != string::npos;});
+      [] (const std::string& addr) {return addr.find( ".org" ) != std::string::npos;});
 }
 int test() {
 

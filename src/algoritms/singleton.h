@@ -1,82 +1,74 @@
-#pragma once
+#ifndef __SINGLETON_H
+#define __SINGLETON_H
+
+#include <mutex>
+#include <thread>
+#include <iostream>
+#include <chrono>
+
 namespace singleton {
 
-using namespace std;
+static std::mutex mutex_;
 
 class ScopeLock {
  public:
   ScopeLock() {
-    //       InitializeCriticalSection(&cs);
-    Lock();
+    std::lock_guard<std::mutex> lock(mutex_);
   }
   virtual ~ScopeLock() {
-    //       DeleteCriticalSection(&cs);
-    Unlock();
-  }
-
- private:
-  //     CRITICAL_SECTION cs;
-  void Lock() {
-    //       EnterCriticalSection(&cs);
-  }
-  void Unlock() {
-    //       LeaveCriticalSection(&cs);
+    std::lock_guard<std::mutex> unlock(mutex_);
   }
 };
 
-//
-// This version solves the problems of the minimalist Singleton above,
-// but strictly speaking only in a single-threaded environment,
-// and use in a multythreaded environment when relying on the ABI
-// may still pose problems at program termination time.
-//
 class Singleton {
+ public:
+  static Singleton * getInstance();
+  static ScopeLock lock;
+
  private:
   Singleton() {
   }
   ~Singleton() {
   }
-  Singleton(const Singleton &);             // intentionally undefined
+  Singleton(const Singleton &);              // intentionally undefined
   Singleton & operator=(const Singleton &);  // intentionally undefined
 
   static Singleton * volatile _instance;
-
- public:
-  static Singleton * getInstance();
-  static ScopeLock lock;
 };
 
 Singleton* volatile Singleton::_instance = 0;
 ScopeLock Singleton::lock;
 
 Singleton* Singleton::getInstance() {
+//  if (!_instance) {
+//    ScopeLock lock;
   if (!_instance) {
-    ScopeLock lock;
-    if (!_instance) {
-      Singleton* tmp = new Singleton();
-      _instance = tmp;
-    }
+    Singleton* tmp = new Singleton();
+    _instance = tmp;
   }
+//  }
   return _instance;
 }
 
-void func(void *);
+void func();
 
-void test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   printf("singleton pattern test\n");
-//        HANDLE handles[2];
-//        handles[0] = (HANDLE)_beginthread(func,0,0);
-//        handles[1] = (HANDLE)_beginthread(func,0,0);
-//
-//        WaitForMultipleObjects(2,handles,1,-1);
 
+  std::thread t1(func);
+  std::thread t2(func);
   printf("\n");
+  RETURN_OK();
 }
 
-void func(void *) {
-  cout << "from func";
-  Singleton * singl1 = Singleton::getInstance();
-  printf("singl1=%p\n", singl1);
+void func() {
+  __SCOPE_LOG__;
+  LOG(INFO) << "from func";
+  std::this_thread::sleep_for(std::chrono::milliseconds(10));
+  Singleton * singleton = Singleton::getInstance();
+  printf("singl1=%p\n", singleton);
 }
 
-}
+}  // singleton
+#endif // #ifndef __SINGLETON_H

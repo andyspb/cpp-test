@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <exception>
-using namespace std;
 
 namespace dynamic_cast_3 {
 
@@ -25,37 +24,32 @@ struct Derived : public Base {
 int test() {
   try {
     Base * pba = new Derived;
-    cout << "pba == " << pba << ".\n";
+    std::cout << "pba == " << pba << std::endl;
 
     Base * pbb = new Base;
-    cout << "pbb == " << pbb << ".\n";
+    std::cout << "pbb == " << pbb << std::endl;
 
     //    Base * pb;
     Derived * pd;
 
     pd = dynamic_cast<Derived*>(pba);
-    cout << "pd == " << pd << ".\n";
+    std::cout << "pd == " << pd << std::endl;
     if (pd == 0) {
-      cout << "Null pointer on first type-cast.\n";
+      std::cout << "Null pointer on first type-cast" << std::endl;
     }
 
     pba = dynamic_cast<Derived*>(pba);
-    cout << "pba == " << pba << ".\n";
-
-
+    std::cout << "pba == " << pba << std::endl;
     pd = dynamic_cast<Derived*>(pbb);
-    cout << "pd == " << pd << ".\n";
+    std::cout << "pd == " << pd << std::endl;
     if (pd == 0) {
-      cout << "Null pointer on second type-cast.\n";
+      std::cout << "Null pointer on second type-cast." << std::endl;
     }
 
-
     pbb = dynamic_cast<Derived*>(pba);
-    cout << "pbb == " << pbb << ".\n";
-
-
-  } catch (exception& e) {
-    cout << "Exception: " << e.what();
+    std::cout << "pbb == " << pbb << std::endl;
+  } catch (std::exception& e) {
+    std::cout << "Exception: " << e.what();
   }
   return 1;
 }

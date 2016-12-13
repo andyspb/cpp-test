@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 #include <limits>
-using namespace std;
 
 void Int2Bin(int i) {
   char bin[32];
@@ -16,11 +15,11 @@ void binary(int number) {
   int remainder;
 
   if (number <= 1) {
-    cout << number;
+    std::cout << number;
     return;
   }
 
   remainder = number % 2;
   binary(number >> 1);
-  cout << remainder;
+  std::cout << remainder;
 }

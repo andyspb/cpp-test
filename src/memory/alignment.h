@@ -9,6 +9,7 @@
 #define ALIGNMENT_H_
 
 #include <stdio.h>
+#include <iostream>
 
 namespace alignment {
 
@@ -21,50 +22,51 @@ namespace alignment {
 // double       8 bytes
 
 // structure A
-typedef struct structa_tag {
+typedef struct Struct_A {
   char c;
   short int s;
 }  //__attribute__((packed, aligned(4)))
-structa_t;
+struct_a_;
 
 // structure B
-typedef struct structb_tag {
+typedef struct Struct_B {
   short int s;
   char c;
   int i;
 }  //__attribute__((packed, aligned(4)))
-structb_t;
+struct_b_;
 
 // structure C
-typedef struct structc_tag {
+typedef struct Struct_C {
   char c;
   double d;
   int s;
 }  //__attribute__((packed, aligned(4)))
-structc_t;
+struct_c_;
 
 // structure D
-typedef struct structd_tag {
+typedef struct Struct_D {
   double d;
   int s;
   char c;
 }  //__attribute__((packed, aligned(4)))
-structd_t;
+struct_d_;
 
-int test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
 #if defined(__linux__) || defined(__mingw64__)
-  printf("sizeof(structa_t) = %lu\n", (long unsigned) sizeof(structa_t));
-  printf("sizeof(structb_t) = %lu\n", (long unsigned) sizeof(structb_t));
-  printf("sizeof(structc_t) = %lu\n", (long unsigned) sizeof(structc_t));
-  printf("sizeof(structd_t) = %lu\n", (long unsigned) sizeof(structd_t));
+  printf("sizeof(structa_t) = %lu\n", (long unsigned) sizeof(struct_a_));
+  printf("sizeof(structb_t) = %lu\n", (long unsigned) sizeof(struct_b_));
+  printf("sizeof(structc_t) = %lu\n", (long unsigned) sizeof(struct_c_));
+  printf("sizeof(structd_t) = %lu\n", (long unsigned) sizeof(struct_d_));
 #else
-//  printf("sizeof(structa_t) = %lld\n", sizeof(structa_t));
-//  printf("sizeof(structb_t) = %lld\n", sizeof(structb_t));
-//  printf("sizeof(structc_t) = %lld\n", sizeof(structc_t));
-//  printf("sizeof(structd_t) = %lld\n", sizeof(structd_t));
+  std::cout << "sizeof(structa_t) = " << sizeof(struct_a_) << std::endl;
+  std::cout << "sizeof(structb_t) = " << sizeof(struct_b_) << std::endl;
+  std::cout << "sizeof(structc_t) = " << sizeof(struct_c_) << std::endl;
+  std::cout << "sizeof(structd_t) = " << sizeof(struct_d_) << std::endl;
 #endif
 
-  return 1;
+  RETURN_OK();
 }
 }
 

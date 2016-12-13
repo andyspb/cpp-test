@@ -2,10 +2,9 @@
 #include <iostream>
 #include <string>
 namespace ostream_change {
-using namespace std;
 
-ostream& operator<<(ostream& out, const char* ch) {
-  string str(ch);
+std::ostream& operator<<(std::ostream& out, const char* ch) {
+  std::string str(ch);
   if (!strcmp(ch, "Andrey")) {
     str = "Boss";
   }
@@ -15,8 +14,7 @@ ostream& operator<<(ostream& out, const char* ch) {
 }
 
 void test() {
-
-  cout << "Operator casting test\n" << "Hello " << "Andrey" << "\n";
+  std::cout << "Operator casting test\n" << "Hello " << "Andrey" << "\n";
 }
 
 }

@@ -1,19 +1,14 @@
 #include <iostream>
 #pragma once
-using namespace std;
 
 char * ItoaTest(int number);
 
 void TestMyItoa(int number) {
-
-  cout << ItoaTest(number) << endl;
-
+  std::cout << ItoaTest(number) << std::endl;
 }
 
 char * ItoaTest(int number) {
-
-  cout << "ItoaTest number=" << number << endl;
-
+  std::cout << "ItoaTest number=" << number << std::endl;
   if (number == 0) {
     char * ret;
     ret = (char *) malloc(2 * sizeof(char));
@@ -42,8 +37,7 @@ char * ItoaTest(int number) {
     }
 
     int m = i >> 1;
-    for (int j = 0; j <= m; j++)
-        {
+    for (int j = 0; j <= m; j++) {
       char ch = buff[j];
       buff[j] = buff[i - j];
       buff[i - j] = ch;

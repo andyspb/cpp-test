@@ -40,19 +40,19 @@ void Graph::BFS(int s) {
     visited[i] = false;
 
   // Create a queue for BFS
-  list<int> queue;
+  std::list<int> queue;
 
   // Mark the current node as visited and enqueue it
   visited[s] = true;
   queue.push_back(s);
 
   // 'i' will be used to get all adjacent vertices of a vertex
-  list<int>::iterator i;
+  std::list<int>::iterator i;
 
   while (!queue.empty()) {
     // Dequeue a vertex from queue and print it
     s = queue.front();
-    cout << s << " ";
+    std::cout << s << " ";
     queue.pop_front();
 
     // Get all adjacent vertices of the dequeued vertex s

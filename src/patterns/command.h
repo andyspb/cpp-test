@@ -5,7 +5,6 @@
 
 namespace command {
 
-using namespace std;
 
 /*the Command interface*/
 class Command {
@@ -23,11 +22,11 @@ class Light {
     }
 
     void turnOn() {
-      cout << "The light is on" << endl;
+      std::cout << "The light is on" << std::endl;
     }
 
     void turnOff() {
-      cout << "The light is off" << endl;
+      std::cout << "The light is off" << std::endl;
     }
 };
 

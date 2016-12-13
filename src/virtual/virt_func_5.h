@@ -2,20 +2,25 @@
 #define VIRT_TEST_5_H_
 
 #include <iostream>
-using namespace std;
 namespace virt_func_5 {
 struct A {
-   virtual ~A() {}
-   virtual void f() { cout << "Class A" << endl; }
+  virtual ~A() {
+  }
+  virtual void f() {
+    std::cout << "Class A" << std::endl;
+  }
 };
 
-struct B: A {
-   virtual ~B() {}
-   void f() { cout << "Class B" << endl; }
+struct B : A {
+  virtual ~B() {
+  }
+  void f() {
+    std::cout << "Class B" << std::endl;
+  }
 };
 
 void g(A& arg) {
-   arg.f();
+  arg.f();
 }
 int test() {
   std::cout << "Test: virtual function 5" << std::endl;
@@ -23,6 +28,6 @@ int test() {
   g(x);
   return 1;
 }
-} // namespace virt_func_5
+}  // namespace virt_func_5
 
 #endif /* VIRT_TEST_5_H_ */

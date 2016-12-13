@@ -3,7 +3,6 @@
 
 #include "common/constants.h"
 
-using namespace std;
 namespace reverse_chars {
 TEST_RESULT test() {
 //        const char * str = "Hello World!";
@@ -16,7 +15,7 @@ TEST_RESULT test() {
   char * p = chars;
   char * q = chars + length - 1;
   while (p < q) {
-    swap(*p++, *q--);
+    std::swap(*p++, *q--);
   }
 
   printf("chars=%s\n", chars);

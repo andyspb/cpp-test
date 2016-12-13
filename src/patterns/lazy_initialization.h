@@ -4,31 +4,30 @@
 #include <iostream>
 
 namespace lazy_initialization {
-using namespace std;
 
 class Fruit {
   public:
-    static Fruit* getFruit(const string& type);
+    static Fruit* getFruit(const std::string& type);
     static void printCurrentTypes();
 
   private:
-    static map<string, Fruit*> types;
-    string type;
+    static std::map<std::string, Fruit*> types;
+    std::string type;
     // note: constructor private forcing one to use static getFruit()
-    Fruit(const string& t)
+    Fruit(const std::string& t)
         : type(t) {
     }
 };
 
 //definition needed for using any static member variable
-map<string, Fruit*> Fruit::types;
+std::map<std::string, Fruit*> Fruit::types;
 /*
  * Lazy Factory method, gets the Fruit instance associated with a
  * certain type. Instantiates new ones as needed.
  * precondition: type. Any string that describes a fruit type, e.g. "apple"
  * postcondition: The Fruit instance associated with that type.
  */
-Fruit* Fruit::getFruit(const string& type) {
+Fruit* Fruit::getFruit(const std::string& type) {
   Fruit *f = types[type]; // try to find a pre-existing instance, or std::map'll create one if not found
 
   if (!f) { // if it was created by map automatically, it'll be pointing to NULL
@@ -44,12 +43,12 @@ Fruit* Fruit::getFruit(const string& type) {
  */
 void Fruit::printCurrentTypes() {
   if (!types.empty()) {
-    cout << "Number of instances made = " << types.size() << endl;
-    for (map<string, Fruit*>::iterator iter = types.begin();
+    std::cout << "Number of instances made = " << types.size() << std::endl;
+    for (std::map<std::string, Fruit*>::iterator iter = types.begin();
         iter != types.end(); ++iter) {
-      cout << (*iter).first << endl;
+      std::cout << (*iter).first << std::endl;
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 }
 

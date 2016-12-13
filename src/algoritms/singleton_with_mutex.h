@@ -1,8 +1,6 @@
 #pragma once
 namespace singleton_with_muex {
 
-using namespace std;
-
 class MutexGuard {
   public:
     MutexGuard() {
@@ -12,15 +10,15 @@ class MutexGuard {
       //        CloseHandle(mutex);
     }
     void Lock() {
-      cout << "MutexGuard::Lock() called\n";
+      std::cout << "MutexGuard::Lock() called\n";
 //            DWORD result = WaitForSingleObject(mutex,INFINITE);
 //            cout<<"result="<<result<<"\n";
-      cout << "MutexGuard::Lock() return\n";
+      std::cout << "MutexGuard::Lock() return\n";
     }
     void Unlock() {
-      cout << "MutexGuard::Unlock() called\n";
+      std::cout << "MutexGuard::Unlock() called\n";
 //            ReleaseMutex(mutex);
-      cout << "MutexGuard::Unlock() return\n";
+      std::cout << "MutexGuard::Unlock() return\n";
     }
 
   private:
@@ -53,7 +51,7 @@ Singleton_with_mutex* Singleton_with_mutex::_instance = 0;
 MutexGuard Singleton_with_mutex::guard;
 
 Singleton_with_mutex* Singleton_with_mutex::getInstance() {
-  cout << "called Singleton_with_mutex::getInstance()\n";
+  std::cout << "called Singleton_with_mutex::getInstance()" << std::endl;
 
   if (!_instance) {
     guard.Lock();
@@ -80,7 +78,7 @@ void test() {
 }
 
 void func1(void *) {
-  cout << "from func1()";
+  std::cout << "from func1()" << std::endl;
   Singleton_with_mutex * singl1 = Singleton_with_mutex::getInstance();
   printf("singl1=%p\n", singl1);
 }

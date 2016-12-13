@@ -61,7 +61,6 @@ namespace db_test {
 //        std::_Bool<<"Array<int> partial specialization"<<std::endl;
 //    }
 //};
-using namespace std;
 //template<int n> struct PrintN
 //{
 //    PrintN()
@@ -190,12 +189,12 @@ class Base {
   public:
     Base()
         : a(0) {
-      cout << method(a++);
+      std::cout << method(a++);
     }
 
     virtual ~Base() {
-      cout << "Base\n";
-      cout << method(a++);
+      std::cout << "Base\n";
+      std::cout << method(a++);
     }
 
     virtual int method(int val) {
@@ -210,12 +209,12 @@ class Derived: public Base {
   public:
     Derived()
         : Base() {
-      cout << method(2);
+      std::cout << method(2);
     }
 
     virtual ~Derived() {
-      cout << "Derived\n";
-      cout << method(3);
+      std::cout << "Derived\n";
+      std::cout << method(3);
     }
 
     virtual int method(int val) {
@@ -224,7 +223,7 @@ class Derived: public Base {
 };
 
 int main() {
-  auto_ptr<Base> obj(new Derived);
+  std::auto_ptr<Base> obj(new Derived);
   return 0;
 }
 

@@ -13,8 +13,6 @@
 #include <iostream>
 #include <cinttypes>
 
-using namespace std;
-
 namespace lock_free_ring_buffer {
 
 #define RING_BUFFER_SIZE 100

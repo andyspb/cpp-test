@@ -16,7 +16,7 @@
 #include "promises.h"
 #include "threads_posix.h"
 
-namespace threads {
+namespace threads_ {
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;

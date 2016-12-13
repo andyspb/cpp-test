@@ -2,11 +2,12 @@
 #include <stdlib.h>
 
 #include <iostream>
-using namespace std;
+
+namespace stsout_redirect {
 
 int StdoutRedirectionTest(void) {
   FILE *stream;
-  cout << "StdoutRedirectionTest" << endl;
+  std::cout << "StdoutRedirectionTest" << std::endl;
   if ((stream = freopen("file.txt", "w", stdout)) == NULL) {
     return -1;
   }
@@ -16,3 +17,7 @@ int StdoutRedirectionTest(void) {
 
   return 0;
 }
+
+
+}  // namespace stsout_redirect
+

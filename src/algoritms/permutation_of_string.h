@@ -1,7 +1,7 @@
 /*
  * permutation_of_string.h
  *
- *  Created on: 25 ÿíâ. 2015 ã.
+ *  Created on: 25 ï¿½ï¿½ï¿½. 2015 ï¿½.
  *      Author: andy
  */
 
@@ -40,11 +40,11 @@ void permute(char *a, int i, int n) {
 }
 
 /* Driver program to test above functions */
-int test() {
+TEST_RESULT test() {
   __SCOPE_LOG__;
   char a[] = "ABCD";
   permute(a, 0, 2);
-  return 1;
+  RETURN_OK();
 }
 
 }  // permutation_of_string

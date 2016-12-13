@@ -19,7 +19,7 @@ TEST_RESULT test() {
   std::string str = "";
 
 
-  std::cout << "str=" << str << '\n';
+  std::cout << "str=" << str << std::endl;
 
 
   std::string from = "\\/";
@@ -31,7 +31,7 @@ TEST_RESULT test() {
     pos += to.length();
   }
 
-  std::cout << "str=" << str << '\n';
+  std::cout << "str=" << str << std::endl;
 
   RETURN_OK();
 }

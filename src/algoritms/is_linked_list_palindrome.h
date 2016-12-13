@@ -11,8 +11,6 @@
 #include <stack>
 #include <iostream>
 
-using namespace std;
-
 namespace linked_list_is_palindrome_with_stack {
 
 struct Node {
@@ -26,7 +24,7 @@ struct Node {
 
 bool isPalindrome(Node* head) {
   Node *fast(head), *slow(head);
-  stack<int> stack;
+  std::stack<int> stack;
   while (fast && fast->next) {
     stack.push(slow->data);
     slow = slow->next;
@@ -50,7 +48,7 @@ bool is_palindrome_with_stack(Node *head) {
   if (!head->next)
     return true;
   Node* slow = head, *fast = head;
-  stack<int> stack;
+  std::stack<int> stack;
   while (fast && fast->next) {
     stack.push(slow->data);
     fast = fast->next->next;
@@ -62,7 +60,7 @@ bool is_palindrome_with_stack(Node *head) {
 
   while (slow) {
     int top = stack.top();
-    cout << top << " " << slow->data << "\n";
+    std::cout << top << " " << slow->data << "\n";
     if (top != slow->data) {
       return false;
     }
@@ -74,14 +72,14 @@ bool is_palindrome_with_stack(Node *head) {
 
 void print_list(Node* node) {
   while (node) {
-    cout << node->data << " ";
+    std::cout << node->data << " ";
     node = node->next;
   }
-  cout << endl;
+  std::cout << std::endl;
 }
 
 int test() {
-  cout << "Is linked list a palindrome\n";
+  std::cout << "Is linked list a palindrome\n";
   Node n1(1);
   Node n2(2);
   n1.next = &n2;
@@ -100,7 +98,7 @@ int test() {
   bool b = is_palindrome_with_stack(&n1);
 //  bool b = isPalindrome(&n1);
 
-  cout << " list is palindrome:" << b << "\n";
+  std::cout << " list is palindrome:" << b << "\n";
   return 1;
 }
 

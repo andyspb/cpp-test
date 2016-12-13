@@ -1,36 +1,34 @@
 #include <iostream>
-using namespace std;
 
 namespace const_const {
 
 class Test {
-  public:
-    int data;
+ public:
+  int data;
 
-  public:
-    Test()
-        : data(0) {
-      cout << __FUNCTION__ << " data:" << data << endl;
-    }
+ public:
+  Test()
+      : data(0) {
+    std::cout << __FUNCTION__ << " data:" << data << std::endl;
+  }
 
-    int GetValue() const {
-      cout << "const " << __FUNCTION__ << endl;
+  int GetValue() const {
+    std::cout << "const " << __FUNCTION__ << std::endl;
+    return data;
+  }
+  int GetValue() {
+    {
+      std::cout << "non-const " << __FUNCTION__ << std::endl;
       return data;
     }
-    int GetValue() {
-      {
-        cout << "non-const " << __FUNCTION__ << endl;
-        return data;
-      }
-    }
-    void test_const() const {
-      cout << __FUNCTION__ << endl;
-    }
-    ;
-    void test_noconst() const {
-      cout << __FUNCTION__ << endl;
-    }
-    ;
+  }
+  void test_const() const {
+    std::cout << __FUNCTION__ << std::endl;
+  }
+
+  void test_noconst() const {
+    std::cout << __FUNCTION__ << std::endl;
+  }
 };
 
 const char *Function1() {
@@ -38,23 +36,23 @@ const char *Function1() {
 }
 
 class Something {
-  public:
-    static int s_nValue;
+ public:
+  static int s_nValue;
 };
 
 //int Something::s_nValue = 1;
 
 class A {
-  public:
-    virtual ~A() {
-      cout << "from ~A" << endl;
-    }
+ public:
+  virtual ~A() {
+    std::cout << "from ~A" << std::endl;
+  }
 };
-class B: public A {
-  public:
-    ~B() {
-      cout << "from ~B" << endl;
-    }
+class B : public A {
+ public:
+  ~B() {
+    std::cout << "from ~B" << std::endl;
+  }
 };
 
 void test() {
@@ -95,7 +93,5 @@ void test() {
 
   //B * bb = new B();
   //delete bb;
-
 }
-
 }

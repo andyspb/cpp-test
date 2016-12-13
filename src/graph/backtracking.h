@@ -19,7 +19,7 @@ struct Node {
 };
 
 #if defined(__GNUC__) and !defined(__WIN64__)
-
+/*
 bool solve(Node* n, int goal) {
   if (!n->next) {
     if (n->next->value == goal)  //the leaf is a goal node,
@@ -32,14 +32,14 @@ bool solve(Node* n, int goal) {
         return true;
       }
     }
-  return false;
+    return false;
+  }
 }
-}
-
+*/
 #endif
 
 TEST_RESULT test() {
-
+  __SCOPE_LOG__;
   RETURN_OK();
 }
 

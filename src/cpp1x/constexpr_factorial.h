@@ -5,13 +5,13 @@
  *      Author: andy
  */
 
-#ifndef SRC_CPP1X_CPP1X_CONSTEXPR_FACTORIAL_H_
-#define SRC_CPP1X_CPP1X_CONSTEXPR_FACTORIAL_H_
+#ifndef SRC_CPP1X_CONSTEXPR_FACTORIAL_H_
+#define SRC_CPP1X_CONSTEXPR_FACTORIAL_H_
 
 #include <iostream>
 #include <stdexcept>
 
-namespace cpp1x_constexpr_factorial {
+namespace constexpr_factorial {
 
 // The C++11 constexpr functions use recursion rather than iteration
 // (C++14 constexpr functions may use local variables and loops)
@@ -32,4 +32,4 @@ TEST_RESULT test() {
 
 }  // namespace cpp1x_constexpr_factorial
 
-#endif /* SRC_CPP1X_CPP1X_CONSTEXPR_FACTORIAL_H_ */
+#endif /* SRC_CPP1X_CONSTEXPR_FACTORIAL_H_ */

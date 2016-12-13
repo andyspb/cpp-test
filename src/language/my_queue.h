@@ -4,7 +4,6 @@
 #include <iostream>
 
 namespace my_queue {
-using namespace std;
 template<typename T>
 struct Node {
     T value;
@@ -77,25 +76,25 @@ class My_Queue {
 
 int test() {
   int n = 20;
-  cout << "my queue test:n=" << n << "\n";
+  std::cout << "my queue test:n=" << n << "\n";
   My_Queue<int> que;
   for (int i = 0; i < n; ++i) {
     que.push(i);
-    cout << i << ' ';
+    std::cout << i << ' ';
   }
 
-  endl(cout);
-  cout << "que size:" << que.size() << endl;
+  std::endl(std::cout);
+  std::cout << "que size:" << que.size() << std::endl;
 
   for (int i = 0; i < n; ++i) {
     int n;
     que.front(&n);
-    cout << n << ' ';
+    std::cout << n << ' ';
     que.pop();
   }
 
-  endl(cout);
-  cout << "que size:" << que.size() << endl;
+  std::endl(std::cout);
+  std::cout << "que size:" << que.size() << std::endl;
   return 1;
 }
 }  // my_queue

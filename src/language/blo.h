@@ -2,9 +2,9 @@
 #define _BLO_H_
 
 #include <string.h>
-#include <limits>
+#include <climits>
+
 //using c-style only
-using namespace std;
 namespace blo {
 int ROL(int a, int n) {
   int t1, t2;

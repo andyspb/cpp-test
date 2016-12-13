@@ -5,14 +5,14 @@
  *      Author: andy
  */
 
-#ifndef SRC_BLOCKCHAIN_HASH_FUNCTION_H_
-#define SRC_BLOCKCHAIN_HASH_FUNCTION_H_
+#ifndef SRC_BLOCKCHAIN_HASH_FUNCTION_STRING_H_
+#define SRC_BLOCKCHAIN_HASH_FUNCTION_STRING_H_
 
 #include <iostream>
 #include <functional>
 #include <string>
 
-namespace hash_function {
+namespace hash_function_string {
 
 unsigned int hash(const char* s, unsigned int seed = 0) {
   unsigned int hash = seed;
@@ -51,4 +51,4 @@ TEST_RESULT test() {
 
 }  // namespace hash_function
 
-#endif /* SRC_BLOCKCHAIN_HASH_FUNCTION_H_ */
+#endif /* SRC_BLOCKCHAIN_HASH_FUNCTION_STRING_H_ */

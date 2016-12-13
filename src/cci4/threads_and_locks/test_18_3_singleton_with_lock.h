@@ -10,8 +10,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 namespace test_18_3_singleton_with_lock {
 
 class A {

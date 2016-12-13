@@ -9,22 +9,21 @@
 #define DYNAMIC_CAST_2_H_
 
 #include <iostream>
-using namespace std;
 
 namespace dynamic_cast_2 {
 
 struct A {
-  virtual void f() { cout << "Class A" << endl; }
+  virtual void f() { std::cout << "Class A" << std::endl; }
   virtual ~A() {};
 };
 
 struct B : A {
-  virtual void f() { cout << "Class B" << endl; }
+  virtual void f() { std::cout << "Class B" << std::endl; }
   virtual ~B() {};
 };
 
 struct C : A {
-  virtual void f() { cout << "Class C" << endl; }
+  virtual void f() { std::cout << "Class C" << std::endl; }
   virtual ~C() {};
 };
 

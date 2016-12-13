@@ -8,7 +8,7 @@
 #ifndef SRC_CPP1X_CPP0X_MOVE_H_
 #define SRC_CPP1X_CPP0X_MOVE_H_
 
-namespace cpp1x_move {
+namespace move {
 
 class Base {
  public:

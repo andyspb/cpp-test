@@ -10,8 +10,6 @@
 
 //#include <boost/thread.hpp>
 
-using namespace std;
-
 namespace test_9 {
 
 // предолагаем что класс Locker корректно реализован

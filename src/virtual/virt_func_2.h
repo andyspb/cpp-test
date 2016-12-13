@@ -7,20 +7,20 @@ namespace virt_func_2 {
 class A {
   public:
     virtual ~A() {
-      cout << "A::~A()" << endl;
+      std::cout << "A::~A()" << std::endl;
     }
   public:
     virtual void test() {
-      cout << "A::test()" << endl;
+      std::cout << "A::test()" << std::endl;
     }
 };
 class B: virtual public A {
   public:
     virtual ~B() {
-      cout << "B::~B()" << endl;
+      std::cout << "B::~B()" << std::endl;
     }
     void test() {
-      cout << "B::test()" << endl;
+      std::cout << "B::test()" << std::endl;
     }
 };
 

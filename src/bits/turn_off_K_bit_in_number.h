@@ -9,7 +9,6 @@
 #define TURN_OFF_K_BIT_IN_NUMBER_H_
 
 #include <iostream>
-using namespace std;
 
 namespace turn_off_K_bit_in_number {
 
@@ -30,7 +29,7 @@ TEST_RESULT test() {
   __SCOPE_LOG__;
   int n = 15;
   int k = 4;
-  cout << turnOffK(n, k);
+  std::cout << turnOffK(n, k);
   RETURN_OK();
 }
 }

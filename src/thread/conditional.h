@@ -19,9 +19,8 @@
 
 #include <type_traits>
 
-#define merge(a,b) #b#a
-
 namespace conditional_variable {
+#define merge(a,b) #b#a
 
 //typedef std::conditional<sizeof(int) <= 4, std::mt19937, std::mt19937_64>::type Engine;
 

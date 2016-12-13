@@ -5,10 +5,10 @@
  *      Author: andy
  */
 
-#ifndef SRC_CPP1X_CPP1X_CONSTEXPR_H_
-#define SRC_CPP1X_CPP1X_CONSTEXPR_H_
+#ifndef SRC_CPP1X_CONSTEXPR_H_
+#define SRC_CPP1X_CONSTEXPR_H_
 
-namespace cpp1x_constexpr {
+namespace constexpr_ {
 
 // literal class
 class conststr {
@@ -64,4 +64,4 @@ TEST_RESULT test() {
 
 }  // namespace cpp1x_constexpr
 
-#endif /* SRC_CPP1X_CPP1X_CONSTEXPR_H_ */
+#endif /* SRC_CPP1X_CONSTEXPR_H_ */

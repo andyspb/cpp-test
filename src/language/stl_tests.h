@@ -10,7 +10,6 @@ bool _isspace(char ch) {
 
 namespace stl_tests {
 int test() {
-  using namespace std;
 
   std::vector<int> v;
   // fill it up somehow
@@ -19,23 +18,23 @@ int test() {
   v.push_back(2);
   v.push_back(99);
   for (size_t i = 0; i < v.size(); ++i) {
-    cout << v.at(i) << ' ';
+    std::cout << v.at(i) << ' ';
   }
-  endl(cout);
-  cout << "v size =" << v.size() << endl;
+  std::endl(std::cout);
+  std::cout << "v size =" << v.size() << std::endl;
   v.erase(std::remove(v.begin(), v.end(), 99), v.end());  // really remove all elements with value 99
-  cout << "v size =" << v.size() << endl;
+  std::cout << "v size =" << v.size() << std::endl;
   for (size_t i = 0; i < v.size(); ++i) {
-    cout << v.at(i) << ' ';
+    std::cout << v.at(i) << ' ';
   }
-  endl(cout);
+  std::endl(std::cout);
 
   std::string str("a a a a a");
-  cout << str << endl;
+  std::cout << str << std::endl;
   str.erase(std::remove_if(str.begin(), str.end(), _isspace), str.end());
-  cout << str << endl;
+  std::cout << str << std::endl;
   return 1;
 }
-}  //  stl_tests
+}  // namespace stl_tests
 
 #endif //  _STL_TESTS_H

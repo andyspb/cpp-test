@@ -9,15 +9,14 @@
 #include <iostream>
 
 //#include <boost/lexical_cast.hpp>
-using namespace std;
 
 namespace test_10 {
 
-string convertInt(int number) {
+std::string convertInt(int number) {
   if (number == 0)
     return "0";
-  string temp = "";
-  string returnvalue = "";
+  std::string temp = "";
+  std::string returnvalue = "";
   while (number > 0) {
     temp += number % 10 + 48;
     number /= 10;
@@ -27,14 +26,14 @@ string convertInt(int number) {
   return returnvalue;
 }
 
-string convertInt2(int number) {
-  stringstream ss;  //create a stringstream
+std::string convertInt2(int number) {
+  std::stringstream ss;  //create a stringstream
   ss << number;  //add number to the stream
   return ss.str();  //return a string with the contents of the stream
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  __SCOPE_LOG__;
 
 //  string s = boost::lexical_cast<string>(10);
 //  cout << "s: " << s << endl;

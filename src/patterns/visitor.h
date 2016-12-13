@@ -4,7 +4,6 @@
 #include <iostream>
 
 namespace visitor {
-using namespace std;
 
 struct Visitor;
 // forward declaration (step 2)
@@ -17,21 +16,21 @@ struct Element {
 
 struct Foo: public Element {
     void make_foo() {
-      cout << "Making some Foo..." << endl;
+      std::cout << "Making some Foo..." << std::endl;
     }
     virtual void accept(Visitor*);  // step 2
 };
 
 struct Bar: public Element {
     void make_bar() {
-      cout << "Making some Bar..." << endl;
+      std::cout << "Making some Bar..." << std::endl;
     }
     virtual void accept(Visitor*);  // step 2
 };
 
 struct Baz: public Element {
     void make_baz() {
-      cout << "Making some Baz..." << endl;
+      std::cout << "Making some Baz..." << std::endl;
     }
     virtual void accept(Visitor*);  // step 2
 };
@@ -62,8 +61,8 @@ struct CountVisitor: public Visitor {
         : foo_count(0), bar_count(0), baz_count(0) {
     }
     void print_counters() {
-      cout << "Counters: Foo(" << foo_count << ") Bar(" << bar_count << ") Baz("
-          << baz_count << ")" << endl;
+      std::cout << "Counters: Foo(" << foo_count << ") Bar(" << bar_count << ") Baz("
+          << baz_count << ")" << std::endl;
     }
 
     virtual void visit(Foo*) {
@@ -94,10 +93,10 @@ void Baz::accept(Visitor* v) {
 //The Element hierarchy with the visitors could be used like this:
 int test() {
   std::cout << "Test: Visitor pattern example --->" << std::endl;
-  list<Element*> e;
-  list<Visitor*> v;
-  typedef list<Element*>::const_iterator e_list_iterator;
-  typedef list<Visitor*>::const_iterator v_list_iterator;
+  std::list<Element*> e;
+  std::list<Visitor*> v;
+  typedef std::list<Element*>::const_iterator e_list_iterator;
+  typedef std::list<Visitor*>::const_iterator v_list_iterator;
 
   e.push_back(new Foo);
   e.push_back(new Foo);

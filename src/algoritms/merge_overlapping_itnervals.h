@@ -12,7 +12,6 @@
 #include <vector>
 #include <algorithm>
 #include <stack>
-using namespace std;
 
 namespace merge_overlapping_itnervals {
 
@@ -31,13 +30,13 @@ bool compareInterval(Interval i1, Interval i2) {
 
 // The main function that takes a set of intervals, merges
 // overlapping intervals and prints the result
-void mergeIntervals(vector<Interval>& intervals) {
+void mergeIntervals(std::vector<Interval>& intervals) {
   // Test if the given set has at least one interval
   if (intervals.size() <= 0)
     return;
 
   // Create an empty stack of intervals
-  stack<Interval> s;
+  std::stack<Interval> s;
 
   // sort the intervals based on start time
   sort(intervals.begin(), intervals.end(), compareInterval);
@@ -65,10 +64,10 @@ void mergeIntervals(vector<Interval>& intervals) {
   }
 
   // Print contents of stack
-  cout << "\n The Merged Intervals are: ";
+  std::cout << "\n The Merged Intervals are: ";
   while (!s.empty()) {
     Interval t = s.top();
-    cout << "[" << t.start << "," << t.end << "]" << " ";
+    std::cout << "[" << t.start << "," << t.end << "]" << " ";
     s.pop();
   }
 
@@ -79,7 +78,7 @@ void mergeIntervals(vector<Interval>& intervals) {
 void TestCase1() {
   // Create a set of intervals
   Interval intvls[] = { { 6, 8 }, { 1, 9 }, { 2, 4 }, { 4, 7 } };
-  vector<Interval> intervals(intvls, intvls + 4);
+  std::vector<Interval> intervals(intvls, intvls + 4);
 
   // Merge overlapping inervals and print result
   mergeIntervals(intervals);
@@ -87,7 +86,7 @@ void TestCase1() {
 void TestCase2() {
   // Create a set of intervals
   Interval intvls[] = { { 6, 8 }, { 1, 3 }, { 2, 4 }, { 4, 7 } };
-  vector<Interval> intervals(intvls, intvls + 4);
+  std::vector<Interval> intervals(intvls, intvls + 4);
 
   // Merge overlapping inervals and print result
   mergeIntervals(intervals);
@@ -95,7 +94,7 @@ void TestCase2() {
 void TestCase3() {
   // Create a set of intervals
   Interval intvls[] = { { 1, 3 }, { 7, 9 }, { 4, 6 }, { 10, 13 } };
-  vector<Interval> intervals(intvls, intvls + 4);
+  std::vector<Interval> intervals(intvls, intvls + 4);
 
   // Merge overlapping inervals and print result
   mergeIntervals(intervals);
@@ -108,7 +107,6 @@ int test() {
   TestCase3();
   return 1;
 }
-
 }
 
 #endif /* MERGE_OVERLAPPING_ITNERVALS_H_ */

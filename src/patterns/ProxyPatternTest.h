@@ -1,20 +1,19 @@
 #include <iostream>
 
-using namespace std;
 
 class Person {
-    string nameString;
-    static string list[];
+    std::string nameString;
+    static std::string list[];
     static int next;
   public:
     Person() {
       nameString = list[next++];
     }
-    string name() {
+    std::string name() {
       return nameString;
     }
 };
-string Person::list[] = { "Tom", "Dick", "Harry", "Bubba" };
+std::string Person::list[] = { "Tom", "Dick", "Harry", "Bubba" };
 int Person::next = 0;
 
 class PettyCashProtected {
@@ -49,13 +48,13 @@ class PettyCash {
 };
 
 void ProxyPatternTest() {
-  cout << endl << "ProxyPatternTest:" << endl;
+  std::cout << "ProxyPatternTest:" << std::endl;
   PettyCash pc;
   Person workers[4];
   for (int i = 0, amount = 100; i < 4; i++, amount += 100)
     if (!pc.withdraw(workers[i], amount))
-      cout << "No money for " << workers[i].name() << '\n';
+      std::cout << "No money for " << workers[i].name() << std::endl;
     else
-      cout << amount << " dollars for " << workers[i].name() << '\n';
-  cout << "Remaining balance is " << pc.getBalance() << '\n';
+      std::cout << amount << " dollars for " << workers[i].name() << std::endl;
+  std::cout << "Remaining balance is " << pc.getBalance() << std::endl;
 }

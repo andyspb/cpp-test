@@ -9,20 +9,19 @@
 #define VIRTUAL_METHOD_2_H_
 
 #include <iostream>
-using namespace std;
 
 namespace virtual_method_2 {
 
 struct A {
   /*virtual*/
   void f() {
-    cout << "Class A" << endl;
+    std::cout << "Class A" << std::endl;
   }
 };
 
 struct B : A {
   void f() {
-    cout << "Class B" << endl;
+    std::cout << "Class B" << std::endl;
   }
 };
 

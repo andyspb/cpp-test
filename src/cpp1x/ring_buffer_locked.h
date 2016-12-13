@@ -52,8 +52,6 @@ class Buffer {
 public:
   std::mutex cout_mutex_;
   std::condition_variable cond_;
-
-
 };
 
 class Producer {

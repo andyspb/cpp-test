@@ -30,8 +30,8 @@ int minimax(int depth, int nodeIndex, bool maximizingPlayer, int values[],
     for (int i = 0; i < 2; i++) {
       int val = minimax(depth + 1, nodeIndex * 2 + i, false, values, alpha,
                         beta);
-      best = max(best, val);
-      alpha = max(alpha, best);
+      best = std::max(best, val);
+      alpha = std::max(alpha, best);
 
       // Alpha Beta Pruning
       if (beta <= alpha)
@@ -45,8 +45,8 @@ int minimax(int depth, int nodeIndex, bool maximizingPlayer, int values[],
     for (int i = 0; i < 2; i++) {
       int val = minimax(depth + 1, nodeIndex * 2 + i, true, values, alpha,
                         beta);
-      best = min(best, val);
-      beta = min(beta, best);
+      best = std::min(best, val);
+      beta = std::min(beta, best);
 
       // Alpha Beta Pruning
       if (beta <= alpha)

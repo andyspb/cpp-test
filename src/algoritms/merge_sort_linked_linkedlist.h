@@ -5,17 +5,16 @@
 
 namespace mergesort_linkedlist {
 // single linked list
-template<typename T>
-struct SList {
-    T val;
-    struct SList *next;
+class Node {
+ public:
+  int val;
+  Node *next;
 };
 
 /* merge the lists.. */
-template<typename T>
-SList<T> *merge(SList<T> *h1, SList<T> *h2) {
+Node *merge_lists(Node *h1, Node *h2) {
   // temporal
-  SList<T> *h3;
+  Node *h3;
 
   if (!h1)
     return h2;
@@ -25,18 +24,17 @@ SList<T> *merge(SList<T> *h1, SList<T> *h2) {
 
   if (h1->val < h2->val) {
     h3 = h1;
-    h3->next = merge(h1->next, h2);
+    h3->next = merge_lists(h1->next, h2);
   } else {
     h3 = h2;
-    h3->next = merge(h1, h2->next);
+    h3->next = merge_lists(h1, h2->next);
   }
 
   return h3;
 }
 
-template<typename T>
-SList<T> *mergesort(SList<T> *head) {
-  SList<T> *h1 = NULL, *h2 = NULL;
+Node *mergesort(Node *head) {
+  Node *h1 = NULL, *h2 = NULL;
 
   if (!head || !head->next)
     return head;
@@ -50,19 +48,20 @@ SList<T> *mergesort(SList<T> *head) {
   h2 = head->next;
   head->next = 0;
 
-  return merge(mergesort(h1), mergesort(h2));
+  return merge_lists(mergesort(h1), mergesort(h2));
 }
 
-int test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::cout << "Test: mergesort for linked list --->" << std::endl;
 
-  struct SList<int> * list = new SList<int>();
+  struct Node* list = new Node();
   list->val = 0;
   list->next = NULL;
 
-  SList<int> * sl = list;
+  Node * sl = list;
   for (int i = 1; i < 35; i++) {
-    sl->next = new SList<int>();
+    sl->next = new Node();
     sl->next->next = NULL;
     sl->next->val = 36 - i;  //( i * 345) % 100;
     sl = sl->next;
@@ -81,7 +80,7 @@ int test() {
     sl = sl->next;
   }
   std::endl(std::cout);
-  return 1;
+  RETURN_OK();
 }
 }  // namespace mergesort_linkedlist
 

@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 namespace template_test2 {
 template<int a[4]> struct _A {
 };
@@ -22,33 +21,35 @@ _A<&i> x;
 typedef char mytype;
 
 template<class T> class Key {
-  public:
-    Key()
-        : kptr(NULL), length(0) {
-      cout << __FUNCTION__ << endl;
-    }
-    ;
-    Key(T)
-        : kptr(NULL), length(0) {
-      cout << __FUNCTION__ << endl;
-    }
-    ;
-  private:
-    T k;
-    T* kptr;
-    int length;
+ public:
+  Key()
+      : kptr(NULL),
+        length(0) {
+    std::cout << __FUNCTION__ << std::endl;
+  }
+
+  Key(T)
+      : kptr(NULL),
+        length(0) {
+    std::cout << __FUNCTION__ << std::endl;
+  }
+
+ private:
+  T k;
+  T* kptr;
+  int length;
 };
 
 template<class T> class K {
-  public:
-    static T x;
+ public:
+  static T x;
 };
 template<class T> T K<T>::x;
 
 template<class T> class A {
 //        typename T::x(y);
-    typedef char C;
-    typename A::C d;
+  typedef char C;
+  typename A::C d;
 };
 
 template<bool> class Assert;
@@ -66,13 +67,14 @@ tA<tB> a;
 template<class T, class U = int> class dA;
 template<class T = float, class U> class dA;
 template<class T, class U> class dA {
-  public:
-    dA()
-        : x(0), y(0) {
-    }
-    ;
-    T x;
-    U y;
+ public:
+  dA()
+      : x(0),
+        y(0) {
+  }
+  ;
+  T x;
+  U y;
 };
 
 template<unsigned> class IntSizeAssert;
@@ -84,17 +86,15 @@ template<> class IntSizeAssert<4> {
 namespace default_param {
 template<class T, class U, class V = int> class X {
 };
-
 }
 
 template<class T> void f() {
-  cout << "<class T>f()" << endl;
-}
-;
+  std::cout << "<class T>f()" << std::endl;
+};
+
 template<int i> void f() {
-  cout << "<int i>f()" << endl;
-}
-;
+  std::cout << "<int i>f()" << std::endl;
+};
 
 int test() {
   f<0>();
@@ -102,8 +102,8 @@ int test() {
   K<int>::x = 0;
 //		A<string> a;
 
-  Key<string> key;
-  Key<string> key_str("test");
+  Key<std::string> key;
+  Key<std::string> key_str("test");
   Key<int> i;
   Key<char*> c;
   Key<mytype> m;
@@ -111,7 +111,7 @@ int test() {
   dA<> da;
   //da.x = 0;
   //da.y = 1;
-  cout << da.x << " " << da.y << " " << endl;
+  std::cout << da.x << " " << da.y << " " << std::endl;
   return 1;
 }
 }  // namespace template_test2

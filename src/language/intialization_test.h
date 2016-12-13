@@ -1,55 +1,51 @@
 #pragma once
 #include <iostream>
-using namespace std;
-namespace intialization_test
-{
+namespace intialization_test {
 
 class A {
-  public:
-    A() {
-    cout << "A\n";
-    }
+ public:
+  A() {
+    std::cout << "A\n";
+  }
 };
 class B {
-  public:
-    B() {
-    cout << "B\n";
-    }
+ public:
+  B() {
+    std::cout << "B\n";
+  }
 };
 class C {
-  public:
-    C() {
-    cout << "C\n";
-    }
+ public:
+  C() {
+    std::cout << "C\n";
+  }
 };
 class D {
-  public:
-    D() {
-    cout << "D\n";
-    }
+ public:
+  D() {
+    std::cout << "D\n";
+  }
 };
-class E: virtual A, virtual B, virtual C {
-  public:
-    E() {
-    cout << "E\n";
-    }
+class E : virtual A, virtual B, virtual C {
+ public:
+  E() {
+    std::cout << "E\n";
+  }
 };
-class F: virtual D, virtual C {
-  public:
-    F() {
-    cout << "F\n";
-    }
+class F : virtual D, virtual C {
+ public:
+  F() {
+    std::cout << "F\n";
+  }
 };
-class G: F, E {
-  public:
-    G() {
-    cout << "G\n";
-    }
+class G : F, E {
+ public:
+  G() {
+    std::cout << "G\n";
+  }
 };
 
-void test()
-{
+void test() {
   G g;
 }
-
 }

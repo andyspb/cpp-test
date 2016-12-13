@@ -1,12 +1,11 @@
 #include <iostream>
-using namespace std;
 namespace virt_access {
 class Base {
  public:
   virtual ~Base() {
   }
   virtual void f() {
-    cout << __FUNCTION__ << endl;
+    std::cout << __FUNCTION__ << std::endl;
   }
 };
 
@@ -16,9 +15,8 @@ class Derived : public Base {
   }
  private:
   void f() {
-    cout << __FUNCTION__ << endl;
+    std::cout << __FUNCTION__ << std::endl;
   }
-  ;
 };
 
 int test() {

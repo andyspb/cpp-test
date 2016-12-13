@@ -8,13 +8,13 @@
 #ifndef SRC_BLOCKCHAIN_BLOCKCHAIN_H_
 #define SRC_BLOCKCHAIN_BLOCKCHAIN_H_
 
-#include "hash_function.h"
+#include "hash_function_string.h"
 
 namespace blockchain {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  assert(hash_function::test());
+  assert(hash_function_string::test());
   RETURN_OK();
 }
 

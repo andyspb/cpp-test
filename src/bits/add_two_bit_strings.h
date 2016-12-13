@@ -13,12 +13,12 @@
 namespace add_two_bit_strings {
 
 //adds the two bit strings and return the result
-string addBitStrings(string first, string second);
+std::string addBitStrings(std::string first, std::string second);
 
 // Helper method: given two unequal sized bit strings, converts them to
 // same length by aadding leading 0s in the smaller string. Returns the
 // the new length
-int makeEqualLength(string &str1, string &str2) {
+int makeEqualLength(std::string &str1, std::string &str2) {
   int len1 = str1.size();
   int len2 = str2.size();
   if (len1 < len2) {
@@ -33,8 +33,8 @@ int makeEqualLength(string &str1, string &str2) {
 }
 
 // The main function that adds two bit sequences and returns the addition
-string addBitStrings(string first, string second) {
-  string result;  // To store the sum bits
+std::string addBitStrings(std::string first, std::string second) {
+  std::string result;  // To store the sum bits
 
   // make the lengths same before adding
   int length = makeEqualLength(first, second);
