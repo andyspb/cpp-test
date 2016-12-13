@@ -8,7 +8,7 @@
 #include <thread>
 #include <iostream>
 
-namespace cpp0x_thread {
+namespace cpp1x_thread {
 
 void doSomeWork(void) {
   std::cout << "hello from thread..." << std::endl;

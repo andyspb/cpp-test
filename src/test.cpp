@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
 //  assert(terramind::test());
 //  assert(virtuals::test());
 //  assert(clock_::test());
-//  assert(cpp1x::test());
+  assert(cpp1x::test());
 //  assert(threads::test());
 //  assert(futures::test());
 //  assert(epam::test() );
@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
 //  assert(google_2::test());
 //  assert(yandex::test());
 //  assert(test_examples::test());
-  assert(templates::test());
+//  assert(templates::test());
 
   RETURN_OK();
 }
