@@ -112,6 +112,7 @@
 #include "reverse_string_3.h"
 #include "paradox_monti_holl.h"
 #include "paradox_monti_holl_2.h"
+#include "selection_sort.h"
 
 namespace algorithms {
 int test() {
@@ -154,6 +155,7 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
 //  assert(reverse_string_3::test());
+  assert(selection_sort::test());
 //  assert(simple_moving_average::test());
 //  assert(singleton::test());
 //  assert(staircase::test());
@@ -174,7 +176,7 @@ int test() {
 //  assert(check_open_closed_brackets::test());
 //  assert(paradox_monti_holl::test());
 //  assert(paradox_monti_holl_2::test());
-  assert(shellsort::test());
+//  assert(shellsort::test());
   RETURN_OK();
 }
 
