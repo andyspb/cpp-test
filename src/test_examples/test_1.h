@@ -9,7 +9,7 @@
 #include <assert.h>
 
 
-namespace test_1 {
+namespace leap_1 {
 
 //typedef int[] IntArray;
 

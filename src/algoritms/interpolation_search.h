@@ -15,9 +15,9 @@ namespace interpolation_search {
 template<typename T>
 int interpolationSearch(T * arr, int size, T key) {
 
-  if (size < 0 || !arr)         // not the best way to handle this case, but it
+  if (size < 0 || !arr) {  // not the best way to handle this case, but it
     return -1;             // serves to draw attention to it possibly happening.
-
+  }
   unsigned long long low = 0;
   unsigned long long high = size - 1;
   unsigned long long mid;

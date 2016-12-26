@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-namespace test_2 {
+namespace leap_2 {
 
 /* suppose to use int as struct data*/
 struct DList {

@@ -19,6 +19,8 @@
 
 #define TEST_RESULT int
 #define TEST_OK 1
+#define OK 1
+#define FALSE 0
 
 class Result {
   void operator()() {
