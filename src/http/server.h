@@ -10,21 +10,20 @@
 
 
 
-#ifdef __GNUC
+#ifdef __linux__
 #include "server_single_thread.h"
 #include "server_threaded.h"
-#endif // __GNUC
+#endif // __linux__
 
 namespace http_server {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-#ifdef __GNUC
 
-//  assert(server_single_thread::test());
+#ifdef __linux__
+  assert(server_single_thread::test());
   assert(server_threaded::test());
-
-#endif // __GNUC
+#endif // __linux__
   RETURN_OK();
 }
 

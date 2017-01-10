@@ -1,6 +1,6 @@
 #include "test.h"
 
-using namespace std;
+//using namespace std;
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
@@ -21,7 +21,8 @@ int main(int argc, char **argv) {
 //  assert(functors::test());
 //  assert(futures::test());
 //  assert(google_2::test());
-//  assert(hash_function::test());
+//  assert(graph::test());
+  assert(hash_::test());
 //  assert(hashmap::test());
 //  assert(http::test());
 //  assert(ipc::test());
@@ -29,7 +30,7 @@ int main(int argc, char **argv) {
 //  assert(lambda::test());
 //  assert(language::test());
 //  assert(last_1::test());
-  assert(leap::test());
+//  assert(leap::test());
 //  assert(lock_free::test());
 //  assert(logger::test());
 //  assert(lge::test());
@@ -37,6 +38,7 @@ int main(int argc, char **argv) {
 //  assert(memory::test());
 //  assert(moto::test());
 //  assert(ms::test() );
+//  assert(net::test());
 //  assert(overloading::test());
 //  assert(parser::test());
 //  assert(patterns::test());

@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_HASH_FUNCTION_PERFECT_HASH_FUNCTION_H_
-#define SRC_HASH_FUNCTION_PERFECT_HASH_FUNCTION_H_
+#ifndef SRC_HASH_PERFECT_HASH_FUNCTION_H_
+#define SRC_HASH_PERFECT_HASH_FUNCTION_H_
 
 #include <vector>
 #include <list>
@@ -187,4 +187,4 @@ TEST_RESULT test() {
 
 }  // namespace perfect_hash_function
 
-#endif /* SRC_HASH_FUNCTION_PERFECT_HASH_FUNCTION_H_ */
+#endif /* SRC_HASH_PERFECT_HASH_FUNCTION_H_ */

@@ -10,12 +10,15 @@
 
 namespace permutation {
 
-void permtuation() {
+void permutation() {
 //  while (std::next_permutation(start, end));
 }
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
+
+
+
 
 
   RETURN_OK();

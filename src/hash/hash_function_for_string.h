@@ -5,8 +5,8 @@
  *      Author: andy
  */
 
-#ifndef SRC_HASH_FUNCTION_HASH_FUNCTION_FOR_STRING_H_
-#define SRC_HASH_FUNCTION_HASH_FUNCTION_FOR_STRING_H_
+#ifndef SRC_HASH_HASH_FUNCTION_FOR_STRING_H_
+#define SRC_HASH_HASH_FUNCTION_FOR_STRING_H_
 
 #include <iostream>
 #include <string>
@@ -48,4 +48,4 @@ TEST_RESULT test() {
 
 }  // namespace string_hash_function
 
-#endif /* SRC_HASH_FUNCTION_HASH_FUNCTION_FOR_STRING_H_ */
+#endif /* SRC_HASH_HASH_FUNCTION_FOR_STRING_H_ */

@@ -8,8 +8,6 @@
 #ifndef BACKTRACKING_H_
 #define BACKTRACKING_H_
 
-#include "../common/node.h"
-
 namespace backtracking {
 // pseudo
 
@@ -18,30 +16,30 @@ struct Node {
   int value;
 };
 
-#if defined(__GNUC__) and !defined(__WIN64__)
-/*
-bool solve(Node* n, int goal) {
-  if (!n->next) {
-    if (n->next->value == goal)  //the leaf is a goal node,
-      return true;
-    else
-      return false;
-  } else {
-    for (auto c : n) {
-      if (solve(c)) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
-*/
-#endif
+//#if defined(__GNUC__) and !defined(__WIN64__)
+///*
+//bool solve(Node* n, int goal) {
+//  if (!n->next) {
+//    if (n->next->value == goal)  //the leaf is a goal node,
+//      return true;
+//    else
+//      return false;
+//  } else {
+//    for (auto c : n) {
+//      if (solve(c)) {
+//        return true;
+//      }
+//    }
+//    return false;
+//  }
+//}
+//*/
+//#endif
 
-TEST_RESULT test() {
-  __SCOPE_LOG__;
-  RETURN_OK();
-}
+//TEST_RESULT test() {
+//  __SCOPE_LOG__;
+//  RETURN_OK();
+//}
 
 }  // namespace backtracking
 

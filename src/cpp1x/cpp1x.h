@@ -41,6 +41,7 @@ TEST_RESULT test() {
 //  assert(permutation::test());
 //  assert(ring_buffer_locked::test());
 //  assert(ring_buffer_lock_free::test());
+  RETURN_OK();
 }
 }  // namespace cpp1x
 

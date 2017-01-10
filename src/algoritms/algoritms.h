@@ -17,6 +17,7 @@
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
 #include "balance_bst.h"
+#include "best_path.h"
 #include "big_little_endian.h"
 #include "binary_search.h"
 #include "blum_filter.h"
@@ -120,6 +121,7 @@ int test() {
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());
+  assert(best_path::test());
 //  assert(breadth_first_traversal_for_a_graph::test());
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
@@ -155,7 +157,7 @@ int test() {
 //  assert(reverse_linkedlist::test());
 //  assert(reverse_string_2::test());
 //  assert(reverse_string_3::test());
-  assert(selection_sort::test());
+//  assert(selection_sort::test());
 //  assert(simple_moving_average::test());
 //  assert(singleton::test());
 //  assert(staircase::test());

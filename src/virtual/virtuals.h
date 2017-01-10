@@ -3,6 +3,7 @@
 
 #include <assert.h>
 #include "pure_virtual.h"
+#include "overrides.h"
 #include "virt_access.h"
 #include "virt_cast_1.h"
 #include "virt_cast_2.h"
@@ -21,7 +22,8 @@
 namespace virtuals {
 
 TEST_RESULT test() {
-    LOG(INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  assert(overrides::test());
 //  assert(virt_cast_1::test());
 //  assert(virt_cast_2::test());
 //  assert(virt_func_1::test());
@@ -32,12 +34,12 @@ TEST_RESULT test() {
 //  assert(virt_private_access::test());
 //  assert(virt_func_5::test());
 //  assert(virt_func_6::test());
-//    assert(virt_func_7::test());
-//    assert(virt_func_8::test());
-//    assert(virt_func_9::test());
-    assert(pure_virtual::test());
+//  assert(virt_func_7::test());
+//  assert(virt_func_8::test());
+//  assert(virt_func_9::test());
+//  assert(pure_virtual::test());
   RETURN_OK();
 }
-} // namespace virtuals
+}  // namespace virtuals
 
 #endif /* VIRTUALS_H_ */

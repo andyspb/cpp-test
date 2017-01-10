@@ -8,6 +8,8 @@
 #ifndef SRC_HASHCODE_HASHTABLE_H_
 #define SRC_HASHTABLE_HASHTABLE_H_
 
+#include "hash_functions_collection.h"
+
 namespace hash_table {
 
 class HashEntry {
@@ -43,9 +45,15 @@ class HashTable {
   }
 
   int get(int key) {
-    int hash = (key % TABLE_SIZE);
-    while (table[hash] != NULL && table[hash]->getKey() != key)
+//    int hash = (key % TABLE_SIZE);
+    int hash = hash_functions_collection::knuth_hash_function(key);
+    LOG(INFO) << "hash=" << hash;
+    LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()=" << table[hash]->getKey();
+
+    while (table[hash] != NULL && table[hash]->getKey() != key) {
+      LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()=" << table[hash]->getKey();
       hash = (hash + 1) % TABLE_SIZE;
+    }
     if (table[hash] == NULL)
       return -1;
     else
@@ -53,12 +61,15 @@ class HashTable {
   }
 
   void put(int key, int value) {
-    int hash = (key % TABLE_SIZE);
+    //int hash = (key % TABLE_SIZE);
+    int hash = hash_functions_collection::knuth_hash_function(key);
+    LOG(INFO) << "hash=" << hash;
     while (table[hash] != NULL && table[hash]->getKey() != key)
       hash = (hash + 1) % TABLE_SIZE;
     if (table[hash] != NULL)
       delete table[hash];
     table[hash] = new HashEntry(key, value);
+    LOG(INFO) << "hash: " << hash;
   }
 
   ~HashTable() {
@@ -67,17 +78,36 @@ class HashTable {
         delete table[i];
     delete[] table;
   }
+
+  int size() {
+    int counter = 0;
+    for (int i = 0; i < TABLE_SIZE; ++i)
+      if (table[i] != NULL) {
+        ++counter;
+      }
+    return counter;
+  }
  private:
   HashEntry **table;
 };
 TEST_RESULT test() {
   __SCOPE_LOG__;
   HashTable table;
-  table.put(1,1);
-  table.put(2,2);
-  table.put(3,3);
-  table.put(4,4);
-  table.put(5,5);
+  constexpr int kMax = 10;
+  for (int i = 1; i < kMax; ++i) {
+    int value = (i * 100) + (i * 10) + i;
+    LOG(INFO) << "table.put(" << i << ", " << value << ")";
+    table.put(i,value);
+  }
+
+  int size = table.size();
+  LOG(INFO) << "table.size()=" << size;
+
+  for (int i = 1; i < kMax; ++i) {
+    int value = table.get(i);
+    LOG(INFO) << "table.get(" << i << ") =" << value;
+  }
+
   RETURN_OK();
 }
 

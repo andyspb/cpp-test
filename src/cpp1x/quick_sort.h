@@ -10,6 +10,7 @@
 
 #include <algorithm>
 #include <functional>
+#include <iterator>
 #include <vector>
 
 using namespace std;
@@ -18,11 +19,18 @@ namespace quick_sort {
 
 typedef vector<int>::iterator iterator;
 
-void print_vector(const std::vector<int>& v) {
+template<typename T = int>
+void print_vector(const std::vector<T>& v) {
   for (auto elem : v) {
     std::cout << elem << " ";
   }
-  std::cout << std::endl;
+  std::endl(std::cout);
+}
+
+template<typename T = int>
+void print_vector_it(const std::vector<T>& v) {
+  std::copy(v.begin(), v.end(), std::ostream_iterator<T>(std::cout, " "));
+  std::endl(std::cout);
 }
 
 template<class FwdIt, class Compare = std::less<>>
@@ -47,13 +55,13 @@ TEST_RESULT test() {
   v.emplace_back(0);
   v.emplace_back(10);
 
-  print_vector(v);
-#ifndef __WIN64__
+  print_vector_it(v);
+//#ifndef __WIN64__
   //quickSort<::std::vector<int>::iterator>(v.begin(), v.end());
   quickSort(v.begin(), v.end());
-#endif
+//#endif
 
-  print_vector(v);
+  print_vector_it(v);
   RETURN_OK();
 }
 

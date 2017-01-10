@@ -1,7 +1,7 @@
 /*
  * graph.h
  *
- *  Created on: 30 нояб. 2016 г.
+ *  Created on: 30 пїЅпїЅпїЅпїЅ. 2016 пїЅ.
  *      Author: andy
  */
 
@@ -11,15 +11,11 @@
 #include "backtracking.h"
 
 namespace graph {
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
-
+//  assert(backtracking::test());
   RETURN_OK();
 }
-
 }  // namespace graph
-
-
 
 #endif /* SRC_GRAPH_GRAPH_H_ */

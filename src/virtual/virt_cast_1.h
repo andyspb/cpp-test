@@ -25,14 +25,13 @@ class Derived : public Base {
 };
 
 int test() {
-  std::cout << "Test: Dynamic cast --->" << std::endl;
-//  Base* pb = new Derived();   // unclear but ok
-//  Base* pb2 = new Base();
-//  Derived* pd = dynamic_cast<Derived*>(pb);   // ok: pb actually points to a D
-//  pd->f();
-//  Derived* pd2 = dynamic_cast<Derived*>(pb2);   // pb2 points to a B not a D
+  LOG(INFO) << __PRETTY_FUNCTION__;
+  Base* pb = new Derived();   // unclear but ok
+  Base* pb2 = new Base();
+  Derived* pd = dynamic_cast<Derived*>(pb);   // ok: pb actually points to a D
+  pd->f();
+  Derived* pd2 = dynamic_cast<Derived*>(pb2);   // pb2 points to a B not a D
 //  pd2->f();
-  std::cout << "<--- test passed" << std::endl;
   return 1;
 }
 }  // namespace virt_cast_1

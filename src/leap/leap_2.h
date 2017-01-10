@@ -12,7 +12,7 @@ namespace _leap_2 {
 
 class A {
  public:
-  virtual
+//  virtual
   void f() {
     std::cout << "A";
   }
@@ -20,7 +20,7 @@ class A {
 
 class B : public A {
  public:
-  virtual
+//  virtual
   void f() {
     std::cout << "B";
   }
