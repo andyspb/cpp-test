@@ -12,7 +12,7 @@
 namespace hash_functions_collection {
 
 
-inline ULONG hashFunc( ULONG i ) {
+unsigned long hashFunc( unsigned long i ) {
 // see http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key
 //return  ( ( 2166136261UL ^ i ) * 16777619 );              // VERY BAD
 //return  ( 2166136261UL ^ (i * 16777619) );                // VERY BAD
@@ -37,17 +37,17 @@ int knuth_hash_function(int i) {
   return (i*2654435761) % (2^32);
 }
 
-int k_hash(int v)
+unsigned long long k_hash(unsigned long long v)
 {
     v *= 2654435761;
     return v >> 32;
 }
-uint32_t k__hash(uint32_t v)
+unsigned long long k__hash(unsigned long long v)
 {
     return v * (2654435761);
 }
 
-}
+}  // hash_functions_collection
 
 
 #endif /* SRC_HASH_HASH_FUNCTIONS_COLLECTION_H_ */

@@ -26,7 +26,7 @@ template<typename ... Types> void f(Types ... args) {
   LOG(INFO) << "numargs=" << numargs
       << ", size=" << size;
 
-  double res[size] = {1,args...,-1};
+  int res[size] = {1,args...,-1};
 
   LOG(INFO) << "res[1]=" << res[1] << ", res[2]=" << res[2];
 

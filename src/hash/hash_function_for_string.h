@@ -30,8 +30,10 @@ unsigned long hash(const char *str) {
 
   unsigned long HASH = 5381;
   int c;
-  while (c = *str++) {
+  c = *str++;
+  while (c != 0) {
     HASH = ((HASH << 5) + HASH) + c; /* hash * 33 + c */
+    c = *str++;
   }
   return HASH;
 
