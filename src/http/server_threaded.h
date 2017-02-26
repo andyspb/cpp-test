@@ -8,8 +8,8 @@
 #ifndef SRC_HTTP_SERVER_THREADED_H_
 #define SRC_HTTP_SERVER_THREADED_H_
 
-#include "logger.h"
-#include "constants.h"
+#include "../logger/logger.h"
+#include "../common/constants.h"
 
 #ifdef __GNUC__
 

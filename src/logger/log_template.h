@@ -123,7 +123,7 @@ private:
 };
 
 #ifdef _WIN32
-#define __SCOPE_LOG__ ScopeLog _(__FUNCTION__)
+#define __SCOPE_LOG__ ScopeLog _(__PRETTY_FUNCTION__)
 #else
 #define __SCOPE_LOG__ ScopeLog _(__PRETTY_FUNCTION__)
 #endif

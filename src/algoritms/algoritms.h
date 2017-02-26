@@ -34,6 +34,8 @@
 #include "count_1_in_binary.h"
 #include "count_inversions_in_array_with_merge.h"
 #include "count_inversions_in_array.h"
+#include "dijkstra_shortest_path_algorithm.h"
+#include "dinics_algorithm_maximum_flow.h"
 #include "drawcircle.h"
 #include "duplication.h"
 #include "encode_string_google.h"
@@ -84,9 +86,8 @@
 #include "pow.h"
 #include "simple_moving_average.h"
 #include "staircase.h"
-
 #include "reverse_string_3.h"
-
+#include "reverse_double_linked_list.h"
 #include "shell_sort.h"
 #include "singleton_with_mutex.h"
 #include "singleton.h"
@@ -102,7 +103,6 @@
 #include "tree_traversal.h"
 #include "tree_distance.h"
 #include "turn_off_bit_in_number.h"
-
 #include "check_if_braces_match.h"
 #include "check_tree_is_bst.h"
 #include "pow_x_n.h"
@@ -121,7 +121,7 @@ int test() {
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());
-  assert(best_path::test());
+//  assert(best_path::test());
 //  assert(breadth_first_traversal_for_a_graph::test());
 //  assert(btree_depth::test());
 //  assert(bubblesort::test());
@@ -131,6 +131,8 @@ int test() {
 //  assert(circular_que::test());
 //  assert(compare_linked_lists::test());
 //  assert(count_ones_in_binary::test());
+//  assert(dijkstra_shortest_path_algorithm::test());
+//  assert(dinics_algorithm_maximum_flow::test());
 //  assert(drawcircle::test());
 //  assert(duplication::test());
 //  assert(encode_string_google::test());
@@ -174,6 +176,7 @@ int test() {
 //  assert(pcm_buffer::test());
 //  assert(palindrome::test());
 //  assert(palindrom_rec::test());
+  assert(reverse_double_linked_list::test());
 //  assert(check_tree_is_bst::test());
 //  assert(check_open_closed_brackets::test());
 //  assert(paradox_monti_holl::test());

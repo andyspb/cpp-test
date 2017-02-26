@@ -9,8 +9,8 @@
 #define SRC_HTTP_SERVER_SINGLE_THREAD_H_
 #ifdef __GNUC__
 
-#include "logger.h"
-#include "constants.h"
+#include "../logger/logger.h"
+#include "../common/constants.h"
 
 #include <stdio.h>
 #include <stdlib.h>

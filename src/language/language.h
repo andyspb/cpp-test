@@ -55,6 +55,7 @@
 #include "pointer_2_function.h"
 #include "private_constructor.h"
 #include "pure_virtual_call.h"
+#include "regular_expressions.h"
 #include "set_test.h"
 #include "sizeof.h"
 #include "stack_container.h"
@@ -93,49 +94,38 @@ TEST_RESULT test() {
 
 //  assert(cast_const::test());
 //  assert(constexpr_test::test());
-  //	assert(constructor_exception::test());
-
+//	assert(constructor_exception::test());
 //  assert(copy_::test());
-
 //  assert(cout_::test());
 //  assert(delete_::test());
 //  assert(dynamic_cast_::test());
 //  assert(dynamic_cast_2::test());
 //  assert(dynamic_cast_3::test());
 //  assert(function_parameter::test());
-
 //  assert(goto_::test());
-
 //  assert(function_pointers::test());
 //  assert(intialization_with_this::test());
-  //	assert(inheritance::test());
-
+//	assert(inheritance::test());
 //  assert(language_lambda::test());
-
-  //    assert(namespace_test::test());
+//  assert(namespace_test::test());
 //  assert(method_hiding::test());
 //  assert(my_queue::test());
 //  assert(my_stack::test());
-
 //  assert(que_test::test());
-
 //  assert(pointer_as_param::test());
 //  assert(pointer_to_function::test());
-
 //  assert(private_constructor::test());
 //  assert(pure_virt_call::test());
+ assert(regular_expressions::test());
 //  assert(set_test::test());
-
-//    assert(static_cast_::test());
+//  assert(static_cast_::test());
 //	assert(string_literal::test());
 //	assert(size_of::test());
 //  assert(stl_tests::test());
 //	assert(strlen_test::test());
-
 //  assert(type_traits::test());
-
 //  assert(union_::test());
-  assert(va_args::test());
+//  assert(va_args::test());
 //  assert(vector_pointer_arithmetic::test());
 //  assert(virtual_destr::test());
 //  assert(virtual_method::test());
