@@ -14,36 +14,37 @@ namespace reverse_double_linked_list {
 // previous pointer as prev and next pointer as next.
 
 struct Node {
-  Node(int v, Node* n, Node* p) : value(v), next(n), prev(p) {}
+  Node(int v, Node* n, Node* p)
+      : value(v),
+        next(n),
+        prev(p) {
+  }
   int value;
   Node* next;
   Node* prev;
 };
 
 void print_dlist(Node* node) {
-  __SCOPE_LOG__;
   while (node) {
-    printf("%d ",node->value);
+    printf("%d ", node->value);
     node = node->next;
   }
   printf("\n");
 }
 
-void reverse_dlist(struct Node *head_ref)
-{
-    struct Node *temp = NULL;
-    struct Node *current = head_ref;
+void reverse_dlist(struct Node *head_ref) {
+  struct Node *temp = NULL;
+  struct Node *current = head_ref;
 
-    while (current !=  NULL)
-    {
-        temp = current->prev;
-        current->prev = current->next;
-        current->next = temp;
-        current = current->prev;
-    }
+  while (current != NULL) {
+    temp = current->prev;
+    current->prev = current->next;
+    current->next = temp;
+    current = current->prev;
+  }
 
-    if(temp != NULL )
-        head_ref = temp->prev;
+  if (temp != NULL)
+    head_ref = temp->prev;
 }
 
 TEST_RESULT test() {
@@ -63,7 +64,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace reverse_double_linked_list
-
-
 
 #endif /* SRC_ALGORITMS_REVERSE_DOUBLE_LINKED_LIST_H_ */
