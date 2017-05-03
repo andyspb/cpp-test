@@ -152,7 +152,7 @@ int Graph::sendFlow(int u, int flow, int t, int start[]) {
     return flow;
 
   // Traverse all adjacent edges one -by - one.
-  for (; start[u] < adj[u].size(); ++start[u]) {
+  for (; start[u] < (int)adj[u].size(); ++start[u]) {
     // Pick next edge from adjacency list of u
     Edge &e = adj[u][start[u]];
 

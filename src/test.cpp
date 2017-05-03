@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
 //  assert(bits::test());
 //  assert(blockchain::test());
 //  assert(cast::test());
-//  assert(cpp1x::test());
+  assert(cpp1x::test());
 //  assert(cci4::test());
 //  assert(cci5::test());
 //  assert(clock_::test());
@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
 //  assert(exceptions::test());
 //  assert(epam::test() );
 //  assert(facebook::test());
-  assert(fast_io::test());
+//  assert(fast_io::test());
 //  assert(functors::test());
 //  assert(futures::test());
 //  assert(google_2::test());

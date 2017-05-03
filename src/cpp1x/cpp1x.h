@@ -22,6 +22,7 @@
 #include "ring_buffer_lock_free.h"
 #include "rvalues.h"
 #include "selection_sort.h"
+#include "sleepsort.h"
 #include "slide.h"
 #include "string_trim.h"
 #include "threads.h"
@@ -34,13 +35,14 @@ TEST_RESULT test() {
 //  assert(threads::test());
 //  assert(move::test());
 //  assert(insert_sort::test());
-  assert(quick_sort::test());
+//  assert(quick_sort::test());
 //  assert(constexpr_::test());
 //  assert(constexpr_factorial::test());
 //  assert(decltype_::test());
 //  assert(permutation::test());
 //  assert(ring_buffer_locked::test());
 //  assert(ring_buffer_lock_free::test());
+    assert(sleepsort::test());
   RETURN_OK();
 }
 }  // namespace cpp1x
