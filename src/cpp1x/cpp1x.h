@@ -23,6 +23,7 @@
 #include "rvalues.h"
 #include "selection_sort.h"
 #include "sleepsort.h"
+#include "sleepsort_lambda.h"
 #include "slide.h"
 #include "string_trim.h"
 #include "threads.h"
@@ -42,7 +43,8 @@ TEST_RESULT test() {
 //  assert(permutation::test());
 //  assert(ring_buffer_locked::test());
 //  assert(ring_buffer_lock_free::test());
-    assert(sleepsort::test());
+//  assert(sleepsort::test());
+  assert(sleepsort_lambda::test());
   RETURN_OK();
 }
 }  // namespace cpp1x

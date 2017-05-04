@@ -32,7 +32,8 @@ class Graph {
  public:
   Graph(int V);
   // add edge to the graph
-  void addEdge(int u, int v, int C);bool BFS(int s, int t);
+  void addEdge(int u, int v, int C);
+  bool BFS(int s, int t);
   int sendFlow(int s, int flow, int t, int ptr[]);
   int DinicMaxflow(int s, int t);
  private:
@@ -92,10 +93,10 @@ Graph::Graph(int V) {
 // add edge to the graph
 void Graph::addEdge(int u, int v, int C) {
   // Forward edge : 0 flow and C capacity
-  Edge a { v, 0, C, adj[v].size() };
+  Edge a { v, 0, C, (int)(adj[v].size()) };
 
   // Back edge : 0 flow and 0 capacity
-  Edge b { u, 0, 0, adj[u].size() };
+  Edge b { u, 0, 0, (int)(adj[u].size()) };
 
   adj[u].push_back(a);
   adj[v].push_back(b);  // reverse edge
