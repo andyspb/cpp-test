@@ -22,18 +22,18 @@ void print_vec(std::vector<A>& vec) {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  std::vector<unsigned> v = {1,20,5,8,33,4,22,3,99,12};
+  std::vector<unsigned> vec = {1,20,5,8,33,4,22,3,99,12};
   print_vec(v);
 
   std::vector<std::thread> threads;
-  for (size_t i = 0; i<v.size(); ++i) {
+  for (const auto& v : vec) {
     threads.push_back(std::thread(([](unsigned x){
       std::this_thread::sleep_for(std::chrono::milliseconds(x));
       std::cout << x << " ";
-    }), v[i]));
+    }), v));
   }
 
-  for(size_t i = 0; i<v.size(); ++i) {
+  for(size_t i = 0; i<vec.size(); ++i) {
     threads[i].join();
   }
 
