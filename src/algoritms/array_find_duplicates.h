@@ -2,7 +2,7 @@
 #define _ARRAY_FIND_DUPLICATES_H
 
 #include "../common/templates.h"
-
+#include "../common/array.h"
 #include <iostream>
 #include <algorithm>
 
@@ -12,20 +12,12 @@
 // [ I ended up giving about 4 or 5 different solutions for this, each supposedly better than the others ].
 
 namespace find_dup_in_array {
-template <typename T>
-void print_array(T* arr, size_t size) {
-  for (size_t s=0; s<size; ++s) {
-    std::cout << arr[s] << " ";
-  }
-  std::endl(std::cout);
-}
-
 
 int find_duplicates_in_array() {
   __SCOPE_LOG__;
   LOG(INFO) << "Test: find duplicates in array";
 
-  int a[100], b[100] = {0};
+  int a[100], b[100] = { 0 };
   for (int i = 0; i < 100; ++i) {
     a[i] = i;
   }
@@ -60,14 +52,12 @@ int find_duplicates_in_array_2(int a[], size_t a_size) {
   return 1;
 }
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-
   find_duplicates_in_array();
 
-  int a[10] = {1,2,3,3,3,4,4,4,8,9};
+  int a[10] = { 1, 2, 3, 3, 3, 4, 4, 4, 8, 9 };
   size_t size = sizeof_array(a);
   LOG(INFO) << "size=" << size;
 
@@ -75,6 +65,7 @@ TEST_RESULT test() {
 
   RETURN_OK();
 }
+
 
 }  // namesapce array_find_duplicates
 #endif // _ARRAY_FIND_DUPLICATES_H

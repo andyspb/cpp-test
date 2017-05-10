@@ -38,6 +38,7 @@
 #include "dinics_algorithm_maximum_flow.h"
 #include "drawcircle.h"
 #include "duplication.h"
+#include "duplicate_linkedlist.h"
 #include "encode_string_google.h"
 //#include "encode_string_google2.h"
 #include "heapsort.h"
@@ -135,6 +136,7 @@ int test() {
 //  assert(dinics_algorithm_maximum_flow::test());
 //  assert(drawcircle::test());
 //  assert(duplication::test());
+  assert(duplicate_linkedlist::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(fibbonachi_sum::test());
@@ -176,7 +178,7 @@ int test() {
 //  assert(pcm_buffer::test());
 //  assert(palindrome::test());
 //  assert(palindrom_rec::test());
-  assert(reverse_double_linked_list::test());
+//  assert(reverse_double_linked_list::test());
 //  assert(check_tree_is_bst::test());
 //  assert(check_open_closed_brackets::test());
 //  assert(paradox_monti_holl::test());

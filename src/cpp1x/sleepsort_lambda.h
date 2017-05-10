@@ -23,7 +23,7 @@ void print_vec(std::vector<A>& vec) {
 TEST_RESULT test() {
   __SCOPE_LOG__;
   std::vector<unsigned> vec = {1,20,5,8,33,4,22,3,99,12};
-  print_vec(v);
+  print_vec(vec);
 
   std::vector<std::thread> threads;
   for (const auto& v : vec) {
@@ -33,13 +33,11 @@ TEST_RESULT test() {
     }), v));
   }
 
-  for(size_t i = 0; i<vec.size(); ++i) {
-    threads[i].join();
+  for(auto& t : threads) {
+    t.join();
   }
 
   std::endl(std::cout);
-
-
 
   RETURN_OK();
 }

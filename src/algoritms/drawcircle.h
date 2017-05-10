@@ -17,7 +17,7 @@ void draw_point(int x, int y, int x0, int y0, int r) {
             << " radius=" << r << std::endl;
 }
 
-int test() {
+TEST_RESULT test() {
   std::cout << "Test: Drawcircle example --->" << std::endl;
   int x = 0, y = 0, r = 50000;
   int xi, yi;
@@ -26,7 +26,7 @@ int test() {
       draw_point(xi, yi, x, y, r);
   }
   std::cout << "<--- test passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace drawcircle
 
