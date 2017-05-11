@@ -22,7 +22,8 @@ int NumberOfSetBits(int i) {
   return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
 }
 
-int test() {
+TEST_RESULT test() {
+  __SCOPE_LOG__;
   std::cout << "Test: count ones in binary:" << std::endl;
   std::cout
       << "Give a very good method to count the number of ones in a N (e.g. 32) bit number."
@@ -35,7 +36,7 @@ int test() {
   number_of_ones_in_N(8);
   number_of_ones_in_N(45);
   std::cout << "<--- passed" << std::endl;
-  return 1;
+  RETURN_OK();
 }
 }  // namespace count_ones_in_binary
 #endif // _COOUNT_ONES_IN_BINARY_H_

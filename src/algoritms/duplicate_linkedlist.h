@@ -9,15 +9,9 @@
 #define SRC_ALGORITMS_DUPLICATE_LINKEDLIST_H_
 
 #include "../common/common.h"
+#include "../common/node.h"
 
 namespace duplicate_linkedlist {
-
-// single linked list
-class Node {
- public:
-  int val;
-  Node *next;
-};
 
 void fill_slist(Node& node, int arr[], int length) {
   node.val = arr[0];
