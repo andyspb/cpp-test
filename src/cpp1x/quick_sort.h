@@ -13,25 +13,12 @@
 #include <iterator>
 #include <vector>
 
-using namespace std;
+#include "common.h"
+
 
 namespace quick_sort {
 
-typedef vector<int>::iterator iterator;
-
-template<typename T = int>
-void print_vector(const std::vector<T>& v) {
-  for (auto elem : v) {
-    std::cout << elem << " ";
-  }
-  std::endl(std::cout);
-}
-
-template<typename T = int>
-void print_vector_it(const std::vector<T>& v) {
-  std::copy(v.begin(), v.end(), std::ostream_iterator<T>(std::cout, " "));
-  std::endl(std::cout);
-}
+typedef std::vector<int>::iterator iterator;
 
 template<class FwdIt, class Compare = std::less<>>
 void quickSort(FwdIt first, FwdIt last, Compare cmp = Compare { }) {
@@ -46,14 +33,7 @@ void quickSort(FwdIt first, FwdIt last, Compare cmp = Compare { }) {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  std::vector<int> v;
-  v.emplace_back(9);
-  v.emplace_back(3);
-  v.emplace_back(2);
-  v.emplace_back(1);
-  v.emplace_back(7);
-  v.emplace_back(0);
-  v.emplace_back(10);
+  std::vector<int> v{9,3,2,1,7,0,10};
 
   print_vector_it(v);
 //#ifndef __WIN64__

@@ -27,6 +27,8 @@
 #include "slide.h"
 #include "string_trim.h"
 #include "threads.h"
+#include "transform_test.h"
+#include "vector_test.h"
 
 namespace cpp1x {
 
@@ -44,7 +46,9 @@ TEST_RESULT test() {
 //  assert(ring_buffer_locked::test());
 //  assert(ring_buffer_lock_free::test());
 //  assert(sleepsort::test());
-  assert(sleepsort_lambda::test());
+//  assert(sleepsort_lambda::test());
+  assert(transform_test::test());
+//  assert(vector_test::test());
   RETURN_OK();
 }
 }  // namespace cpp1x

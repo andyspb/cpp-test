@@ -8,6 +8,8 @@
 #ifndef SRC_FAST_IO_FAST_SCAN_H_
 #define SRC_FAST_IO_FAST_SCAN_H_
 
+#include <iostream>
+
 namespace fast_scan {
 
 void fastscan(int &number) {
@@ -41,7 +43,7 @@ void fastscan(int &number) {
 TEST_RESULT test() {
   int number;
   fastscan(number);
-  cout << number << "\n";
+  std::cout << number << "\n";
   RETURN_OK();
 }
 

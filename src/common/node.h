@@ -14,6 +14,8 @@ struct Node;
 void print_nodes(Node* node);
 void fill_nodes_from_array(Node& node, int arr[], int length);
 
+////////////////////////////////////////////////////////////////
+//
 // implementation
 struct Node {
   Node(): val(0), next(0) {}

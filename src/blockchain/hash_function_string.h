@@ -22,9 +22,9 @@ unsigned int hash(const char* s, unsigned int seed = 0) {
   return hash;
 }
 
-size_t test_std_hash(const std::string& in_str) {
+size_t test_std_hash(const std::string& str) {
   std::hash<std::string> hash;
-  return hash(in_str);
+  return hash(str);
 }
 
 TEST_RESULT test() {

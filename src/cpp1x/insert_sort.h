@@ -4,25 +4,13 @@
 #include <algorithm>
 #include <iostream>
 
-namespace insert_sort {
+#include "common.h"
 
-void print_vector(const std::vector<int>& v) {
-  for (auto elem: v)  {
-    std::cout << elem << " ";
-  }
-  std::cout<<std::endl;
-}
+namespace insert_sort {
 
 int test() {
 
-  std::vector<int> v;
-  v.push_back(9);
-  v.push_back(3);
-  v.push_back(2);
-  v.push_back(1);
-  v.push_back(7);
-  v.push_back(0);
-  v.push_back(10);
+  std::vector<int> v{9,3,2,1,7,0,10};
 
   print_vector(v);
 
