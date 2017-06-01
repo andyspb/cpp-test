@@ -8,6 +8,10 @@
 namespace bind1st_ {
 void param_test(...) {
 }
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 int test() {
   std::cout << "Test: bind1st  --->" << std::endl;
   std::binder1st<std::equal_to<int> > equal_to_10(std::equal_to<int>(), 10);
@@ -23,5 +27,7 @@ int test() {
   return 1;
 }
 }  // namespace bind1st_
+
+#pragma GCC diagnostic pop
 
 #endif // #define _BIND1ST_H_

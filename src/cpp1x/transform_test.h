@@ -19,9 +19,11 @@ TEST_RESULT test() {
   __SCOPE_LOG__;
 
   std::string s("hello");
+  std::cout << s << std::endl;
+
   std::transform(s.begin(), s.end(), s.begin(),
                  [](unsigned char c) {return std::toupper(c);});
-  std::cout << s;
+  std::cout << s << std::endl;
 
   RETURN_OK();
 }

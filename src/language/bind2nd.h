@@ -3,6 +3,10 @@
 
 #include <algorithm>
 #include <iostream>
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace bind2nd_ {
 int test() {
   std::cout << "Test: bind2nd  --->" << std::endl;
@@ -15,6 +19,9 @@ int test() {
   return 1;
 }
 }  // namespace bind2nd_
+
+#pragma GCC diagnostic pop
+
 
 #endif  // _BIND2ND_H_
 

@@ -12,6 +12,7 @@
 #include <ctime>
 #include <sstream>
 #include <iomanip>
+#include <string>
 
 #define LOG(LEVEL) tlog::Log<tlog::Level::LEVEL>().Get()
 #define __ENTER__ " >>> "

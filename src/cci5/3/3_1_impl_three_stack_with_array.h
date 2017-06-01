@@ -48,6 +48,9 @@ bool isEmpty(int stackNum) {
   return stackPointer[stackNum] == -1;
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated"
+
 void push(int stackNum, int value) throw (Exception) {
   /* Check if we have space */
   if (stackPointer[stackNum] + 1 >= stackSize) {
@@ -68,6 +71,9 @@ int pop(int stackNum) throw(Exception) {
   stackPointer[stackNum]--;// Decrement pointer
   return value;
 }
+
+#pragma GCC diagnostic pop
+
 
 int test() {
   return 1;

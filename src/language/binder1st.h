@@ -5,6 +5,9 @@
 #include <functional>
 #include <algorithm>
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
 namespace binder1st_ {
 int test() {
   std::cout << "Test: binder1st  --->" << std::endl;
@@ -20,5 +23,7 @@ int test() {
   return 1;
 }
 } // namespace binder1st_
+
+#pragma GCC diagnostic pop
 
 #endif // _BINDER1ST_H_

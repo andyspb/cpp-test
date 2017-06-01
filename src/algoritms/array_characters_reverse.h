@@ -30,7 +30,7 @@ TEST_RESULT test() {
     std::cout << " " << str[i];
   }
   std::endl(std::cout);
-  std::cout << "<--- end" << std::endl;
+  ::std::cout << "<--- end" << std::endl;
   RETURN_OK();
 }
 }  // namespace array_characters_reverse
