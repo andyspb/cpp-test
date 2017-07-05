@@ -14,6 +14,7 @@
 #include "constexpr.h"
 #include "constexpr_factorial.h"
 #include "decltype.h"
+#include "inserting_vector_in_sorted_order.h"
 #include "insert_sort.h"
 #include "move.h"
 #include "quick_sort.h"
@@ -37,7 +38,8 @@ TEST_RESULT test() {
 //  assert(conditional_variable_::test());
 //  assert(threads::test());
 //  assert(move::test());
-//  assert(insert_sort::test());
+  assert(inserting_vector_in_sorted_order::test());
+  //  assert(insert_sort::test());
 //  assert(quick_sort::test());
 //  assert(constexpr_::test());
 //  assert(constexpr_factorial::test());
@@ -47,7 +49,7 @@ TEST_RESULT test() {
 //  assert(ring_buffer_lock_free::test());
 //  assert(sleepsort::test());
 //  assert(sleepsort_lambda::test());
-  assert(transform_test::test());
+//  assert(transform_test::test());
 //  assert(vector_test::test());
   RETURN_OK();
 }
