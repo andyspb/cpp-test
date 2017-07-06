@@ -14,6 +14,7 @@
 #include "constexpr.h"
 #include "constexpr_factorial.h"
 #include "decltype.h"
+#include "heap.h"
 #include "inserting_vector_in_sorted_order.h"
 #include "insert_sort.h"
 #include "move.h"
@@ -38,7 +39,8 @@ TEST_RESULT test() {
 //  assert(conditional_variable_::test());
 //  assert(threads::test());
 //  assert(move::test());
-  assert(inserting_vector_in_sorted_order::test());
+//  assert(inserting_vector_in_sorted_order::test());
+  assert(heap_test::test());
   //  assert(insert_sort::test());
 //  assert(quick_sort::test());
 //  assert(constexpr_::test());
