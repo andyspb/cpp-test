@@ -81,6 +81,7 @@
 #include "num_to_str.h"
 #include "palindrom_rec.h"
 #include "palindrome.h"
+#include "palindrome_linkedlist.h"
 #include "pcm_buffer.h"
 #include "permutation_of_string.h"
 #include "piramid_sort.h"
@@ -119,6 +120,7 @@
 namespace algorithms {
 int test() {
   __SCOPE_LOG__;
+  assert(palindrome_linkedlist::test());
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());
@@ -136,7 +138,7 @@ int test() {
 //  assert(dinics_algorithm_maximum_flow::test());
 //  assert(drawcircle::test());
 //  assert(duplication::test());
-  assert(duplicate_linkedlist::test());
+//  assert(duplicate_linkedlist::test());
 //  assert(encode_string_google::test());
 //  assert(fibbonachi::test());
 //  assert(fibbonachi_sum::test());
