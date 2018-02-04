@@ -7,6 +7,7 @@
 
 #include <assert.h>
 
+#include "lambda_test.h"
 #include "lambda_test1.h"
 #include "lambda_test2.h"
 #include "lambda_test3.h"
@@ -14,8 +15,9 @@
 namespace lambda {
 
 TEST_RESULT test() {
-  LOG(INFO) << __FUNCTION__;
-  assert(lambda_test1::test());
+  __SCOPE_LOG__;
+  assert(lambda_test::test());
+//  assert(lambda_test1::test());
 //  assert(lambda_test2::test());
 //  assert(lambda_test3::test());
   RETURN_OK();

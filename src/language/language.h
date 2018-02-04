@@ -22,6 +22,7 @@
 #include "cast_1.h"
 #include "cast_2.h"
 #include "cast_sidecast.h"
+#include "cast_static_dynamic.h"
 #include "char_array.h"
 #include "class_initialization.h"
 #include "const_char_test.h"
@@ -93,6 +94,7 @@ TEST_RESULT test() {
 //  assert(const_char_test::test());
 
 //  assert(cast_const::test());
+  assert(cast_static_dynamic::test());
 //  assert(constexpr_test::test());
 //	assert(constructor_exception::test());
 //  assert(copy_::test());

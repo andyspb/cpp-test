@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv) {
   __SCOPE_LOG__;
-  assert(algorithms::test());
+//  assert(algorithms::test());
 //  assert(array_::test());
 //  assert(binary_tree::test());
 //  assert(bits::test());
@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
 //  assert(ipc::test());
 //  assert(json::test());
 //  assert(lambda::test());
-//  assert(language::test());
+  assert(language::test());
 //  assert(last_1::test());
 //  assert(leap::test());
 //  assert(lock_free::test());
