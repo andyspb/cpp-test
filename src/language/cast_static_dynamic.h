@@ -17,6 +17,10 @@ struct A {
       : a(0),
         b(0) {
   }
+
+  virtual ~A() {
+  }
+
   int a;
   int b;
 };
@@ -24,12 +28,21 @@ struct B : A {
   B()
       : g(0) {
   }
+
+  virtual ~B() {
+  }
+
   int g;
 };
 struct D {
   D()
       : f(0) {
   }
+
+  virtual ~D() {
+
+  }
+
   float f;
 };
 struct C : A, D {
@@ -40,10 +53,10 @@ struct C : A, D {
 };
 
 TEST_RESULT test_0() {
-  C* pC = new C;
-  A* pA = pC;
-  D* pD = static_cast<D*>(pC);
-  std::cout << pÑ << " " << pD << " " << pA << std::endl;
+  C* c = new C;
+  A* a = c;
+  D* d = static_cast<D*>(c);
+  std::cout << c << " " << d << " " << a << std::endl;
 
   RETURN_OK();
 }
@@ -59,13 +72,14 @@ TEST_RESULT test_1() {
 }
 
 TEST_RESULT test_2() {
-  C* pC = new C;
-  A* pA = pC;
-  if (D* pD = dynamic_cast<D*>(pC))
+  C* c = new C;
+  A* a = c;
+  if (D* d = dynamic_cast<D*>(c))
     std::cout << " OK " << std::endl;
   else
     std::cout << " not OK " << std::endl;
-  if (B* pB = dynamic_cast<B*>(pA))
+
+  if (B* b = dynamic_cast<B*>(a))
     std::cout << " OK " << std::endl;
   else
     std::cout << " not OK " << std::endl;

@@ -16,6 +16,7 @@
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
+#include "array_rotation.h"
 #include "balance_bst.h"
 #include "best_path.h"
 #include "big_little_endian.h"
@@ -111,6 +112,7 @@
 #include "longest_common_subseq.h"
 #include "merge_sort_linked_linkedlist.h"
 #include "merge_sort_linked_linkedlist.h"
+#include "merge_str_arrays.h"
 #include "reverse_string_2.h"
 #include "reverse_string_3.h"
 #include "paradox_monti_holl.h"
@@ -120,7 +122,9 @@
 namespace algorithms {
 int test() {
   __SCOPE_LOG__;
-  assert(palindrome_linkedlist::test());
+  assert(merge_str_arr::test());
+//  assert(palindrome_linkedlist::test());
+//  assert(array_rotation::test());
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());
