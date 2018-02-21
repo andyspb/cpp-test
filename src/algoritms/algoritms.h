@@ -32,9 +32,11 @@
 #include "circular_que.h"
 #include "common_data.h"
 #include "compare_linked_list.h"
+#include "compare_triplet.h"
 #include "count_1_in_binary.h"
 #include "count_inversions_in_array_with_merge.h"
 #include "count_inversions_in_array.h"
+#include "diagonal_difference.h"
 #include "dijkstra_shortest_path_algorithm.h"
 #include "dinics_algorithm_maximum_flow.h"
 #include "drawcircle.h"
@@ -122,7 +124,9 @@
 namespace algorithms {
 int test() {
   __SCOPE_LOG__;
-  assert(merge_str_arr::test());
+//  assert(compare_triplet::test());
+  assert(diagonal_difference::test());
+//  assert(merge_str_arr::test());
 //  assert(palindrome_linkedlist::test());
 //  assert(array_rotation::test());
 //  assert(longest_common_subseq::test());
