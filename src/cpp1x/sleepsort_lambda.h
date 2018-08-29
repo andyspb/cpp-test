@@ -12,28 +12,28 @@ namespace sleepsort_lambda {
 
 template<class A>
 void print_vec(std::vector<A>& vec) {
-  size_t len= vec.size();
+  size_t len = vec.size();
   for (const auto i : vec) {
     std::cout << i << " ";
   }
   std::endl(std::cout);
 }
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  std::vector<unsigned> vec = {1,20,5,8,33,4,22,3,99,12};
+  std::vector<unsigned> vec = { 1, 20, 5, 8, 33, 4, 22, 3, 99, 12 };
   print_vec(vec);
 
-  std::vector<std::thread> threads;
+  std::vector < std::thread > threads;
   for (const auto& v : vec) {
-    threads.push_back(std::thread(([](unsigned x){
+    threads.push_back(std::thread(([](unsigned x) {
       std::this_thread::sleep_for(std::chrono::milliseconds(x));
       std::cout << x << " ";
-    }), v));
+    }),
+                                  v));
   }
 
-  for(auto& t : threads) {
+  for (auto& t : threads) {
     t.join();
   }
 
@@ -43,7 +43,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace sleepsort_lambda
-
-
 
 #endif /* SRC_CPP1X_SLEEPSORT_LAMBDA_H_ */

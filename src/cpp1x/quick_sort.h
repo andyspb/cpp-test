@@ -15,7 +15,6 @@
 
 #include "common.h"
 
-
 namespace quick_sort {
 
 typedef std::vector<int>::iterator iterator;
@@ -33,7 +32,7 @@ void quickSort(FwdIt first, FwdIt last, Compare cmp = Compare { }) {
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  std::vector<int> v{9,3,2,1,7,0,10};
+  std::vector<int> v { 9, 3, 2, 1, 7, 0, 10 };
 
   print_vector_it(v);
 //#ifndef __WIN64__
