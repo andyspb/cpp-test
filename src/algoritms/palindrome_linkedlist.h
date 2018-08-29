@@ -32,7 +32,7 @@ TEST_RESULT test() {
 
   /* Start with the empty list */
   struct Node* head = NULL;
-  char str[] = "abacaba";
+  char str[] = "1abacaba";
   int i;
 
   for (i = 0; str[i] != '\0'; i++) {

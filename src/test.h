@@ -28,6 +28,7 @@
 #include "cast/cast.h"
 #include "clock/clock.h"
 #include "cpp1x/cpp1x.h"
+#include "cpp17/test.h"
 #include "cci4/cci4.h"
 #include "cci5/cci5.h"
 #include "cpp1x/cpp1x.h"

@@ -16,6 +16,7 @@
 
 #include "array_characters_reverse.h"
 #include "array_find_duplicates.h"
+#include "array_rotation.h"
 #include "balance_bst.h"
 #include "best_path.h"
 #include "big_little_endian.h"
@@ -31,9 +32,11 @@
 #include "circular_que.h"
 #include "common_data.h"
 #include "compare_linked_list.h"
+#include "compare_triplet.h"
 #include "count_1_in_binary.h"
 #include "count_inversions_in_array_with_merge.h"
 #include "count_inversions_in_array.h"
+#include "diagonal_difference.h"
 #include "dijkstra_shortest_path_algorithm.h"
 #include "dinics_algorithm_maximum_flow.h"
 #include "drawcircle.h"
@@ -111,6 +114,7 @@
 #include "longest_common_subseq.h"
 #include "merge_sort_linked_linkedlist.h"
 #include "merge_sort_linked_linkedlist.h"
+#include "merge_str_arrays.h"
 #include "reverse_string_2.h"
 #include "reverse_string_3.h"
 #include "paradox_monti_holl.h"
@@ -120,7 +124,11 @@
 namespace algorithms {
 int test() {
   __SCOPE_LOG__;
-  assert(palindrome_linkedlist::test());
+//  assert(compare_triplet::test());
+  assert(diagonal_difference::test());
+//  assert(merge_str_arr::test());
+//  assert(palindrome_linkedlist::test());
+//  assert(array_rotation::test());
 //  assert(longest_common_subseq::test());
 //  assert(binary_search::test());
 //  assert(balance_bst::test());

@@ -17,8 +17,7 @@ class AddressBook {
   template<typename Func>
   std::vector<std::string> findMatchingAddresses(Func func) {
     std::vector<std::string> results;
-    for (auto itr = _addresses.begin(), end = _addresses.end(); itr != end;
-        ++itr) {
+    for (auto itr = _addr.begin(), end = _addr.end(); itr != end; ++itr) {
       // call the function passed into findMatchingAddresses and see if it matches
       if (func(*itr)) {
         results.push_back(*itr);
@@ -28,7 +27,7 @@ class AddressBook {
   }
 
  private:
-  std::vector<std::string> _addresses;
+  std::vector<std::string> _addr;
 };
 
 AddressBook global_address_book;
@@ -39,7 +38,6 @@ std::vector<std::string> findAddressesFromOrgs() {
       [] (const std::string& addr) {return addr.find( ".org" ) != std::string::npos;});
 }
 int test() {
-
   return 1;
 }
 }
