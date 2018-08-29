@@ -25,5 +25,4 @@ void algo_23() {
   printf("\nString is:%s\n", s1);
 }
 
-
 #endif  // REMOVE_SUBSTR_IN_STR_H_

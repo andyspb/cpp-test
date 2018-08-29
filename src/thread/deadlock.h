@@ -20,7 +20,8 @@ namespace deadlock {
 class Lock {
  public:
   Lock(std::mutex& m1, std::mutex& m2)
- :  m1_(m1), m2_(m2){
+      : m1_(m1),
+        m2_(m2) {
     m1_.lock();
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     m2_.lock();
@@ -36,7 +37,7 @@ class Lock {
 
 void foo() {
   __SCOPE_LOG__;
-  Lock(m1,m2);
+  Lock(m1, m2);
 //  LOG(INFO) << "v1:" << v1;
 //  while (!v2) {
 //  }
@@ -45,7 +46,7 @@ void foo() {
 
 void bar(int x) {
   __SCOPE_LOG__;
-  Lock(m2,m1);
+  Lock(m2, m1);
 //  v2 = 1;
 //  LOG(INFO) << "v2:" << v2;
 //  while (!v1) {
@@ -72,7 +73,7 @@ void bar1(int x) {
 TEST_RESULT test() {
 
   std::thread t1(foo);
-  std::thread t2(bar,1);
+  std::thread t2(bar, 1);
 //  std::thread t2(bar1, 1);
 
   t1.join();

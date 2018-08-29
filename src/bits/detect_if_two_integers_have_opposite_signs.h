@@ -14,7 +14,7 @@
 namespace detect_if_two_integers_have_opposite_signs {
 
 bool opposite_signs(int x, int y) {
-  return ((x ^ y) >> ((sizeof(int)*CHAR_BIT)-1));
+  return ((x ^ y) >> ((sizeof(int) * CHAR_BIT) - 1));
 }
 
 TEST_RESULT test() {
@@ -25,8 +25,8 @@ TEST_RESULT test() {
 
   std::cout << std::boolalpha;
 
-  std::cout << " a and b have opposite signs: "
-      << opposite_signs(a,b) << std::endl;
+  std::cout << " a and b have opposite signs: " << opposite_signs(a, b)
+            << std::endl;
 
   RETURN_OK();
 }

@@ -12,8 +12,8 @@
 
 namespace print_pair_sum {
 
-void printPairSums(int array[], int size, int sum){
-  std::sort(array, array+size);
+void printPairSums(int array[], int size, int sum) {
+  std::sort(array, array + size);
   int first = 0;
   int last = size - 1;
   while (first < last) {
@@ -25,7 +25,8 @@ void printPairSums(int array[], int size, int sum){
     } else {
       if (s < sum)
         first++;
-      else last--;
+      else
+        last--;
     }
   }
 }

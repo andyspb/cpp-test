@@ -23,6 +23,6 @@ TEST_RESULT test() {
   assert(test_1_8_check_string_rotation_if_has_substr::test());
   RETURN_OK();
 }
-} // arrays_and_strings
+}  // arrays_and_strings
 
 #endif /* ARRAYS_AND_STRINGS_H_ */

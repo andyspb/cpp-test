@@ -24,7 +24,6 @@
 #include "template_default_param.h"
 #include "variadic_template.h"
 
-
 namespace templates {
 
 template<class T> void f() {
@@ -38,9 +37,17 @@ class MyFileBuffer {
   T* filepos;
   static int array[size];
  public:
-  MyFileBuffer(): filepos(0) { /* ... */};
-  ~MyFileBuffer() {};
-  int advance() {return 1;};
+  MyFileBuffer()
+      : filepos(0) { /* ... */
+  }
+  ;
+  ~MyFileBuffer() {
+  }
+  ;
+  int advance() {
+    return 1;
+  }
+  ;
   // function defined elsewhere in program
 };
 
@@ -50,7 +57,7 @@ int template_test() {
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO)<<__PRETTY_FUNCTION__;
 
 //  template_test();
 
@@ -73,6 +80,7 @@ TEST_RESULT test() {
   assert(variadic_template::test());
   RETURN_OK();
 }
-}  // namespace templates
+}
+  // namespace templates
 
 #endif // _TEMPLATES_H_

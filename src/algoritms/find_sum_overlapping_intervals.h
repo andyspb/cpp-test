@@ -75,9 +75,6 @@ int find_sum_of_intervals_with_stack(std::vector<Interval>& vector_intervals) {
   return l;
 }
 
-
 }  // namespace find_sum_overlapping_intervals
-
-
 
 #endif /* FIND_SUM_OVERLAPPING_INTERVALS_H_ */

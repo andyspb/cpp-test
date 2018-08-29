@@ -8,7 +8,6 @@
 #ifndef SRC_NET_CLIENT_H_
 #define SRC_NET_CLIENT_H_
 
-
 //
 // A simple Internet client application.
 // It connects to a remote server,
@@ -35,16 +34,16 @@
 
 namespace client {
 
-const int PORT = 8888;
-const char* HOST = "localhost";
+  const int PORT = 8888;
+  const char* HOST = "localhost";
 
-static void usage();
+  static void usage();
 
-TEST_RESULT test() {
+  TEST_RESULT test() {
     // Create a socket
     int socket_ = socket(AF_INET, SOCK_STREAM, 0);
     if (socket_ < 0) {
-        perror("CLIENT: Cannot create a socket"); exit(1);
+      perror("CLIENT: Cannot create a socket"); exit(1);
     }
 
     // Fill in the address of server
@@ -56,7 +55,7 @@ TEST_RESULT test() {
     // Resolve the server address (convert from symbolic name to IP number)
     struct hostent *host = gethostbyname(peerHost);
     if (host == NULL) {
-        perror("CLIENT: Cannot define host address"); exit(1);
+      perror("CLIENT: Cannot define host address"); exit(1);
     }
     peeraddr.sin_family = AF_INET;
     short peerPort = PORT;
@@ -78,15 +77,15 @@ TEST_RESULT test() {
     // Connect to a remote server
     int res = connect(socket_, (struct sockaddr*) &peeraddr, sizeof(peeraddr));
     if (res < 0) {
-        perror("CLIENT: Cannot connect"); exit(1);
+      perror("CLIENT: Cannot connect"); exit(1);
     }
     printf("CLIENT: Connected. Reading a server message.\n");
 
     char buffer[1024];
     res = read(socket_, buffer, 1024);
     if (res < 0) {
-        perror("CLIENT: Read error");
-        exit(1);
+      perror("CLIENT: Read error");
+      exit(1);
     }
     printf("CLIENT: Received:\n%s", buffer);
 
@@ -94,20 +93,20 @@ TEST_RESULT test() {
 
     close(socket_);
     return 0;
-}
+  }
 
-static void usage() {
+  static void usage() {
     LOG(INFO)
-        << "CLIENT: simple Internet client application.\n"
-        << "Usage:\n"
-        << "         client [IP_address_of_server [port_of_server]]\n"
-        << "     where IP_address_of_server is either IP number of server\n"
-        << "     or a symbolic Internet name, default is \"localhost\";\n"
-        << "     port_of_server is a port number, default is 8888.\n"
-        << "The client connects to a server which address is given in a\n"
-        << "command line, receives a message from a server, sends the message\n"
-        << "\"Thanks! Bye-bye...\", and terminates.\n";
-}
+    << "CLIENT: simple Internet client application.\n"
+    << "Usage:\n"
+    << "         client [IP_address_of_server [port_of_server]]\n"
+    << "     where IP_address_of_server is either IP number of server\n"
+    << "     or a symbolic Internet name, default is \"localhost\";\n"
+    << "     port_of_server is a port number, default is 8888.\n"
+    << "The client connects to a server which address is given in a\n"
+    << "command line, receives a message from a server, sends the message\n"
+    << "\"Thanks! Bye-bye...\", and terminates.\n";
+  }
 
 }  // namespace client
 

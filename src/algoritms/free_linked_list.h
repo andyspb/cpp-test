@@ -5,15 +5,16 @@
 
 namespace free_linkedlist {
 class List {
-  public:
-    List(int v)
-        : value(v), next(NULL) {
-    }
-    ~List() {
-      std::cout << "from LList::~LList() value=" << value << std::endl;
-    }
-    int value;
-    List *next;
+ public:
+  List(int v)
+      : value(v),
+        next(NULL) {
+  }
+  ~List() {
+    std::cout << "from LList::~LList() value=" << value << std::endl;
+  }
+  int value;
+  List *next;
 };
 
 TEST_RESULT test() {

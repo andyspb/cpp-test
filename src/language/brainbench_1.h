@@ -25,6 +25,6 @@ int test() {
   printf("%s\n", BUF1);
   return 1;
 }
-} // namespace brainbench_1
+}  // namespace brainbench_1
 
 #endif // _BRAINBENCH_1_H_

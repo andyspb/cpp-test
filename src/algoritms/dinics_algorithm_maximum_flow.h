@@ -93,10 +93,10 @@ Graph::Graph(int V) {
 // add edge to the graph
 void Graph::addEdge(int u, int v, int C) {
   // Forward edge : 0 flow and C capacity
-  Edge a { v, 0, C, (int)(adj[v].size()) };
+  Edge a { v, 0, C, (int) (adj[v].size()) };
 
   // Back edge : 0 flow and 0 capacity
-  Edge b { u, 0, 0, (int)(adj[u].size()) };
+  Edge b { u, 0, 0, (int) (adj[u].size()) };
 
   adj[u].push_back(a);
   adj[v].push_back(b);  // reverse edge
@@ -153,7 +153,7 @@ int Graph::sendFlow(int u, int flow, int t, int start[]) {
     return flow;
 
   // Traverse all adjacent edges one -by - one.
-  for (; start[u] < (int)adj[u].size(); ++start[u]) {
+  for (; start[u] < (int) adj[u].size(); ++start[u]) {
     // Pick next edge from adjacency list of u
     Edge &e = adj[u][start[u]];
 

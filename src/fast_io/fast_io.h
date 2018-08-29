@@ -11,7 +11,6 @@
 #include "fast_cin.h"
 #include "fast_scan.h"
 
-
 namespace fast_io {
 
 TEST_RESULT test() {

@@ -11,23 +11,23 @@
 #include <vector>
 
 /*
-// Given a BST (Binary Search Tree) that may be unbalanced, convert it into a
-// balanced BST that has minimum possible height.
-// Input:
-//           4
-//         /   \
+ // Given a BST (Binary Search Tree) that may be unbalanced, convert it into a
+ // balanced BST that has minimum possible height.
+ // Input:
+ //           4
+ //         /   \
 //        3     5
-//       /       \
+ //       /       \
 //      2         6
-//     /           \
+ //     /           \
 //    1             7
-// Output:
-//        4
-//     /    \
+ // Output:
+ //        4
+ //     /    \
 //    2      6
-//  /  \    /  \
+ //  /  \    /  \
 // 1    3  5    7
-*/
+ */
 
 namespace balance_bst {
 struct Node {
@@ -99,15 +99,15 @@ void preOrder(Node* node) {
 TEST_RESULT test() {
   __SCOPE_LOG__;
   /* Constructed skewed binary tree is
-                  10
-                 /
-                8
-               /
-              7
-             /
-            6
-           /
-          5   */
+   10
+   /
+   8
+   /
+   7
+   /
+   6
+   /
+   5   */
 
   Node* root = newNode(10);
   root->left = newNode(8);

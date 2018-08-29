@@ -28,7 +28,6 @@ TEST_RESULT test() {
 //  assert(join::test());
 //  assert(threads_posix::test());
 
-
   RETURN_OK();
 }
 

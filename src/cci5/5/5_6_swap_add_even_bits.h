@@ -22,7 +22,7 @@
 namespace swap_add_even_bits {
 
 int swapOddEvenBits(int x) {
- return ( ((x & OxAAAAAAAA) >> 1) | ((x & 0x55555555) << 1) );
+  return (((x & OxAAAAAAAA) >> 1) | ((x & 0x55555555) << 1));
 }
 
 }  // namespace swap_add_even_bits

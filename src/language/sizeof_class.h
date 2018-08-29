@@ -16,7 +16,7 @@ class Base {
   }
 };
 
-class Derived: public Base {
+class Derived : public Base {
  public:
   virtual ~Derived() {
   }
@@ -33,7 +33,7 @@ class BaseClass {
   char c;
 };
 
-class DerivedClass: public BaseClass {
+class DerivedClass : public BaseClass {
   char d;
   int i;
 };
@@ -42,15 +42,15 @@ class ABase {
   int iMem;
 };
 
-class BBase: public virtual ABase {
+class BBase : public virtual ABase {
   int iMem;
 };
 
-class CBase: public virtual ABase {
+class CBase : public virtual ABase {
   int iMem;
 };
 
-class ABCDerived: public BBase, public CBase {
+class ABCDerived : public BBase, public CBase {
   int iMem;
 };
 void test() {

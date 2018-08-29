@@ -28,7 +28,6 @@ class Result {
   }
 };
 
-
 namespace constants {
 
 }  // constants

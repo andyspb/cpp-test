@@ -15,13 +15,10 @@ namespace terramind_11 {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-
   RETURN_OK();
 
 }
 
 }  // namespace test_11
-
-
 
 #endif /* SRC_TERAMIND_TERRAMIND_11_H_ */

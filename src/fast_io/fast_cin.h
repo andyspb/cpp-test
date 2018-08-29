@@ -10,7 +10,6 @@
 
 #include <bits/stdc++.h>
 
-
 namespace fast_cin {
 
 TEST_RESULT test() {
@@ -34,9 +33,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace fast_cin
-
-
 
 #endif /* SRC_FAST_IO_FAST_CIN_H_ */

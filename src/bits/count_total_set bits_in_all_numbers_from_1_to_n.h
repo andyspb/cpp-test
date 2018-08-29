@@ -16,6 +16,6 @@ int test() {
 }
 
 }
-  // namespace c_ount_total_set_bits_in_all_numbers_from_1_to_ n
+// namespace c_ount_total_set_bits_in_all_numbers_from_1_to_ n
 
 #endif /* COUNT_TOTAL_SET_BITS_IN_ALL_NUMBERS_FROM_1_TO_N_H_ */

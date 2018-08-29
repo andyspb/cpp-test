@@ -6,72 +6,77 @@
 namespace bridge {
 /** "Implementor" */
 class DrawingAPI {
-  public:
-    virtual ~DrawingAPI() {
-    }
-    virtual void drawCircle(double x, double y, double radius) = 0;
+ public:
+  virtual ~DrawingAPI() {
+  }
+  virtual void drawCircle(double x, double y, double radius) = 0;
 };
 
 /** "ConcreteImplementor" 1/2 */
-class DrawingAPI1: public DrawingAPI {
-  public:
-    DrawingAPI1() {
-    }
+class DrawingAPI1 : public DrawingAPI {
+ public:
+  DrawingAPI1() {
+  }
 
-    virtual ~DrawingAPI1() {
-    }
+  virtual ~DrawingAPI1() {
+  }
 
-    void drawCircle(double x, double y, double radius) {
-      std::cout << "API1.circle at " << x << ":" << y <<" radius " << radius << std::endl;
-    }
+  void drawCircle(double x, double y, double radius) {
+    std::cout << "API1.circle at " << x << ":" << y << " radius " << radius
+              << std::endl;
+  }
 };
 
 /** "ConcreteImplementor" 2/2 */
-class DrawingAPI2: public DrawingAPI {
-  public:
-    DrawingAPI2() {
-    }
+class DrawingAPI2 : public DrawingAPI {
+ public:
+  DrawingAPI2() {
+  }
 
-    virtual ~DrawingAPI2() {
-    }
+  virtual ~DrawingAPI2() {
+  }
 
-    void drawCircle(double x, double y, double radius) {
-      std::cout << "API2.circle at "<< x << ":" << ":" << y << " radius " << radius << std::endl;
-    }
+  void drawCircle(double x, double y, double radius) {
+    std::cout << "API2.circle at " << x << ":" << ":" << y << " radius "
+              << radius << std::endl;
+  }
 };
 
 // Note: this example does not follow the "structure" specified above.
 // In particular, that this class "maintains the Implementor reference"
 /** "Abstraction" */
 class Shape {
-  public:
-    virtual void draw()= 0; // low-level
-    virtual void resizeByPercentage(double pct) = 0; // high-level
-    virtual ~Shape() {
-    }
+ public:
+  virtual void draw()= 0;  // low-level
+  virtual void resizeByPercentage(double pct) = 0;  // high-level
+  virtual ~Shape() {
+  }
 };
 
 /** "Refined Abstraction" */
-class CircleShape: public Shape {
-  public:
-    CircleShape(double x, double y, double radius, DrawingAPI& drawingAPI)
-        : x(x), y(y), radius(radius), drawingAPI(drawingAPI) {
-    }
+class CircleShape : public Shape {
+ public:
+  CircleShape(double x, double y, double radius, DrawingAPI& drawingAPI)
+      : x(x),
+        y(y),
+        radius(radius),
+        drawingAPI(drawingAPI) {
+  }
 
-    virtual ~CircleShape() {
-    }
+  virtual ~CircleShape() {
+  }
 
-    // low-level i.e. Implementation specific
-    void draw() {
-      drawingAPI.drawCircle(x, y, radius);
-    }
-    // high-level i.e. Abstraction specific
-    void resizeByPercentage(double pct) {
-      radius *= pct;
-    }
-  private:
-    double x, y, radius;
-    DrawingAPI& drawingAPI;
+  // low-level i.e. Implementation specific
+  void draw() {
+    drawingAPI.drawCircle(x, y, radius);
+  }
+  // high-level i.e. Abstraction specific
+  void resizeByPercentage(double pct) {
+    radius *= pct;
+  }
+ private:
+  double x, y, radius;
+  DrawingAPI& drawingAPI;
 };
 
 int test(int argc = 0, char* argv[] = 0) {
@@ -94,6 +99,6 @@ int test(int argc = 0, char* argv[] = 0) {
   std::cout << "<--- test passed " << std::endl;
   return 1;
 }
-} // namespace bridge
+}  // namespace bridge
 
 #endif // _BRIDGE_H_

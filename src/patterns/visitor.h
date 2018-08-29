@@ -9,73 +9,75 @@ struct Visitor;
 // forward declaration (step 2)
 
 struct Element {
-    virtual ~Element() {
-    }
-    virtual void accept(Visitor*) = 0;  // step 2
+  virtual ~Element() {
+  }
+  virtual void accept(Visitor*) = 0;  // step 2
 };
 
-struct Foo: public Element {
-    void make_foo() {
-      std::cout << "Making some Foo..." << std::endl;
-    }
-    virtual void accept(Visitor*);  // step 2
+struct Foo : public Element {
+  void make_foo() {
+    std::cout << "Making some Foo..." << std::endl;
+  }
+  virtual void accept(Visitor*);  // step 2
 };
 
-struct Bar: public Element {
-    void make_bar() {
-      std::cout << "Making some Bar..." << std::endl;
-    }
-    virtual void accept(Visitor*);  // step 2
+struct Bar : public Element {
+  void make_bar() {
+    std::cout << "Making some Bar..." << std::endl;
+  }
+  virtual void accept(Visitor*);  // step 2
 };
 
-struct Baz: public Element {
-    void make_baz() {
-      std::cout << "Making some Baz..." << std::endl;
-    }
-    virtual void accept(Visitor*);  // step 2
+struct Baz : public Element {
+  void make_baz() {
+    std::cout << "Making some Baz..." << std::endl;
+  }
+  virtual void accept(Visitor*);  // step 2
 };
 
 // Visitor classes (step 1)
 struct Visitor {
-    virtual ~Visitor() {
-    }
-    virtual void visit(Foo*) = 0;
-    virtual void visit(Bar*) = 0;
-    virtual void visit(Baz*) = 0;
+  virtual ~Visitor() {
+  }
+  virtual void visit(Foo*) = 0;
+  virtual void visit(Bar*) = 0;
+  virtual void visit(Baz*) = 0;
 };
 
-struct MakeVisitor: public Visitor {
-    virtual void visit(Foo* foo) {
-      foo->make_foo();
-    }
-    virtual void visit(Bar* bar) {
-      bar->make_bar();
-    }
-    virtual void visit(Baz* baz) {
-      baz->make_baz();
-    }
+struct MakeVisitor : public Visitor {
+  virtual void visit(Foo* foo) {
+    foo->make_foo();
+  }
+  virtual void visit(Bar* bar) {
+    bar->make_bar();
+  }
+  virtual void visit(Baz* baz) {
+    baz->make_baz();
+  }
 };
 
-struct CountVisitor: public Visitor {
-    CountVisitor()
-        : foo_count(0), bar_count(0), baz_count(0) {
-    }
-    void print_counters() {
-      std::cout << "Counters: Foo(" << foo_count << ") Bar(" << bar_count << ") Baz("
-          << baz_count << ")" << std::endl;
-    }
+struct CountVisitor : public Visitor {
+  CountVisitor()
+      : foo_count(0),
+        bar_count(0),
+        baz_count(0) {
+  }
+  void print_counters() {
+    std::cout << "Counters: Foo(" << foo_count << ") Bar(" << bar_count
+              << ") Baz(" << baz_count << ")" << std::endl;
+  }
 
-    virtual void visit(Foo*) {
-      ++foo_count;
-    }
-    virtual void visit(Bar*) {
-      ++bar_count;
-    }
-    virtual void visit(Baz*) {
-      ++baz_count;
-    }
-  private:
-    int foo_count, bar_count, baz_count;
+  virtual void visit(Foo*) {
+    ++foo_count;
+  }
+  virtual void visit(Bar*) {
+    ++bar_count;
+  }
+  virtual void visit(Baz*) {
+    ++baz_count;
+  }
+ private:
+  int foo_count, bar_count, baz_count;
 };
 
 // Implementing the accept(Visitor*) methods (step 2)
@@ -120,7 +122,7 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace visitor
+}  // namespace visitor
 
 #endif  // _VISITOR_H_
 

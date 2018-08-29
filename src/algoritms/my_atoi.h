@@ -22,6 +22,6 @@ int test() {
   std::cout << "<--- passed" << std::endl;
   return 1;
 }
-} // my_atoi
+}  // my_atoi
 
 #endif /// MY_ATOI_H

@@ -5,80 +5,81 @@
 
 namespace virt_func_1 {
 class Base {
-  public:
-    Base() {}
-    virtual ~Base() {
-      std::cout << "From ~Base()" << std::endl;
-    }
-    virtual void f() {
-      std::cout << "From Base::f()" << std::endl;
-    }
+ public:
+  Base() {
+  }
+  virtual ~Base() {
+    std::cout << "From ~Base()" << std::endl;
+  }
+  virtual void f() {
+    std::cout << "From Base::f()" << std::endl;
+  }
 };
 
-class Derived: public Base {
-  private:
-    ~Derived() {
-      std::cout << "From ~Derived()" << std::endl;
-    }
-    void f() {
-      std::cout << "From Derived::f()" << std::endl;
-    }
+class Derived : public Base {
+ private:
+  ~Derived() {
+    std::cout << "From ~Derived()" << std::endl;
+  }
+  void f() {
+    std::cout << "From Derived::f()" << std::endl;
+  }
 };
 
 class A {
-  public:
-    //void nonvirt() = 0;
-    /*virtual*/
-    void f(); // = 0 ;//{ cout << "Class A" << endl; }
-    A() {
-      std::cout << "From A::A()" << std::endl;
-    }
-  protected:
-    ~A() {
-      std::cout << "from A::~A()" << std::endl;
-      delete this;
-    }
+ public:
+  //void nonvirt() = 0;
+  /*virtual*/
+  void f();  // = 0 ;//{ cout << "Class A" << endl; }
+  A() {
+    std::cout << "From A::A()" << std::endl;
+  }
+ protected:
+  ~A() {
+    std::cout << "from A::~A()" << std::endl;
+    delete this;
+  }
 };
 void A::f() {
   std::cout << "From A::f()" << std::endl;
 }
 
-class B: public A {
-  public:
-    B() {
-      std::cout << "From B::B()" << std::endl;
-    }
-    void f() {
-      std::cout << "B::f()" << std::endl;
-    }
-    ~B() {
-      std::cout << "From B::~B()" << std::endl;
-    }
+class B : public A {
+ public:
+  B() {
+    std::cout << "From B::B()" << std::endl;
+  }
+  void f() {
+    std::cout << "B::f()" << std::endl;
+  }
+  ~B() {
+    std::cout << "From B::~B()" << std::endl;
+  }
 };
 
-class C: public B {
+class C : public B {
 
-  public:
-    void f() {
-      std::cout << "From C::f()" << std::endl;
-    }
-    virtual ~C() {
-      std::cout << "From C::~C()" << std::endl;
-    }
-    C() {
-      std::cout << "From C::C()" << std::endl;
-    }
+ public:
+  void f() {
+    std::cout << "From C::f()" << std::endl;
+  }
+  virtual ~C() {
+    std::cout << "From C::~C()" << std::endl;
+  }
+  C() {
+    std::cout << "From C::C()" << std::endl;
+  }
 
-    //C(const volatile C& c )
-    //{
-    //	cout<<"C copy constructor"<<endl;
-    //}
+  //C(const volatile C& c )
+  //{
+  //	cout<<"C copy constructor"<<endl;
+  //}
 
-    //C& operator= (const volatile C& c)
-    //{
-    //	cout<<"C assignment operator"<<endl;
-    //	return *this;
-    //}
+  //C& operator= (const volatile C& c)
+  //{
+  //	cout<<"C assignment operator"<<endl;
+  //	return *this;
+  //}
 
 };
 
@@ -122,6 +123,6 @@ int test() {
   //pa2->f();
   return 1;
 }
-} // namespace virt_func_1
+}  // namespace virt_func_1
 
 #endif // _VIRT_FUNC_1_H_

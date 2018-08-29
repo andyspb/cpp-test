@@ -17,7 +17,7 @@ void Integer2StringTest(int number) {
   Number2String2(number, _str);
   Numbers2String(number, __str);
   std::cout << "integer:" << number << " _str:" << _str << " __str:" << __str
-      << std::endl;
+            << std::endl;
 }
 
 #endif  // _NUM_TO_STR_H

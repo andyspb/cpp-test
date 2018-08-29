@@ -24,7 +24,7 @@ void removeDuplicates(char* str, int size) {
   int tail = 1;
   for (int i = 1; i < size; ++i) {
     int j;
-    for (j =0; j <tail; ++j) {
+    for (j = 0; j < tail; ++j) {
       if (str[i] == str[j]) {
         break;
       }
@@ -45,26 +45,26 @@ int test() {
 //  4 String with all continuous duplicates, e g : aaabbb
   char arr1[] = "abcd";
   std::cout << arr1 << ":";
-  removeDuplicates(arr1,4);
+  removeDuplicates(arr1, 4);
   std::cout << arr1 << std::endl;
 
   char arr2[] = "aaaa";
   std::cout << arr2 << ":";
-  removeDuplicates(arr2,4);
+  removeDuplicates(arr2, 4);
   std::cout << arr2 << std::endl;
 
   char* arr3 = 0;
   //std::cout << arr3 << ":";
-  removeDuplicates(arr3,0);
+  removeDuplicates(arr3, 0);
   //std::cout << arr3 << std::endl;
 
   char arr4[] = "aaaabbbb";
   std::cout << arr4 << ":";
-  removeDuplicates(arr4,8);
+  removeDuplicates(arr4, 8);
   std::cout << arr4 << std::endl;
 
   return 1;
 }
-} // namesapce test_1_3
+}  // namesapce test_1_3
 
 #endif /* TEST_1_3_REMOVE_DUPLICATES_FORM_STRING_H_ */

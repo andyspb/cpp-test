@@ -86,7 +86,6 @@ void flatten(Node<int>*& head) {
   return;
 }
 
-
 Node<int>* flattenNodes(Node<int> * head) {
   if (!head) {
     return head;

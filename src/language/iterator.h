@@ -6,9 +6,8 @@ class StringIterator {
   const char *position, *end;
  public:
   StringIterator(const char * str)
-      :
-          position(str),
-          end(str + strlen(str)) {
+      : position(str),
+        end(str + strlen(str)) {
   }
   bool at_end() const {
     return position == end;

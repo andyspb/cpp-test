@@ -23,16 +23,16 @@ bool anagram2(std::string s, std::string t) {
   int num_completed_t = 0;
   char *s_array = new char[s.length() + 1];
   strcpy(s_array, s.c_str());
-  for (int i = 0; i < (int)s.length(); ++i) {
+  for (int i = 0; i < (int) s.length(); ++i) {
     // count number of each char in s.
-    if (letters[(int)s_array[i]] == 0) {
+    if (letters[(int) s_array[i]] == 0) {
       ++num_unique_chars;
     }
-    ++letters[(int)s_array[i]];
+    ++letters[(int) s_array[i]];
   }
-  for (int i = 0; i < (int)t.length(); ++i) {
+  for (int i = 0; i < (int) t.length(); ++i) {
     int c = (int) t.at(i);
-    if (letters[c] == 0) { // Found more of char c in t than in s.
+    if (letters[c] == 0) {  // Found more of char c in t than in s.
       return false;
     }
     --letters[c];
@@ -40,7 +40,7 @@ bool anagram2(std::string s, std::string t) {
       ++num_completed_t;
       if (num_completed_t == num_unique_chars) {
         // itÕs a match if t has been processed completely
-        return i == (int)t.length() - 1;
+        return i == (int) t.length() - 1;
       }
     }
   }
@@ -66,6 +66,6 @@ int test() {
 
   return 1;
 }
-} // test_1_4
+}  // test_1_4
 
 #endif /* TEST_1_4_STRINGS_ARE_ANAGRAM_H_ */

@@ -11,7 +11,7 @@ class steal_it;
 
 template<typename U, template<typename > class C>
 struct steal_it<C<U> > {
-    typedef U result_t;
+  typedef U result_t;
 };
 
 template<typename T>

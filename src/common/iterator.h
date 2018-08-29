@@ -37,7 +37,6 @@ class Node<int[]> {
 
 typedef Node<int[]> NodeIntArr;
 
-
 template<class T>
 class MyIterator {
   Node<T>* itr;

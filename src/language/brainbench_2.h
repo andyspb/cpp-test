@@ -13,6 +13,6 @@ int test() {
   printf("%.2f\n", z);
   return 1;
 }
-} // namespace brainbench_2
+}  // namespace brainbench_2
 
 #endif // _BRAINBENCH_2_H_

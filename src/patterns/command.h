@@ -5,78 +5,78 @@
 
 namespace command {
 
-
 /*the Command interface*/
 class Command {
-  public:
-    virtual ~Command() {
-    }
-    virtual void execute()=0;
+ public:
+  virtual ~Command() {
+  }
+  virtual void execute()=0;
 };
 
 /*Receiver class*/
 class Light {
 
-  public:
-    Light() {
-    }
+ public:
+  Light() {
+  }
 
-    void turnOn() {
-      std::cout << "The light is on" << std::endl;
-    }
+  void turnOn() {
+    std::cout << "The light is on" << std::endl;
+  }
 
-    void turnOff() {
-      std::cout << "The light is off" << std::endl;
-    }
+  void turnOff() {
+    std::cout << "The light is off" << std::endl;
+  }
 };
 
 /*the Command for turning on the light*/
-class FlipUpCommand: public Command {
-  public:
+class FlipUpCommand : public Command {
+ public:
 
-    FlipUpCommand(Light& light)
-        : theLight(light) {
-    }
+  FlipUpCommand(Light& light)
+      : theLight(light) {
+  }
 
-    virtual void execute() {
-      theLight.turnOn();
-    }
+  virtual void execute() {
+    theLight.turnOn();
+  }
 
-  private:
-    Light& theLight;
+ private:
+  Light& theLight;
 };
 
 /*the Command for turning off the light*/
-class FlipDownCommand: public Command {
-  public:
-    FlipDownCommand(Light& light)
-        : theLight(light) {
+class FlipDownCommand : public Command {
+ public:
+  FlipDownCommand(Light& light)
+      : theLight(light) {
 
-    }
-    virtual void execute() {
-      theLight.turnOff();
-    }
-  private:
-    Light& theLight;
+  }
+  virtual void execute() {
+    theLight.turnOff();
+  }
+ private:
+  Light& theLight;
 };
 
 class Switch {
-  public:
-    Switch(Command& flipUpCmd, Command& flipDownCmd)
-        : flipUpCommand(flipUpCmd), flipDownCommand(flipDownCmd) {
-    }
+ public:
+  Switch(Command& flipUpCmd, Command& flipDownCmd)
+      : flipUpCommand(flipUpCmd),
+        flipDownCommand(flipDownCmd) {
+  }
 
-    void flipUp() {
-      flipUpCommand.execute();
-    }
+  void flipUp() {
+    flipUpCommand.execute();
+  }
 
-    void flipDown() {
-      flipDownCommand.execute();
-    }
+  void flipDown() {
+    flipDownCommand.execute();
+  }
 
-  private:
-    Command& flipUpCommand;
-    Command& flipDownCommand;
+ private:
+  Command& flipUpCommand;
+  Command& flipDownCommand;
 };
 
 /*The test class or client*/
@@ -91,6 +91,6 @@ int test() {
   std::cout << "<--- test passed " << std::endl;
   return 1;
 }
-} // namespace command
+}  // namespace command
 
 #endif // _COMMAND_H_

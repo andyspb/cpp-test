@@ -12,6 +12,4 @@ namespace habrhabr {
 
 }  // namespace habrhabr
 
-
-
 #endif /* SRC_MEMORY_HABRHABR_H_ */

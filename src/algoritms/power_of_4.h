@@ -12,7 +12,6 @@ namespace power_of_4 {
 
 #define power_of_two(x) ((x)&&(!( x & (x-1) )) && x & 0x55555555)
 
-
 bool fn(unsigned int x) {
   if (x == 0)
     return false;

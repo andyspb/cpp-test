@@ -13,7 +13,7 @@
 
 namespace cci4 {
 TEST_RESULT test() {
-	__SCOPE_LOG__;
+  __SCOPE_LOG__;
   assert(arrays_and_strings::test());
   assert(cplusplus::test());
   assert(linked_lists::test());

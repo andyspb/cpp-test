@@ -12,11 +12,12 @@
 
 namespace test_2_4 {
 struct LList {
-    LList(int d)
-        : data(d), next(NULL) {
-    }
-    int data;
-    LList *next;
+  LList(int d)
+      : data(d),
+        next(NULL) {
+  }
+  int data;
+  LList *next;
 };
 
 void test_fill_list1(LList *head) {
@@ -55,7 +56,7 @@ void print_list(LList *head) {
 }
 
 LList *addLists(LList *l1, LList *l2, int carry) {
-  if (l1 == NULL && l2 == NULL ) {
+  if (l1 == NULL && l2 == NULL) {
     return NULL;
   }
   LList *result = new LList(carry);
@@ -68,12 +69,12 @@ LList *addLists(LList *l1, LList *l2, int carry) {
   }
   result->data = value % 10;
   LList *more = addLists(l1 == NULL ? NULL : l1->next,
-      l2 == NULL ? NULL : l2->next, value >= 10 ? 1 : 0);
+                         l2 == NULL ? NULL : l2->next, value >= 10 ? 1 : 0);
   result->next = more;
   return result;
 }
 
- // We can implement this recursively by adding node by node,
+// We can implement this recursively by adding node by node,
 // just as we would digit by digit
 // result data = (node1 + node2 + any earlier carry) % 10
 // if node1 + node2 > 10, then carry a 1 to the next addition
@@ -92,6 +93,6 @@ int test() {
   return 1;
 }
 
-} // namesapce namespace test_2_4
+}  // namesapce namespace test_2_4
 
 #endif /* TEST_2_4_SUM_LINKED_LIST_H_ */

@@ -69,9 +69,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace array_2d
-
-
 
 #endif /* SRC_ARRAY_ARRAY_2D_H_ */

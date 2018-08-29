@@ -17,6 +17,6 @@ int test() {
   assert(test_2_5::test());
   return 1;
 }
-}// namespace linked_lists
+}  // namespace linked_lists
 
 #endif /* LINKED_LISTS_H_ */

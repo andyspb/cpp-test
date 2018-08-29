@@ -23,5 +23,4 @@ int test() {
 
 }  // namespace exceptions
 
-
 #endif /* EXCEPTIONS_H_ */

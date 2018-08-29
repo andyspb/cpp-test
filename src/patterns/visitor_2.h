@@ -2,9 +2,9 @@
 #include "stdafx.h"
 namespace visitor_2 {
 struct PrintChar {
-    void operator()(char ch) {
-      std::cout << "_" << ch;
-    }
+  void operator()(char ch) {
+    std::cout << "_" << ch;
+  }
 };
 
 template<typename Visitor>

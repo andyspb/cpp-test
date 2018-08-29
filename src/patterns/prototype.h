@@ -4,53 +4,55 @@
 #include <iostream>
 namespace prototype {
 class PrototypeFactory {
-  public:
-    virtual ~PrototypeFactory() {}
-    virtual PrototypeFactory * clone() {
-      PrototypeFactory * copy = new PrototypeFactory();
-      //In an actual implementation of this pattern you might now change references to
-      //the expensive to produce parts from the copies that are held inside the prototype.
-      return copy;
-    }
-    virtual void prototypeFactory(int x) {
-    }
-    virtual void printValue() {
-    }
+ public:
+  virtual ~PrototypeFactory() {
+  }
+  virtual PrototypeFactory * clone() {
+    PrototypeFactory * copy = new PrototypeFactory();
+    //In an actual implementation of this pattern you might now change references to
+    //the expensive to produce parts from the copies that are held inside the prototype.
+    return copy;
+  }
+  virtual void prototypeFactory(int x) {
+  }
+  virtual void printValue() {
+  }
 };
 
 /**
  * Concrete Prototypes to clone
  */
-class PrototypeImpl: public PrototypeFactory {
-  public:
-    virtual ~PrototypeImpl() {}
-    PrototypeImpl(int x) {
-      this->x = x;
-    }
-    void prototypeFactory(int x) {
-      this->x = x;
-    }
-    void printValue() {
-      printf("Value :%d\n", x);
-    }
-  private:
-    int x;
+class PrototypeImpl : public PrototypeFactory {
+ public:
+  virtual ~PrototypeImpl() {
+  }
+  PrototypeImpl(int x) {
+    this->x = x;
+  }
+  void prototypeFactory(int x) {
+    this->x = x;
+  }
+  void printValue() {
+    printf("Value :%d\n", x);
+  }
+ private:
+  int x;
 };
 
 /**
  * Client Class
  */
 class PrototypeExample {
-  public:
-    PrototypeExample(PrototypeFactory * example) {
-      this->example = example;
-    }
-    PrototypeFactory * makeCopy() {
-      return (PrototypeFactory *) this->example->clone();
-    }
+ public:
+  PrototypeExample(PrototypeFactory * example) {
+    this->example = example;
+  }
+  PrototypeFactory * makeCopy() {
+    return (PrototypeFactory *) this->example->clone();
+  }
 
-  private:
-    PrototypeFactory * example; // Could have been a private Cloneable example.
+ private:
+  PrototypeFactory * example;  // Could have been a private Cloneable example.
 };
 
 int test() {
@@ -67,6 +69,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace prototype
+}  // namespace prototype
 
 #endif // _OBSERVER_H_

@@ -20,6 +20,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namspace multiply_by_7
+}  // namspace multiply_by_7
 
 #endif  // _MULTIPLY_BY_7_H

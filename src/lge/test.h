@@ -14,7 +14,6 @@
 
 namespace lge {
 
-
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
@@ -25,8 +24,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace lge
-
 
 #endif /* SRC_LGE_TEST_H_ */

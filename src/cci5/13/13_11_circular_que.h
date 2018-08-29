@@ -74,7 +74,6 @@ class CircularQue {
   }
 };
 
-
 int test() {
   return 1;
 }

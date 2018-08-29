@@ -12,6 +12,6 @@ int test() {
   assert(test_3_6::test());
   return 1;
 }
-} // stacks_and_queues
+}  // stacks_and_queues
 
 #endif /* STACKS_AND_QUEUES_H_ */

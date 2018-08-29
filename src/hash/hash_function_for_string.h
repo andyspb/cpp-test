@@ -13,18 +13,11 @@
 
 namespace hash_function_for_string {
 
-const char* test_string[10] = {
-    "test1test2",
-    "test2test2",
-    "test2test2",
-    "",
-    "1",
-    "2",
-    "test7test2test2test2test2test2",
-    "test8test2",
-    "test9test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2",
-    "test10test2"
-};
+const char* test_string[10] =
+    { "test1test2", "test2test2", "test2test2", "", "1", "2",
+        "test7test2test2test2test2test2", "test8test2",
+        "test9test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2",
+        "test10test2" };
 
 unsigned long hash(const char *str) {
 
@@ -42,10 +35,10 @@ unsigned long hash(const char *str) {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-  for (int i = 0; i<10; ++i) {
-    std::cout << test_string[i]<< ": " << hash(test_string[i]) << std::endl;
+  for (int i = 0; i < 10; ++i) {
+    std::cout << test_string[i] << ": " << hash(test_string[i]) << std::endl;
   }
- RETURN_OK();
+  RETURN_OK();
 }
 
 }  // namespace string_hash_function

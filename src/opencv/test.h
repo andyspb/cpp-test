@@ -18,6 +18,4 @@ TEST_RESULT test() {
 
 }
 
-
-
 #endif /* SRC_OPENCV_TEST_H_ */

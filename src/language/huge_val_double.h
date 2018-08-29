@@ -1,4 +1,3 @@
-
 #include <limits>
 #include <cmath>
 
@@ -9,7 +8,8 @@ bool foo(double a) {
 }
 
 void test() {
-  printf("foo returns %d\n", (int) foo(std::numeric_limits<double>::infinity()));
+  printf("foo returns %d\n",
+         (int) foo(std::numeric_limits<double>::infinity()));
 
   printf("foo returns %d\n", (int) foo(HUGE_VAL));
 

@@ -58,9 +58,7 @@ void swap(std::queue<BNode*>& q1, std::queue<BNode*>& q2) {
     temp2.pop();
   }
 
-
- }
-
+}
 
 void print_btree(BNode* root) {
   if (!root) {
@@ -73,13 +71,13 @@ void print_btree(BNode* root) {
     BNode * currNode = currentLevel.front();
     currentLevel.pop();
     if (currNode) {
-      std::cout<< currNode->data << " ";
+      std::cout << currNode->data << " ";
       nextLevel.push(currNode->left);
       nextLevel.push(currNode->right);
     }
     if (currentLevel.empty()) {
       std::cout << std::endl;
-      swap(currentLevel,nextLevel);
+      swap(currentLevel, nextLevel);
     }
   }
 }
@@ -90,7 +88,7 @@ void printLevelOrder(BNode *root) {
   int nodesInCurrentLevel(1), nodesInNextLevel(0);
   std::queue<BNode*> queue;
   queue.push(root);
-  while(!queue.empty()) {
+  while (!queue.empty()) {
     BNode *currNode = queue.front();
     queue.pop();
     --nodesInCurrentLevel;
@@ -98,7 +96,7 @@ void printLevelOrder(BNode *root) {
       std::cout << currNode->data << " ";
       queue.push(currNode->left);
       queue.push(currNode->right);
-      nodesInNextLevel+=2;
+      nodesInNextLevel += 2;
     }
     if (nodesInCurrentLevel == 0) {
       std::cout << std::endl;
@@ -119,7 +117,7 @@ int test() {
   BNode d('D');
   BNode e('E');
   b.left = &d;
-  b.right =&e;
+  b.right = &e;
   BNode f('F');
   c.left = &f;
 

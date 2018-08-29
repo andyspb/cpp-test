@@ -17,9 +17,10 @@ namespace que_from_2stacks {
 template<typename T>
 class Myque {
  public:
-  Myque() {}
+  Myque() {
+  }
   int size() const {
-    return stackNewest.size()+stackOldest.size();
+    return stackNewest.size() + stackOldest.size();
   }
   void add(T value) {
     stackNewest.push(value);
@@ -37,7 +38,7 @@ class Myque {
  private:
   void shiftStacks() {
     if (stackOldest.isEmpty()) {
-      while(!stackNewest.isEmpty()) {
+      while (!stackNewest.isEmpty()) {
         stackOldest.push(stackNewest.pop());
       }
     }

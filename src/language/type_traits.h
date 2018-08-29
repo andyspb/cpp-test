@@ -13,12 +13,14 @@
 
 namespace type_traits {
 
-template <typename T>
-struct Wrapper{
-  Wrapper() : p_(0) {
+template<typename T>
+struct Wrapper {
+  Wrapper()
+      : p_(0) {
     std::cout << "is_void<T>:" << std::is_void<T>::value << '\n';
     std::cout << "is_pod<T>:" << std::is_pod<T>::value << '\n';
-  };
+  }
+  ;
   T* p_;
 };
 
@@ -30,7 +32,6 @@ TEST_RESULT test() {
 
   constexpr void* p = NULL;
   constexpr int n = 1;
-
 
   std::cout << std::boolalpha;
   Wrapper<void> w1;
@@ -44,7 +45,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace type_traits
-
-
 
 #endif /* SRC_LANGUAGE_TYPE_TRAITS_H_ */

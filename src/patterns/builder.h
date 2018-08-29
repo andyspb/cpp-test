@@ -7,101 +7,103 @@
 namespace builder {
 
 class Pizza {
-  public:
-    virtual ~Pizza() {}
+ public:
+  virtual ~Pizza() {
+  }
 
-    virtual void setDough(const std::string& dough) {
-      this->dough = dough;
-    }
+  virtual void setDough(const std::string& dough) {
+    this->dough = dough;
+  }
 
-    virtual void setSauce(const std::string& sauce) {
-      this->sauce = sauce;
-    }
+  virtual void setSauce(const std::string& sauce) {
+    this->sauce = sauce;
+  }
 
-    virtual void setTopping(const std::string& topping) {
-      this->topping = topping;
-    }
+  virtual void setTopping(const std::string& topping) {
+    this->topping = topping;
+  }
 
-  private:
-    std::string dough;
-    std::string sauce;
-    std::string topping;
+ private:
+  std::string dough;
+  std::string sauce;
+  std::string topping;
 };
 
 /** "Abstract Builder" */
 class PizzaBuilder {
-  public:
-    virtual ~PizzaBuilder() {}
+ public:
+  virtual ~PizzaBuilder() {
+  }
 
-    virtual Pizza * getPizza() {
-      return pizza;
-    }
+  virtual Pizza * getPizza() {
+    return pizza;
+  }
 
-    virtual void createNewPizzaProduct() {
-      pizza = new Pizza();
-    }
+  virtual void createNewPizzaProduct() {
+    pizza = new Pizza();
+  }
 
-    virtual void buildDough() {
-    }
-    virtual void buildSauce() {
-    }
-    virtual void buildTopping() {
-    }
+  virtual void buildDough() {
+  }
+  virtual void buildSauce() {
+  }
+  virtual void buildTopping() {
+  }
 
-  protected:
-    Pizza * pizza;
+ protected:
+  Pizza * pizza;
 };
 
 /** "ConcreteBuilder" */
-class HawaiianPizzaBuilder: public PizzaBuilder {
-  public:
-    void buildDough() {
-      pizza->setDough("cross");
-    }
-    void buildSauce() {
-      pizza->setSauce("mild");
-    }
-    void buildTopping() {
-      pizza->setTopping("ham+pineapple");
-    }
+class HawaiianPizzaBuilder : public PizzaBuilder {
+ public:
+  void buildDough() {
+    pizza->setDough("cross");
+  }
+  void buildSauce() {
+    pizza->setSauce("mild");
+  }
+  void buildTopping() {
+    pizza->setTopping("ham+pineapple");
+  }
 };
 
 /** "ConcreteBuilder" */
-class SpicyPizzaBuilder: public PizzaBuilder {
-  public:
-    void buildDough() {
-      pizza->setDough("pan baked");
-    }
+class SpicyPizzaBuilder : public PizzaBuilder {
+ public:
+  void buildDough() {
+    pizza->setDough("pan baked");
+  }
 
-    void buildSauce() {
-      pizza->setSauce("hot");
-    }
+  void buildSauce() {
+    pizza->setSauce("hot");
+  }
 
-    void buildTopping() {
-      pizza->setTopping("pepperoni+salami");
-    }
+  void buildTopping() {
+    pizza->setTopping("pepperoni+salami");
+  }
 };
 
 /** "Director" */
 class Cook {
-  public:
-    void setPizzaBuilder(PizzaBuilder * pb) {
-      pizzaBuilder = pb;
-    }
+ public:
+  void setPizzaBuilder(PizzaBuilder * pb) {
+    pizzaBuilder = pb;
+  }
 
-    Pizza * getPizza() {
-      return pizzaBuilder->getPizza();
-    }
+  Pizza * getPizza() {
+    return pizzaBuilder->getPizza();
+  }
 
-    void constructPizza() {
-      pizzaBuilder->createNewPizzaProduct();
-      pizzaBuilder->buildDough();
-      pizzaBuilder->buildSauce();
-      pizzaBuilder->buildTopping();
-    }
+  void constructPizza() {
+    pizzaBuilder->createNewPizzaProduct();
+    pizzaBuilder->buildDough();
+    pizzaBuilder->buildSauce();
+    pizzaBuilder->buildTopping();
+  }
 
-  private:
-    PizzaBuilder * pizzaBuilder;
+ private:
+  PizzaBuilder * pizzaBuilder;
 };
 
 /** A given type of pizza being constructed. */
@@ -128,6 +130,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace builder
+}  // namespace builder
 
 #endif // _BUILDER_H_

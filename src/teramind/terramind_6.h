@@ -28,10 +28,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace test_6
-
-
-
 
 #endif /* SRC_TERAMIND_TERRAMIND_6_H_ */

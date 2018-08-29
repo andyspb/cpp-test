@@ -26,5 +26,4 @@ TEST_RESULT test() {
 
 }  // namespace memory
 
-
 #endif /* SRC_MEMORY_MEMORY_H_ */

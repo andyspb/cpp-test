@@ -20,8 +20,8 @@ namespace test_1_7_if_element_matrix_is_0_entire_row_and_column_set_0 {
 // We then make a second pass oft hematrix
 // and set a cell to zero if its row or column is zero
 void setZeros(int matrix[][2], int m, int n) {
-  int row[3] = {0};
-  int column[2] = {0};
+  int row[3] = { 0 };
+  int column[2] = { 0 };
   // Store the row and column index with value 0
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
@@ -42,8 +42,8 @@ void setZeros(int matrix[][2], int m, int n) {
 }
 
 void print_N_N_matrix(int matrix[][2], int m, int n) {
-  for (int i = 0; i<m; ++i ) {
-    for (int j = 0; j <n; ++j) {
+  for (int i = 0; i < m; ++i) {
+    for (int j = 0; j < n; ++j) {
       std::cout << matrix[i][j] << " ";
     }
     std::endl(std::cout);
@@ -52,10 +52,10 @@ void print_N_N_matrix(int matrix[][2], int m, int n) {
 
 int test() {
   std::cout << "Test 1.7" << std::endl;
-  int matrix [3][2] = {{1,2},{1,0},{3,4}};
-  print_N_N_matrix(matrix, 3,2);
-  setZeros(matrix, 3,2);
-  print_N_N_matrix(matrix, 3,2);
+  int matrix[3][2] = { { 1, 2 }, { 1, 0 }, { 3, 4 } };
+  print_N_N_matrix(matrix, 3, 2);
+  setZeros(matrix, 3, 2);
+  print_N_N_matrix(matrix, 3, 2);
   return 1;
 }
 }

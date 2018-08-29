@@ -18,6 +18,5 @@ int StdoutRedirectionTest(void) {
   return 0;
 }
 
-
 }  // namespace stsout_redirect
 

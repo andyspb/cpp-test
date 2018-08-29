@@ -8,8 +8,4 @@
 #ifndef _CREATE_LIST_FROM_EACH_DEPTH_H_
 #define _CREATE_LIST_FROM_EACH_DEPTH_H_
 
-
-
-
-
 #endif /* _CREATE_LIST_FROM_EACH_DEPTH_H_ */

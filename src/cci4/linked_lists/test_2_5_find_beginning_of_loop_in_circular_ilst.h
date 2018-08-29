@@ -38,7 +38,7 @@ namespace test_2_5 {
 LList *FindBeginning(LList* head) {
   LList *n1 = head;
   LList *n2 = head;
- // Find meeting point
+  // Find meeting point
   while (n2->next != NULL) {
     n1 = n1->next;
     n2 = n2->next->next;
@@ -48,7 +48,7 @@ LList *FindBeginning(LList* head) {
   }
   // Error check - there is no meeting point, and therefore no loop
   if (n2->next == NULL) {
-     return NULL;
+    return NULL;
   }
   // Move n1 to Head. Keep n2 at Meeting Point.
   // Each are k steps from the Loop Start.
@@ -66,6 +66,6 @@ LList *FindBeginning(LList* head) {
 int test() {
   return 1;
 }
-} // test_2_5
+}  // test_2_5
 
 #endif /* TEST_2_5_FIND_BEGINNING_OF_LOOP_IN_CIRCULAR_ILST_H_ */

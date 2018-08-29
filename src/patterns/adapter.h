@@ -5,20 +5,20 @@
 
 namespace adapter {
 class Adaptee {
-  public:
-    void methodB() {
-      std::cout << "\tFrom Adaptee->methodB()\n";
-    }
+ public:
+  void methodB() {
+    std::cout << "\tFrom Adaptee->methodB()\n";
+  }
 };
 
 class Adapter {
-  public:
-    void methodA() {
-      std::cout << "From Adapter->method()\n";
-      adaptee.methodB();
-    }
-  private:
-    Adaptee adaptee;
+ public:
+  void methodA() {
+    std::cout << "From Adapter->method()\n";
+    adaptee.methodB();
+  }
+ private:
+  Adaptee adaptee;
 };
 
 int test() {

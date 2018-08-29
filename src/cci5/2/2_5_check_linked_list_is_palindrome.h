@@ -12,7 +12,11 @@
 namespace is_linked_list_palindrome {
 
 struct Node {
-  Node(int v): data(v), next(0) {};
+  Node(int v)
+      : data(v),
+        next(0) {
+  }
+  ;
   int data;
   struct Node *next;
 };
@@ -47,7 +51,7 @@ bool isPalindrome(Node* head) {
 }
 
 void printList(Node* list) {
-  while (list)  {
+  while (list) {
     std::cout << list->data << " ";
     list = list->next;
   }
@@ -55,7 +59,7 @@ void printList(Node* list) {
 }
 
 int test() {
-  std::cout << "Check linked list is a palindrome" <<std:: endl;
+  std::cout << "Check linked list is a palindrome" << std::endl;
 
   Node * _node = new Node(0);
   Node * head = _node;
@@ -87,7 +91,6 @@ int test() {
   _node->next = new Node(0);
   _node = _node->next;
 
-
   printList(head);
 
   std::cout << " is palindrome: " << isPalindrome(head) << std::endl;
@@ -96,6 +99,5 @@ int test() {
 }
 
 }  // is_linked_list_palindrome
-
 
 #endif /* _CHECK_LINKED_LIST_PALINDROME_H_ */

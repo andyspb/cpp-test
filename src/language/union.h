@@ -7,18 +7,18 @@
 
 namespace union_ {
 union U {
-    int i;
-    float f;
-    U() {
-      i = 0;
-      f = 1;
-    }
+  int i;
+  float f;
+  U() {
+    i = 0;
+    f = 1;
+  }
 };
 
 union Union {
-    int a;
-    char b[10];
-    float c;
+  int a;
+  char b[10];
+  float c;
 };
 
 int test() {
@@ -27,7 +27,7 @@ int test() {
   std::cout << "u.f=" << u.f << std::endl;
   std::cout << "size" << sizeof(U) << std::endl;
 
-  Union x,y;
+  Union x, y;
   x.a = 50;
   strcpy(x.b, "hello");
   x.c = 21.50;
@@ -35,11 +35,11 @@ int test() {
 //  std::cout << "Union x:" << x.a  << " " << x.b << " " << x.c << std::endl;
 //  std::cout << "Union y:" << y.a << " " << y.b  << " "<< y.c << std::endl;
 
-  printf( "Union x: %d, %s, %f ", x.a, x.b, x.c);
-  printf( "Union y: %d, %s, %f ", y.a, y.b, y.c);
+  printf("Union x: %d, %s, %f ", x.a, x.b, x.c);
+  printf("Union y: %d, %s, %f ", y.a, y.b, y.c);
 
   return 1;
 }
-} // namespace union_
+}  // namespace union_
 
 #endif  // _UNION_H_

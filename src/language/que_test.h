@@ -23,5 +23,5 @@ int test() {
   std::cout << "<--- passed" << std::endl;
   return 1;
 }
-} // namespace que_test
+}  // namespace que_test
 #endif // _QUE_TEST_H_

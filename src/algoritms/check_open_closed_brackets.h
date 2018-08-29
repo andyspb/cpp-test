@@ -49,7 +49,7 @@ bool errorsFound(Brackets& stack, char openingBracket, char closingBracket) {
 }
 bool CheckBracketsMatching(std::string input_string = "") {
   std::string input_str;
-  if (input_string.length() ==0 )
+  if (input_string.length() == 0)
     std::getline(std::cin, input_str);
   else
     input_str = input_string;
@@ -96,8 +96,7 @@ TEST_RESULT test() {
   std::string str = "[[[(())]]]";
 
   bool res = CheckBracketsMatching(str);
-  LOG(INFO) << "check matching brackets in (" <<
-      str << "): " << res;
+  LOG(INFO) << "check matching brackets in (" << str << "): " << res;
 
   RETURN_OK();
 

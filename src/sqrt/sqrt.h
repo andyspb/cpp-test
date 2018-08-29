@@ -27,7 +27,7 @@ float SquareRoot(float num) {
 }
 
 int test() {
-  LOG(INFO) << __PRETTY_FUNCTION__ << " Test sqrt";
+  LOG(INFO)<<__PRETTY_FUNCTION__ << " Test sqrt";
   std::cout << "SquareRoot(4) " << SquareRoot(4) << std::endl;
   std::cout << "SquareRoot(9) " << SquareRoot(9) << std::endl;
   std::cout << "SquareRoot(25) " << SquareRoot(25) << std::endl;
@@ -35,6 +35,7 @@ int test() {
   return 1;
 }
 
-}  // namespace sqrt_
+}
+  // namespace sqrt_
 
 #endif /* SQRT_H_ */

@@ -12,31 +12,31 @@ namespace template_fibonacci {
 
 template<int n>
 struct Fibonacci {
-    enum {
-      value = Fibonacci<n - 1>::value + Fibonacci<n - 2>::value
-    };
+  enum {
+    value = Fibonacci<n - 1>::value + Fibonacci<n - 2>::value
+  };
 };
 
 template<>
 struct Fibonacci<2> {
-    enum {
-      value = 1
-    };
+  enum {
+    value = 1
+  };
 };
 
 template<>
 struct Fibonacci<1> {
-    enum {
-      value = 1
-    };
+  enum {
+    value = 1
+  };
 };
 
 template<>
 class Fibonacci<0> {
-  public:
-    enum {
-      value = 0
-    };
+ public:
+  enum {
+    value = 0
+  };
 };
 
 int test() {
@@ -47,7 +47,5 @@ int test() {
 }
 
 }  // namespace template_fibonacci
-
-
 
 #endif /* TEMPLATE_FIBONACCI_H_ */

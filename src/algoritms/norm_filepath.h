@@ -36,7 +36,7 @@ struct normal_path {
     std::vector<std::string> vec;
 
     for (std::string token; getline(iss, token, '/');)
-      if (token.length() >0 )
+      if (token.length() > 0)
         vec.push_back(token);
 
 //    for(auto v: vec)

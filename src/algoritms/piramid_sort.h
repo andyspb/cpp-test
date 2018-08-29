@@ -10,7 +10,6 @@
 
 namespace piramid_sort {
 
-
 }  // piramid_sort
 
 #endif /* PIRAMID_SORT_H_ */

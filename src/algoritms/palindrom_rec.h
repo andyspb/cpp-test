@@ -29,15 +29,12 @@ TEST_RESULT test() {
   std::string str = "arosaupalanalapuasora";
   bool result = palindrome(str);
 
-  LOG(INFO) << "Is palindrome(" << str
-      << ") = " << std::boolalpha << result;
+  LOG(INFO) << "Is palindrome(" << str << ") = " << std::boolalpha << result;
 
   str = "some test";
   result = palindrome(str);
 
-  LOG(INFO) << "Is palindrome(" << str
-      << ") = " << std::boolalpha << result;
-
+  LOG(INFO) << "Is palindrome(" << str << ") = " << std::boolalpha << result;
 
   RETURN_OK();
 }

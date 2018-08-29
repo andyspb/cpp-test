@@ -7,7 +7,7 @@
 namespace byte_array_2_string {
 
 char const hex[16] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A',
-        'B', 'C', 'D', 'E', 'F' };
+    'B', 'C', 'D', 'E', 'F' };
 
 std::string byte_2_str(char* bytes, int size) {
   std::string str;

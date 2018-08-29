@@ -20,5 +20,4 @@ TEST_RESULT test() {
 
 }  // namespace http
 
-
 #endif /* SRC_HTTP_HTTP_H_ */

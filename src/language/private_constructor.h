@@ -6,11 +6,11 @@
 namespace private_constructor {
 
 class Class {
-  private:
-    Class() {
-    }
-  public:
-    int value;
+ private:
+  Class() {
+  }
+ public:
+  int value;
 };
 
 int test() {
@@ -19,6 +19,6 @@ int test() {
   std::cout << "c.value = " << c.value << std::endl;
   return 1;
 }
-} // namespace private_constructor
+}  // namespace private_constructor
 
 #endif  // PRIVATE_CONSTRUCTOR_H_ 

@@ -15,6 +15,6 @@ int test() {
   std::cout << "i=" << i << std::endl;
   return 1;
 }
-} // namespace prefix_postfix_test
+}  // namespace prefix_postfix_test
 
 #endif // _PREFIX_POSTFIX_TEST_H_

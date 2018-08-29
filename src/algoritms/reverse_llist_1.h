@@ -5,11 +5,12 @@
 
 namespace reverse_llist_1 {
 struct _Node {
-    explicit _Node(int i)
-        : value(i), next(NULL) {
-    }
-    int value;
-    _Node * next;
+  explicit _Node(int i)
+      : value(i),
+        next(NULL) {
+  }
+  int value;
+  _Node * next;
 };
 
 void printNodes(_Node * node) {
@@ -21,7 +22,7 @@ void printNodes(_Node * node) {
 }
 
 void ReverseLinkedListTest() {
-  std::cout << "Reverse linked list test" <<std:: endl;
+  std::cout << "Reverse linked list test" << std::endl;
   _Node * _node = new _Node(0);
   _Node * head = _node;
   for (int i = 1; i < 10; i++) {
@@ -41,6 +42,6 @@ void ReverseLinkedListTest() {
 
   printNodes(reverseList);
 }
-} // namespace reverse_llist_1
+}  // namespace reverse_llist_1
 
 #endif // _REVERSE_LLIST_1_H_

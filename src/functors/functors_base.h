@@ -32,13 +32,11 @@ template<class T> class SpecificFunctor : public BaseFunctor {
   SpecificFunctor(T* _pt2Object, void (T::*_fpt)(const char*)) {
     pt2Object = _pt2Object;
     fpt = _fpt;
-    LOG(INFO) << __PRETTY_FUNCTION__ <<
-        "pt2Object:"<< pt2Object;
+    LOG(INFO) << __PRETTY_FUNCTION__ << "pt2Object:" << pt2Object;
   }
 
   virtual ~SpecificFunctor() {
-    LOG(INFO) << __PRETTY_FUNCTION__ <<
-        " pt2Object:"<< pt2Object;
+    LOG(INFO) << __PRETTY_FUNCTION__ << " pt2Object:" << pt2Object;
     if (pt2Object) {
 //      delete pt2Object;
     }

@@ -5,36 +5,37 @@
 namespace mediator {
 
 class Printer {
-  public:
-    virtual ~Printer() {
-    }
-    void print(const std::string & str) const {
-      std::cout << str << std::endl;
-    }
+ public:
+  virtual ~Printer() {
+  }
+  void print(const std::string & str) const {
+    std::cout << str << std::endl;
+  }
 };
 
 class Message {
-  public:
-    virtual ~Message() {
-    }
-    virtual void print(const class Mediator & mediator) const;
+ public:
+  virtual ~Message() {
+  }
+  virtual void print(const class Mediator & mediator) const;
 };
 
 class Mediator {
-    const Printer & printer;
-    const Message & message;
-  public:
-    Mediator(const Printer & pr, const Message & msg)
-        : printer(pr), message(msg) {
-    }
-    virtual ~Mediator() {
-    }
-    void print() const {
-      message.print(*this);
-    }
-    void print(const std::string & str) const {
-      printer.print(str);
-    }
+  const Printer & printer;
+  const Message & message;
+ public:
+  Mediator(const Printer & pr, const Message & msg)
+      : printer(pr),
+        message(msg) {
+  }
+  virtual ~Mediator() {
+  }
+  void print() const {
+    message.print(*this);
+  }
+  void print(const std::string & str) const {
+    printer.print(str);
+  }
 };
 
 inline void Message::print(const Mediator & mediator) const {
@@ -53,6 +54,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace mediator
+}  // namespace mediator
 
 #endif // _MEDIATOR_H_

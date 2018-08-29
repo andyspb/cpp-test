@@ -6,53 +6,59 @@
 namespace factory_method {
 
 class Pizza {
-  public:
-    virtual ~Pizza() {}
-    virtual int getPrice() = 0; // count the cents
+ public:
+  virtual ~Pizza() {
+  }
+  virtual int getPrice() = 0;  // count the cents
 };
 
-class HamAndMushroomPizza: public Pizza {
-  public:
-    virtual ~HamAndMushroomPizza() {}
-    virtual int getPrice() {
-      return 850;
-    }
+class HamAndMushroomPizza : public Pizza {
+ public:
+  virtual ~HamAndMushroomPizza() {
+  }
+  virtual int getPrice() {
+    return 850;
+  }
 };
 
-class DeluxePizza: public Pizza {
-  public:
-    virtual ~DeluxePizza() {}
-    virtual int getPrice() {
-      return 1050;
-    }
+class DeluxePizza : public Pizza {
+ public:
+  virtual ~DeluxePizza() {
+  }
+  virtual int getPrice() {
+    return 1050;
+  }
 };
 
-class HawaiianPizza: public Pizza {
-  public:
-    virtual ~HawaiianPizza() {}
-    virtual int getPrice() {
-      return 1150;
-    }
+class HawaiianPizza : public Pizza {
+ public:
+  virtual ~HawaiianPizza() {
+  }
+  virtual int getPrice() {
+    return 1150;
+  }
 };
 
 class PizzaFactory {
-  public:
-    typedef enum {
-      HamMushroom = 0, Deluxe = 1, Hawaiian = 2
-    } PizzaType;
+ public:
+  typedef enum {
+    HamMushroom = 0,
+    Deluxe = 1,
+    Hawaiian = 2
+  } PizzaType;
 
-    static Pizza * createPizza(PizzaType pizzaType) {
-      switch (pizzaType) {
-        case HamMushroom:
-          return new HamAndMushroomPizza();
-        case Deluxe:
-          return new DeluxePizza();
-        case Hawaiian:
-          return new HawaiianPizza();
-        default:
-          return 0;
-      }
+  static Pizza * createPizza(PizzaType pizzaType) {
+    switch (pizzaType) {
+      case HamMushroom:
+        return new HamAndMushroomPizza();
+      case Deluxe:
+        return new DeluxePizza();
+      case Hawaiian:
+        return new HawaiianPizza();
+      default:
+        return 0;
     }
+  }
 };
 
 int test() {
@@ -70,6 +76,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace factory_method
+}  // namespace factory_method
 
 #endif // _FACTORY_METHOD_H_

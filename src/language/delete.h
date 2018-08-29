@@ -4,16 +4,16 @@
 #include <iostream>
 
 namespace delete_ {
-  
+
 class A {
-public:
+ public:
   void f() {
     delete this;
   }
 };
 
 int test() {
-  A * a= new A();
+  A * a = new A();
 //  delete &a;
   a->f();
 

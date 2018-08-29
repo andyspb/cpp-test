@@ -6,17 +6,17 @@
 namespace lazy_initialization {
 
 class Fruit {
-  public:
-    static Fruit* getFruit(const std::string& type);
-    static void printCurrentTypes();
+ public:
+  static Fruit* getFruit(const std::string& type);
+  static void printCurrentTypes();
 
-  private:
-    static std::map<std::string, Fruit*> types;
-    std::string type;
-    // note: constructor private forcing one to use static getFruit()
-    Fruit(const std::string& t)
-        : type(t) {
-    }
+ private:
+  static std::map<std::string, Fruit*> types;
+  std::string type;
+  // note: constructor private forcing one to use static getFruit()
+  Fruit(const std::string& t)
+      : type(t) {
+  }
 };
 
 //definition needed for using any static member variable
@@ -28,12 +28,12 @@ std::map<std::string, Fruit*> Fruit::types;
  * postcondition: The Fruit instance associated with that type.
  */
 Fruit* Fruit::getFruit(const std::string& type) {
-  Fruit *f = types[type]; // try to find a pre-existing instance, or std::map'll create one if not found
+  Fruit *f = types[type];  // try to find a pre-existing instance, or std::map'll create one if not found
 
-  if (!f) { // if it was created by map automatically, it'll be pointing to NULL
+  if (!f) {  // if it was created by map automatically, it'll be pointing to NULL
     // couldn't find one, so make a new instance
-    f = new Fruit(type); // lazy initialization part
-    types[type] = f; // Registering the newly created Fruit in the types' map for later use.
+    f = new Fruit(type);  // lazy initialization part
+    types[type] = f;  // Registering the newly created Fruit in the types' map for later use.
   }
   return f;
 }
@@ -67,6 +67,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace lazy_initialization
+}  // namespace lazy_initialization
 
 #endif // _LAZY_INITIALIZATION_H_

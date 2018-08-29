@@ -68,7 +68,7 @@ void breadth_first_traverse(Node<T>* node) {
   que.push(node);
   Node<T>* n(0);
   while (!que.empty()) {
-    n = (Node<T>*)que.front();
+    n = (Node<T>*) que.front();
     std::cout << n->value << " ";
     que.pop();
     if (n->left) {

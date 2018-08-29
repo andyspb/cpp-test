@@ -8,23 +8,23 @@
 
 namespace cast_2 {
 class Base {
-  public:
-    virtual void funcB()=0;
-    virtual ~Base() {
-       std::cout << "From Base::~Base()" <<std::endl;
-    }
+ public:
+  virtual void funcB()=0;
+  virtual ~Base() {
+    std::cout << "From Base::~Base()" << std::endl;
+  }
 };
 
-class Derived: public Base {
-  public:
-    virtual ~Derived() {
-    }
-    virtual void funcB() {
-      std::cout << "D::funcB" << std::endl;
-    }
-    void func() {
-      std::cout << "D::func" << std::endl;
-    }
+class Derived : public Base {
+ public:
+  virtual ~Derived() {
+  }
+  virtual void funcB() {
+    std::cout << "D::funcB" << std::endl;
+  }
+  void func() {
+    std::cout << "D::func" << std::endl;
+  }
 };
 
 void test_1() {
@@ -42,19 +42,19 @@ void test_1() {
 }
 
 class Pet {
-  public:
-    virtual ~Pet() {
-    }
+ public:
+  virtual ~Pet() {
+  }
 };
-class Dog: public Pet {
+class Dog : public Pet {
 };
-class Cat: public Pet {
+class Cat : public Pet {
 };
 
 void test_2() {
 //  std::cout << sizeof(long) << std::endl;
 
-  Pet* pet_ptr = new Cat; // Upcast
+  Pet* pet_ptr = new Cat;  // Upcast
   // Try to cast it to Dog*:
   Dog* dog_ptr = dynamic_cast<Dog*>(pet_ptr);
   // Try to cast it to Cat*:
@@ -74,6 +74,6 @@ int test() {
 //	void * v1 = calloc(10, sizeof(int));
   return 1;
 }
-} //namespace cast_2
+}  //namespace cast_2
 
 #endif  // _CAST_2_H_

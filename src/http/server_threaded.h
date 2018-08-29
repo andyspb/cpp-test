@@ -37,10 +37,9 @@ constexpr char response[] = "HTTP/1.1 200 OK\r\n"
     " text-shadow: 0 0 2mm red}</style></head>"
     "<body><h1>Goodbye, world!</h1></body></html>\r\n";
 
-
 void child(int fd) {
-  LOG(INFO) << __PRETTY_FUNCTION__
-      << " fd:" << fd;
+  LOG(INFO)<< __PRETTY_FUNCTION__
+  << " fd:" << fd;
   char outbuf[MAX_LINE + 1];
   size_t outbuf_used = 0;
   ssize_t result;
@@ -64,11 +63,11 @@ void child(int fd) {
 //      continue;
 //    }
 //  }
-  LOG(INFO)  << "exit() fd:" << fd;
+  LOG(INFO) << "exit() fd:" << fd;
 }
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO)<<__PRETTY_FUNCTION__;
   int listener;
   struct sockaddr_in sin;
   auto constexpr port = 8080;
@@ -112,7 +111,8 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-}  // namespace server_threaded
+}
+  // namespace server_threaded
 
 #endif // __GNUC__
 #endif /* SRC_HTTP_SERVER_THREADED_H_ */

@@ -17,6 +17,6 @@ int test() {
   assert(test_16_10_two_dim_array::test());
   return 1;
 }
-}// namespace low_level
+}  // namespace low_level
 
 #endif /* LOW_LEVEL_H_ */

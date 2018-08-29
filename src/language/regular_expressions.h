@@ -52,7 +52,6 @@ TEST_RESULT test() {
   std::regex long_word_regex("(\\s)");
   std::string new_s = std::regex_replace(s, long_word_regex, "_");
 
-
   std::cout << new_s << '\n';
 
   RETURN_OK();

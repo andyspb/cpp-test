@@ -17,9 +17,6 @@ using namespace std;
 
 namespace find_whether_path_exist {
 
-
-
-
 }  // namespace find_whether_path_exist
 
 #endif /* SRC_ALGORITMS_FIND_WHETHER_PATH_EXIST_H_ */

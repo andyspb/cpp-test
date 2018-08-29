@@ -182,11 +182,11 @@ void TestFull() {
   for (int i = 0; i < static_cast<int>(sizeof(nWin) / sizeof(int)); i++) {
     int nCount = nWin[i] + nLoose[i];
     std::cout << i << ") " << aDesc[i] << " (" << nCount * 100 / nCountIteration
-         << "%)" << " - ";
+        << "%)" << " - ";
     std::cout << "Wins: " << nWin[i] << " (" << nWin[i] * 100 / nCount << "%)"
-         << "; ";
-    std::cout << "Loose: " << nLoose[i] << " (" << nLoose[i] * 100 / nCount << "%)"
-         << std::endl;
+        << "; ";
+    std::cout << "Loose: " << nLoose[i] << " (" << nLoose[i] * 100 / nCount
+        << "%)" << std::endl;
   }
 }
 
@@ -195,10 +195,12 @@ void TestFull() {
 // nCountIteration - количество испытаний
 template<class TAnhorStrategy, int nCountIteration>
 void Test() {
-  std::cout << "========================================================" << std::endl;
+  std::cout << "========================================================"
+      << std::endl;
   std::cout << "Anchorman strategy: " << TAnhorStrategy::GetName() << std::endl;
   std::cout << std::endl;
-  std::cout << "User strategy: " << CUserStrategyKeepTheChoose::GetName() << std::endl;
+  std::cout << "User strategy: " << CUserStrategyKeepTheChoose::GetName()
+      << std::endl;
   TestFull<CUserStrategyKeepTheChoose, TAnhorStrategy, nCountIteration>();
 
   std::cout << std::endl;

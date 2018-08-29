@@ -14,12 +14,12 @@ int test() {
   std::binder1st<std::less<int> > IsNegative(std::less<int>(), 0);
   cx = static_cast<int>(count_if(numbers, numbers + 5, IsNegative));
   std::cout << "There are " << cx << " negative elements." << std::endl;
-  std::binder2nd <std::greater<int> > IsPositive(std::greater<int>(), 0);
+  std::binder2nd<std::greater<int> > IsPositive(std::greater<int>(), 0);
   cx = static_cast<int>(count_if(numbers, numbers + 5, IsPositive));
   std::cout << "There are " << cx << " negative elements." << std::endl;
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace binder2nd_
+}  // namespace binder2nd_
 
 #endif // _BINDER1ST_H_

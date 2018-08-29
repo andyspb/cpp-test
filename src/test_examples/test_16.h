@@ -2,19 +2,17 @@
 // author: andrey.krutogolov@gmail.com
 // date:   01.04.2013
 
-
 #ifndef TESTS16_H_
 #define TESTS16_H_
 
 #include <iostream>
-
 
 namespace test_16 {
 
 class B;
 
 class A {
- friend class B;
+  friend class B;
  public:
   A() {
     std::cout << "A::A()\n";
@@ -37,7 +35,7 @@ class B : A {
 TEST_RESULT main() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
- // A* a = new B();
+  // A* a = new B();
 //  delete a;
   RETURN_OK();
 }

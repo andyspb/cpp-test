@@ -15,11 +15,12 @@
 
 namespace insertsort {
 struct SList {
-    SList(int i)
-        : val_(i), next_(0) {
-    }
-    int val_;
-    struct SList * next_;
+  SList(int i)
+      : val_(i),
+        next_(0) {
+  }
+  int val_;
+  struct SList * next_;
 };
 
 struct SList *SortList(struct SList * pList) {
@@ -84,6 +85,6 @@ int test() {
   return 1;
 }
 
-} // namespace insertsort
+}  // namespace insertsort
 
 #endif /* INSERTSORT_H_ */

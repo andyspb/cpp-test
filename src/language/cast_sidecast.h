@@ -36,7 +36,7 @@ TEST_RESULT test() {
 
   A *a = new Derived();
   B *b = dynamic_cast<B*>(a);
-  std::cout << "b="<<b << "\n";
+  std::cout << "b=" << b << "\n";
 
   RETURN_OK();
 }

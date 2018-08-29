@@ -4,7 +4,10 @@ namespace revert_slist {
 
 class Node {
  public:
-  Node(int v) : value(v), next(0) {}
+  Node(int v)
+      : value(v),
+        next(0) {
+  }
   int value;
   Node* next;
 };

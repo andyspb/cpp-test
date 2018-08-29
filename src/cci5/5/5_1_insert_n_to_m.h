@@ -51,6 +51,4 @@ int test() {
 
 }  // namespace insert_n_to_m
 
-
-
 #endif /* 5_1_INSERT_N_TO_M_H_ */

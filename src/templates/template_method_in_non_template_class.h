@@ -6,18 +6,18 @@
 
 namespace template_method_in_non_template_class {
 class InnertemplateTest {
-  public:
-    InnertemplateTest()
-        : ptr_(0) {
-    }
-    virtual ~InnertemplateTest(void) {
-    }
+ public:
+  InnertemplateTest()
+      : ptr_(0) {
+  }
+  virtual ~InnertemplateTest(void) {
+  }
 
-    template<class T>
-    void foo_templ(const T&);
+  template<class T>
+  void foo_templ(const T&);
 
-  private:
-    void* ptr_;
+ private:
+  void* ptr_;
 };
 
 template<class T>

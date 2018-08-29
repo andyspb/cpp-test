@@ -2,7 +2,6 @@
 // author: andrey.krutogolov@gmail.com
 // date:   04.04.2013
 
-
 #ifndef TESTS19_H_
 #define TESTS19_H_
 
@@ -24,7 +23,7 @@ TEST_RESULT test() {
 
   int i = 5;
   int j = i++ + ++i;
-  std::cout << "j=" << j <<std::endl;
+  std::cout << "j=" << j << std::endl;
 
   volatile int u = 0;
 //  u = u++ + ++u;
@@ -41,14 +40,14 @@ TEST_RESULT test() {
 
   int ii = 5;
   ii = (++ii) + (++ii) + (++ii);
-  std::cout << "ii=" << ii <<std::endl;
+  std::cout << "ii=" << ii << std::endl;
 
 //  float f = std::numeric_limits<float>::max();
   float f = FLT_MAX;
 
   float f1 = f + 1;
 
-  if ( f == f1) {
+  if (f == f1) {
     std::cout << "f == f1\n";
   } else {
     std::cout << "f != f1\n";
@@ -62,7 +61,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace tests19
-
-
 
 #endif  // TESTS19_H_

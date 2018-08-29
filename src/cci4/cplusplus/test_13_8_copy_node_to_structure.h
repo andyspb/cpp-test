@@ -7,7 +7,6 @@
 // Write a method that takes a pointer to a Node structure
 // as a parameter and returns a complete copy of the passed-in data structure.
 // The Node structure contains two pointers to other Node structures.
-
 #ifndef TEST_13_8_COPY_NODE_TO_STRUCTURE_H_
 #define TEST_13_8_COPY_NODE_TO_STRUCTURE_H_
 
@@ -16,8 +15,8 @@
 namespace test_13_8_copy_node_to_structure {
 
 struct Node {
-    Node* ptr1;
-    Node* ptr2;
+  Node* ptr1;
+  Node* ptr2;
 };
 
 typedef std::map<Node*, Node*> NodeMap;

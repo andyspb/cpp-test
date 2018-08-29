@@ -19,12 +19,12 @@ void merge(int a[], int b[], int lastA, int lastB) {
   while (indexA >= 0 && indexB >= 0) {
     /* end of a is > than end of b */
     if (a[indexA] > b[indexB]) {
-      a[indexMerged] = a[indexA]; // copy element
-      indexMerged--; // move indices
+      a[indexMerged] = a[indexA];  // copy element
+      indexMerged--;  // move indices
       indexA--;
     } else {
-      a[indexMerged] = b[indexB]; // copy element
-      indexMerged--; // move indices
+      a[indexMerged] = b[indexB];  // copy element
+      indexMerged--;  // move indices
       indexB--;
     }
   }
@@ -34,15 +34,13 @@ void merge(int a[], int b[], int lastA, int lastB) {
     a[indexMerged] = b[indexB];
     indexMerged--;
     indexB--;
-    }
   }
+}
 
 int test() {
   return 1;
 }
 
 }  // namespace merge_array_to_array
-
-
 
 #endif /* 11_1_MERGE_ARRAY_TO_ARRAY_H_ */

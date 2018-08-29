@@ -19,14 +19,11 @@ void print_list(list::Node<T>* node) {
   if (!node)
     return;
   while (node) {
-    std::cout<< node->data << " ";
+    std::cout << node->data << " ";
   }
   std::endl(std::cout);
 }
 
-
 }  // namespace linked_list
-
-
 
 #endif /* LINKED_LIST_H_ */

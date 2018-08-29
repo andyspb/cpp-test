@@ -48,10 +48,12 @@ class HashTable {
 //    int hash = (key % TABLE_SIZE);
     int hash = hash_functions_collection::knuth_hash_function(key);
     LOG(INFO) << "hash=" << hash;
-    LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()=" << table[hash]->getKey();
+    LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()="
+        << table[hash]->getKey();
 
     while (table[hash] != NULL && table[hash]->getKey() != key) {
-      LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()=" << table[hash]->getKey();
+      LOG(INFO) << "table[hash] =" << table[hash] << " table[hash]->getKey()="
+          << table[hash]->getKey();
       hash = (hash + 1) % TABLE_SIZE;
     }
     if (table[hash] == NULL)
@@ -97,7 +99,7 @@ TEST_RESULT test() {
   for (int i = 1; i < kMax; ++i) {
     int value = (i * 100) + (i * 10) + i;
     LOG(INFO) << "table.put(" << i << ", " << value << ")";
-    table.put(i,value);
+    table.put(i, value);
   }
 
   int size = table.size();

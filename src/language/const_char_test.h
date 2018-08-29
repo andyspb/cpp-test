@@ -19,8 +19,7 @@ int test() {
   std::cout << p3 << std::endl;
 
   p0 = wh;
-  *(p2+1 )= 'a';
-
+  *(p2 + 1) = 'a';
 
   ch[3] = '_';
   //*(p1+2) = 't';

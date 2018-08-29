@@ -12,47 +12,47 @@ namespace container_stack_test {
 #include <iostream>
 
 struct DefStackTraits {
-    static const int MIN_ELEMENT_COUNT_ = 10;
-    typedef int int_t;
+  static const int MIN_ELEMENT_COUNT_ = 10;
+  typedef int int_t;
 };
 
 template<typename T, typename Traits = DefStackTraits>
 class Stack {
-  private:
-    typedef std::list<T> List_t;
-    List_t items_;
-    size_t capacity_;
-    size_t size_;
+ private:
+  typedef std::list<T> List_t;
+  List_t items_;
+  size_t capacity_;
+  size_t size_;
 
-  public:
-    Stack(int capacity = DefStackTraits::MIN_ELEMENT_COUNT_)
-        : capacity_(capacity) {
-      items_.resize(capacity_);
-    }
-    ~Stack() {
-    }
+ public:
+  Stack(int capacity = DefStackTraits::MIN_ELEMENT_COUNT_)
+      : capacity_(capacity) {
+    items_.resize(capacity_);
+  }
+  ~Stack() {
+  }
 
-    T pop() {
-      T elem = items_.front();
-      items_.pop_front();
-      return elem;
-    }
+  T pop() {
+    T elem = items_.front();
+    items_.pop_front();
+    return elem;
+  }
 
-    void push(const T& el) {
-      items_.push_front(el);
-    }
+  void push(const T& el) {
+    items_.push_front(el);
+  }
 
-    bool empty() const {
-      return items_.empty();
-    }
+  bool empty() const {
+    return items_.empty();
+  }
 
-    int size() const {
-      return static_cast<int>(items_.size());
-    }
+  int size() const {
+    return static_cast<int>(items_.size());
+  }
 
-    const T& front() const {
-      return items_.front();
-    }
+  const T& front() const {
+    return items_.front();
+  }
 };
 
 // test routine
@@ -73,5 +73,5 @@ int test() {
   std::cout << "<--- container stack test passed" << std::endl;
   return 1;
 }
-} // namespace container_stack_test
+}  // namespace container_stack_test
 #endif // _CONTAINER_STACK_TEST_H_

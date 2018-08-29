@@ -11,16 +11,16 @@
 #include <stdio.h>
 
 namespace anti_pattern {
-class Base{
-public:
+class Base {
+ public:
   int* pointer_to_data_;
 };
 
-class Derived: public Base {
+class Derived : public Base {
  public:
   Derived() {
     data_ = 10;
-    pointer_to_data_=&data_;
+    pointer_to_data_ = &data_;
   }
  private:
   int data_;

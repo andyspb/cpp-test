@@ -18,7 +18,11 @@ struct Node {
   Node * right;
   int data;
 
-  Node(int value): left(0), right(0), data(value) {}
+  Node(int value)
+      : left(0),
+        right(0),
+        data(value) {
+  }
 };
 
 bool check_tree_is_bst(struct Node* node) {
@@ -28,18 +32,17 @@ bool check_tree_is_bst(struct Node* node) {
 
   /* false if left is > than node */
   if (node->left && node->left->data > node->data) {
-      return false;
+    return false;
   }
 
   /* false if right is < than node */
   if (node->right && node->right->data < node->data) {
-      return false;
+    return false;
   }
 
   /* false if, recursively, the left or right is not a BST */
   if (!check_tree_is_bst(node->left) || !check_tree_is_bst(node->right))
     return false;
-
 
   /* passing all that, it's a BST */
   return true;
@@ -68,8 +71,7 @@ TEST_RESULT test() {
 
   bool result = check_tree_is_bst(&node);
 
-  LOG(INFO) << "check_tree_is_bst: " <<
-      std::boolalpha << result;
+  LOG(INFO) << "check_tree_is_bst: " << std::boolalpha << result;
   RETURN_OK();
 }
 }  // namespace check_tree_is_bst

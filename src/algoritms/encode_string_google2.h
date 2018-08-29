@@ -60,6 +60,6 @@ int test() {
 //print(file)
 //}
   return 0;
-} // encode_string_google2
+}  // encode_string_google2
 
 #endif /* ENCODE_STRING_GOOGLE2_H_ */

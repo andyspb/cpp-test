@@ -18,6 +18,4 @@ TEST_RESULT test() {
 
 }
 
-
-
 #endif /* SRC_PARSER_JSON_PARSER_H_ */

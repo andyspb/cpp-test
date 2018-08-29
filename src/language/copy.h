@@ -25,27 +25,24 @@ TEST_RESULT test() {
   orig.push_back(5);
   orig.push_back(6);
 
-  std::vector<int>  dest;
-  std::cout<< "orig\n";
-  std::for_each(orig.begin(), orig.end(), [](int &n){std::cout<< n <<" ";});
-  std::cout<<std::endl;
-  std::cout<< "dest\n";
-  std::for_each(dest.begin(), dest.end(), [](int &n){std::cout<< n <<" ";});
-  std::cout<<std::endl;
+  std::vector<int> dest;
+  std::cout << "orig\n";
+  std::for_each(orig.begin(), orig.end(), [](int &n) {std::cout<< n <<" ";});
+  std::cout << std::endl;
+  std::cout << "dest\n";
+  std::for_each(dest.begin(), dest.end(), [](int &n) {std::cout<< n <<" ";});
+  std::cout << std::endl;
 
-  std::cout<< "after copy_n\n";
+  std::cout << "after copy_n\n";
 
   std::copy_n(orig.begin(), 5, std::back_inserter(dest));
-  std::cout<< "dest\n";
-  std::for_each(dest.begin(), dest.end(), [](int &n){std::cout<< n <<" ";});
-  std::cout<<std::endl;
-
+  std::cout << "dest\n";
+  std::for_each(dest.begin(), dest.end(), [](int &n) {std::cout<< n <<" ";});
+  std::cout << std::endl;
 
   RETURN_OK();
 }
 
 }  // namespace copy_
-
-
 
 #endif /* SRC_LANGUAGE_COPY_H_ */

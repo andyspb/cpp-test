@@ -19,12 +19,10 @@ struct TListNode {
 template<class T>
 class LockFreeQueue {
   /** A node in the linked list. */
-  struct node
-  {
-      int t /**< Value */;
-      std::atomic<node*> next /**< Next node in list */;
+  struct node {
+    int t /**< Value */;
+    std::atomic<node*> next /**< Next node in list */;
   };
-
 
   struct TRootNode {
     TListNode * volatile PushQueue;
@@ -52,8 +50,7 @@ class LockFreeQueue {
   volatile long FreememCounter;
   TRootNode * volatile FreePtr;
 
-  bool atomic_add(volatile long& );
-
+  bool atomic_add(volatile long&);
 
   void TryToFreeAsyncMemory() {
     TRootNode *current = FreePtr;
@@ -235,7 +232,6 @@ class LockFreeQueue {
   }
 };
 #endif
-
 
 int main() {
 #if defined(__GNUC__) and !defined(__WIN64__)

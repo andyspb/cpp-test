@@ -26,24 +26,23 @@ void print() {
   std::cout << "j = " << j << std::endl;
 }
 
-
 namespace static_ {
 
-  int test() {
-    A a;
-    a.print();
-    a.print();
-    a.print();
-    a.print();
+int test() {
+  A a;
+  a.print();
+  a.print();
+  a.print();
+  a.print();
 
-    print();
-    print();
-    print();
-    print();
+  print();
+  print();
+  print();
+  print();
 
-    return 1;
-  }
+  return 1;
+}
 
-} // namespace static_
+}  // namespace static_
 
 #endif /* STATIC_H_ */

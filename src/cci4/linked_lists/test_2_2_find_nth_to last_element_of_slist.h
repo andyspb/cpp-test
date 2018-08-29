@@ -6,11 +6,12 @@
 
 namespace test_2_2 {
 struct LList {
-    LList(int d)
-        : data(d), next(NULL) {
-    }
-    int data;
-    LList *next;
+  LList(int d)
+      : data(d),
+        next(NULL) {
+  }
+  int data;
+  LList *next;
 };
 
 void fill_list(LList *head) {
@@ -41,9 +42,9 @@ LList *nthToLast(LList *head, int n) {
   }
   LList* p1 = head;
   LList* p2 = head;
-  for (int j = 0; j < n - 1; ++j) { // skip n-1 steps ahead
+  for (int j = 0; j < n - 1; ++j) {  // skip n-1 steps ahead
     if (p2 == NULL) {
-      return NULL; // not found since list size < n }
+      return NULL;  // not found since list size < n }
     }
     p2 = p2->next;
   }
@@ -59,10 +60,10 @@ int test() {
   LList list(0);
   fill_list(&list);
   print_list(&list);
-  LList *nth = nthToLast(&list,5);
+  LList *nth = nthToLast(&list, 5);
   print_list(nth);
   return 1;
 }
-} // test_2_2
+}  // test_2_2
 
 #endif /* TEST_2_2_FIND_NTH_TO_LAST_ELEMENT_OF_SLIST_H_ */

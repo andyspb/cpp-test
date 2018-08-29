@@ -4,24 +4,24 @@
 namespace null_object {
 
 class Recipient {
-  public:
-    virtual ~Recipient() {
-    }
-    virtual std::string name() const=0;
+ public:
+  virtual ~Recipient() {
+  }
+  virtual std::string name() const=0;
 };
 
-class NullRecipient: public Recipient {
-  public:
-    std::string name() const {
-      return "nobody";
-    }
+class NullRecipient : public Recipient {
+ public:
+  std::string name() const {
+    return "nobody";
+  }
 };
 
-class _World: public Recipient {
-  public:
-    std::string name() const {
-      return "world";
-    }
+class _World : public Recipient {
+ public:
+  std::string name() const {
+    return "world";
+  }
 };
 
 void test_real(const Recipient & recipient = _World()) {

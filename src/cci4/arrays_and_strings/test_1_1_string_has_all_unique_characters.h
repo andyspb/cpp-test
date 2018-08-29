@@ -55,6 +55,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-} // namespace test_1_1
+}  // namespace test_1_1
 
 #endif  // _TEST_1_1_H

@@ -27,6 +27,6 @@ int test() {
   std::endl(std::cout);
   return 1;
 }
-} // namespace std_qsort
+}  // namespace std_qsort
 
 #endif // _STD_QSORT_H_

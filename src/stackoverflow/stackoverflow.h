@@ -22,6 +22,4 @@ int test() {
 
 }
 
-
-
 #endif /* SRC_STACKOVERFLOW_STACKOVERFLOW_H_ */

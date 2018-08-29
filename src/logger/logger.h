@@ -35,7 +35,7 @@ void Trace(const char* msg, ...) {
 
   std::string str(pStr);
 
-  LOG(INFO) << "str: " << str;
+  LOG(INFO)<< "str: " << str;
 }
 
 void Trace2(const char* msg, const char* msg1, ...) {
@@ -49,17 +49,15 @@ void Trace2(const char* msg, const char* msg1, ...) {
 
   std::string str(pStr);
 
-  LOG(INFO) << "str: " << str;
+  LOG(INFO)<< "str: " << str;
 }
 
-
-
-int test(){
+int test() {
   __SCOPE_LOG__;
 
   const char test[] = "This is a test string";
   //Trace("[ [%s:%d] %s, %d ]", __PRETTY_FUNCTION__, __LINE__, test, 123);
-  
+
 #ifdef _WIN32
   Trace("[ [%s:%d] %s, %d ]", __FUNCTION__, __LINE__, test, 123);
 #else

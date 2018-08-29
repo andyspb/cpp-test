@@ -2,26 +2,26 @@
 namespace singleton_with_muex {
 
 class MutexGuard {
-  public:
-    MutexGuard() {
-      //          mutex = (HANDLE)CreateMutex(0,0,"MutexGuard");
-    }
-    virtual ~MutexGuard() {
-      //        CloseHandle(mutex);
-    }
-    void Lock() {
-      std::cout << "MutexGuard::Lock() called\n";
+ public:
+  MutexGuard() {
+    //          mutex = (HANDLE)CreateMutex(0,0,"MutexGuard");
+  }
+  virtual ~MutexGuard() {
+    //        CloseHandle(mutex);
+  }
+  void Lock() {
+    std::cout << "MutexGuard::Lock() called\n";
 //            DWORD result = WaitForSingleObject(mutex,INFINITE);
 //            cout<<"result="<<result<<"\n";
-      std::cout << "MutexGuard::Lock() return\n";
-    }
-    void Unlock() {
-      std::cout << "MutexGuard::Unlock() called\n";
+    std::cout << "MutexGuard::Lock() return\n";
+  }
+  void Unlock() {
+    std::cout << "MutexGuard::Unlock() called\n";
 //            ReleaseMutex(mutex);
-      std::cout << "MutexGuard::Unlock() return\n";
-    }
+    std::cout << "MutexGuard::Unlock() return\n";
+  }
 
-  private:
+ private:
 //        HANDLE mutex;
 };
 
@@ -32,19 +32,19 @@ class MutexGuard {
 // may still pose problems at program termination time.
 //
 class Singleton_with_mutex {
-  private:
-    Singleton_with_mutex() {
-    }
-    ~Singleton_with_mutex() {
-    }
-    Singleton_with_mutex(const Singleton_with_mutex &); // intentionally undefined
-    Singleton_with_mutex & operator=(const Singleton_with_mutex &); // intentionally undefined
+ private:
+  Singleton_with_mutex() {
+  }
+  ~Singleton_with_mutex() {
+  }
+  Singleton_with_mutex(const Singleton_with_mutex &);  // intentionally undefined
+  Singleton_with_mutex & operator=(const Singleton_with_mutex &);  // intentionally undefined
 
-    static Singleton_with_mutex *_instance;
+  static Singleton_with_mutex *_instance;
 
-  public:
-    static Singleton_with_mutex * getInstance();
-    static MutexGuard guard;
+ public:
+  static Singleton_with_mutex * getInstance();
+  static MutexGuard guard;
 };
 
 Singleton_with_mutex* Singleton_with_mutex::_instance = 0;

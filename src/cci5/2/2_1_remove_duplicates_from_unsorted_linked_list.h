@@ -18,13 +18,17 @@ namespace remove_dup_from_unsorted_llist {
 
 class Node {
  public:
-  Node(int v): value(v), next(NULL) {};
+  Node(int v)
+      : value(v),
+        next(NULL) {
+  }
+  ;
   int value;
   Node *next;
 };
 
 void printList(Node* list) {
-  while (list != NULL)  {
+  while (list != NULL) {
     std::cout << list->value << " ";
     list = list->next;
   }
@@ -36,22 +40,22 @@ void printNodes(Node * node) {
     std::cout << node->value << " ";
     node = node->next;
   }
-  std::endl(std::cout);
+  std::endl (std::cout);
 }
 
 // with buffer
 void removeDupsFromList(Node* list) {
   if (!list || !list->next)
     return;
-  int arr[256] = {0};
+  int arr[256] = { 0 };
   Node* prev = list;
-  while(list->next != NULL) {
+  while (list->next != NULL) {
     prev = list;
     list = list->next;
-    if (arr[list->value] >0) {
+    if (arr[list->value] > 0) {
       prev->next = list->next;
     } else {
-      arr[list->value] +=1;
+      arr[list->value] += 1;
     }
   }
 
@@ -74,12 +78,12 @@ void removeDupsFromListWithoutBuffer(Node* node) {
         runner = runner->next;
       }
     }
-    current = current ->next;
+    current = current->next;
   }
 }
 
 int test() {
-  std::cout << "Reverse linked list test" <<std:: endl;
+  std::cout << "Reverse linked list test" << std::endl;
 
   Node * _node = new Node(0);
   Node * head = _node;

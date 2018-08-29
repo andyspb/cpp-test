@@ -5,23 +5,26 @@
 
 namespace virt_func_3 {
 class Base {
-  public:
-    Base() {}
-    virtual ~Base() {}
-    virtual void doSome() {
-      std::cout << "From Base::doSome()" << std::endl;
-    }
+ public:
+  Base() {
+  }
+  virtual ~Base() {
+  }
+  virtual void doSome() {
+    std::cout << "From Base::doSome()" << std::endl;
+  }
 };
 
-class Derived: public Base {
-  public:
-    Derived() {
-      doSome();
-    }
-    virtual ~Derived() {}
-    virtual void doSome() {
-      std::cout << "From Derived::doSome()" << std::endl;
-    }
+class Derived : public Base {
+ public:
+  Derived() {
+    doSome();
+  }
+  virtual ~Derived() {
+  }
+  virtual void doSome() {
+    std::cout << "From Derived::doSome()" << std::endl;
+  }
 };
 
 int test() {
@@ -31,6 +34,6 @@ int test() {
   std::cout << "<--- test passed";
   return 1;
 }
-} // virt_func_3
+}  // virt_func_3
 
 #endif // #ifndef _VIRT_FUNC_3_H_

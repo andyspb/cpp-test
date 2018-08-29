@@ -14,7 +14,7 @@ int max(int a, int b) {
 
 void draw_point(int x, int y, int x0, int y0, int r) {
   std::cout << "draw point (" << x << "," << y << " -- " << x0 << "," << y0
-            << " radius=" << r << std::endl;
+      << " radius=" << r << std::endl;
 }
 
 TEST_RESULT test() {

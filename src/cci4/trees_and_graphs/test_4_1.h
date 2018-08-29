@@ -11,7 +11,9 @@ namespace test_4_1 {
 template<typename T>
 struct TreeNode {
   TreeNode(T i)
-      : data(i), left(NULL), right(NULL) {
+      : data(i),
+        left(NULL),
+        right(NULL) {
   }
   ~TreeNode() {
     if (left) {

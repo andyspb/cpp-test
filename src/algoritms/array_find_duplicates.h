@@ -66,6 +66,5 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namesapce array_find_duplicates
 #endif // _ARRAY_FIND_DUPLICATES_H

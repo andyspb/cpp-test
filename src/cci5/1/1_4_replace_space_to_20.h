@@ -16,19 +16,19 @@ char* replaceSpacesTo20(char* str) {
   int spaceCount(0), newLength(0), i;
   int length = strlen(str);
   char* ret;
-  for (i=0; i<length; ++i) {
+  for (i = 0; i < length; ++i) {
     if (str[i] == ' ')
       ++spaceCount;
 
   }
-  newLength = length+spaceCount*2;
-   ret = new char[newLength*(sizeof(char))];
+  newLength = length + spaceCount * 2;
+  ret = new char[newLength * (sizeof(char))];
   if (!ret) {
     return 0;
   }
   i = 0;
   char * tmp = ret;
-  while (i<length) {
+  while (i < length) {
     ++i;
     char ch = *str++;
     if (ch != ' ') {
@@ -45,7 +45,6 @@ char* replaceSpacesTo20(char* str) {
 
 int test() {
   char str[] = "This is a test string";
-
 
   std::cout << str << std::endl;
   char* result = replaceSpacesTo20(str);

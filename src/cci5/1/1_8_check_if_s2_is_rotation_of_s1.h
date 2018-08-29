@@ -29,6 +29,6 @@ int test() {
 }
 
 }
-  // namespace check_is_rotation
+// namespace check_is_rotation
 
 #endif /* CHECK_IF_S2_IS_ROTATION_OF_S1_H_ */

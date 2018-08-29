@@ -44,6 +44,6 @@ struct TreeNode {
 //return false;
 //}
 
-}  // namespace binary_search_tree
+}// namespace binary_search_tree
 
 #endif /* BINARY_SEARCH_TREE_H_ */

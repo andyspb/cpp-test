@@ -37,6 +37,4 @@ TEST_RESULT test() {
 
 }  // namespace array_ds
 
-
-
 #endif /* SRC_HRANK_ARRAY_DS_H_ */

@@ -29,7 +29,7 @@ int test() {
   int n = 15;
   int k = 4;
   std::cout << turnOffK(n, k);
-  std::cout<<"\n";
+  std::cout << "\n";
   return 1;
 }
 

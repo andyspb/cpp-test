@@ -32,15 +32,15 @@ typedef int socklen_t;
 namespace server_single_thread {
 
 TEST_RESULT test() {
-  LOG(INFO) << __PRETTY_FUNCTION__;
+  LOG(INFO)<<__PRETTY_FUNCTION__;
 
   char response[] = "HTTP/1.1 200 OK\r\n"
-      "Content-Type: text/html; charset=UTF-8\r\n\r\n"
-      "<!DOCTYPE html><html><head><title>Bye-bye baby bye-bye</title>"
-      "<style>body { background-color: #111 }"
-      "h1 { font-size:4cm; text-align: center; color: black;"
-      " text-shadow: 0 0 2mm red}</style></head>"
-      "<body><h1>Goodbye, world!</h1></body></html>\r\n";
+  "Content-Type: text/html; charset=UTF-8\r\n\r\n"
+  "<!DOCTYPE html><html><head><title>Bye-bye baby bye-bye</title>"
+  "<style>body { background-color: #111 }"
+  "h1 { font-size:4cm; text-align: center; color: black;"
+  " text-shadow: 0 0 2mm red}</style></head>"
+  "<body><h1>Goodbye, world!</h1></body></html>\r\n";
 
   int one = 1, client_fd;
   struct sockaddr_in svr_addr, cli_addr;
@@ -57,7 +57,7 @@ TEST_RESULT test() {
   }
 #ifndef WIN32
   {
-  setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(int));
+    setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &one, sizeof(int));
   }
 #else
   setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, (char*)&one, sizeof(int));

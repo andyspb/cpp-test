@@ -21,6 +21,4 @@ TEST_RESULT test() {
 
 }  // namespace hrank
 
-
-
 #endif /* SRC_HRANK_HRANK_H_ */

@@ -10,7 +10,6 @@
 #include "functors_base.h"
 #include "increment.h"
 
-
 namespace functors {
 TEST_RESULT test() {
   __SCOPE_LOG__;

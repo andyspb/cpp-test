@@ -37,8 +37,6 @@ bool isDivBy9_iter(int n) {
 
 #define div(x) x%9?0:1
 
-
-
 // Driver program to test above function
 TEST_RESULT test() {
   __SCOPE_LOG__;

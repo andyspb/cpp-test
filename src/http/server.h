@@ -8,8 +8,6 @@
 #ifndef SRC_HTTP_SERVER_H_
 #define SRC_HTTP_SERVER_H_
 
-
-
 #ifdef __linux__
 #include "server_single_thread.h"
 #include "server_threaded.h"

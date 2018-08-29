@@ -10,17 +10,12 @@
 
 namespace json {
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
-
 
   RETURN_OK();
 }
 
-
 }  // namespace json
-
-
 
 #endif /* SRC_JSON_JSON_H_ */

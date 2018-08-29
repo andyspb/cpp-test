@@ -21,7 +21,7 @@ void rotate(int matrix[][2], int n) {
     int last = n - 1 - layer;
     for (int i = first; i < last; ++i) {
       int offset = i - first;
-      int top = matrix[first][i]; // save top
+      int top = matrix[first][i];  // save top
       // left -> top
       matrix[first][i] = matrix[last - offset][first];
       // bottom -> left
@@ -29,29 +29,28 @@ void rotate(int matrix[][2], int n) {
       // right -> bottom
       matrix[last][last - offset] = matrix[i][last];
       // top -> right
-      matrix[i][last] = top; // right <- saved top }
+      matrix[i][last] = top;  // right <- saved top }
     }
   }
 }
 
 void print_N_N_matrix(int matrix[][2], int n) {
-  for (int i = 0; i<n; ++i ) {
-    for (int j = 0; j <n; ++j) {
+  for (int i = 0; i < n; ++i) {
+    for (int j = 0; j < n; ++j) {
       std::cout << matrix[i][j] << " ";
     }
     std::endl(std::cout);
   }
 }
 
-
 int test() {
   std::cout << "Test 1.6" << std::endl;
-  int matrix [2][2] = {{1,2},{3,4}};
-  print_N_N_matrix(matrix,2);
-  rotate(matrix,2);
-  print_N_N_matrix(matrix,2);
+  int matrix[2][2] = { { 1, 2 }, { 3, 4 } };
+  print_N_N_matrix(matrix, 2);
+  rotate(matrix, 2);
+  print_N_N_matrix(matrix, 2);
   return 1;
 }
-} // namespace test_1_6
+}  // namespace test_1_6
 
 #endif /* TEST_1_6_ROTATE_IMAGE_H_ */

@@ -7,11 +7,12 @@
 
 namespace test_2_3 {
 struct LList {
-    LList(int d)
-        : data(d), next(NULL) {
-    }
-    int data;
-    LList *next;
+  LList(int d)
+      : data(d),
+        next(NULL) {
+  }
+  int data;
+  LList *next;
 };
 
 void fill_list(LList *head) {
@@ -64,6 +65,6 @@ int test() {
   return 1;
 }
 
-} // namespace test_2_3
+}  // namespace test_2_3
 
 #endif /* TEST_2_3_DELETE_IN_MIDDLE_SLIST_H_ */

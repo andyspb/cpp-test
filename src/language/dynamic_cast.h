@@ -46,7 +46,7 @@ class CDerived : public CBase {
 int test() {
   std::cout << "dynamic_cast: " << std::endl;
   Base *b1 = new Base;
-  std::cout << " sizeof(Base) "<< sizeof(Base) << std::endl;
+  std::cout << " sizeof(Base) " << sizeof(Base) << std::endl;
   if (dynamic_cast<Derived*>(b1) == NULL) {
     std::cout << " FAILED dynamic_cast<Derived*>(b1)" << std::endl;
   } else {

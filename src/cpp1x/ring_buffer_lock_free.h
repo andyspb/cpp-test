@@ -17,6 +17,4 @@ TEST_RESULT test() {
 
 }  // namespace ring_buffer_lock_free
 
-
-
 #endif /* SRC_CPP1X_RING_BUFFER_LOCK_FREE_H_ */

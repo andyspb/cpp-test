@@ -64,7 +64,7 @@ int test() {
   print_array(array, size);
   setZeros(array, size);
 
-  std::cout<<"after set zeros"<<std::endl;
+  std::cout << "after set zeros" << std::endl;
   print_array(array, size);
 
   return 1;

@@ -15,12 +15,13 @@ namespace pure_virtual {
 class Base {
   int x;
  public:
-  virtual ~Base() {}
+  virtual ~Base() {
+  }
   virtual void print()=0;
 };
 
 void Base::print() {
-  std::cout << "Base x:"<< x << std::endl;
+  std::cout << "Base x:" << x << std::endl;
 }
 
 class Derived : public Base {
@@ -28,7 +29,7 @@ class Derived : public Base {
  public:
   void print() {
     Base::print();
-    std::cout <<"Derived y:"<< y << std::endl;
+    std::cout << "Derived y:" << y << std::endl;
   }
 };
 

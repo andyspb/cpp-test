@@ -2,7 +2,6 @@
 // author: andrey.krutogolov@gmail.com
 // date:   05.04.2013
 
-
 #ifndef TESTS20_H_
 #define TESTS20_H_
 
@@ -17,9 +16,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace test_20
-
-
 
 #endif  // TESTS20_H_

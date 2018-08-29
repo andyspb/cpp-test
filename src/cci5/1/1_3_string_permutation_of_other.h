@@ -14,8 +14,8 @@ namespace string_permutation_of_other {
 
 bool is_string_permutation_of_other(char* str1, char* str2) {
 //  std::cout << str1 << "  " << str2 << std::endl;
-  std::sort(str1, str1+sizeof(char)*(strlen(str1)));
-  std::sort(str2, str2+sizeof(char)*strlen(str2));
+  std::sort(str1, str1 + sizeof(char) * (strlen(str1)));
+  std::sort(str2, str2 + sizeof(char) * strlen(str2));
   return strcmp(str1, str2) == 0;
 }
 
@@ -29,7 +29,5 @@ int test() {
 }
 
 }
-
-
 
 #endif /* STRING_PERMUTATION_OF_OTHER_H_ */

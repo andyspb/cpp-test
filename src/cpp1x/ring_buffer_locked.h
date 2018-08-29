@@ -49,7 +49,7 @@ class Buffer {
   const unsigned int size_ = 100;
   std::mutex mutex_;
 
-public:
+ public:
   std::mutex cout_mutex_;
   std::condition_variable cond_;
 };

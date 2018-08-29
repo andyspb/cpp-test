@@ -10,8 +10,7 @@
 
 namespace perform_string_compression {
 
-char* StrCompress(char str[])
-{
+char* StrCompress(char str[]) {
   char *s, *in;
   for (s = str, in = str; *s; ++s) {
     int count = 1;
@@ -20,23 +19,23 @@ char* StrCompress(char str[])
     while (s[0] == s[1]) {
       ++count;
       ++s;
-    }   
+    }
     if (count > 1) {
       int len = sprintf(in, "%d", count);
       in += len;
-    }   
+    }
   }
   in[0] = 0;
   return str;
 }
 
 int test() {
-  char str[] ="AAAABBBCCCCCEEFGIIJJJKLMNNNNOOO";
+  char str[] = "AAAABBBCCCCCEEFGIIJJJKLMNNNNOOO";
   std::cout << str << std::endl;
 
   char* res = StrCompress(str);
   std::cout << res << std::endl;
-  
+
   return 1;
 }
 

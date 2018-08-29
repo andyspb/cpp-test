@@ -25,6 +25,4 @@ TEST_RESULT test() {
 
 }  // namespace lock_free
 
-
-
 #endif  // _LOCK_FREE_LOCK_FREE_H_

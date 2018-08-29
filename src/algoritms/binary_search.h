@@ -39,26 +39,26 @@ int binary_search_rec(int arr[], int key, int min, int max) {
 int binary_search_iter(int arr[], int key, int min, int max) {
   // continue searching while [imin,imax] is not empty
   while (max >= min) {
-      // calculate the midpoint for roughly equal partition
-      int mid = min - (min - max)/2;
-      if(arr[mid] == key)
-        // key found at index imid
-        return mid;
-      // determine which subarray to search
-      else if (arr[mid] < key)
-        // change min index to search upper subarray
-        min = mid + 1;
-      else
-        // change max index to search lower subarray
-        max = mid - 1;
-    }
+    // calculate the midpoint for roughly equal partition
+    int mid = min - (min - max) / 2;
+    if (arr[mid] == key)
+      // key found at index imid
+      return mid;
+    // determine which subarray to search
+    else if (arr[mid] < key)
+      // change min index to search upper subarray
+      min = mid + 1;
+    else
+      // change max index to search lower subarray
+      max = mid - 1;
+  }
   // key was not found
   return KEY_NOT_FOUND;
 }
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  int arr[] = {1,2,3,5,6,7,8,9,11,22,33,44,55};
+  int arr[] = { 1, 2, 3, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55 };
 
   int rec = binary_search_rec(arr, 33, 0, 13);
   std::cout << "rec=" << rec << std::endl;
@@ -69,7 +69,6 @@ TEST_RESULT test() {
   std::cout << "<<<" << std::endl;
   RETURN_OK();
 }
-
 
 }  // namespace binary_search
 

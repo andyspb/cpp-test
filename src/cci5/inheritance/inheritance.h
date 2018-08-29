@@ -15,10 +15,16 @@ namespace inheritance_ {
 class Base {
  public:
   Base(int v)
-      : value(v) {};
+      : value(v) {
+  }
+  ;
   Base()
-      : value(0) {};
-  virtual ~Base() {};
+      : value(0) {
+  }
+  ;
+  virtual ~Base() {
+  }
+  ;
   void setValue(int v) {
     value = v;
   }
@@ -27,7 +33,7 @@ class Base {
     return value;
   }
   virtual void print() {
-    std::cout << "From Base value="<< value << std::endl;
+    std::cout << "From Base value=" << value << std::endl;
   }
  private:
   int value;
@@ -35,10 +41,12 @@ class Base {
 
 class Derived : private Base {
  public:
-  Derived(int v) : Base(v) {}
+  Derived(int v)
+      : Base(v) {
+  }
   void print() {
     Base::print();
-    std::cout << "From Derived value="<< Base::getValue() << std::endl; // error when value is private
+    std::cout << "From Derived value=" << Base::getValue() << std::endl;  // error when value is private
     //   std::cout << "From Derived value="<< value << std::endl; // error when value is private
   }
 
@@ -50,7 +58,7 @@ class Derived : private Base {
 
 int test() {
   std::cout << "Inheritance tests" << std::endl;
- // Base * b = new Derived(1); //error: 'inheritance_::Base' is an inaccessible base of 'inheritance_::Derived'
+  // Base * b = new Derived(1); //error: 'inheritance_::Base' is an inaccessible base of 'inheritance_::Derived'
   Derived * d = new Derived(1);
 
   d->print();

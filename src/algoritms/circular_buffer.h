@@ -24,7 +24,7 @@ void cbInit(CircularBuffer *cb, int size) {
   cb->size = size + 1; /* include empty elem */
   cb->start = 0;
   cb->end = 0;
-  cb->elems = (ElemType*)calloc(cb->size, sizeof(ElemType));
+  cb->elems = (ElemType*) calloc(cb->size, sizeof(ElemType));
 }
 
 void cbFree(CircularBuffer *cb) {

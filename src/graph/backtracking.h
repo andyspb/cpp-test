@@ -41,6 +41,6 @@ struct Node {
 //  RETURN_OK();
 //}
 
-}  // namespace backtracking
+}// namespace backtracking
 
 #endif /* BACKTRACKING_H_ */

@@ -40,10 +40,9 @@ void f() {
   Derived_* d = static_cast<Derived_*>(b);
 }
 
-class A
-{
-  public:
-    virtual ~A() = 0;
+class A {
+ public:
+  virtual ~A() = 0;
 };
 
 inline A::~A() = default;
@@ -81,7 +80,7 @@ TEST_RESULT test() {
   int *ii1 = static_cast<int*>(v1);
 
   if (i1 == ii1) {
-    LOG(INFO) << " i1 == ii1 " << i1 ;
+    LOG(INFO) << " i1 == ii1 " << i1;
   }
 
   int *i2 = new int();
@@ -89,7 +88,7 @@ TEST_RESULT test() {
   int *ii2 = reinterpret_cast<int*>(v2);
 
   if (i2 == ii2) {
-    LOG(INFO) << " i2 == ii2 " << i2 ;
+    LOG(INFO) << " i2 == ii2 " << i2;
   }
 
   delete b;

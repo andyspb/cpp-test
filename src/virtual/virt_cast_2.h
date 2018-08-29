@@ -5,22 +5,22 @@
 #include <assert.h>
 namespace virt_cast_2 {
 class Base {
-  public:
-    Base() {
-      std::cout << "from A" << std::endl;
-    }
-    virtual ~Base() {
-      std::cout << "delete Base" << std::endl;
-    }
+ public:
+  Base() {
+    std::cout << "from A" << std::endl;
+  }
+  virtual ~Base() {
+    std::cout << "delete Base" << std::endl;
+  }
 };
-class Derived: public Base {
-  public:
-    Derived() {
-      std::cout << "from Derived" << std::endl;
-    }
-    ~Derived() {
-      std::cout << "delete Derived" << std::endl;
-    }
+class Derived : public Base {
+ public:
+  Derived() {
+    std::cout << "from Derived" << std::endl;
+  }
+  ~Derived() {
+    std::cout << "delete Derived" << std::endl;
+  }
 };
 
 int test() {
@@ -32,6 +32,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // virt_cast_2
+}  // virt_cast_2
 
 #endif // _VIRT_CAST_2_H_

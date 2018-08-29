@@ -53,7 +53,6 @@ void print_array(T arr[], int n) {
   std::endl(std::cout);
 }
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
   const int size = 11;

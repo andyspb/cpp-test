@@ -13,7 +13,6 @@
 
 #ifdef __GNUC__
 
-
 namespace google_2 {
 
 struct TreeNode {
@@ -64,7 +63,7 @@ void printLevelOrder(TreeNode* root) {
   }
   std::queue<TreeNode*> current_level, next_level;
   current_level.push(root);
-  while(!current_level.empty()) {
+  while (!current_level.empty()) {
     TreeNode* node = current_level.front();
     current_level.pop();
     if (node) {
@@ -74,7 +73,7 @@ void printLevelOrder(TreeNode* root) {
     }
     if (current_level.empty()) {
       std::endl(std::cout);
-      std::swap(current_level,next_level);
+      std::swap(current_level, next_level);
     }
   }
 }

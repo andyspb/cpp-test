@@ -1,49 +1,49 @@
 #pragma once
 
 namespace multition {
-class _MyCriticalSection // : public CRITICAL_SECTION
+class _MyCriticalSection  // : public CRITICAL_SECTION
 {
-  public:
-    _MyCriticalSection() {
-      //          InitializeCriticalSection(this);
-    }
-    virtual ~_MyCriticalSection() {
-      //          DeleteCriticalSection(this);
-    }
+ public:
+  _MyCriticalSection() {
+    //          InitializeCriticalSection(this);
+  }
+  virtual ~_MyCriticalSection() {
+    //          DeleteCriticalSection(this);
+  }
 };
 
 class FooMultiton {
-  private:
-    FooMultiton() /* also acceptable: protected, {default} */{
-      /* no explicit implementation */
+ private:
+  FooMultiton() /* also acceptable: protected, {default} */{
+    /* no explicit implementation */
+  }
+
+ public:
+  static FooMultiton * getInstance(string key) {
+    _MyCriticalSection cs;
+    printf("Get Object %s\n", key.c_str());
+    //      EnterCriticalSection(&cs);
+    map<string, FooMultiton *>::iterator iter = instances.find(key);
+    FooMultiton * instance;
+    if (iter == instances.end()) {
+
+      instance = new FooMultiton();
+      instances.insert(pair<string, FooMultiton *>(key, instance));
+    } else {
+      instance = (FooMultiton *) iter->second;
     }
 
-  public:
-    static FooMultiton * getInstance(string key) {
-      _MyCriticalSection cs;
-      printf("Get Object %s\n", key.c_str());
-      //      EnterCriticalSection(&cs);
-      map<string, FooMultiton *>::iterator iter = instances.find(key);
-      FooMultiton * instance;
-      if (iter == instances.end()) {
+    //    LeaveCriticalSection(&cs);
+    return instance;
 
-        instance = new FooMultiton();
-        instances.insert(pair<string, FooMultiton *>(key, instance));
-      } else {
-        instance = (FooMultiton *) iter->second;
-      }
+  }
 
-      //    LeaveCriticalSection(&cs);
-      return instance;
-
-    }
-
-    static int getObjectPoolSize() {
-      return (int) instances.size();
-    }
-    // other fields and methods ...
-  private:
-    static map<string, FooMultiton *> instances;
+  static int getObjectPoolSize() {
+    return (int) instances.size();
+  }
+  // other fields and methods ...
+ private:
+  static map<string, FooMultiton *> instances;
 
 };
 

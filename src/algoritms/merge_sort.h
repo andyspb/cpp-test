@@ -33,7 +33,7 @@ void msort(int* arr, int lb, int ub) {
 
 int test() {
   std::cout << "Test: mergesort ---> " << std::endl;
-  int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23 , 43};
+  int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23, 43 };
   int size = sizeof(arr) / sizeof(arr[0]);
   for (int i = 0; i < size; i++) {
     std::cout << arr[i] << " ";
@@ -46,6 +46,6 @@ int test() {
   std::endl(std::cout);
   return 1;
 }
-} // namespace merge_sort
+}  // namespace merge_sort
 
 #endif // _MERGE_SORT_H_

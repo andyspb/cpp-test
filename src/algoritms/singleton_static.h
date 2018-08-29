@@ -13,14 +13,20 @@ namespace singleton_static {
 class Singleton {
  public:
   static Singleton * GetInstance(void);
-  void print() {};
+  void print() {
+  }
+  ;
  protected:
-  Singleton() {};
-  virtual ~Singleton() {};
+  Singleton() {
+  }
+  ;
+  virtual ~Singleton() {
+  }
+  ;
  private:
   static Singleton * volatile _instance;
 
-  Singleton(Singleton&) ;
+  Singleton(Singleton&);
   void operator=(Singleton&);
 
 };
@@ -30,7 +36,6 @@ Singleton* volatile Singleton::_instance = new Singleton();
 Singleton * Singleton::GetInstance(void) {
   return _instance;
 }
-
 
 int test() {
   Singleton* s = Singleton::GetInstance();

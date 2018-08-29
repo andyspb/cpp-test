@@ -22,5 +22,4 @@ TEST_RESULT test() {
 
 }  // namespace ipc
 
-
 #endif /* SRC_IPC_IPC_H_ */

@@ -6,17 +6,17 @@
 namespace template_keyword {
 
 class X {
-  public:
-    template<int j>
-    struct S {
-        void h() {
-          std::cout << "member template's member function: " << j << std::endl;
-        }
-    };
-    template<int i>
-    void f() {
-      std::cout << "Primary: " << i << std::endl;
+ public:
+  template<int j>
+  struct S {
+    void h() {
+      std::cout << "member template's member function: " << j << std::endl;
     }
+  };
+  template<int i>
+  void f() {
+    std::cout << "Primary: " << i << std::endl;
+  }
 };
 
 template<>

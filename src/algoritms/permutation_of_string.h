@@ -29,8 +29,7 @@ void permute(char *a, int i, int n) {
   int j;
   if (i == n) {
     printf("%s\n", a);
-  }
-  else {
+  } else {
     for (j = i; j <= n; ++j) {
       swap((a + i), (a + j));
       permute(a, i + 1, n);

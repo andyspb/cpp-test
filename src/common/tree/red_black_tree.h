@@ -19,11 +19,11 @@ typedef enum {
 
 template<typename T>
 struct RedBlackNode {
-    RedBlackNode *left;         /* left child */
-    RedBlackNode *right;        /* right child */
-    RedBlackNode *parent;       /* parent */
-    nodeColor color;            /* node color (BLACK, RED) */
-    T data;                     /* data stored in node */
+  RedBlackNode *left; /* left child */
+  RedBlackNode *right; /* right child */
+  RedBlackNode *parent; /* parent */
+  nodeColor color; /* node color (BLACK, RED) */
+  T data; /* data stored in node */
 };
 
 #endif /* RED_BLACK_TREE_H_ */

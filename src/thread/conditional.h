@@ -10,8 +10,6 @@
 
 #ifdef __GNUC__
 
-
-
 #include <mutex>
 #include <condition_variable>
 #include <thread>
@@ -24,8 +22,7 @@ namespace conditional_variable {
 
 //typedef std::conditional<sizeof(int) <= 4, std::mt19937, std::mt19937_64>::type Engine;
 
-void fun(const int n)
-{
+void fun(const int n) {
   int arr[n];
   // ......
 }
@@ -69,11 +66,10 @@ void worker_thread() {
   cv.notify_one();
 }
 
-
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;
 
-  std::cout << merge(36,12) << std::endl;
+  std::cout << merge(36, 12) << std::endl;
   fun(6);
 
 //  SayHello hello;

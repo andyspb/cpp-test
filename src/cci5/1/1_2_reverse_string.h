@@ -16,7 +16,7 @@ namespace reverse_string {
 
 void reverse_str(char* str) {
   std::cout << "reverse strlen(str)=" << strlen(str) << std::endl;
-  if (!str || strlen(str)==1) {
+  if (!str || strlen(str) == 1) {
     // nothing to reverse;
     return;
   }
@@ -27,8 +27,8 @@ void reverse_str(char* str) {
     ++end;
   }
   --end;
-  while( str<end ) {
-    tmp=*str;
+  while (str < end) {
+    tmp = *str;
     *str = *end;
     *end = tmp;
     ++str;
@@ -36,8 +36,7 @@ void reverse_str(char* str) {
   }
 }
 
-
-int test(){
+int test() {
   char str[] = "bla bla bla";
   std::cout << str << std::endl;
   reverse_str(str);

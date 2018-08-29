@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 std::ostream& operator<<(std::ostream& out, const char * s) {
 
   std::string str(s);

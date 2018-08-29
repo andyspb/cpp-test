@@ -21,8 +21,8 @@ int test(int value) {
   std::cout << "Reverse integer test " << std::endl;
   int reversedInteger = ReverseInteger(value);
   std::cout << "integer before reverse: " << value << " reversedInteger: "
-      << reversedInteger << std::endl;
+            << reversedInteger << std::endl;
   return 1;
 }
-} // namespace reverse_integer
+}  // namespace reverse_integer
 #endif // _REVERSE_INTEGER_H_

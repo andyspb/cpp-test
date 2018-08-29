@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <assert.h>
 
-
 namespace leap_1 {
 
 //typedef int[] IntArray;

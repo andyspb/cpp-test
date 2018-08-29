@@ -27,9 +27,9 @@ void test_loop_in_switch() {
   switch (count % 8) {
     do {
       case 7:
-        std::cout << n << ":7" << std::endl;
+      std::cout << n << ":7" << std::endl;
       case 6:
-        std::cout << n << ":6" << std::endl;
+      std::cout << n << ":6" << std::endl;
     } while (--n > 0);
   case 5:
     std::cout << n << ":5" << std::endl;
@@ -65,11 +65,11 @@ void test_goto_in_for() {
 int test() {
   std::cout << "Test: loops and goto within a switch" << std::endl;
   std::cout << test_for_in_switch() << std::endl;
-  test_loop_in_switch() ;
+  test_loop_in_switch();
   test_goto_in_for();
   return 1;
 }
 
-} // namespace loop_in_switch
+}  // namespace loop_in_switch
 
 #endif // _LOOP_IN_SWITCH_H_

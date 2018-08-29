@@ -11,17 +11,15 @@
 namespace constexpr_test {
 
 constexpr int mult(int i, int j) {
-  return i*j;
+  return i * j;
 }
-
 
 TEST_RESULT test() {
   __SCOPE_LOG__;
-  auto r = mult(2,3);
-  std::cout<< "r = " << r << std::endl;
+  auto r = mult(2, 3);
+  std::cout << "r = " << r << std::endl;
   return RESULT_OK;
 }
-
 
 }  // namespace constexpr_test
 

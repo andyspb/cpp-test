@@ -13,18 +13,30 @@
 namespace dynamic_cast_2 {
 
 struct A {
-  virtual void f() { std::cout << "Class A" << std::endl; }
-  virtual ~A() {};
+  virtual void f() {
+    std::cout << "Class A" << std::endl;
+  }
+  virtual ~A() {
+  }
+  ;
 };
 
 struct B : A {
-  virtual void f() { std::cout << "Class B" << std::endl; }
-  virtual ~B() {};
+  virtual void f() {
+    std::cout << "Class B" << std::endl;
+  }
+  virtual ~B() {
+  }
+  ;
 };
 
 struct C : A {
-  virtual void f() { std::cout << "Class C" << std::endl; }
-  virtual ~C() {};
+  virtual void f() {
+    std::cout << "Class C" << std::endl;
+  }
+  virtual ~C() {
+  }
+  ;
 };
 
 void f(A* arg) {
@@ -37,7 +49,8 @@ void f(A* arg) {
     cp->f();
   else
     arg->f();
-};
+}
+;
 
 int test() {
   A aobj;
@@ -50,6 +63,5 @@ int test() {
 }
 
 }  // namespace dynamic_cast_2
-
 
 #endif /* DYNAMIC_CAST_2_H_ */

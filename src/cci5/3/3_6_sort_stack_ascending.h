@@ -28,7 +28,6 @@ void print_stack(std::stack<int> stack) {
   std::cout << std::endl;
 }
 
-
 void sort_stack_with_2add_stacks(std::stack<int> &s) {
   int v0, v1, min;
   std::stack<int> temp_stack1, temp_stack2;

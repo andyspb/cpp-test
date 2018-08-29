@@ -12,7 +12,8 @@
 
 namespace overloading {
 
-struct X { };
+struct X {
+};
 void operator!(X) {
   std::cout << "void operator!(X)" << std::endl;
 }
@@ -23,13 +24,10 @@ struct Y {
   }
 };
 
-
 int test() {
   return 1;
 }
 
 }
-
-
 
 #endif /* OVERLOADING_H_ */

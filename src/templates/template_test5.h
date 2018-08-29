@@ -14,31 +14,38 @@ template<class T, class U = int> class A;
 template<class T = float, class U> class A;
 
 template<class T, class U> class A {
-   public:
-      T x;
-      U y;
+ public:
+  T x;
+  U y;
 };
 
 template<class T = char> class X;
-template<class T> class X { };
+template<class T> class X {
+};
 
 template<class T = int> class A1;
 template<class T = float> class B1;
 template<class V, V obj> class C1;
 // a template parameter (T) used as the default argument
 // to another template parameter (U)
-template<class T, class U = T> class D { };
+template<class T, class U = T> class D {
+};
 
-template<class T> void f() { };
-template<int i> void f() { };
+template<class T> void f() {
+}
+;
+template<int i> void f() {
+}
+;
 
-template<class T, int size> class Myfilebuf
-{
-      T* filepos;
-      static int array[size];
-public:
-      Myfilebuf(): filepos(0) { /* ... */ }
-      ~Myfilebuf();
+template<class T, int size> class Myfilebuf {
+  T* filepos;
+  static int array[size];
+ public:
+  Myfilebuf()
+      : filepos(0) { /* ... */
+  }
+  ~Myfilebuf();
   //    advance(); // function defined elsewhere in program
 };
 

@@ -8,34 +8,34 @@
 namespace inheritance {
 
 class A {
-  public:
-    void f() {
-      std::cout << "from A::f()" << std::endl;
-    }
+ public:
+  void f() {
+    std::cout << "from A::f()" << std::endl;
+  }
 
 };
 class AA : public A {
 };
-class B: private AA {
-  public:
-    using A::f;
-    void f(int) {
-      std::cout << "from B::f()" << std::endl;
-    }
+class B : private AA {
+ public:
+  using A::f;
+  void f(int) {
+    std::cout << "from B::f()" << std::endl;
+  }
 
 };
 
 class Base {
-  public:
-    Base() {
+ public:
+  Base() {
 
-    }
+  }
 };
 
-class Derived : Base{
-    Derived() {
+class Derived : Base {
+  Derived() {
 
-    }
+  }
 };
 
 int test() {

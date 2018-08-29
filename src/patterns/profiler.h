@@ -19,16 +19,19 @@ void b();
 void c();
 
 enum Action {
-  start, end
+  start,
+  end
 };
 
 struct Function {
-    Function(std::string n, Action a, int t)
-        : name(n), action(a), time(t) {
-    }
-    std::string name;
-    Action action;
-    int time;
+  Function(std::string n, Action a, int t)
+      : name(n),
+        action(a),
+        time(t) {
+  }
+  std::string name;
+  Action action;
+  int time;
 };
 void unit_test(int);
 void print_calls(std::queue<Function*> calls);
@@ -45,7 +48,7 @@ int test() {
   std::cout << "\nname\tinclusive\texclusive\n";
   for (char ch = 'a'; ch <= 'c'; ch++) {
     std::cout << ch << "\t" << getInclusive(calls, ch) << "\t\t"
-        << getExclusive(calls, ch) << std::endl;
+              << getExclusive(calls, ch) << std::endl;
   }
   while (!calls.empty()) {
     Function* f = (Function*) calls.front();
@@ -60,7 +63,7 @@ void print_calls(std::queue<Function*> calls) {
   while (!calls.empty()) {
     Function * f = (Function*) calls.front();
     std::cout << f->name << "\t" << (f->action ? "\tend" : "start\t") << "\t"
-        << f->time << "\n";
+              << f->time << "\n";
     calls.pop();
   }
 }
@@ -172,6 +175,6 @@ void c() {
   _START_
   _END_
 }
-} // namespace profiler
+}  // namespace profiler
 
 #endif // _PROFILER_H_

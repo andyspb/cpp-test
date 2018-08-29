@@ -2,7 +2,6 @@
 //  author: andrey.krutogolov@gmail.com
 //  date:   23.03.2013
 
-
 #ifndef TESTS12_H_
 #define TESTS12_H_
 
@@ -15,10 +14,9 @@ class Layer {
 class Cell {
 };
 
-class Player
-{
-private:
-    long balance;
+class Player {
+ private:
+  long balance;
 //    Layer &current_layer;
 //    Cell &current_cell;
 };
@@ -36,7 +34,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace tests12
-
-
 
 #endif  // TESTS12_H_

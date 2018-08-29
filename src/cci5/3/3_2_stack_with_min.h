@@ -61,9 +61,9 @@ class StackWithMin : public Stack {
 };
 
 void StackWithMin::push(int x) {
-	__SCOPE_LOG__;
-	LOG(INFO) << " x=" << x << std::endl;
-	if (isEmpty() == true) {
+  __SCOPE_LOG__;
+  LOG(INFO) << " x=" << x << std::endl;
+  if (isEmpty() == true) {
     Stack::push(x);
     min.push(x);
   } else {
@@ -93,7 +93,7 @@ int StackWithMin::getMin() {
 }
 
 int test() {
-	__SCOPE_LOG__;
+  __SCOPE_LOG__;
 
   StackWithMin s;
   s.push(10);

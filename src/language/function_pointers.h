@@ -10,13 +10,13 @@ void f() {
 }
 
 class A {
-  public:
-    void f() {
-      std::cout << "from A::f()" << std::endl;
-    }
-    void g(int i) {
-      std::cout << "from A::g() i=" << i << std::endl;
-    }
+ public:
+  void f() {
+    std::cout << "from A::f()" << std::endl;
+  }
+  void g(int i) {
+    std::cout << "from A::g() i=" << i << std::endl;
+  }
 };
 
 int test() {

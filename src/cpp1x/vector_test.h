@@ -17,7 +17,7 @@ namespace vector_test {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-  std::vector<int> vec{ 0, 5, -3, 11, -3, 7, 0, 2, 7, -6, 11, 0, 21, 12, -5 };
+  std::vector<int> vec { 0, 5, -3, 11, -3, 7, 0, 2, 7, -6, 11, 0, 21, 12, -5 };
 
   auto print = [](int n) {
     std::cout<<n<<" is";

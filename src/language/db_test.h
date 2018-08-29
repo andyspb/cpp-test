@@ -186,40 +186,40 @@ namespace db_test {
 //}
 
 class Base {
-  public:
-    Base()
-        : a(0) {
-      std::cout << method(a++);
-    }
+ public:
+  Base()
+      : a(0) {
+    std::cout << method(a++);
+  }
 
-    virtual ~Base() {
-      std::cout << "Base\n";
-      std::cout << method(a++);
-    }
+  virtual ~Base() {
+    std::cout << "Base\n";
+    std::cout << method(a++);
+  }
 
-    virtual int method(int val) {
-      return val + 1;
-    }
+  virtual int method(int val) {
+    return val + 1;
+  }
 
-  protected:
-    int a;
+ protected:
+  int a;
 };
 
-class Derived: public Base {
-  public:
-    Derived()
-        : Base() {
-      std::cout << method(2);
-    }
+class Derived : public Base {
+ public:
+  Derived()
+      : Base() {
+    std::cout << method(2);
+  }
 
-    virtual ~Derived() {
-      std::cout << "Derived\n";
-      std::cout << method(3);
-    }
+  virtual ~Derived() {
+    std::cout << "Derived\n";
+    std::cout << method(3);
+  }
 
-    virtual int method(int val) {
-      return val - 1;
-    }
+  virtual int method(int val) {
+    return val - 1;
+  }
 };
 
 int main() {

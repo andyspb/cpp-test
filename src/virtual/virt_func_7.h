@@ -6,24 +6,29 @@
 namespace virt_func_7 {
 
 class A {
-  public:
-    virtual ~A() {}
-    virtual void print() {printf("in A\n");}
+ public:
+  virtual ~A() {
+  }
+  virtual void print() {
+    printf("in A\n");
+  }
 };
 
-class B: public A{
-  public:
-    virtual void print() {printf("in B\n");}
+class B : public A {
+ public:
+  virtual void print() {
+    printf("in B\n");
+  }
 };
 
-static void f(A a){
-    a.print();
+static void f(A a) {
+  a.print();
 }
 
 int test() {
-    B b;
-    f(b);
-    return 1;
+  B b;
+  f(b);
+  return 1;
 }
 
 }  // end of virt_func_7

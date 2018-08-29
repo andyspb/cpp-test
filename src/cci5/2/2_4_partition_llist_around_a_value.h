@@ -13,7 +13,11 @@
 namespace partition_llist_around_value {
 
 struct Node {
-  Node(int v) : data(v), next(0) {};
+  Node(int v)
+      : data(v),
+        next(0) {
+  }
+  ;
   int data;
   struct Node *next;
 };
@@ -52,17 +56,16 @@ Node* partition(Node* node, int x) {
 }
 
 void printList(Node* list) {
-  while (list)  {
+  while (list) {
     std::cout << list->data << " ";
     list = list->next;
   }
   std::cout << std::endl;
 }
 
-
 int test() {
 
-  std::cout << "Partition linked list around value" <<std:: endl;
+  std::cout << "Partition linked list around value" << std::endl;
 
   Node * _node = new Node(0);
   Node * head = _node;
@@ -104,12 +107,9 @@ int test() {
 
   printList(newNode);
 
-
   return 1;
 }
 
 }
-
-
 
 #endif /* _PARTITION_LLIST_AROUND_A_VALUE_H_ */

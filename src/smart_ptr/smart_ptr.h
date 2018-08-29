@@ -44,7 +44,7 @@ void thr(std::shared_ptr<Base> p) {
                                  // shared use_count is incremented
   {
     static std::mutex io_mutex;
-    std::lock_guard<std::mutex> lk(io_mutex);
+    std::lock_guard < std::mutex > lk(io_mutex);
     std::cout << "local pointer in a thread:\n" << "  lp.get() = " << lp.get()
               << ", lp.use_count() = " << lp.use_count() << '\n';
   }
@@ -81,7 +81,6 @@ TEST_RESULT test() {
 //  }
 
 //  f();
-
 
 //  std::thread t(&bar::foo, bar());
 //  t.join();

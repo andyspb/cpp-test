@@ -16,7 +16,7 @@ TEST_RESULT test() {
 #pragma GCC diagnostic ignored "-Wunused-variable"
 #pragma GCC diagnostic push
 #endif
-  int arr[] = {1,2,3,5,6,7,8,9,11,22,33,44,55};
+  int arr[] = { 1, 2, 3, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55 };
   RETURN_OK();
 #ifdef __GNUC__
 #pragma GCC diagnostic pop
@@ -24,7 +24,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace linear_search
-
-
 
 #endif /* SRC_ALGORITMS_LINEAR_SEARCH_H_ */

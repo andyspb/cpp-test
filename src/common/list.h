@@ -10,6 +10,4 @@
 
 #include "list/linked_list.h"
 
-
-
 #endif /* SRC_COMMON_LIST_H_ */

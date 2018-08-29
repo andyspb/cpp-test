@@ -6,41 +6,41 @@
 namespace method_hiding {
 
 class Base {
-  public:
-    virtual ~Base() {
-    }
+ public:
+  virtual ~Base() {
+  }
 
-    Base() {
-      i = 1;
-    }
-    void f() {
-      std::cout << "From Base::f() i=" << i << std::endl;
-    }
+  Base() {
+    i = 1;
+  }
+  void f() {
+    std::cout << "From Base::f() i=" << i << std::endl;
+  }
 
-    int i;
+  int i;
 };
 
-class Derived: public Base {
-  public:
-    virtual ~Derived() {
-    }
-    Derived() {
-      i = 2;
-    }
-  public:
-    void f() {
-      std::cout << "From Derived::f() i=" << i << std::endl;
-    }
+class Derived : public Base {
+ public:
+  virtual ~Derived() {
+  }
+  Derived() {
+    i = 2;
+  }
+ public:
+  void f() {
+    std::cout << "From Derived::f() i=" << i << std::endl;
+  }
 
-    void f(int a) {
-      std::cout << "From Derived::f(int) i=" << i << std::endl;
-      std::cout << "Base::i=" << Base::i << std::endl;
-    }
+  void f(int a) {
+    std::cout << "From Derived::f(int) i=" << i << std::endl;
+    std::cout << "Base::i=" << Base::i << std::endl;
+  }
 
-    void test() volatile {
-    }
+  void test() volatile {
+  }
 
-    int i;
+  int i;
 };
 
 void func(Base& b) {
@@ -55,11 +55,11 @@ void func(Base& b, int a) {
 }
 
 class FirstClass {
-  public:
-    virtual ~FirstClass() {
-    }
-    virtual void MethodA(int);
-    virtual void MethodA(int, int);
+ public:
+  virtual ~FirstClass() {
+  }
+  virtual void MethodA(int);
+  virtual void MethodA(int, int);
 };
 void FirstClass::MethodA(int i) {
   std::cout << "ONE !!\n";
@@ -68,11 +68,13 @@ void FirstClass::MethodA(int i, int j) {
   std::cout << "TWO !!\n";
 }
 
-class SecondClass: public FirstClass {
-  public:
-    using FirstClass::MethodA;
-    virtual ~SecondClass() {};
-    void MethodA(int);
+class SecondClass : public FirstClass {
+ public:
+  using FirstClass::MethodA;
+  virtual ~SecondClass() {
+  }
+  ;
+  void MethodA(int);
 };
 void SecondClass::MethodA(int i) {
   std::cout << "THREE!!\n";
@@ -83,11 +85,11 @@ int test() {
   delete d;
 
   SecondClass a;
-  a.MethodA (1);
-  a.MethodA (1, 1);
+  a.MethodA(1);
+  a.MethodA(1, 1);
   return 1;
 }
 
-} // namespace method_hiding
+}  // namespace method_hiding
 
 #endif /* METHOD_HIDING_H_ */

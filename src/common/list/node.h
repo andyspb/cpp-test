@@ -10,7 +10,7 @@
 
 namespace list {
 
-template<typename T=int>
+template<typename T = int>
 class Node {
   T data;
   Node *next;
@@ -30,6 +30,5 @@ class Node<int> {
 };
 
 }  // namespace list
-
 
 #endif /* SRC_COMMON_LIST_NODE_H_ */

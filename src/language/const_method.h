@@ -6,21 +6,22 @@
 namespace const_method {
 
 class Class {
-  public:
-    Class() {}
-    void f() {
-      std::cout << "From Class::f()" << std::endl;
-    }
+ public:
+  Class() {
+  }
+  void f() {
+    std::cout << "From Class::f()" << std::endl;
+  }
 
-    void f_const() const {
-      std::cout << "From Class::f_const() const" << std::endl;
-      Class *c = (Class*)this;
-      c->bar();
-    }
+  void f_const() const {
+    std::cout << "From Class::f_const() const" << std::endl;
+    Class *c = (Class*) this;
+    c->bar();
+  }
 
-    void bar() {
-      std::cout << "From Class::bar()" << std::endl;
-    }
+  void bar() {
+    std::cout << "From Class::bar()" << std::endl;
+  }
 };
 
 int test() {
@@ -32,7 +33,7 @@ int test() {
   c.f_const();
 
 //  cc.f(); // error: cannot convert 'this' pointer from
-            // 'const const_method::Class' to 'const_method::Class &'
+  // 'const const_method::Class' to 'const_method::Class &'
   cc.f_const();
 
   c.bar();

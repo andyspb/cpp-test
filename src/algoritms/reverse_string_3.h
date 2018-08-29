@@ -16,7 +16,7 @@ void reverse_string_3(std::string &str) {
 
   // Swap character starting from two
   // corners
-  for (int i = 0; i < n/2; ++i) {
+  for (int i = 0; i < n / 2; ++i) {
 //    LOG(INFO) << str[i] << " " << str[n - i - 1] << std::endl;
     std::swap(str[i], str[n - i - 1]);
   }

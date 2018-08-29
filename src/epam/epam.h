@@ -71,14 +71,16 @@ void remove(mymap& m, int v) {
 
 class Base {
  public:
-  Base(int i) : data(i) {};
+  Base(int i)
+      : data(i) {
+  }
+  ;
  private:
   int data;
 
   // Base(const Base& base);
   // Base& operator=(const Base& base);
 };
-
 
 int test() {
   std::cout << "epam tests\n";

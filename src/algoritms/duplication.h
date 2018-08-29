@@ -16,7 +16,6 @@ void print_array(int arr[], int n) {
   ::std::cout << ::std::endl;
 }
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
   int a[100], b[100];
@@ -27,7 +26,7 @@ TEST_RESULT test() {
   a[33] = 22;
   a[11] = 44;
   int n = sizeof(a) / sizeof(a[0]);
-  print_array(a,n);
+  print_array(a, n);
 
   for (int i = 0; i < 100; ++i) {
     b[i] = 0;

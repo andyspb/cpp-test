@@ -20,10 +20,10 @@ struct S1 {
 };
 
 struct S2 {
-  unsigned int a: 10;
-  unsigned int b: 10;
-  unsigned int c: 10;
-  unsigned int d: 3;
+  unsigned int a :10;
+  unsigned int b :10;
+  unsigned int c :10;
+  unsigned int d :3;
 };
 
 TEST_RESULT test() {
@@ -34,7 +34,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace bits_field
-
-
 
 #endif /* SRC_BITS_BITS_FIELD_H_ */

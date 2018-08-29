@@ -22,7 +22,7 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace binder1st_
+}  // namespace binder1st_
 
 #pragma GCC diagnostic pop
 

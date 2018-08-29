@@ -48,7 +48,7 @@ float sqroot(float m) {
 int test() {
   __SCOPE_LOG__;
   for (int m = 0; m < 225; m += 15) {
-    std::cout << "number=" << m << " using std::sqrt() " << std::sqrt((long)m)
+    std::cout << "number=" << m << " using std::sqrt() " << std::sqrt((long) m)
               << std::endl;
     std::cout << "number=" << m << " using sqroot()" << sqroot(m) << std::endl;
     std::cout << "number=" << m << " using sqroot2()" << sqroot2(m)

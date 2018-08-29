@@ -10,6 +10,4 @@
 
 #include "tree/tree.h"
 
-
-
 #endif /* SRC_COMMON_TREE_H_ */

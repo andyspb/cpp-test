@@ -2,7 +2,6 @@
 //  author: andrey.krutogolov@gmail.com
 //  date:   27.02.2013
 
-
 #ifndef SET_TEST_H_
 #define SET_TEST_H_
 
@@ -23,7 +22,7 @@ int test() {
 
   typedef std::set<int>::iterator set_iter;
 
-  for (set_iter it = s.begin(); it!= s.end(); ++it) {
+  for (set_iter it = s.begin(); it != s.end(); ++it) {
     std::cout << *it << ' ';
   }
   std::endl(std::cout);

@@ -42,7 +42,7 @@ TEST_RESULT test() {
   int arr[] = { 44, -2, 0, 10, 1, 23, 4, 4, 3, 4, 2, 11, 67, -1, 23 };
   int size = sizeof(arr) / sizeof(arr[0]);
   print_array(arr, size);
-  quicksort(arr, 0, size-1);
+  quicksort(arr, 0, size - 1);
   print_array(arr, size);
   RETURN_OK();
 }

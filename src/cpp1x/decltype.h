@@ -49,8 +49,7 @@ TEST_RESULT test() {
 
   std::cout << "i = " << i << ", " << "j = " << j << '\n';
 
-  auto x = foo();                           // more concise than `decltype(foo()) x`
-
+  auto x = foo();                       // more concise than `decltype(foo()) x`
 
   RETURN_OK();
 }

@@ -6,20 +6,20 @@
 namespace flyweight {
 
 class Character {
-    char ch;
-  public:
-    Character(char c)
-        : ch(c) {
-    }
-    void output() const {
-      std::cout << ch;
-    }
+  char ch;
+ public:
+  Character(char c)
+      : ch(c) {
+  }
+  void output() const {
+    std::cout << ch;
+  }
 };
 
 struct OutputChar {
-    void operator()(char ch) const {
-      Character(ch).output();
-    }
+  void operator()(char ch) const {
+    Character(ch).output();
+  }
 };
 
 void hello_world(const std::string & message) {
@@ -32,6 +32,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace flyweigtht
+}  // namespace flyweigtht
 
 #endif // _FLYWEIGHT_H_

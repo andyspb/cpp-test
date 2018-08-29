@@ -38,7 +38,6 @@ TEST_RESULT test() {
   RETURN_OK();
 }
 
-
 }  // namespace swap_2_numbers_xor
 
 #endif /* SWAP_2_NUMBERS_XOR_H_ */

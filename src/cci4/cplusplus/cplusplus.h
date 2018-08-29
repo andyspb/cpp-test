@@ -7,7 +7,6 @@
 #include "test_13_8_copy_node_to_structure.h"
 #include "test_13_9_smart_ptr.h"
 
-
 namespace cplusplus {
 
 int test() {
@@ -16,6 +15,6 @@ int test() {
   assert(test_13_8_copy_node_to_structure::test());
   return 1;
 }
-} // arrays_and_strings
+}  // arrays_and_strings
 
 #endif /* CPLUSPLUS_H_ */

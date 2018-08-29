@@ -7,16 +7,16 @@
 
 namespace loop_list_test {
 class SList {
-  public:
-    SList(int i) {
-      data = i;
-      next = NULL;
+ public:
+  SList(int i) {
+    data = i;
+    next = NULL;
 
-    }
+  }
 
-  public:
-    int data;
-    SList * next;
+ public:
+  int data;
+  SList * next;
 };
 
 bool FindLoopInList(SList * startNode) {
@@ -28,7 +28,7 @@ bool FindLoopInList(SList * startNode) {
     bool isCircular = true;
 
     do {
-      if (fastPtr->next == NULL || fastPtr->next->next == NULL) //SList end found
+      if (fastPtr->next == NULL || fastPtr->next->next == NULL)  //SList end found
       {
         isCircular = false;
         break;

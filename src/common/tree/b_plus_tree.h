@@ -13,7 +13,6 @@
 #include "../../logger/logger.h"
 #include "../constants.h"
 
-
 namespace bplus_tree {
 
 class BTreeNode {
@@ -259,10 +258,12 @@ TEST_RESULT test() {
   t.traverse();
 
   int k = 6;
-  (t.search(k) != NULL) ? std::cout << "\nPresent" : std::cout << "\nNot Present";
+  (t.search(k) != NULL) ?
+      std::cout << "\nPresent" : std::cout << "\nNot Present";
 
   k = 15;
-  (t.search(k) != NULL) ? std::cout << "\nPresent" : std::cout << "\nNot Present";
+  (t.search(k) != NULL) ?
+      std::cout << "\nPresent" : std::cout << "\nNot Present";
 
   return 0;
 }

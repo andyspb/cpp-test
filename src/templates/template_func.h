@@ -11,9 +11,8 @@
 namespace template_func {
 
 template<int R, int C>
-void myFunction(double (&myArray)[R][C])
-{
-    myArray[0][0] = 5;
+void myFunction(double (&myArray)[R][C]) {
+  myArray[0][0] = 5;
 }
 
 TEST_RESULT test() {
@@ -21,7 +20,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace template_func
-
-
 
 #endif /* SRC_TEMPLATES_TEMPLATE_FUNC_H_ */

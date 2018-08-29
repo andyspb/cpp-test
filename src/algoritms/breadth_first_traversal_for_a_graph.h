@@ -25,7 +25,7 @@ class Graph {
 
 Graph::Graph(int V) {
   this->V = V;
-  adj = new std::list<int> [V];
+  adj = new std::list<int>[V];
 }
 
 Graph::~Graph() {

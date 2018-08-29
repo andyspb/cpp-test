@@ -18,7 +18,7 @@ class Exception : public std::exception {
   Exception(std::string msg)
       : message(msg) {
   }
-  ~Exception() throw() {
+  ~Exception() throw () {
   }
 
   virtual const char* what() const throw () {
@@ -62,18 +62,17 @@ void push(int stackNum, int value) throw (Exception) {
   buffer[absTopOfStack(stackNum)] = value;
 }
 
-int pop(int stackNum) throw(Exception) {
+int pop(int stackNum) throw (Exception) {
   if (stackPointer[stackNum] == -1) {
     throw new Exception("Trying to pop an empty stack.");
   }
   int value = buffer[absTopOfStack(stackNum)];  // Get top
-  buffer[absTopOfStack(stackNum)] = 0;// Clear index
-  stackPointer[stackNum]--;// Decrement pointer
+  buffer[absTopOfStack(stackNum)] = 0;  // Clear index
+  stackPointer[stackNum]--;  // Decrement pointer
   return value;
 }
 
 #pragma GCC diagnostic pop
-
 
 int test() {
   return 1;

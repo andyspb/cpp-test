@@ -28,6 +28,6 @@ int test() {
   return 1;
 }
 
-} //  namespace get_max_sum_in_array
+}  //  namespace get_max_sum_in_array
 
 #endif /* 17_8_FIND_LARGEST_SUM_IN_ARR_H_ */

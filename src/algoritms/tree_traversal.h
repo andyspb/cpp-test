@@ -92,7 +92,7 @@ void breadth_first_traverse(Node<T>* node) {
   std::queue<Node<T>*> que;
   que.push(node);
   Node<T>* t;
-  while(!que.empty()) {
+  while (!que.empty()) {
     t = que.front();
     std::cout << t->value << ' ';
     que.pop();
@@ -113,7 +113,7 @@ void breadth_back_traverse(Node<T>* node) {
   std::stack<T> stack_;
   que.push(node);
   Node<T>* t;
-  while(!que.empty()) {
+  while (!que.empty()) {
     t = que.front();
     stack_.push(t->value);
     que.pop();
@@ -136,7 +136,7 @@ void print_level_order(Node<T>* root) {
     return;
   std::queue<Node<T>*> current_level, next_level;
   current_level.push(root);
-  while(!current_level.empty()) {
+  while (!current_level.empty()) {
     Node<T>* node = current_level.front();
     current_level.pop();
     if (node) {

@@ -25,12 +25,12 @@ enum State {
   Visiting
 };
 
-class Graph g{
+class Graph g {
 
 };
 
 bool search(Graph g, Node start, Node end) {
- // operates as Queue
+  // operates as Queue
 // LinkedList<Node> q = new LinkedList<Node>();
 //
 //  for (Node u : g.getNodesQ) {
@@ -58,9 +58,7 @@ bool search(Graph g, Node start, Node end) {
 //  return false;
 //  }
 //
-  return true; //fix it
+  return true;  //fix it
 }
-
-
 
 #endif /* ROUTE_BETWEEN_NODES_H_ */

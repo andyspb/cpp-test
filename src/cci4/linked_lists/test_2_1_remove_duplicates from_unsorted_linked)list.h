@@ -9,11 +9,12 @@
 // FOLLOW UP
 // How would you solve this problem if a temporary buffer is not allowed?
 struct LList {
-    LList(int d)
-        : data(d), next(NULL) {
-    }
-    int data;
-    LList *next;
+  LList(int d)
+      : data(d),
+        next(NULL) {
+  }
+  int data;
+  LList *next;
 };
 
 void fill_list(LList *head) {
@@ -72,15 +73,15 @@ void deleteDup2(LList * head) {
   while (current) {
     LList *runner = head;
     while (runner != current) {
-      if (runner->data == current->data) { // Check for earlier dups
-        LList *tmp = current->next; // remove current
-        prev->next = tmp; // update current to next node
-        current = tmp; // all other dups have already been removed
+      if (runner->data == current->data) {  // Check for earlier dups
+        LList *tmp = current->next;  // remove current
+        prev->next = tmp;  // update current to next node
+        current = tmp;  // all other dups have already been removed
         break;
       }
       runner = runner->next;
     }
-    if ( runner == current ) {  // current not updated - update now
+    if (runner == current) {  // current not updated - update now
       prev = current;
       current = current->next;
     }
@@ -104,6 +105,6 @@ int test() {
   return 1;
 }
 
-} // namespace test_2_1
+}  // namespace test_2_1
 
 #endif /* TEST_2_1_REMOVE_DUPLICATES_FROM_UNSORTED_LINKED_LIST_H_ */

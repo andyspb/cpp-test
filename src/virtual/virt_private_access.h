@@ -4,20 +4,20 @@
 
 namespace virt_private_access {
 class B {
-  public:
-    virtual ~B() {
-    }
-    virtual void f() {
-    }
+ public:
+  virtual ~B() {
+  }
+  virtual void f() {
+  }
 };
 
-class D: public B {
-  public:
-    virtual ~D() {
-    }
+class D : public B {
+ public:
+  virtual ~D() {
+  }
 //private:
-    void f() {
-    }
+  void f() {
+  }
 };
 
 int test() {
@@ -34,6 +34,6 @@ int test() {
   std::cout << "<--- test passed";
   return 1;
 }
-} // namespace virt_private_access
+}  // namespace virt_private_access
 
 #endif /* _VIRT_PRIVATE_ACCESS_H_ */

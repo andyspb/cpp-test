@@ -3,23 +3,23 @@
 
 namespace embar {
 struct A {
-    virtual ~A() {
-    }
-    int value;
-    virtual void doTest(int i = 1) {
-      std::cout << "from A " << std::endl;
-      value = i;
-    }
+  virtual ~A() {
+  }
+  int value;
+  virtual void doTest(int i = 1) {
+    std::cout << "from A " << std::endl;
+    value = i;
+  }
 };
 
-struct B: public A {
-    virtual ~B() {
+struct B : public A {
+  virtual ~B() {
 
-    }
-    virtual void doTest(int i = 999) {
-      std::cout << "from B" << std::endl;
-      value = i;
-    }
+  }
+  virtual void doTest(int i = 999) {
+    std::cout << "from B" << std::endl;
+    value = i;
+  }
 };
 
 void t1(char *a[]) {

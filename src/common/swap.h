@@ -15,5 +15,4 @@ void swap(T *a, T *b) {
   *b = tmp;
 }
 
-
 #endif /* SRC_COMMON_SWAP_H_ */

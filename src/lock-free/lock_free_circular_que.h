@@ -8,7 +8,6 @@
 #ifndef SRC_LOCK_FREE_LOCK_FREE_CIRCULAR_QUE_H_
 #define SRC_LOCK_FREE_LOCK_FREE_CIRCULAR_QUE_H_
 
-
 /*
  * lock_free_buffer.h
  *
@@ -31,10 +30,22 @@
 namespace lock_free_circular_que {
 
 struct PcmData {
-  PcmData(): data_(0), size_(-1) {}
-  PcmData(void* data, int size): data_(data), size_(size) {}
-  PcmData(int* data, int size): data_(static_cast<void*>(data)), size_(size) {}
-  PcmData(char* data, int size): data_(static_cast<void*>(data)), size_(size) {}
+  PcmData()
+      : data_(0),
+        size_(-1) {
+  }
+  PcmData(void* data, int size)
+      : data_(data),
+        size_(size) {
+  }
+  PcmData(int* data, int size)
+      : data_(static_cast<void*>(data)),
+        size_(size) {
+  }
+  PcmData(char* data, int size)
+      : data_(static_cast<void*>(data)),
+        size_(size) {
+  }
   void* data_;
   int size_;
 };
@@ -43,7 +54,7 @@ class LockFreeCircularQue {
  public:
   LockFreeCircularQue(const size_t max_size = CIRCULAR_QUE_MAX_SIZE)
       : max_size_(max_size),
-        capacity_(max_size_+1),
+        capacity_(max_size_ + 1),
         tail_(0),
         head_(0) {
     array_ = new PcmData[capacity_];
@@ -78,7 +89,8 @@ class LockFreeCircularQue {
       pcm_data.size_ = -1;
       return false;   // empty queue
     }
-    std::cout << "\t" << __FUNCTION__ <<" current_head:" << current_head << " tail_.load()=" << tail_.load() << "\n";
+    std::cout << "\t" << __FUNCTION__ << " current_head:" << current_head
+              << " tail_.load()=" << tail_.load() << "\n";
     pcm_data = array_[current_head];
     head_.store(increment(current_head));
     return true;
@@ -104,7 +116,6 @@ class LockFreeCircularQue {
   const size_t max_size_;
   const size_t capacity_;
 
-
   std::atomic<size_t> tail_;
   std::atomic<size_t> head_;
   PcmData* array_;
@@ -112,7 +123,8 @@ class LockFreeCircularQue {
 };
 
 void thread_write(void* buffer) {
-  LockFreeCircularQue* pcm_buffer = reinterpret_cast<LockFreeCircularQue*>(buffer);
+  LockFreeCircularQue* pcm_buffer =
+      reinterpret_cast<LockFreeCircularQue*>(buffer);
 
   for (int i = 0; i < DEFAULT_THREAD_MAX; ++i) {
     std::this_thread::sleep_for(std::chrono::milliseconds(WRITE_SLEEP));
@@ -126,16 +138,19 @@ void thread_write(void* buffer) {
 }
 
 void thread_read(void* buffer) {
-  LockFreeCircularQue* pcm_buffer = reinterpret_cast<LockFreeCircularQue*>(buffer);
+  LockFreeCircularQue* pcm_buffer =
+      reinterpret_cast<LockFreeCircularQue*>(buffer);
   for (int i = 0; i < DEFAULT_THREAD_MAX; ++i) {
     std::this_thread::sleep_for(std::chrono::milliseconds(READ_SLEEP));
     PcmData pcm_data;
     if (pcm_buffer->Pop(pcm_data)) {
       int* data = static_cast<int*>(pcm_data.data_);
       if (data) {
-        std::cout << "\t\t" << __FUNCTION__ <<" read: " << "data_:" << *data << " " << std::endl;
+        std::cout << "\t\t" << __FUNCTION__ << " read: " << "data_:" << *data
+                  << " " << std::endl;
       } else {
-        std::cout << "\t\t" << __FUNCTION__<< " read: " << "empty" << std::endl;
+        std::cout << "\t\t" << __FUNCTION__ << " read: " << "empty"
+                  << std::endl;
       }
     }
   }
@@ -157,6 +172,5 @@ TEST_RESULT test() {
 }
 
 }  // namespace lock_free_buffer
-
 
 #endif /* SRC_LOCK_FREE_LOCK_FREE_CIRCULAR_QUE_H_ */

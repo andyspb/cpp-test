@@ -27,7 +27,7 @@ namespace best_path {
 #define MAX_N 3
 #define MAX_M 3
 
-int arr[MAX_N][MAX_M] = { {4,5,9}, {8,1,3}, {2,6,7}};
+int arr[MAX_N][MAX_M] = { { 4, 5, 9 }, { 8, 1, 3 }, { 2, 6, 7 } };
 
 void fill_arr() {
 //  arr[0][0] = 4;
@@ -54,8 +54,8 @@ void find_best_path(int (&arr)[MAX_N][MAX_M], int n = MAX_N, int m = MAX_M) {
   LOG(INFO) << __PRETTY_FUNCTION__;
   int i = 0, j = 0;
   while (i < MAX_N && j < MAX_M) {
-    std::cout << arr[i][j] << " " ;
-    if (arr[i][j+1] < arr[i+1][j]) {
+    std::cout << arr[i][j] << " ";
+    if (arr[i][j + 1] < arr[i + 1][j]) {
       ++j;
     } else {
       ++i;
@@ -74,7 +74,6 @@ TEST_RESULT test() {
   fill_arr();
   print_array(arr);
   find_best_path(arr);
-
 
   RETURN_OK();
 }

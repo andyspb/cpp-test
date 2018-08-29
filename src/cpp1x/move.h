@@ -38,7 +38,7 @@ class Base {
 };
 
 TEST_RESULT test() {
-	__SCOPE_LOG__;
+  __SCOPE_LOG__;
 
   Base b(5);
   LOG(INFO) << "b.v=" << b.v << " b.ref=" << b.ref << " b.pv=" << b.pv;

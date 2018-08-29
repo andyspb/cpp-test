@@ -12,18 +12,13 @@
 
 namespace cast {
 
-
 TEST_RESULT test() {
   __SCOPE_LOG__;
   assert(cast_static_cast_::test());
 
-
   RETURN_OK();
 }
 
-
 }  // namespace cast
-
-
 
 #endif /* SRC_CAST_CAST_H_ */

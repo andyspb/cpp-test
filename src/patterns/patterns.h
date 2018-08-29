@@ -63,6 +63,6 @@ int test() {
   return 1;
 }
 
-} // namespace patterns
+}  // namespace patterns
 
 #endif /* PATTERNS_H_ */

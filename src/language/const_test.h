@@ -16,23 +16,23 @@ int strspcmp1(char * s1, char * s2) {
 }
 
 class A {
-  private:
-    int x;
-  public:
-    A(int a) {
-      x = a;
-      std::cout << "A(int) // x=" << x << std::endl;
-    }
-    void f() {
-      std::cout << "f() // x=" << x << std::endl;
-    }
-    void f() const {
-      std::cout << "f() const // x=" << x << std::endl;
-    }
-    const int* const Method3(const int* const & i) const {
-      std::cout << "Method const // x=" << x << std::endl;
-      return i;
-    }
+ private:
+  int x;
+ public:
+  A(int a) {
+    x = a;
+    std::cout << "A(int) // x=" << x << std::endl;
+  }
+  void f() {
+    std::cout << "f() // x=" << x << std::endl;
+  }
+  void f() const {
+    std::cout << "f() const // x=" << x << std::endl;
+  }
+  const int* const Method3(const int* const & i) const {
+    std::cout << "Method const // x=" << x << std::endl;
+    return i;
+  }
 };
 
 const char * test1(char * ch) {
@@ -101,6 +101,6 @@ void test() {
   *pMutableY = 42;
   return;
 }
-} // namespace const_
+}  // namespace const_
 
 #endif // _CONST_H_

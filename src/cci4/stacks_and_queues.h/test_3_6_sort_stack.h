@@ -45,5 +45,5 @@ int test() {
   std::endl(std::cout);
   return 1;
 }
-} // namespace test_3_6
+}  // namespace test_3_6
 #endif /* TEST_3_6_SORT_STACK_H_ */

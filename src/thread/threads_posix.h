@@ -30,7 +30,7 @@ void *thread_function(void *dummyPtr) {
 #endif // __GNUC
 
 TEST_RESULT test() {
- __SCOPE_LOG__;
+  __SCOPE_LOG__;
 #ifdef __GNUC
   pthread_t thread_id[NTHREADS];
   int i, j;
@@ -52,7 +52,6 @@ TEST_RESULT test() {
 #endif // __GNUC
   RETURN_OK();
 }
-
 
 }  // namespace threads_posix
 

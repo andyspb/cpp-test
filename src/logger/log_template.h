@@ -111,9 +111,10 @@ template<Level logLevel>
 }  // namespace tlog
 
 class ScopeLog {
-public:
-  ScopeLog(const std::string& from) : from_(from){
-    LOG(INFO) << from_ << __ENTER__;
+ public:
+  ScopeLog(const std::string& from)
+      : from_(from) {
+    LOG(INFO)<< from_ << __ENTER__;
   }
   ~ScopeLog() {
     LOG(INFO) << from_ << __EXIT__;

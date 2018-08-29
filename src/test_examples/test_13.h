@@ -15,7 +15,6 @@
 #include <sstream>
 #include <stdexcept>
 
-
 namespace test_13 {
 inline std::string stringify(int x) {
   std::ostringstream o;

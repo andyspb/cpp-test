@@ -35,7 +35,7 @@ TEST_RESULT test() {
   std::cout << "Reversed string:\n" << str << std::endl;
   // reverse back for next test
   reverse(str);
-  std::cout << "Recursively reversed string:\n" ;
+  std::cout << "Recursively reversed string:\n";
   reverse_rec(str);
   std::endl(std::cout);
   std::cout << "end of the test" << std::endl;

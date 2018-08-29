@@ -31,11 +31,9 @@ TEST_RESULT test() {
   __SCOPE_LOG__;
   try {
     throw your_exc3();
-  }
-  catch (std::exception const& e) {
+  } catch (std::exception const& e) {
     std::cout << e.what();
-  }
-  catch (...) {
+  } catch (...) {
     std::cout << "whoops!" << std::endl;
   }
   std::cout << "<---\n";

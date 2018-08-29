@@ -14,8 +14,14 @@ namespace _leap_1 {
 // Linked list
 class L {
  public:
-  L(int v): value(v), next(0) {}
-  L(int v, L* n): value(v), next(n) {}
+  L(int v)
+      : value(v),
+        next(0) {
+  }
+  L(int v, L* n)
+      : value(v),
+        next(n) {
+  }
   int value;
   L* next;
 };
@@ -30,11 +36,11 @@ L* get_nth_tail(L* head, int n) {
   int counter = 0;
   while (head && t) {
     if (++counter > n) {
-      LOG(INFO) << "counter=" << counter << " n=" << n
-          << " head->value=" <<head->value << std::endl;
+      LOG(INFO) << "counter=" << counter << " n=" << n << " head->value="
+          << head->value << std::endl;
       head = head->next;
     }
-    LOG(INFO) << " t->value=" <<t->value << std::endl;
+    LOG(INFO) << " t->value=" << t->value << std::endl;
     t = t->next;
   }
 
@@ -57,7 +63,6 @@ TEST_RESULT test() {
   L l3(3, &l4);
   L l2(2, &l3);
   L l1(1, &l2);
-
 
   L* l = get_nth_tail(&l1, 5);
 

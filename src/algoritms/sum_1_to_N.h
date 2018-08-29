@@ -17,6 +17,6 @@ int test() {
   std::cout << "throw n*(n+1)/2 sum is " << sum << std::endl;
   return 1;
 }
-} // namespace sum_1_to_N
+}  // namespace sum_1_to_N
 
 #endif // _SUM_1_TO_N_H_

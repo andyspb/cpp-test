@@ -11,7 +11,7 @@
 namespace array_size {
 template<typename T, size_t n>
 void findSize(T (&arr)[n]) {
-  LOG(INFO)  << sizeof(T) * n;
+  LOG(INFO) << sizeof(T) * n;
 }
 
 template<typename T, size_t n>
@@ -19,10 +19,9 @@ size_t size_of_array(T (&arr)[n]) {
   return sizeof(T) * n;
 }
 
-
 template<size_t n>
 void findSize(char (&arr)[n]) {
-  LOG(INFO)  << sizeof(char) * n;
+  LOG(INFO) << sizeof(char) * n;
 }
 
 template<size_t n>
@@ -32,7 +31,7 @@ size_t size_of_array(char (&arr)[n]) {
 
 template<size_t n>
 void findSize(int (&arr)[n]) {
-  LOG(INFO)  << sizeof(int) * n;
+  LOG(INFO) << sizeof(int) * n;
 }
 
 template<size_t n>
@@ -42,7 +41,7 @@ size_t size_of_array(int (&arr)[n]) {
 
 template<size_t n>
 void findSize(long long (&arr)[n]) {
-  LOG(INFO)  << sizeof(char) * n;
+  LOG(INFO) << sizeof(char) * n;
 }
 
 template<size_t n>
@@ -52,14 +51,13 @@ size_t size_of_array(long long (&arr)[n]) {
 
 template<size_t n>
 void findSize(double (&arr)[n]) {
-  LOG(INFO)  << sizeof(char) * n;
+  LOG(INFO) << sizeof(char) * n;
 }
 
 template<size_t n>
 size_t size_of_array(double (&arr)[n]) {
   return sizeof(char) * n;
 }
-
 
 TEST_RESULT test() {
   LOG(INFO) << __PRETTY_FUNCTION__;

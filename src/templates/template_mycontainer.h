@@ -9,29 +9,29 @@ namespace template_mycontainer {
 // class template:
 template<class T>
 class mycontainer {
-    T element;
-  public:
-    mycontainer(T arg) {
-      element = arg;
-    }
-    T increase() {
-      return ++element;
-    }
+  T element;
+ public:
+  mycontainer(T arg) {
+    element = arg;
+  }
+  T increase() {
+    return ++element;
+  }
 };
 
 // class template specialization:
 template<>
 class mycontainer<char> {
-    char element;
-  public:
-    mycontainer(char arg) {
-      element = arg;
-    }
-    char uppercase() {
-      if ((element >= 'a') && (element <= 'z'))
-        element += 'A' - 'a';
-      return element;
-    }
+  char element;
+ public:
+  mycontainer(char arg) {
+    element = arg;
+  }
+  char uppercase() {
+    if ((element >= 'a') && (element <= 'z'))
+      element += 'A' - 'a';
+    return element;
+  }
 };
 
 int test() {
@@ -43,6 +43,6 @@ int test() {
   std::cout << "<--- test passed " << std::endl;
   return 1;
 }
-} // namespace template_mycontainer
+}  // namespace template_mycontainer
 
 #endif // _TEMPLATE_MY_CONTAINER_H_

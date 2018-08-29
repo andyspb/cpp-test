@@ -5,19 +5,22 @@
 
 namespace cast_1 {
 class Base {
-  public:
-    Base()  : i(1) {
-      std::cout << "From Base::Base() " << std::endl;
-    }
-    int i;
+ public:
+  Base()
+      : i(1) {
+    std::cout << "From Base::Base() " << std::endl;
+  }
+  int i;
 };
-class Derived: public Base {
-  public:
-    Derived() : ii(2), p(0) {
-      std::cout << "From Derived::Derived()" << std::endl;
-    }
-    int ii;
-    int * p;
+class Derived : public Base {
+ public:
+  Derived()
+      : ii(2),
+        p(0) {
+    std::cout << "From Derived::Derived()" << std::endl;
+  }
+  int ii;
+  int * p;
 };
 
 int test() {
@@ -32,6 +35,6 @@ int test() {
   }
   return 1;
 }
-} // namespace cast_1
+}  // namespace cast_1
 
 #endif // _CAST_1_H_

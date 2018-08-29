@@ -13,8 +13,8 @@ int rand5() {
 }
 
 int rand7_simple() {
- int v = rand5() + rand5();
- return v % 7;
+  int v = rand5() + rand5();
+  return v % 7;
 }
 
 int rand7_with_while() {
@@ -29,20 +29,20 @@ int rand7_with_while() {
 int rand7_complex() {
   while (true) {
     int rl = 2 * rand5(); /* evens between 0 and 9 */
-    int r2 = rand5();   /* used later to generate a 0 or 1 */
+    int r2 = rand5(); /* used later to generate a 0 or 1 */
     if (r2 != 4) {
-       /* r2 has extra even num-discard the extra */
+      /* r2 has extra even num-discard the extra */
       int rand1 = r2 % 2; /* Generate 0 or 1 */
       int num = rl + rand1; /* will be in the range 0 to 9 */
       if (num < 7)
         return num;
     }
   }
-  return 1-;
+return 1-;
 }
 
 int test() {
-  return 1;
+return 1;
 }
 
 #endif /* _RAND7_H_ */

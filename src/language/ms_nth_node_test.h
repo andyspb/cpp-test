@@ -3,7 +3,7 @@
 void fill_linked_list(ms_common::List * head, int numbers);
 void print_linked_list(ms_common::List * head);
 ms_common::List * find_nth_element_from_end(ms_common::List * head,
-    int element);
+                                            int element);
 void copy_linked_list(ms_common::List *q, ms_common::List **s);
 void print_linked_list_from_end(ms_common::List * head);
 
@@ -91,7 +91,7 @@ void print_linked_list(ms_common::List *head) {
 }
 
 ms_common::List * find_nth_element_from_end(ms_common::List * head,
-    int element) {
+                                            int element) {
   ms_common::List * tmp = head;
   ms_common::List * behind_tmp = 0;
   tmp = head;

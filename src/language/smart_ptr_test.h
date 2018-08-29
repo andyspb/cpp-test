@@ -7,10 +7,12 @@ class Person {
 
  public:
   Person()
-      : pName(0), age(0) {
+      : pName(0),
+        age(0) {
   }
   Person(char* pName, int age)
-      : pName(pName), age(age) {
+      : pName(pName),
+        age(age) {
   }
   ~Person() {
   }
@@ -24,36 +26,36 @@ class Person {
 };
 
 template<typename T> class SP {
-  private:
-    T* pointee;
-  public:
-    SP(T * t)
-        : pointee(t) {
+ private:
+  T* pointee;
+ public:
+  SP(T * t)
+      : pointee(t) {
 
-    }
-    ~SP() {
-      delete pointee;
-    }
-    T& operator*() {
-      return *pointee;
-    }
-    T* operator->() {
-      return pointee;
-    }
+  }
+  ~SP() {
+    delete pointee;
+  }
+  T& operator*() {
+    return *pointee;
+  }
+  T* operator->() {
+    return pointee;
+  }
 };
 
 class A {
-  public:
-    A() {
-      printf("ctor A\n");
-    }
-    virtual ~A() {
-      printf("from ~A\n");
-    }
-    virtual void test() =0;
-    virtual void Do() {
-      printf("Do from A\n");
-    }
+ public:
+  A() {
+    printf("ctor A\n");
+  }
+  virtual ~A() {
+    printf("from ~A\n");
+  }
+  virtual void test() =0;
+  virtual void Do() {
+    printf("Do from A\n");
+  }
 
 };
 void A::test() {
@@ -61,14 +63,14 @@ void A::test() {
 
 }
 
-class B: public A {
-  public:
-    virtual void test();
+class B : public A {
+ public:
+  virtual void test();
 
-  private:
-    void Do() {
-      printf("Do from B\n");
-    }
+ private:
+  void Do() {
+    printf("Do from B\n");
+  }
 
 };
 void B::test() {
@@ -77,11 +79,11 @@ void B::test() {
 
 }
 
-class C: public B {
-  private:
-    void Do() {
-      printf("Do from A\n");
-    }
+class C : public B {
+ private:
+  void Do() {
+    printf("Do from A\n");
+  }
 
 };
 void test() {

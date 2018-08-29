@@ -48,7 +48,7 @@ template<int n> struct constN {
 };
 
 TEST_RESULT test() {
-	__SCOPE_LOG__;
+  __SCOPE_LOG__;
 
 //  std::cout << "Number of lowercase letters in \"Hello, world!\" is ";
 //  constN<countlower("Hello, world!")> out2;  // implicitly converted to conststr

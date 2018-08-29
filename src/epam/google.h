@@ -9,13 +9,12 @@
 #define GOOGLE_H_
 
 #if _WIN32
-  // windows code goes here
- typedef uint64_t uint;
+// windows code goes here
+typedef uint64_t uint;
 #endif
 
 #ifdef __GNUC__
 #include <pthread.h>
-
 
 #include <mutex>
 
@@ -54,7 +53,6 @@ uint assignId(Event& ev) {
   uint id = (uint) ev.getAddress();
   return id;
 }
-
 
 }  // namespace google_test
 

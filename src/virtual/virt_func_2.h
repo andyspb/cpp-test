@@ -5,23 +5,23 @@
 
 namespace virt_func_2 {
 class A {
-  public:
-    virtual ~A() {
-      std::cout << "A::~A()" << std::endl;
-    }
-  public:
-    virtual void test() {
-      std::cout << "A::test()" << std::endl;
-    }
+ public:
+  virtual ~A() {
+    std::cout << "A::~A()" << std::endl;
+  }
+ public:
+  virtual void test() {
+    std::cout << "A::test()" << std::endl;
+  }
 };
-class B: virtual public A {
-  public:
-    virtual ~B() {
-      std::cout << "B::~B()" << std::endl;
-    }
-    void test() {
-      std::cout << "B::test()" << std::endl;
-    }
+class B : virtual public A {
+ public:
+  virtual ~B() {
+    std::cout << "B::~B()" << std::endl;
+  }
+  void test() {
+    std::cout << "B::test()" << std::endl;
+  }
 };
 
 int test() {
@@ -32,7 +32,7 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace virt_func_2
+}  // namespace virt_func_2
 
 #endif // #define _VIRT_FUNC_2_H_
 

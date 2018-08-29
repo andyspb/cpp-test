@@ -4,11 +4,12 @@
 #include <iostream>
 namespace insert_into_sorted_slist {
 struct SList {
-    SList(int i)
-        : val_(i), next_(0) {
-    }
-    int val_;
-    struct SList * next_;
+  SList(int i)
+      : val_(i),
+        next_(0) {
+  }
+  int val_;
+  struct SList * next_;
 };
 void fill_slist(SList * head) {
   if (!head) {
@@ -66,6 +67,6 @@ TEST_RESULT test() {
   std::cout << "<--- test insertsort passed" << std::endl;
   RETURN_OK();
 }
-} // namespace insert_into_sorted_slist
+}  // namespace insert_into_sorted_slist
 
 #endif //_INSERT_INTO_SORTED_LIST_H_

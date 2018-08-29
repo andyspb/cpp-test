@@ -16,7 +16,7 @@
 //git diff algorithm
 
 std::string git_diff(std::fstream& f1, std::fstream& f2) {
-  if (!f1.good() || !f2.good() )
+  if (!f1.good() || !f2.good())
     throw("SOme file incorrect");
 
   std::string output;
@@ -30,21 +30,21 @@ std::string git_diff(std::fstream& f1, std::fstream& f2) {
 
   bool endBlock = false;
 
-  while( f1.good() ) {
+  while (f1.good()) {
     std::getline(f1, s1);
-    q1.push(s1+"\n");
+    q1.push(s1 + "\n");
   }
 
   while (f2.good()) {
     std::getline(f2, s2);
-      q2.push(s2+"\n");
+    q2.push(s2 + "\n");
   }
 
   bool equal = false;
   while (!q1.empty() && !q2.empty()) {
     out1 = q1.front();
     out2 = q2.front();
-    while(!equal) {
+    while (!equal) {
     }
 //    else {
 //      std::cout << "s1 == s2" << std::endl;
@@ -89,14 +89,14 @@ bool adj11(int n) {
 
 namespace moto {
 
-int test(){
+int test() {
   std::cout << __PRETTY_FUNCTION__ << std::endl;
   std::fstream f1("d:\\test1.txt", std::fstream::in | std::fstream::out);
   std::fstream f2("d:\\test2.txt", std::fstream::in | std::fstream::out);
 
   std::string s = git_diff(f1, f2);
 
-  std::cout<< "output:\n" << s << std::endl;
+  std::cout << "output:\n" << s << std::endl;
 
   f1.close();
   f1.close();

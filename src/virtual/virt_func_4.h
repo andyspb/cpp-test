@@ -5,24 +5,27 @@
 
 namespace virt_func_4 {
 struct Base {
-    virtual ~Base() {}
-    virtual void f() {
-      std::cout << "Class Base" << std::endl;
-    }
+  virtual ~Base() {
+  }
+  virtual void f() {
+    std::cout << "Class Base" << std::endl;
+  }
 };
 
-struct DerivedA: Base {
-    virtual ~DerivedA() {}
-    void f(int) {
-      std::cout << "Class DerivedA" << std::endl;
-    }
+struct DerivedA : Base {
+  virtual ~DerivedA() {
+  }
+  void f(int) {
+    std::cout << "Class DerivedA" << std::endl;
+  }
 };
 
-struct DerivedB: DerivedA {
-    virtual ~DerivedB() {}
-    void f() {
-      std::cout << "Class DerivedB" << std::endl;
-    }
+struct DerivedB : DerivedA {
+  virtual ~DerivedB() {
+  }
+  void f() {
+    std::cout << "Class DerivedB" << std::endl;
+  }
 };
 
 int test() {
@@ -38,6 +41,6 @@ int test() {
   std::cout << "<--- test passed";
   return 1;
 }
-} // namespace virt_func_4
+}  // namespace virt_func_4
 
 #endif // _VIRT_FUNC_4_H_

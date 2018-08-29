@@ -22,6 +22,5 @@ int test() {
 
 #pragma GCC diagnostic pop
 
-
 #endif  // _BIND2ND_H_
 

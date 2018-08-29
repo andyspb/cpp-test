@@ -22,10 +22,22 @@
 namespace lock_free_buffer {
 
 struct PcmData {
-  PcmData(): data_(0), size_(-1) {}
-  PcmData(void* data, int size): data_(data), size_(size) {}
-  PcmData(int* data, int size): data_(static_cast<void*>(data)), size_(size) {}
-  PcmData(char* data, int size): data_(static_cast<void*>(data)), size_(size) {}
+  PcmData()
+      : data_(0),
+        size_(-1) {
+  }
+  PcmData(void* data, int size)
+      : data_(data),
+        size_(size) {
+  }
+  PcmData(int* data, int size)
+      : data_(static_cast<void*>(data)),
+        size_(size) {
+  }
+  PcmData(char* data, int size)
+      : data_(static_cast<void*>(data)),
+        size_(size) {
+  }
   void* data_;
   int size_;
 };
@@ -66,7 +78,8 @@ class LockFreeBuffer {
 
   bool Pop(PcmData& pcm_data) {
     const auto current_head = head_.load();
-    std::cout << "\t" << __FUNCTION__ <<" current_head:" << current_head << " tail_.load()=" << tail_.load() << "\n";
+    std::cout << "\t" << __FUNCTION__ << " current_head:" << current_head
+              << " tail_.load()=" << tail_.load() << "\n";
     if (current_head == tail_.load()) {
       pcm_data.data_ = 0;
       pcm_data.size_ = -1;
@@ -102,7 +115,8 @@ class LockFreeBuffer {
 };
 
 void thread_write(void* buffer) {
-  LockFreeBuffer<MAX_SIZE>* pcm_buffer = reinterpret_cast<LockFreeBuffer<MAX_SIZE>*>(buffer);
+  LockFreeBuffer<MAX_SIZE>* pcm_buffer = reinterpret_cast<LockFreeBuffer<
+      MAX_SIZE>*>(buffer);
 
   for (int i = 0; i < DEFAULT_MAX; ++i) {
     std::this_thread::sleep_for(std::chrono::milliseconds(WRITE_SLEEP));
@@ -116,16 +130,19 @@ void thread_write(void* buffer) {
 }
 
 void thread_read(void* buffer) {
-  LockFreeBuffer<MAX_SIZE>* pcm_buffer = reinterpret_cast<LockFreeBuffer<MAX_SIZE>*>(buffer);
+  LockFreeBuffer<MAX_SIZE>* pcm_buffer = reinterpret_cast<LockFreeBuffer<
+      MAX_SIZE>*>(buffer);
   for (int i = 0; i < DEFAULT_MAX; ++i) {
     std::this_thread::sleep_for(std::chrono::milliseconds(READ_SLEEP));
     PcmData pcm_data;
     if (pcm_buffer->Pop(pcm_data)) {
       int* data = static_cast<int*>(pcm_data.data_);
       if (data) {
-        std::cout << "\t\t" << __FUNCTION__ <<" read: " << "data_:" << *data << " " << std::endl;
+        std::cout << "\t\t" << __FUNCTION__ << " read: " << "data_:" << *data
+                  << " " << std::endl;
       } else {
-        std::cout << "\t\t" << __FUNCTION__<< " read: " << "empty" << std::endl;
+        std::cout << "\t\t" << __FUNCTION__ << " read: " << "empty"
+                  << std::endl;
       }
     }
   }

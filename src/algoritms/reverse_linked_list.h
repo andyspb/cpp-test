@@ -8,8 +8,8 @@ namespace reverse_linkedlist {
 // single linked list
 template<typename T = int>
 struct Node {
-    T val;
-    Node *next;
+  T val;
+  Node *next;
 };
 
 //template <>
@@ -59,8 +59,8 @@ void print_slist_int(Node<T> * head) {
 
 void fill_slist(Node<> * head, int size) {
   Node<> *temp = head;
-  for (int i = 1; i < size ; ++i) {
-    Node<> *node= new Node<>();
+  for (int i = 1; i < size; ++i) {
+    Node<> *node = new Node<>();
     node->val = i;
     node->next = NULL;
     temp->next = node;
@@ -76,7 +76,7 @@ TEST_RESULT test() {
   list->next = NULL;
 
   Node<int> *temp = list;
-  for (int i = 1; i < 20 ; ++i) {
+  for (int i = 1; i < 20; ++i) {
     Node<int> *l = new Node<int>();
     l->val = i;
     l->next = NULL;
@@ -84,7 +84,7 @@ TEST_RESULT test() {
     temp = l;
   }
 
-  LOG(INFO) << " Print origin list" ;
+  LOG(INFO) << " Print origin list";
 
   print_slist_int(list);
 
@@ -97,7 +97,6 @@ TEST_RESULT test() {
   print_slist_int(list);
   RETURN_OK();
 }
-
 
 }  // namespace reverse_linkedlist
 

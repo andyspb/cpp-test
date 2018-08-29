@@ -6,17 +6,17 @@
 namespace memento {
 
 class Memento {
-  public:
-    Memento(std::string & str, const std::string newString)
-        : oldString(str) {
-      str = newString;
-    }
-    void undo(std::string & str) {
-      str = oldString;
-    }
+ public:
+  Memento(std::string & str, const std::string newString)
+      : oldString(str) {
+    str = newString;
+  }
+  void undo(std::string & str) {
+    str = oldString;
+  }
 
-  private:
-    std::string oldString;
+ private:
+  std::string oldString;
 };
 
 void hello_world(Memento & memento) {
@@ -33,6 +33,6 @@ int test() {
   std::cout << "<--- test passed" << std::endl;
   return 1;
 }
-} // namespace memento
+}  // namespace memento
 
 #endif // _MEMENTO_H

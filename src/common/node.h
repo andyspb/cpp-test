@@ -18,8 +18,14 @@ void fill_nodes_from_array(Node& node, int arr[], int length);
 //
 // implementation
 struct Node {
-  Node(): val(0), next(0) {}
-  Node(int v, Node* n = 0) : val(v), next(n) {}
+  Node()
+      : val(0),
+        next(0) {
+  }
+  Node(int v, Node* n = 0)
+      : val(v),
+        next(n) {
+  }
 
   int val;
   Node *next;
@@ -44,7 +50,5 @@ void fill_nodes_from_array(Node& node, int arr[], int length) {
     n = temp;
   }
 }
-
-
 
 #endif /* SRC_COMMON_NODE_H_ */

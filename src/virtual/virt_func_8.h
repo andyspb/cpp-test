@@ -6,37 +6,43 @@
 namespace virt_func_8 {
 
 class A {
-public:
-    virtual ~A() {}
-    void print() {printf("in A\n");}
+ public:
+  virtual ~A() {
+  }
+  void print() {
+    printf("in A\n");
+  }
 };
 
-class B : public A{
-public:
-    virtual void print() {printf("in B\n");}
+class B : public A {
+ public:
+  virtual void print() {
+    printf("in B\n");
+  }
 };
 
-class C : public A{
-public:
-    virtual void print() {printf("in C\n");}
+class C : public A {
+ public:
+  virtual void print() {
+    printf("in C\n");
+  }
 };
 
-class D : public C{
-public:
+class D : public C {
+ public:
 };
-
 
 int test() {
-    printf("virt_func_8::test()\n");
-    A* a = new D;
-    C* c = new D;
-    a->print();
-    c->print();
+  printf("virt_func_8::test()\n");
+  A* a = new D;
+  C* c = new D;
+  a->print();
+  c->print();
 
-    delete a;
-    delete c;
+  delete a;
+  delete c;
 
-    return 1;
+  return 1;
 }
 
 }  // namespace virt_func_8

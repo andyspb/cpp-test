@@ -10,36 +10,36 @@
 namespace intialization_with_this {
 
 class Base {
-  public:
-    Base(Base* b)
-        : base(b) {
+ public:
+  Base(Base* b)
+      : base(b) {
+  }
+  virtual ~Base() {
+  }
+  virtual void print() {
+    std::cout << "B::print()" << std::endl;
+  }
+  virtual void in_print() {
+    if (base) {
+      base->print();
     }
-    virtual ~Base() {
-    }
-    virtual void print() {
-      std::cout << "B::print()" << std::endl;
-    }
-    virtual void in_print() {
-      if (base) {
-        base->print();
-      }
-    }
-  protected:
-    Base* base;
+  }
+ protected:
+  Base* base;
 
 };
 
-class Derived: public Base {
-  public:
-    Derived()
-        : Base(this) {
-    }
+class Derived : public Base {
+ public:
+  Derived()
+      : Base(this) {
+  }
 
-    virtual ~Derived() {
-    }
-    virtual void print() {
-      std::cout << "D::print()" << std::endl;
-    }
+  virtual ~Derived() {
+  }
+  virtual void print() {
+    std::cout << "D::print()" << std::endl;
+  }
 };
 
 int test() {

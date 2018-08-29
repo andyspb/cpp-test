@@ -29,16 +29,16 @@ int test() {
   std::cout << "Test 1.8" << std::endl;
   std::string str1 = "apple";
   std::string str2 = "pleap";
-  std::string res = isRotation(str1, str2)?"is rotation":"is not rotation";
+  std::string res = isRotation(str1, str2) ? "is rotation" : "is not rotation";
   std::cout << str2 << " " << res << " for " << str1 << std::endl;
 
   str1 = "apple";
   str2 = "ppale";
-  res = isRotation(str1, str2)?"is rotation":"is not rotation";
+  res = isRotation(str1, str2) ? "is rotation" : "is not rotation";
   std::cout << str2 << " " << res << " for " << str1 << std::endl;
 
   return 1;
 }
-} // namespace test_1_8
+}  // namespace test_1_8
 
 #endif /* TEST_1_8_CHECK_STRING_ROTATION_IF_HAS_SUBSTR_H_ */

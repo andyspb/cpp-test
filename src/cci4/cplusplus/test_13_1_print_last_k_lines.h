@@ -22,7 +22,7 @@
 
 namespace test_13_1_print_last_k_lines {
 
-void f(const int K, const char* file_name ) {
+void f(const int K, const char* file_name) {
 //   std::string L[K];
 //   int lines = 0;
 //   std::fstream file(file_name);

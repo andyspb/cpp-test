@@ -17,15 +17,9 @@ void permutation() {
 TEST_RESULT test() {
   __SCOPE_LOG__;
 
-
-
-
-
   RETURN_OK();
 }
 
 }  // namespace permutation
-
-
 
 #endif /* SRC_CPP1X_PERMUTATION_H_ */

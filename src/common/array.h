@@ -12,8 +12,6 @@
 template<typename T>
 void print_array(T* arr, size_t size);
 
-
-
 // implementation
 template<typename T>
 void print_array(T* arr, size_t size) {
@@ -22,7 +20,5 @@ void print_array(T* arr, size_t size) {
   }
   std::endl(std::cout);
 }
-
-
 
 #endif /* SRC_COMMON_ARRAY_ARRAY_H_ */

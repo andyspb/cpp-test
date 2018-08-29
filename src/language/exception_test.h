@@ -1,22 +1,22 @@
 #include "stdafx.h"
 namespace exception_test {
 class Inner {
-  public:
-    Inner() {
-      printf("ctor Inner\n");
-    }
-    ~Inner() {
-      printf("destructor Inner\n");
-    }
+ public:
+  Inner() {
+    printf("ctor Inner\n");
+  }
+  ~Inner() {
+    printf("destructor Inner\n");
+  }
 };
 
 class A {
-  public:
-    A();
-    ~A();
-  private:
-    int * p;
-    Inner * in;
+ public:
+  A();
+  ~A();
+ private:
+  int * p;
+  Inner * in;
 };
 
 A::A() {

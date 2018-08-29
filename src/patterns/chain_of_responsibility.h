@@ -6,32 +6,32 @@
 namespace chain_of_responsibility {
 
 class Output {
-  public:
-    void output(const std::string & str) {
-      std::cout << str << std::endl;
-    }
+ public:
+  void output(const std::string & str) {
+    std::cout << str << std::endl;
+  }
 };
 
 class World {
-    Output & out;
-  public:
-    World(Output & out)
-        : out(out) {
-    }
-    void output(const std::string & str) {
-      out.output(str + " (output from word)world!");
-    }
+  Output & out;
+ public:
+  World(Output & out)
+      : out(out) {
+  }
+  void output(const std::string & str) {
+    out.output(str + " (output from word)world!");
+  }
 };
 
 class Hello {
-    World & world;
-  public:
-    Hello(World & world)
-        : world(world) {
-    }
-    void output() {
-      world.output("(Output from hello)Hello");
-    }
+  World & world;
+ public:
+  Hello(World & world)
+      : world(world) {
+  }
+  void output() {
+    world.output("(Output from hello)Hello");
+  }
 };
 
 void hello_world(Hello & hello) {
@@ -39,7 +39,8 @@ void hello_world(Hello & hello) {
 }
 
 int test() {
-  std::cout << "Test: Chain_of_responsibility pattern example --->" << std::endl;
+  std::cout << "Test: Chain_of_responsibility pattern example --->"
+            << std::endl;
   Output output;
   World world(output);
   Hello hello(world);
@@ -48,6 +49,6 @@ int test() {
   return 1;
 }
 
-} // namespace chain_of_responsibility
+}  // namespace chain_of_responsibility
 
 #endif // _CHAIN_OF_RESPONSIBILITY_H_

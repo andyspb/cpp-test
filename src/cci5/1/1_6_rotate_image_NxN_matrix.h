@@ -24,18 +24,16 @@ namespace rotate_matrix {
 //column are set to 0
 //This algorithm is 0(N2), which is
 
-
 void print_array(int** matrix, int n) {
   if (!matrix || !*matrix)
     return;
-  for (int i = 0; i<n; ++i ) {
+  for (int i = 0; i < n; ++i) {
     for (int j = 0; j < n; ++j) {
-      std::cout<< matrix[i][j] << " ";
+      std::cout << matrix[i][j] << " ";
     }
     std::cout << std::endl;
   }
 }
-
 
 void rotate(int** matrix, int n) {
   for (int layer = 0; layer < n / 2; ++layer) {
@@ -64,25 +62,22 @@ void rotate(int** matrix, int n) {
 int test() {
   const int size = 4;
   int **array = new int *[size];
-  for(int i = 0; i <size; i++)
-      array[i] = new int[size];
+  for (int i = 0; i < size; i++)
+    array[i] = new int[size];
   int count = 0;
-  for (int i = 0; i<size; ++i ) {
+  for (int i = 0; i < size; ++i) {
     for (int j = 0; j < size; ++j) {
       array[i][j] = ++count;
     }
   }
   print_array(array, size);
   rotate(array, 3);
-  std::cout<<"after rotation"<<std::endl;
+  std::cout << "after rotation" << std::endl;
   print_array(array, size);
 
   return 1;
 }
 
 }  // namespace rotate_matrix
-
-
-
 
 #endif /* 1_6_ROTATE_IMAGE_NXN_MATRIX_H_ */

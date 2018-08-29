@@ -16,7 +16,7 @@ void reverse(char* str) {
       ++end;
     }
     --end;
-    while(str<end) {
+    while (str < end) {
       tmp = *str;
       *str++ = *end;
       *end-- = tmp;
@@ -32,5 +32,5 @@ int test() {
   std::cout << str << std::endl;
   return 1;
 }
-} // namespace test_1_2
+}  // namespace test_1_2
 #endif /* TEST_1_2_REVERSE_C_STRING_H_ */

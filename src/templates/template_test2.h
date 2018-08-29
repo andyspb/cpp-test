@@ -90,11 +90,13 @@ template<class T, class U, class V = int> class X {
 
 template<class T> void f() {
   std::cout << "<class T>f()" << std::endl;
-};
+}
+;
 
 template<int i> void f() {
   std::cout << "<int i>f()" << std::endl;
-};
+}
+;
 
 int test() {
   f<0>();

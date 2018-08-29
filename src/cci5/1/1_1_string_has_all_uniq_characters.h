@@ -26,7 +26,7 @@ bool isUniqueChars(char* str) {
 int test() {
   char test[] = "abcd";
 
-  std::cout << test << "all uniq chars: " << isUniqueChars(test)<< std::endl;
+  std::cout << test << "all uniq chars: " << isUniqueChars(test) << std::endl;
   char test2[] = "abbd";
   std::cout << test2 << "all uniq chars: " << isUniqueChars(test2) << std::endl;
   return 1;

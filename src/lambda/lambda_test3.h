@@ -9,7 +9,6 @@
 #include <iostream>
 #include <vector>
 
-
 namespace lambda_test3 {
 
 int test() {

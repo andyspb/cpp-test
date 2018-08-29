@@ -50,7 +50,7 @@ int test() {
     }
   }
   std::cout << "SubArray: [" << subArrStart << ", " << subArrEnd << "] MaxSum: "
-      << subArrSum << std::endl;
+            << subArrSum << std::endl;
   return 1;
 }
 }  // find_largest_sum_in_array

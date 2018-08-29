@@ -4,10 +4,16 @@
 
 namespace reverse_llist_test {
 class SList {
-    SList(): data(0), next(0) {}
-    SList(int d): data(d), next(0) {}
-    int data;
-    SList *next;
+  SList()
+      : data(0),
+        next(0) {
+  }
+  SList(int d)
+      : data(d),
+        next(0) {
+  }
+  int data;
+  SList *next;
 };
 
 SList * iter_rev_llist(SList *);
@@ -16,8 +22,8 @@ SList * recursive_reverse_linked_list_2(SList * node, SList * prev);
 
 void fill_slist(SList * head, int size) {
   SList *temp = head;
-  for (int i = 1; i < size ; ++i) {
-    SList *node= new SList();
+  for (int i = 1; i < size; ++i) {
+    SList *node = new SList();
     node->data = i;
     node->next = NULL;
     temp->next = node;

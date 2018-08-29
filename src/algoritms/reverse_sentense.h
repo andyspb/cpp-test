@@ -22,7 +22,8 @@ void reverese_sentense(char *str) {
   }
   char *end, *x, *y;
   end = &str[length];
-  reverse_word(str, end - 1);;
+  reverse_word(str, end - 1);
+  ;
   x = str - 1;
   y = str;
   while (x++ < end) {
@@ -41,7 +42,7 @@ TEST_RESULT test() {
   LOG(INFO) << str;
   RETURN_OK();
 }
-} // namespace reverse_sentense
+}  // namespace reverse_sentense
 
 #endif // _REVERSE_SENTENSE_H_
 

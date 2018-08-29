@@ -15,7 +15,7 @@ int** my2DAlloc(int rows, int cols) {
   int i;
   rowptr = (int**) malloc(rows * sizeof(int*));
   for (i = 0; i < rows; i++) {
-     rowptr[i] = (int*) malloc(cols * sizeof(int));
+    rowptr[i] = (int*) malloc(cols * sizeof(int));
   }
   return rowptr;
 }
@@ -24,15 +24,14 @@ void my2DDealloc(int** rowptr, int rows) {
   for (i = 0; i < rows; i++) {
     free(rowptr[i]);
   }
-  free (rowptr);
+  free(rowptr);
 }
-
 
 int** my2DAlloc_singlemalloc(int rows, int cols) {
   int i;
   int header = rows * sizeof(int*);
   int data = rows * cols * sizeof(int);
-  int** rowptr = (int**)malloc(header + data);
+  int** rowptr = (int**) malloc(header + data);
   if (rowptr == 0)
     return 0;
 

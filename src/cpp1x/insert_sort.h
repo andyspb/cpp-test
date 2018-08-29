@@ -10,7 +10,7 @@ namespace insert_sort {
 
 int test() {
 
-  std::vector<int> v{9,3,2,1,7,0,10};
+  std::vector<int> v { 9, 3, 2, 1, 7, 0, 10 };
 
   print_vector(v);
 

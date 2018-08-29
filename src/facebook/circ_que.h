@@ -12,11 +12,11 @@
 
 namespace circ_que {
 
-template <typename T>
+template<typename T>
 class CircQue {
  private:
   enum {
-    default_max =10
+    default_max = 10
   };
 
   size_t head;
@@ -77,7 +77,6 @@ class CircQue {
   }
 };
 
-
 int test() {
   std::cout << "\tcircular que --->" << std::endl;
   CircQue<int> cque(6);
@@ -99,7 +98,5 @@ int test() {
 }
 
 }  // namespace circ_que
-
-
 
 #endif /* CIRC_QUE_H_ */

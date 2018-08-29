@@ -39,6 +39,6 @@ int test() {
   std::cout << str << std::endl;
   return 1;
 }
-} // namespace test_1_5
+}  // namespace test_1_5
 
 #endif /* TEST_1_5_REPLACE_ALL_SPACES_IN_STRING_WITH_PERS20_H_ */

@@ -16,14 +16,14 @@ namespace print_last_k_lines {
 
 void printLastl0Lines(char* fileName) {
   const int K = 10;
-  std::ifstream file (fileName);
+  std::ifstream file(fileName);
   std::string L[K];
   int size = 0;
 
   /* read file line by line into circular array */
   while (file.good()) {
-   getline(file, L[size % K]);
-   ++size;
+    getline(file, L[size % K]);
+    ++size;
   }
 
   // compute start of circular array, and the size of it
@@ -32,7 +32,7 @@ void printLastl0Lines(char* fileName) {
 
   /* print elements in the order they were read */
   for (int i = 0; i < count; i++) {
-    std::cout << L[ (start + i) % K] << std::endl;
+    std::cout << L[(start + i) % K] << std::endl;
   }
 }
 

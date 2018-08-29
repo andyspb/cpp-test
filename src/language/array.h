@@ -1,5 +1,4 @@
 
-
 namespace array2_ {
 
 TEST_RESULT test() {
@@ -11,12 +10,11 @@ TEST_RESULT test() {
   std::vector<int> v(2000);
   std::cout << "sizeof(v)" << sizeof(v);
 
-  int is[1] = {0};
+  int is[1] = { 0 };
 
   std::cout << "sizeof(is)" << sizeof(is);
 
   is[2] = 1;
-
 
   register int ri = 0;
   int * ptr = &ri;
@@ -36,6 +34,5 @@ TEST_RESULT test() {
 
   RETURN_OK();
 }
-
 
 }  // namespace array_

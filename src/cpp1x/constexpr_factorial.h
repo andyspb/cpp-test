@@ -20,15 +20,13 @@ constexpr int factorial(int n) {
 }
 
 TEST_RESULT test() {
-	__SCOPE_LOG__;
+  __SCOPE_LOG__;
 
   int f = factorial(5);
-  LOG(INFO) <<
-      "factorial(5)=" << f;
+  LOG(INFO) << "factorial(5)=" << f;
 
   RETURN_OK();
 }
-
 
 }  // namespace cpp1x_constexpr_factorial
 

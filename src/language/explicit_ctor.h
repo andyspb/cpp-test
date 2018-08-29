@@ -5,13 +5,13 @@
 
 namespace explicit_ctor {
 class A {
-  public:
-    A() {
-    }
-    explicit A(int a) {
-      std::cout << "explicit Constructor called" << std::endl;
-      std::cout << "value is:" << a << std::endl;
-    }
+ public:
+  A() {
+  }
+  explicit A(int a) {
+    std::cout << "explicit Constructor called" << std::endl;
+    std::cout << "value is:" << a << std::endl;
+  }
 };
 
 int test() {

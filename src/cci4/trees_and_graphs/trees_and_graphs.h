@@ -10,6 +10,6 @@ int test() {
   return 1;
 }
 
-} //  namespace trees_and_graphs
+}  //  namespace trees_and_graphs
 
 #endif /* TREES_AND_GRAPHS_H_ */

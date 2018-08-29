@@ -10,116 +10,119 @@
 namespace generic_list_test {
 template<class T>
 class Node {
-  public:
-    Node(T& value)
-        : value_(value), next_(NULL) {
-    }
-    T value_;
-    Node<T> * next_;
+ public:
+  Node(T& value)
+      : value_(value),
+        next_(NULL) {
+  }
+  T value_;
+  Node<T> * next_;
 };
 
 template<class T>
 class List {
-  public:
-    List()
-        : first_(NULL), last_(NULL), size_(0) {
-    }
-    ~List() {
-      clean();
-    }
+ public:
+  List()
+      : first_(NULL),
+        last_(NULL),
+        size_(0) {
+  }
+  ~List() {
+    clean();
+  }
 
-    bool empty() const {
-      return first_ == NULL;
-    }
+  bool empty() const {
+    return first_ == NULL;
+  }
 
-    int size() const {
-      return size_;
-    }
+  int size() const {
+    return size_;
+  }
 
-    T& back() {
-      return last_->value_;
+  T& back() {
+    return last_->value_;
+  }
+  T& front() {
+    return first_->value_;
+  }
+  void push_front(T value) {
+    Node<T>* node = new Node<T>(value);
+    if (empty())
+      first_ = last_ = node;
+    else {
+      node->next_ = first_;
+      first_ = node;
     }
-    T& front() {
-      return first_->value_;
+    ++size_;
+  }
+  void push_back(T value) {
+    Node<T>* node = new Node<T>(value);
+    if (empty()) {
+      first_ = last_ = node;
+    } else {
+      last_->next_ = node;
+      last_ = node;
     }
-    void push_front(T value) {
-      Node<T>* node = new Node<T>(value);
-      if (empty())
-        first_ = last_ = node;
-      else {
-        node->next_ = first_;
-        first_ = node;
-      }
-      ++size_;
+    ++size_;
+  }
+  void push_middle(T value, int pos) {
+    if (pos < 0) {
+      return;
     }
-    void push_back(T value) {
-      Node<T>* node = new Node<T>(value);
-      if (empty()) {
-        first_ = last_ = node;
-      } else {
-        last_->next_ = node;
-        last_ = node;
-      }
-      ++size_;
+    if (pos == 0) {
+      push_front(value);
+      return;
     }
-    void push_middle(T value, int pos) {
-      if (pos < 0) {
-        return;
-      }
-      if (pos == 0) {
-        push_front(value);
-        return;
-      }
-      if (pos >= size_) {
-        push_back(value);
-        return;
-      }
-      Node<T>* node = new Node<T>(value);
-      if (empty()) {
-        first_ = last_ = node;
-      } else {
-        Node<T>* n1 = first_;
-        while (--pos > 0) {
-          n1 = n1->next_;
-        }
-        Node<T>* n2 = n1->next_;
-        n1->next_ = node;
-        node->next_ = n2;
-      }
-      ++size_;
+    if (pos >= size_) {
+      push_back(value);
+      return;
     }
+    Node<T>* node = new Node<T>(value);
+    if (empty()) {
+      first_ = last_ = node;
+    } else {
+      Node<T>* n1 = first_;
+      while (--pos > 0) {
+        n1 = n1->next_;
+      }
+      Node<T>* n2 = n1->next_;
+      n1->next_ = node;
+      node->next_ = n2;
+    }
+    ++size_;
+  }
 
-    void reverse() {
-      if (!first_ || !first_->next_)
-        return;
-      Node<T> *n1, *n2 = 0;
-      last_ = first_;
-      while (first_) {
-        n1 = first_;
-        first_ = first_->next_;
-        n1->next_ = n2;
-        n2 = n1;
-      }
-      first_ = n1;
-      last_->next_ = NULL;
+  void reverse() {
+    if (!first_ || !first_->next_)
+      return;
+    Node<T> *n1, *n2 = 0;
+    last_ = first_;
+    while (first_) {
+      n1 = first_;
+      first_ = first_->next_;
+      n1->next_ = n2;
+      n2 = n1;
     }
+    first_ = n1;
+    last_->next_ = NULL;
+  }
 
-    void clean() {
-      Node<T> * first = first_;
-      while (first != NULL) {
-        Node<T>* next = first->next_;
-        delete first;
-        first = next;
-      }
-      first_ = NULL;
-      last_ = NULL;
-      size_ = 0;
+  void clean() {
+    Node<T> * first = first_;
+    while (first != NULL) {
+      Node<T>* next = first->next_;
+      delete first;
+      first = next;
     }
-    // giving access to print data
-    // protected:
-    Node<T>* first_;
-    Node<T>* last_;
-    int size_;
+    first_ = NULL;
+    last_ = NULL;
+    size_ = 0;
+  }
+  // giving access to print data
+  // protected:
+  Node<T>* first_;
+  Node<T>* last_;
+  int size_;
 };
 
 int test_push_front(List<int>& list) {
@@ -147,13 +150,13 @@ int test_push_back(List<int>& list) {
 bool test_push_middle(List<int>& list) {
   int nodes = 10;
   std::cout << "\ttest_push_middle() with " << nodes << " and " << nodes + 1
-      << " in middle\n";
+            << " in middle\n";
   list.clean();
   for (int i = 0; i < 10; ++i) {
     list.push_back(i);
   }
   int middle_value = nodes + 1;
-  int middle_pos = list.size() >> 1; // make middle
+  int middle_pos = list.size() >> 1;  // make middle
   list.push_middle(middle_value, middle_pos);
   Node<int>* node = list.first_;
   while (--middle_pos >= 0) {

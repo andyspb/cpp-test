@@ -26,11 +26,11 @@ void print_array(const array_int8& arr) {
 }
 
 void print_hash_set(const hash_set& hs) {
-  std::cout<<"(";
-  std::for_each(hs.begin(), hs.end(), [](const int v) {std::cout << v << ", ";});
-  std::cout<<")";
+  std::cout << "(";
+  std::for_each(hs.begin(), hs.end(),
+                [](const int v) {std::cout << v << ", ";});
+  std::cout << ")";
 }
-
 
 bool find_in_range_in_distance(const array_int8& arr, size_t distance,
                                size_t range = 0) {
@@ -53,11 +53,11 @@ bool find_in_range_in_distance(const array_int8& arr, size_t distance,
         ++i;
       }
     } else {
-      std::cout << "deleting from set: " << arr[count-1] << std::endl;
-      hs.erase(arr[count-1]);
+      std::cout << "deleting from set: " << arr[count - 1] << std::endl;
+      hs.erase(arr[count - 1]);
       std::cout << "adding to set: ";
-      std::cout << arr[count+distance-1] << " ";
-      bool inserted = (hs.insert(arr[count+distance-1])).second;
+      std::cout << arr[count + distance - 1] << " ";
+      bool inserted = (hs.insert(arr[count + distance - 1])).second;
       std::cout << "(" << inserted << ") ";
       if (!inserted)
         return true;
